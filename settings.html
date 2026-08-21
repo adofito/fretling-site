@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings – Fretling</title>
+  <meta name="description" content="Every option in Fretling's settings sidebar: the Fretboard, Audio, and Icon tabs, plus the chip bars around the neck.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Fretling</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learning-modes.html">Learning Modes</a></li>
+          <li><a href="fretboard.html">Fretboard</a></li>
+          <li><a href="practice-tools.html">Practice Tools</a></li>
+          <li><a href="settings.html" class="active">Settings</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Settings</h1>
+    <p class="lede">The settings sidebar slides in from the left, opened with the button in the top-left corner. It has three tabs — <strong>Fretboard</strong>, <strong>Audio</strong>, and <strong>Icon</strong> — and a link to About at the bottom.</p>
+
+    <div class="callout">
+      <p>Not everything lives in here. The settings you change constantly sit on the chip bars that bracket the neck: <a href="fretboard.html#marker-bar">marker display</a> above it, <a href="fretboard.html#overlays">Visual Groupings</a> below it. The sidebar holds the things you set once and leave alone.</p>
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#fretboard-tab">Fretboard tab</a></li>
+        <li><a href="#audio-tab">Audio tab</a></li>
+        <li><a href="#icon-tab">Icon tab</a></li>
+        <li><a href="#about">About and tips</a></li>
+      </ul>
+    </nav>
+
+    <section class="section-card" id="fretboard-tab">
+      <h2>Fretboard tab</h2>
+      <p>Six groups, some of which appear only in the modes they apply to. Options that do not apply right now are dimmed rather than hidden, so the sidebar does not rearrange itself under you.</p>
+
+      <h3>Appearance</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Theme</strong></td><td>System / Light / Dark</td><td>Follow the device appearance, or pin Fretling to light or dark.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Borrowed Harmony</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Secondary Dominants</strong></td><td>Toggle</td><td>Adds the secondary dominants of the key (V7/ii, V7/V and so on) to the chord picker. These are seventh-quality chords, so switching this on also enables advanced chords.</td></tr>
+            <tr><td><strong>Modal Interchange</strong></td><td>Toggle</td><td>Adds chords borrowed from the parallel mode.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Markers</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Shapes</strong></td><td>Circles / Intervals</td><td>Plain circles, or a distinct shape per interval so degrees are readable even without colour.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Labels, colours and accidentals are not here — they are on the <a href="fretboard.html#marker-bar">marker display bar</a> above the neck.</p>
+
+      <h3>Timeline</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Structure</strong></td><td>Brackets / Ticks</td><td>How chord and scale structure is drawn on the <a href="fretboard.html#timeline">scale timeline</a>. A line of text under the control describes whichever style is selected.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Practice Focus</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Show Non-Chord Notes</strong></td><td>Toggle</td><td>Keeps the rest of the scale visible under an active chord. Available in Chords mode, and in Scales mode when a chord is selected; dimmed otherwise.</td></tr>
+            <tr><td><strong>Limit Fret Range</strong></td><td>Toggle</td><td>Shows the <a href="fretboard.html#fret-range">fret range limiter</a> below the neck.</td></tr>
+            <tr><td><strong>Show Triad Boxes</strong></td><td>Toggle</td><td>Triads mode only. Outlines each triad position.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Shape Overlays</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CAGED Display</strong></td><td>Box / Lines / Both</td><td>How a CAGED shape is drawn: region outline, connecting lines through its notes, or both.</td></tr>
+            <tr><td><strong>Show Chord Shapes</strong></td><td>Toggle</td><td>Chords mode. Draws playable fingerings for the selected chord on the neck.</td></tr>
+            <tr><td><strong>Timeline Shape Cues</strong></td><td>Toggle</td><td>Also marks the shape's tones on the timeline. Requires Show Chord Shapes.</td></tr>
+            <tr><td><strong>Show Finger Numbers</strong></td><td>Toggle</td><td>Prints finger numbers on chord shapes. Requires Show Chord Shapes.</td></tr>
+            <tr><td><strong>CAGED Interaction</strong></td><td>Coexist / Exclusive / Replace CAGED</td><td>Chords mode. What happens when chord shapes and CAGED are both on — draw both, let shapes take over while they are on, or have shapes replace CAGED entirely (which also removes the CAGED chips from Visual Groupings).</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The whole Shape Overlays group is dimmed while you are identifying a chord — there is no key to lay a shape against.</p>
+    </section>
+
+    <section class="section-card" id="audio-tab">
+      <h2>Audio tab</h2>
+      <h3>Playback</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Instrument</strong></td><td>Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel), Jazz Guitar, Clean Electric Guitar, Sine Wave</td><td>The voice used when you tap notes on the neck. Sine Wave is synthesised; the rest come from a General MIDI SoundFont.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Chord Pad Layers</h3>
+      <p>Chords can be voiced by stacking up to three instruments, which is how you get a pad behind a chord rather than one flat sample. Each layer has its own instrument, volume, and mute; <strong>Add Layer</strong> adds one, up to the maximum.</p>
+      <p>Layers apply to chord playback — the Chord chip beside the timeline, Chord Atlas previews, and progression playback. Tapping single notes always uses the Instrument setting above.</p>
+    </section>
+
+    <section class="section-card" id="icon-tab">
+      <h2>Icon tab</h2>
+      <p>Fretling ships fourteen app icons; pick one and the home screen or Dock icon changes. The choices are <strong>Warm hex</strong>, <strong>Classic</strong>, <strong>Rich wood</strong>, <strong>Fret window</strong>, <strong>Blush sky</strong>, <strong>Soft aurora</strong>, <strong>Watercolor</strong>, <strong>Champagne</strong>, <strong>Interval halo</strong>, <strong>Fret monogram</strong>, <strong>Constellation</strong>, <strong>Ember</strong>, <strong>Ultraviolet</strong>, and <strong>Daylight</strong>. Each is shown as a preview tile before you commit.</p>
+    </section>
+
+    <section class="section-card" id="about">
+      <h2>About and tips</h2>
+      <p>At the bottom of the sidebar, <strong>About Fretling</strong> opens a screen with the version and build number, a plain-language privacy summary, and credits for the open-source components Fretling is built on — the chord fingering database, the SoundFont used for instrument playback, and the Neural Amp Modeler engine with its dependencies.</p>
+      <p>The About screen also holds an optional <strong>tip jar</strong>. Tips are ordinary in-app purchases handled by Apple, in three sizes. <strong>They unlock nothing</strong> — every feature is available whether or not you ever tip.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Fretling – Scale Tones and Chords. User guide for version 1.1.</div>
+  </footer>
+</body>
+</html>

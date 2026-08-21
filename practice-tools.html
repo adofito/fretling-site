@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Tools – Fretling</title>
+  <meta name="description" content="Fretling's practice tools: chromatic tuner, metronome and drum sequencer, guitar amp, looper, mixer, and Live Detect.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Fretling</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learning-modes.html">Learning Modes</a></li>
+          <li><a href="fretboard.html">Fretboard</a></li>
+          <li><a href="practice-tools.html" class="active">Practice Tools</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Practice Tools</h1>
+    <p class="lede">Six tools open from the icon row in the top-right corner. Each is a floating panel over the fretboard — drag it where you want it, and close it when you are done. The neck stays visible and usable underneath.</p>
+
+    <div class="callout">
+      <p><strong>The amp and the looper are Mac-only.</strong> They ride the same macOS monitoring engine, which iPadOS does not offer. Everything else on this page works on both platforms.</p>
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#tuner">Tuner</a></li>
+        <li><a href="#metronome">Metronome</a></li>
+        <li><a href="#drums">Drum sequencer</a></li>
+        <li><a href="#amp">Guitar amp</a></li>
+        <li><a href="#looper">Looper</a></li>
+        <li><a href="#mixer">Mixer</a></li>
+        <li><a href="#live-detect">Live Detect</a></li>
+        <li><a href="#microphone">Microphone access</a></li>
+      </ul>
+    </nav>
+
+    <section class="section-card" id="tuner">
+      <h2>Tuner</h2>
+      <p>A chromatic tuner that listens through your microphone or audio interface. It names the note you are playing and shows how far off you are in cents.</p>
+
+      <h3>Indicator styles</h3>
+      <p>Five ways of drawing the same measurement — pick whichever you read fastest:</p>
+      <ul>
+        <li><strong>Needle</strong> — a classic swinging needle.</li>
+        <li><strong>Bar</strong> — a horizontal deviation bar against a cents scale.</li>
+        <li><strong>Trace</strong> — plots pitch over time, so drift and vibrato are visible.</li>
+        <li><strong>Strobe</strong> — a strobe band that stands still when you are in tune.</li>
+        <li><strong>Disc</strong> — a rotating disc that stops turning at true pitch.</li>
+      </ul>
+
+      <h3>Fast or Precision</h3>
+      <p>These are two different instruments, not a quality slider:</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Mode</th><th>Reads</th><th>In tune within</th><th>Use it when</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Fast</strong></td><td>Responds immediately, whole cents</td><td>±5 cents</td><td>Retuning a string mid-song, checking quickly between takes.</td></tr>
+            <tr><td><strong>Precision</strong></td><td>Hold a note about a second, tenths of a cent</td><td>±0.5 cents</td><td>Setting the guitar up properly with it on the bench.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Precision measures phase over a settled baseline, which is why it needs a held note — a sub-cent reading is only as good as the stretch of signal it was fitted over.</p>
+    </section>
+
+    <section class="section-card" id="metronome">
+      <h2>Metronome</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Control</th><th>Range / options</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Tempo</strong></td><td>40–250 BPM, default 120</td><td>Steppers move one BPM at a time; hold to run.</td></tr>
+            <tr><td><strong>TAP</strong></td><td>—</td><td>Tap in time and the tempo follows your taps.</td></tr>
+            <tr><td><strong>Meter</strong></td><td>4/4, 3/4, 2/4, 6/8, 5/4, 7/8, 9/8, 12/8, 1/4</td><td>The beat indicator shows your place in the bar.</td></tr>
+            <tr><td><strong>Subdivision</strong></td><td>Quarter, Eighth, Triplet, Dotted Eighth, Sixteenth</td><td>Subdivides the beat without changing the tempo.</td></tr>
+            <tr><td><strong>Sound</strong></td><td>Classic, Woodblock, Click, Drums</td><td><em>Drums</em> plays a real kit pattern instead of a click — see below.</td></tr>
+            <tr><td><strong>Accent</strong></td><td>On / off</td><td>Emphasises the downbeat of each bar.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card" id="drums">
+      <h2>Drum sequencer</h2>
+      <p>With the <strong>Drums</strong> sound pack selected, the metronome plays a step-sequenced pattern across three lanes — <strong>Kick</strong>, <strong>Snare</strong>, and <strong>Hat</strong> — instead of a bare click. Every meter ships with a musical default rather than a mechanical one, so 6/8 feels like 6/8 without you editing anything.</p>
+      <p>Open the pattern editor from the metronome to build your own:</p>
+      <ul>
+        <li><strong>The grid</strong> — one row per lane, one column per step. Tap a cell to switch that hit on or off; the grid scrolls sideways when a meter needs more steps than fit.</li>
+        <li><strong>Play while you edit</strong> — the pattern loops as you work, so you hear each change immediately.</li>
+        <li><strong>Library</strong> — save a pattern under a name, mark one as active, duplicate one as a starting point, rename, or delete. Edited-but-unsaved patterns are badged <em>Edited</em>, and closing with unsaved work asks before discarding it.</li>
+        <li><strong>Reset</strong> — restores the default kick, snare and hat steps for the current meter.</li>
+      </ul>
+      <p>Changing the meter while a custom pattern is loaded asks what you want done with it rather than silently reshaping your work.</p>
+    </section>
+
+    <section class="section-card" id="amp">
+      <h2>Guitar amp <span class="platform-badge">Mac only</span></h2>
+      <p>Plug a guitar into an audio interface and monitor it through a <strong>Neural Amp Modeler</strong> profile — the amp captures shared as <code>.nam</code> files. Fretling ships with a set of starter models and loads any other <code>.nam</code> file you point it at.</p>
+
+      <h3>Amp tab</h3>
+      <ul>
+        <li><strong>Input level</strong> — a live meter, so you can set gain before you hear anything.</li>
+        <li><strong>Model</strong> — pick a starter profile, or <strong>Load .nam…</strong> to use your own.</li>
+        <li><strong>Monitor / Stop</strong> — starts and stops live monitoring.</li>
+        <li><strong>Input gain</strong> and <strong>Output gain</strong> — level into and out of the amp path.</li>
+        <li><strong>Model input level</strong> and <strong>Model output level</strong> — trim around the model itself, which is how you match a profile that was captured hot or quiet.</li>
+      </ul>
+
+      <h3>Advanced tab</h3>
+      <ul>
+        <li><strong>Input device</strong> and <strong>Channel</strong> — choose the interface and which of its inputs your guitar is on. If a saved device is gone, the picker says so rather than failing silently, and there is a shortcut into macOS Sound settings.</li>
+        <li><strong>Buffer size</strong> and <strong>Sample rate</strong> — the latency trade. Fretling supports 44.1, 48, 88.2, 96 and 192 kHz.</li>
+        <li><strong>Latency</strong> — the resulting monitoring latency, reported in milliseconds so the trade is a number rather than a guess.</li>
+      </ul>
+      <p>Every slider has tick marks, a dB readout, and a double-click reset back to its default.</p>
+    </section>
+
+    <section class="section-card" id="looper">
+      <h2>Looper <span class="platform-badge">Mac only</span></h2>
+      <p>Record a phrase and play over it. The looper sits on the amp's monitoring path, so <strong>turn Monitor on in the amp first</strong> — the looper says as much if you have not.</p>
+      <ul>
+        <li><strong>Record</strong> — press once to start, press again to close the loop. It then repeats until you clear it.</li>
+        <li><strong>Bars</strong> — set a length in bars and recording stops itself on the bar line, so the loop is in time without you catching it by hand.</li>
+        <li><strong>Count-in</strong> — a bar of clicks before recording starts.</li>
+        <li><strong>Click while recording</strong> — keeps the metronome audible through the take.</li>
+        <li><strong>Loop volume</strong> — how loud the loop plays back under you.</li>
+        <li><strong>Layer fade</strong> — how much earlier layers fade back as you stack new ones on top.</li>
+        <li><strong>Clear</strong> — throws the loop away.</li>
+      </ul>
+      <p>A beat readout shows where in the loop you are. Changing the sample rate clears the loop — the recording no longer matches the engine — and the looper tells you when that has happened.</p>
+      <p>Loops live in memory for the session only. Nothing is written to disk, and quitting the app discards them.</p>
+    </section>
+
+    <section class="section-card" id="mixer">
+      <h2>Mixer</h2>
+      <p>One panel for every sound Fretling makes, so you can balance them instead of hunting for the level that is too loud.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Strip</th><th>Controls</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Notes</strong></td><td>Notes you tap on the neck, and scale playback.</td></tr>
+            <tr><td><strong>Chord</strong></td><td>Chords played from the timeline and the Chord Atlas.</td></tr>
+            <tr><td><strong>Prog</strong></td><td>Progression playback.</td></tr>
+            <tr><td><strong>Click</strong></td><td>Metronome and drums.</td></tr>
+            <tr><td><strong>Amp</strong> <span class="platform-badge">Mac</span></td><td>Your monitored guitar.</td></tr>
+            <tr><td><strong>Loop</strong> <span class="platform-badge">Mac</span></td><td>Looper playback.</td></tr>
+            <tr><td><strong>Main</strong></td><td>Master output.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Every strip except Main has <strong>mute</strong> and <strong>solo</strong>; a badge on the panel reminds you when something is muted or soloed, so a silent app is never a mystery. Levels persist between sessions.</p>
+    </section>
+
+    <section class="section-card" id="live-detect">
+      <h2>Live Detect</h2>
+      <p>Live Detect listens to what you play and marks it on the neck in real time, so you can check that what you are fingering is what you think it is.</p>
+      <p>In <a href="learning-modes.html#identify">identify</a> mode it gains a <strong>Send to fretboard</strong> button, which takes the notes it just heard and places them on the neck as an identification query — play a chord you cannot name, send it over, and read the ranked answers.</p>
+    </section>
+
+    <section class="section-card" id="microphone">
+      <h2>Microphone access</h2>
+      <p>The tuner, Live Detect, and the amp all need audio input, so the first time you open one, your device asks permission. Audio is analysed live and never recorded, stored, or transmitted; capture stops when you close the tools. Full detail is in the <a href="privacy.html">privacy policy</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Fretling – Scale Tones and Chords. User guide for version 1.1.</div>
+  </footer>
+</body>
+</html>

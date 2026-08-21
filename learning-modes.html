@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Modes – Fretling</title>
+  <meta name="description" content="Fretling's learning modes: Scales, Chords, and Triads, plus identifying a chord from notes you place or play.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Fretling</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learning-modes.html" class="active">Learning Modes</a></li>
+          <li><a href="fretboard.html">Fretboard</a></li>
+          <li><a href="practice-tools.html">Practice Tools</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Learning Modes</h1>
+    <p class="lede">Everything starts from one sentence at the top of the screen. Each coloured word is a dropdown; changing one rewrites what the fretboard shows.</p>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#sentence">The sentence header</a></li>
+        <li><a href="#scales">Scales</a></li>
+        <li><a href="#chords">Chords</a></li>
+        <li><a href="#triads">Triads</a></li>
+        <li><a href="#identify">Identify a chord</a></li>
+      </ul>
+    </nav>
+
+    <section class="section-card" id="sentence">
+      <h2>The sentence header</h2>
+      <p>The header reads as ordinary prose and every highlighted word opens a picker:</p>
+      <blockquote>I want to <strong>learn</strong> <strong>scales</strong> in <strong>E</strong> <strong>Major</strong>.</blockquote>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Word</th><th>Choices</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>learn / identify</strong></td><td>The verb picks what the app is for right now — showing you something (<a href="#scales">learn</a>) or naming something you play (<a href="#identify">identify</a>). Switching to identify leaves your learn setup untouched, so switching back restores it exactly.</td></tr>
+            <tr><td><strong>Mode</strong></td><td>Scales, Chords, Triads.</td></tr>
+            <tr><td><strong>Root note</strong></td><td>All twelve notes. Names follow the ♯/♭ choice in the marker display bar.</td></tr>
+            <tr><td><strong>Scale type</strong></td><td>Major, Minor and Pentatonic Major sit at the top; <em>More scales</em> opens the rest — Pentatonic Minor, Blues, Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor.</td></tr>
+            <tr><td><strong>Chord</strong></td><td>In Chords mode, and optionally in Scales mode, a chord picker backed by the Chord Atlas.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The header scrolls horizontally on narrow windows rather than wrapping, so the sentence always reads as one line.</p>
+    </section>
+
+    <section class="section-card" id="scales">
+      <h2>Scales</h2>
+      <p><strong>Purpose:</strong> learn a scale across the whole neck in any key.</p>
+      <p><strong>What you pick:</strong> a root note and a scale type — twelve scales in total, covering the major and minor scales, both pentatonics, the blues scale, five modes, and harmonic and melodic minor.</p>
+      <p><strong>On the fretboard:</strong> every note of the scale is marked. The <a href="fretboard.html#timeline">scale timeline</a> above the neck lays the twelve semitones out in a row so you can see the shape of the key itself. Below the neck, <a href="fretboard.html#overlays">Visual Groupings</a> let you overlay CAGED shapes, one of five pentatonic positions, or a three-notes-per-string pattern.</p>
+      <p><strong>Adding a chord:</strong> Scales mode has an optional chord slot at the end of the sentence. Pick a chord from the Chord Atlas and its tones are marked over the scale — including tones that are <em>not</em> in the scale, which stay visible rather than being filtered away. That is how borrowed chords, secondary dominants and slash-bass notes stay honest on the neck.</p>
+      <p><strong>Use it to:</strong> learn one key thoroughly, then switch on pentatonic or CAGED to see how the patterns you already know line up inside it.</p>
+    </section>
+
+    <section class="section-card" id="chords">
+      <h2>Chords</h2>
+      <p><strong>Purpose:</strong> explore the chords of a key and see where each one sits on the neck.</p>
+      <p><strong>What you pick:</strong> a root note, a scale type — which sets the key — and then a chord. The chord picker is the <strong>Chord Atlas</strong>: it lists the chords of the key with their Roman numerals, lets you preview each one, and reaches beyond the diatonic seven when you want it to.</p>
+      <p><strong>Borrowed harmony:</strong> two switches in <a href="settings.html#fretboard-tab">Settings → Fretboard</a> widen the list:</p>
+      <ul>
+        <li><strong>Secondary Dominants</strong> — the V7 of each degree (V7/ii, V7/V and so on).</li>
+        <li><strong>Modal Interchange</strong> — chords borrowed from the parallel mode.</li>
+      </ul>
+      <p><strong>On the fretboard:</strong> chord tones are marked. Turn on <strong>Show Non-Chord Notes</strong> in Settings to keep the rest of the scale visible underneath, dimmed, so you can see the chord inside its key. Non-diatonic chord tones are always drawn, whatever the scale filter is doing.</p>
+      <p><strong>Chord shapes:</strong> with <strong>Show Chord Shapes</strong> on, real fingerings for the selected chord are drawn on the neck, optionally with finger numbers, and optionally cued on the timeline. See <a href="fretboard.html#chord-shapes">Chord shapes</a>.</p>
+      <p><strong>Use it to:</strong> see how the chords of a key relate to one another, and how each one maps onto a CAGED shape.</p>
+    </section>
+
+    <section class="section-card" id="triads">
+      <h2>Triads</h2>
+      <p><strong>Purpose:</strong> practise three-note voicings on specific sets of strings.</p>
+      <p><strong>What you pick:</strong> a root note and a triad type — <strong>Major</strong>, <strong>Minor</strong>, <strong>Augmented</strong>, or <strong>Diminished</strong>.</p>
+      <p><strong>On the fretboard:</strong> triad tones are marked across the neck. Turn on <strong>Show Triad Boxes</strong> in <a href="settings.html#fretboard-tab">Settings → Fretboard</a> to outline each triad position. The <strong>Strings</strong> group in Visual Groupings narrows the view to one string set — <strong>123</strong>, <strong>234</strong>, <strong>345</strong>, or <strong>456</strong> — so you work one shape at a time. CAGED and pentatonic overlays are available here too.</p>
+      <p><strong>Use it to:</strong> learn a triad on one string set, then move the same shape up the neck and across to the next set.</p>
+    </section>
+
+    <section class="section-card" id="identify">
+      <h2>Identify a chord</h2>
+      <p><strong>Purpose:</strong> the reverse lookup — you have a shape under your fingers and want to know what it is called.</p>
+      <p>Change the verb in the header from <em>learn</em> to <em>identify</em> and the sentence becomes <em>&ldquo;I want to identify a chord in C Major&rdquo;</em>. A chip lets you drop the key: <em>&ldquo;… a chord without a key&rdquo;</em>. With a key, readings are also named by their Roman numeral in that key; without one, they are named on their own terms.</p>
+
+      <h3>Giving Fretling the notes</h3>
+      <ul>
+        <li><strong>Tap them onto the neck.</strong> Tap a position to place a note, tap it again to remove it. A placement toolbar gives you <strong>Undo</strong>, <strong>Clear</strong>, and a running count of placed notes.</li>
+        <li><strong>Play them.</strong> Open <a href="practice-tools.html#live-detect">Live Detect</a>, play the chord, and use <strong>Send to fretboard</strong> to drop what it heard onto the neck as placed notes.</li>
+      </ul>
+
+      <h3>Reading the results</h3>
+      <p>Fretling ranks the possible names under a <strong>Readings</strong> heading rather than committing to one answer — the same set of pitches is often several chords, and which one is right depends on context the app cannot see. Slash chords are shown with their bass note called out. From a reading you can:</p>
+      <ul>
+        <li><strong>Hear it</strong> — play the chord back.</li>
+        <li><strong>Show voicings</strong> — see playable fingerings for that name.</li>
+        <li><strong>Open in Chord Atlas</strong> — jump into the full chord entry.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Fretling – Scale Tones and Chords. User guide for version 1.1.</div>
+  </footer>
+</body>
+</html>

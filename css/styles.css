@@ -1,0 +1,316 @@
+/* Fretling Documentation – overrides and extras on top of Pico CSS */
+
+/*
+  Fretling app color palette (from ColorPalette.swift & AppTheme.swift).
+  RGB values converted from SwiftUI Color 0–1 to hex.
+*/
+:root {
+  /* Primary palette */
+  --fretling-deep-blue: #3366b3;
+  --fretling-teal: #339999;
+  --fretling-primary-blue: #4080cc;
+  --fretling-light-blue: #66b3e6;
+  --fretling-purple: #7f4db3;
+  --fretling-amber: #f29933;
+  --fretling-gold: #f2bf4d;
+  --fretling-emerald: #33b380;
+  --fretling-forest-green: #336633;
+  /* Backgrounds (light theme) */
+  --fretling-warm-bg: #faf7f2;
+  --fretling-card-bg: #ffffff;
+  /* Neutrals */
+  --fretling-neutral-gray: #808080;
+  --fretling-light-gray: #e6e6e6;
+  --fretling-dark-gray: #333333;
+  /* Text */
+  --fretling-text: #000000;
+  --fretling-text-dimmed: rgba(0, 0, 0, 0.7);
+  --fretling-shadow: rgba(0, 0, 0, 0.08);
+  --fretling-diagram-line: rgba(0, 0, 0, 0.45);
+  --fretling-diagram-fill: rgba(51, 153, 153, 0.10);
+
+  /* Map Pico to Fretling palette (light) */
+  --pico-primary: var(--fretling-teal);
+  --pico-primary-hover: var(--fretling-deep-blue);
+  --pico-primary-focus: rgba(51, 153, 153, 0.15);
+  --pico-background-color: var(--fretling-warm-bg);
+  --pico-color: var(--fretling-text);
+  --pico-muted-color: var(--fretling-neutral-gray);
+  --pico-muted-border-color: var(--fretling-light-gray);
+  --pico-card-sectioning-background-color: var(--fretling-card-bg);
+}
+
+/*
+  Dark theme – Fretling dark palette.
+  Declared twice on purpose: once for the system preference (unless the reader has
+  explicitly asked for light) and once for an explicit dark choice, so a toggle wins
+  in both directions. A single combined `[data-theme="dark"], @media (...)` selector
+  list is invalid CSS and silently drops the whole block.
+*/
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fretling-shadow: rgba(0, 0, 0, 0.35);
+    --fretling-diagram-line: rgba(255, 255, 255, 0.5);
+    --fretling-diagram-fill: rgba(77, 179, 179, 0.14);
+
+    --pico-primary: #4db3b3;
+    --pico-primary-hover: var(--fretling-light-blue);
+    --pico-primary-focus: rgba(77, 179, 179, 0.2);
+    --pico-background-color: #1a1a1a;
+    --pico-color: #ffffff;
+    --pico-muted-color: rgba(255, 255, 255, 0.65);
+    --pico-muted-border-color: #404040;
+    --pico-card-sectioning-background-color: #252525;
+  }
+}
+
+:root[data-theme="dark"] {
+  --fretling-shadow: rgba(0, 0, 0, 0.35);
+  --fretling-diagram-line: rgba(255, 255, 255, 0.5);
+  --fretling-diagram-fill: rgba(77, 179, 179, 0.14);
+
+  --pico-primary: #4db3b3;
+  --pico-primary-hover: var(--fretling-light-blue);
+  --pico-primary-focus: rgba(77, 179, 179, 0.2);
+  --pico-background-color: #1a1a1a;
+  --pico-color: #ffffff;
+  --pico-muted-color: rgba(255, 255, 255, 0.65);
+  --pico-muted-border-color: #404040;
+  --pico-card-sectioning-background-color: #252525;
+}
+
+body {
+  background-color: var(--pico-background-color);
+  color: var(--pico-color);
+}
+
+/* Skip link (accessibility) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  padding: 0.75rem 1rem;
+  background: var(--pico-primary);
+  color: var(--pico-color-inverse);
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 0 0 var(--pico-border-radius) 0;
+}
+.skip-link:focus { top: 0; }
+
+/* Header: flex layout so brand and nav sit in one row */
+.site-header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 0 var(--pico-muted-border-color);
+  background-color: var(--pico-background-color);
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--pico-color);
+}
+.brand:hover { color: var(--pico-primary); }
+
+/* Horizontal nav (Pico often stacks nav links) */
+.site-header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-header nav a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--pico-border-radius);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.site-header nav a:hover {
+  background: var(--pico-primary-focus);
+  color: var(--pico-primary);
+}
+.site-header nav a.active {
+  color: var(--pico-primary);
+  font-weight: 600;
+}
+
+/* Main content spacing */
+main.container {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* Lede paragraph under the page title */
+.lede {
+  font-size: 1.05rem;
+  color: var(--pico-muted-color);
+}
+
+/* Home page: link cards in a grid */
+.home-cards {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 640px) {
+  .home-cards { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+}
+.home-card {
+  display: block;
+  padding: 1.5rem;
+  border-radius: var(--pico-border-radius);
+  border: 1px solid var(--pico-muted-border-color);
+  background: var(--pico-card-sectioning-background-color, var(--pico-background-color));
+  color: var(--pico-color);
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.home-card:hover {
+  border-color: var(--pico-primary);
+  box-shadow: 0 0 0 2px var(--pico-primary-focus);
+}
+.home-card h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.35rem;
+  border: none;
+  padding: 0;
+}
+.home-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--pico-muted-color);
+}
+
+/* Section cards (content blocks on sub-pages) */
+.section-card {
+  padding: 1.5rem;
+  border-radius: var(--pico-border-radius);
+  border: 1px solid var(--pico-muted-border-color);
+  background: var(--pico-card-sectioning-background-color, var(--pico-background-color));
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px var(--fretling-shadow);
+}
+
+.section-card h2 {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--pico-muted-border-color);
+}
+.section-card h3 { margin-top: 1.25rem; }
+
+/* In-page table of contents */
+.toc {
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  border-radius: var(--pico-border-radius);
+  border: 1px solid var(--pico-muted-border-color);
+  background: var(--pico-card-sectioning-background-color, var(--pico-background-color));
+  font-size: 0.95rem;
+}
+.toc h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  border: none;
+  padding: 0 0 0.5rem;
+}
+.toc ul { list-style: none; padding-left: 0; margin: 0; }
+.toc li { margin-bottom: 0.4rem; }
+.toc a { text-decoration: none; }
+.toc a:hover { text-decoration: underline; color: var(--pico-primary); }
+
+/* Platform badge — marks a feature that is not on every platform */
+.platform-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--pico-primary);
+  color: var(--pico-primary);
+  background: var(--pico-primary-focus);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Callout for notes and caveats */
+.callout {
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  border-left: 4px solid var(--pico-primary);
+  border-radius: 0 var(--pico-border-radius) var(--pico-border-radius) 0;
+  background: var(--pico-primary-focus);
+  font-size: 0.95rem;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+/* Wide content must scroll inside its own box, never the page body */
+.table-scroll {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+.table-scroll table { margin-bottom: 0; }
+
+/* Layout diagram (schematic, not a screenshot) */
+.diagram {
+  margin: 1.5rem 0;
+}
+.diagram svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+.diagram-box { fill: var(--fretling-diagram-fill); stroke: var(--pico-primary); stroke-width: 1.5; }
+.diagram-neck { fill: none; stroke: var(--fretling-diagram-line); stroke-width: 1.5; }
+.diagram-string { stroke: var(--fretling-diagram-line); stroke-width: 1; }
+.diagram-fret { stroke: var(--fretling-diagram-line); stroke-width: 1; opacity: 0.55; }
+.diagram-dot { fill: var(--pico-primary); }
+.diagram-label {
+  fill: var(--pico-color);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+}
+.diagram-label--muted { fill: var(--pico-muted-color); font-size: 12px; }
+
+/* Documentation images */
+.doc-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--pico-border-radius);
+  border: 1px solid var(--pico-muted-border-color);
+  margin: 1rem 0;
+  box-shadow: 0 1px 3px var(--fretling-shadow);
+}
+.figure-caption {
+  font-size: 0.9rem;
+  color: var(--pico-muted-color);
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--pico-muted-border-color);
+  font-size: 0.9rem;
+  color: var(--pico-muted-color);
+  text-align: center;
+}
