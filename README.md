@@ -87,6 +87,12 @@ public site repo and pushes it. Only the files listed above are published — th
 prep notes, plans, specs, design-review captures and backlog that live beside it under
 `docs/` in the app repo stay private.
 
+It refuses to publish on a broken link. Two checks run against the staged copy: every
+`src`/`href` (and every Markdown link target) must be a file in the public subset, and
+every `#anchor` must resolve — `scripts/site/check-anchors.py`, which understands both
+the explicit ids the HTML pages use and the heading slugs the Markdown mirrors rely on.
+Run `./scripts/publish-site.sh --dry-run` to exercise both without publishing.
+
 ## Keeping it accurate
 
 The guide describes the shipping build. When a feature lands, changes shape, or moves

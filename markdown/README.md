@@ -53,7 +53,7 @@ Everything sits around one stable fretboard:
 
 | Platform | Requirement | Notes |
 |----------|-------------|-------|
-| Mac | macOS 15.4 or later | Full feature set, including the guitar amp and looper. Minimum window 1000 × 700. |
+| Mac | macOS 15.4 or later | Full feature set, including the guitar amp and looper. Minimum window 1000 × 760. |
 | iPad | iPadOS 18.6 or later | Landscape, full screen. The amp and looper are Mac-only. |
 | iPhone | Not supported | The layout is built around a wide neck; an iPhone version is planned but not shipped. |
 
