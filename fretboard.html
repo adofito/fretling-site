@@ -93,7 +93,16 @@
       <h2>Layout</h2>
       <p>Six strings, low E at the bottom to high e at the top, and <strong>15 frets</strong> plus the open position. Fret numbers run along the neck, with the usual inlay frets — 3, 5, 7, 9, 12, 15 — called out so you can find your place at a glance.</p>
       <p>The neck fills the width it is given and does not scroll horizontally. If you want a smaller span, use the <a href="#fret-range">fret range limiter</a> rather than scrolling.</p>
-    </section>
+          <figure class="shot">
+        <img class="shot-light" src="screenshots/01-app-scales-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="The Fretling window in Scales mode: the sentence header across the top, the scale timeline and marker display bar above the neck, six strings of E Major markers, and the Visual Groupings chips below.">
+        <img class="shot-dark" src="screenshots/01-app-scales-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="The Fretling window in Scales mode: the sentence header across the top, the scale timeline and marker display bar above the neck, six strings of E Major markers, and the Visual Groupings chips below.">
+        <figcaption class="figure-caption">Six strings and fifteen frets, with the inlay frets numbered along the top.</figcaption>
+      </figure>
+</section>
 
     <section class="section-card" id="marker-bar">
       <h2>Marker display bar</h2>
@@ -123,7 +132,25 @@
         </table>
       </div>
       <p>Each group is radio-style: one chip is lit, and tapping the lit chip does nothing. On a narrow window the bar scrolls sideways instead of wrapping.</p>
-    </section>
+          <figure class="shot">
+        <img class="shot-light" src="screenshots/08-marker-bar-notes-light.webp"
+             width="1936" height="290" loading="lazy" decoding="async"
+             alt="The marker display bar with Labels set to Notes, so every marker on the neck below prints a note name.">
+        <img class="shot-dark" src="screenshots/08-marker-bar-notes-dark.webp"
+             width="1936" height="290" loading="lazy" decoding="async"
+             alt="The marker display bar with Labels set to Notes, so every marker on the neck below prints a note name.">
+        <figcaption class="figure-caption">Labels = Notes. Accidentals stays live, because note names can be sharp or flat.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img class="shot-light" src="screenshots/09-marker-bar-intervals-light.webp"
+             width="1936" height="290" loading="lazy" decoding="async"
+             alt="The marker display bar with Labels set to Intervals, so markers print scale degrees and the Accidentals group is dimmed.">
+        <img class="shot-dark" src="screenshots/09-marker-bar-intervals-dark.webp"
+             width="1936" height="290" loading="lazy" decoding="async"
+             alt="The marker display bar with Labels set to Intervals, so markers print scale degrees and the Accidentals group is dimmed.">
+        <figcaption class="figure-caption">Labels = Intervals. Accidentals dims — it no longer applies — but stays visible.</figcaption>
+      </figure>
+</section>
 
     <section class="section-card" id="markers">
       <h2>Note markers</h2>
@@ -132,6 +159,24 @@
         <li><strong>Shapes — Circles or Intervals.</strong> <em>Circles</em> draws every marker the same. <em>Intervals</em> gives each degree its own outline, so the root reads differently from a third even in Gray.</li>
       </ul>
       <p>The root note is always emphasised against the other tones.</p>
+      <figure class="shot">
+        <img class="shot-light" src="screenshots/10-markers-circles-light.webp"
+             width="1936" height="579" loading="lazy" decoding="async"
+             alt="The neck with every marker drawn as a plain filled circle.">
+        <img class="shot-dark" src="screenshots/10-markers-circles-dark.webp"
+             width="1936" height="579" loading="lazy" decoding="async"
+             alt="The neck with every marker drawn as a plain filled circle.">
+        <figcaption class="figure-caption">Marker Shapes = Circles.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img class="shot-light" src="screenshots/11-markers-intervals-light.webp"
+             width="1936" height="579" loading="lazy" decoding="async"
+             alt="The neck with markers drawn as distinct per-degree shapes instead of plain circles.">
+        <img class="shot-dark" src="screenshots/11-markers-intervals-dark.webp"
+             width="1936" height="579" loading="lazy" decoding="async"
+             alt="The neck with markers drawn as distinct per-degree shapes instead of plain circles.">
+        <figcaption class="figure-caption">Marker Shapes = Intervals: each scale degree takes its own outline.</figcaption>
+      </figure>
 
       <h3>The interval wheel</h3>
       <p>With <strong>Colors</strong> set to Color, a marker&rsquo;s fill is its distance from the
@@ -171,6 +216,24 @@
         <li><strong>Ticks</strong> — a baseline with ticks, chord upward and scale downward.</li>
       </ul>
       <p>The sidebar shows a one-line description of whichever style is selected, so you do not have to guess which is which.</p>
+      <figure class="shot" style="--shot-max: 900px">
+        <img class="shot-light" src="screenshots/12-timeline-brackets-light.webp"
+             width="1800" height="330" loading="lazy" decoding="async"
+             alt="The scale timeline showing twelve semitones with the chord bracketed above the row and the scale bracketed below it.">
+        <img class="shot-dark" src="screenshots/12-timeline-brackets-dark.webp"
+             width="1800" height="330" loading="lazy" decoding="async"
+             alt="The scale timeline showing twelve semitones with the chord bracketed above the row and the scale bracketed below it.">
+        <figcaption class="figure-caption">Structure = Brackets. The chord rail sits above, the scale rail below.</figcaption>
+      </figure>
+      <figure class="shot" style="--shot-max: 900px">
+        <img class="shot-light" src="screenshots/13-timeline-ticks-light.webp"
+             width="1800" height="330" loading="lazy" decoding="async"
+             alt="The same twelve-semitone timeline with chord and scale membership marked by ticks above and below the row instead of brackets.">
+        <img class="shot-dark" src="screenshots/13-timeline-ticks-dark.webp"
+             width="1800" height="330" loading="lazy" decoding="async"
+             alt="The same twelve-semitone timeline with chord and scale membership marked by ticks above and below the row instead of brackets.">
+        <figcaption class="figure-caption">Structure = Ticks — the same information, drawn lighter.</figcaption>
+      </figure>
 
       <h3>Play chips</h3>
       <p>Beside the timeline are up to two playback chips:</p>
@@ -193,12 +256,39 @@
         <li><strong>Lines</strong> — connecting lines through the shape's notes.</li>
         <li><strong>Both</strong> — outline and lines together.</li>
       </ul>
+      <figure class="shot">
+        <img class="shot-light" src="screenshots/14-caged-a-both-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="The A-shape CAGED box outlined over the E Major scale, with connecting lines drawn through the notes inside it.">
+        <img class="shot-dark" src="screenshots/14-caged-a-both-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="The A-shape CAGED box outlined over the E Major scale, with connecting lines drawn through the notes inside it.">
+        <figcaption class="figure-caption">CAGED = A with CAGED Display set to Both: the box and its connecting lines.</figcaption>
+      </figure>
 
       <h3>Shapes (pentatonic)</h3>
       <p><strong>Off / All / 1 / 2 / 3 / 4 / 5.</strong> Overlays pentatonic position boxes. In Scales and Triads modes you pick a single position or All; in Chords mode the same five positions are drawn in the context of the selected chord.</p>
+      <figure class="shot">
+        <img class="shot-light" src="screenshots/15-pentatonic-shape-4-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Pentatonic position 4 outlined on the neck over the E Major scale.">
+        <img class="shot-dark" src="screenshots/15-pentatonic-shape-4-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Pentatonic position 4 outlined on the neck over the E Major scale.">
+        <figcaption class="figure-caption">Shapes = 4: one pentatonic position, boxed in place.</figcaption>
+      </figure>
 
       <h3>3 Notes Per String</h3>
       <p><strong>Off / 1 … 7.</strong> Scales mode only. Draws a pattern with three scale notes on every string. How many patterns exist depends on the scale — a seven-note scale gives seven, and smaller scales offer fewer.</p>
+      <figure class="shot">
+        <img class="shot-light" src="screenshots/16-three-notes-per-string-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="A three-notes-per-string pattern outlined across the neck in E Major.">
+        <img class="shot-dark" src="screenshots/16-three-notes-per-string-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="A three-notes-per-string pattern outlined across the neck in E Major.">
+        <figcaption class="figure-caption">3 Notes Per String = 3.</figcaption>
+      </figure>
 
       <h3>Strings</h3>
       <p><strong>Off / 123 / 234 / 345 / 456.</strong> Triads mode only. Narrows the neck to one set of three adjacent strings so you can work a triad shape without the rest of the neck competing for attention.</p>
@@ -222,7 +312,16 @@
         </li>
       </ul>
       <p>A legend below the neck names the shapes currently drawn.</p>
-    </section>
+          <figure class="shot">
+        <img class="shot-light" src="screenshots/17-chord-shapes-legend-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="E major chord shapes drawn on the neck with finger numbers, and a legend below the neck naming each shape and its position.">
+        <img class="shot-dark" src="screenshots/17-chord-shapes-legend-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="E major chord shapes drawn on the neck with finger numbers, and a legend below the neck naming each shape and its position.">
+        <figcaption class="figure-caption">Real fingerings with finger numbers on, and the legend that names each shape.</figcaption>
+      </figure>
+</section>
 
     <section class="section-card" id="fret-range">
       <h2>Fret range limiter</h2>
@@ -233,7 +332,16 @@
         <li><strong>Drag the track between them</strong> — slide the whole window up or down the neck without changing its width.</li>
       </ul>
       <p>Vertical marks inside the track show which frets hold at least one visible note, so you can see where the material is before you move the window. The neck dims everything outside the range, and Scale playback follows the range too.</p>
-    </section>
+          <figure class="shot">
+        <img class="shot-light" src="screenshots/18-fret-range-limiter-light.webp"
+             width="1936" height="666" loading="lazy" decoding="async"
+             alt="The neck limited to frets five through nine, with the range bar below it and the rest of the neck dimmed.">
+        <img class="shot-dark" src="screenshots/18-fret-range-limiter-dark.webp"
+             width="1936" height="666" loading="lazy" decoding="async"
+             alt="The neck limited to frets five through nine, with the range bar below it and the rest of the neck dimmed.">
+        <figcaption class="figure-caption">Limit Fret Range narrowed to frets 5–9.</figcaption>
+      </figure>
+</section>
 
     <section class="section-card" id="interaction">
       <h2>Tap to play</h2>

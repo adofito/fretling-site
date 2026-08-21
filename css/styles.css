@@ -15,8 +15,9 @@
     6. Chips, callouts, badges
     7. Tables
     8. Fretboard figure
-    9. Interval palette
-   10. Responsive + motion
+    9. Screenshots
+   10. Interval palette
+   11. Responsive + motion
 */
 
 /* ============================================================
@@ -1228,7 +1229,55 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
 :root[data-theme="dark"] .fb-t-11 { --m-text: #000000; }
 
 /* ============================================================
-   9. Interval palette
+   9. Screenshots
+
+   A capture of the app, framed like the neck itself: an inset well in board
+   colour, so the window's own rounded corners sit inside a hairline rather
+   than against the page.
+
+   Every shot ships twice, once per theme, and the pair is swapped by class —
+   never by <picture media>, which follows prefers-color-scheme only and would
+   desync from the System/Light/Dark control in the header.
+   ============================================================ */
+
+.shot {
+  max-width: var(--shot-max, 100%);
+  margin: var(--s-5) 0 var(--s-2);
+  padding: var(--s-2);
+  border-radius: var(--r-island);
+  background: var(--f-board);
+  box-shadow: inset 0 0 0 1px var(--f-hairline);
+}
+
+/* Matches `.section-card ul` specificity, the same guard the palette uses, so a
+   figure inside a card keeps the card's full width instead of the prose measure. */
+.section-card .shot { max-width: var(--shot-max, 100%); }
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;   /* honours the intrinsic ratio from the width/height attributes */
+  border-radius: calc(var(--r-island) - var(--s-1));
+}
+
+/* Theme swap. Every selector qualifies the image (`img.shot-dark`, not
+   `.shot-dark`) because `.shot img` above already sets display, and a bare
+   class would lose to it on specificity — both themes would show at once.
+
+   Three declarations in this order: media queries add no specificity, so the
+   explicit [data-theme] rules must come last to win. */
+.shot img.shot-dark { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .shot img.shot-light { display: none; }
+  :root:not([data-theme="light"]) .shot img.shot-dark  { display: block; }
+}
+
+:root[data-theme="dark"] .shot img.shot-light { display: none; }
+:root[data-theme="dark"] .shot img.shot-dark  { display: block; }
+
+/* ============================================================
+   10. Interval palette
    ============================================================ */
 
 /* A figure, not prose — it takes the card's full width, not the measure.
@@ -1276,7 +1325,7 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
 }
 
 /* ============================================================
-   10. Responsive + motion
+   11. Responsive + motion
    ============================================================ */
 
 @media (max-width: 900px) {
@@ -1341,4 +1390,8 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   .site-header, .theme-control, .skip-link, .toc { display: none; }
   body { background: #fff; color: #000; }
   .section-card, .stage, .guide-index { box-shadow: none; border: 1px solid #ddd; }
+  /* Paper is always light: print the light shot whatever the screen was showing. */
+  .shot { box-shadow: none; border: 1px solid #ddd; background: none; }
+  .shot img.shot-light { display: block !important; }
+  .shot img.shot-dark { display: none !important; }
 }

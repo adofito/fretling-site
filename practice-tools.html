@@ -96,6 +96,15 @@
     <section class="section-card" id="tuner">
       <h2>Tuner</h2>
       <p>A chromatic tuner that listens through your microphone or audio interface. It names the note you are playing and shows how far off you are in cents.</p>
+      <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="screenshots/23-tuner-light.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The tuner panel reading A2 flat, with the bar indicator sitting left of centre.">
+        <img class="shot-dark" src="screenshots/23-tuner-dark.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The tuner panel reading A2 flat, with the bar indicator sitting left of centre.">
+        <figcaption class="figure-caption">The tuner in Fast mode, showing a note that is flat.</figcaption>
+      </figure>
 
       <h3>Indicator styles</h3>
       <p>Five ways of drawing the same measurement — pick whichever you read fastest:</p>
@@ -140,7 +149,16 @@
           </tbody>
         </table>
       </div>
-    </section>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="screenshots/24-metronome-light.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The metronome panel at 120 BPM in 4/4 with quarter-note subdivision and the drum kit sound pack selected.">
+        <img class="shot-dark" src="screenshots/24-metronome-dark.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The metronome panel at 120 BPM in 4/4 with quarter-note subdivision and the drum kit sound pack selected.">
+        <figcaption class="figure-caption">The metronome, stopped: tempo, meter, subdivision, sound and accent.</figcaption>
+      </figure>
+</section>
 
     <section class="section-card" id="drums">
       <h2>Drum sequencer</h2>
@@ -153,7 +171,16 @@
         <li><strong>Reset</strong> — restores the default kick, snare and hat steps for the current meter.</li>
       </ul>
       <p>Changing the meter while a custom pattern is loaded asks what you want done with it rather than silently reshaping your work.</p>
-    </section>
+          <figure class="shot" style="--shot-max: 500px">
+        <img class="shot-light" src="screenshots/25-drum-sequencer-light.webp"
+             width="1000" height="980" loading="lazy" decoding="async"
+             alt="The drum pattern editor with kick, snare and hat lanes over a step grid.">
+        <img class="shot-dark" src="screenshots/25-drum-sequencer-dark.webp"
+             width="1000" height="980" loading="lazy" decoding="async"
+             alt="The drum pattern editor with kick, snare and hat lanes over a step grid.">
+        <figcaption class="figure-caption">The drum sequencer. Edits play live; Save keeps a pattern in your library.</figcaption>
+      </figure>
+</section>
 
     <section class="section-card" id="amp">
       <h2>Guitar amp <span class="platform-badge">Mac only</span></h2>
@@ -167,6 +194,15 @@
         <li><strong>Input gain</strong> and <strong>Output gain</strong> — level into and out of the amp path.</li>
         <li><strong>Model input level</strong> and <strong>Model output level</strong> — trim around the model itself, which is how you match a profile that was captured hot or quiet.</li>
       </ul>
+      <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="screenshots/26-amp-light.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The guitar amp panel on the Amp tab with a Neural Amp Modeler profile loaded, the input meter at rest and Monitor idle.">
+        <img class="shot-dark" src="screenshots/26-amp-dark.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The guitar amp panel on the Amp tab with a Neural Amp Modeler profile loaded, the input meter at rest and Monitor idle.">
+        <figcaption class="figure-caption">The Amp tab with a starter model loaded, before Monitor is turned on.</figcaption>
+      </figure>
 
       <h3>Advanced tab</h3>
       <ul>
@@ -175,7 +211,16 @@
         <li><strong>Latency</strong> — the resulting monitoring latency, reported in milliseconds so the trade is a number rather than a guess.</li>
       </ul>
       <p>Every slider has tick marks, a dB readout, and a double-click reset back to its default.</p>
-    </section>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="screenshots/27-amp-advanced-light.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The guitar amp panel on the Advanced tab, showing the input device picker and a link to the system sound settings.">
+        <img class="shot-dark" src="screenshots/27-amp-advanced-dark.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The guitar amp panel on the Advanced tab, showing the input device picker and a link to the system sound settings.">
+        <figcaption class="figure-caption">The Advanced tab: input device, channel, buffer size and sample rate.</figcaption>
+      </figure>
+</section>
 
     <section class="section-card" id="looper">
       <h2>Looper <span class="platform-badge">Mac only</span></h2>
@@ -191,7 +236,16 @@
       </ul>
       <p>A beat readout shows where in the loop you are. Changing the sample rate clears the loop — the recording no longer matches the engine — and the looper tells you when that has happened.</p>
       <p>Loops live in memory for the session only. Nothing is written to disk, and quitting the app discards them.</p>
-    </section>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="screenshots/28-looper-light.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The looper panel armed and empty, showing the record button, the bars setting and the loop controls.">
+        <img class="shot-dark" src="screenshots/28-looper-dark.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The looper panel armed and empty, showing the record button, the bars setting and the loop controls.">
+        <figcaption class="figure-caption">The looper before anything is recorded.</figcaption>
+      </figure>
+</section>
 
     <section class="section-card" id="mixer">
       <h2>Mixer</h2>
@@ -213,13 +267,31 @@
         </table>
       </div>
       <p>Every strip except Main has <strong>mute</strong> and <strong>solo</strong>; a badge on the panel reminds you when something is muted or soloed, so a silent app is never a mystery. Levels persist between sessions.</p>
-    </section>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="screenshots/29-mixer-light.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The mixer panel with a strip for each voice, one of them muted so its badge is lit.">
+        <img class="shot-dark" src="screenshots/29-mixer-dark.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The mixer panel with a strip for each voice, one of them muted so its badge is lit.">
+        <figcaption class="figure-caption">The mixer, with the click muted — the badge reminds you why it is silent.</figcaption>
+      </figure>
+</section>
 
     <section class="section-card" id="live-detect">
       <h2>Live Detect</h2>
       <p>Live Detect listens to what you play and marks it on the neck in real time, so you can check that what you are fingering is what you think it is.</p>
       <p>In <a href="learning-modes.html#identify">identify</a> mode it gains a <strong>Send to fretboard</strong> button, which takes the notes it just heard and places them on the neck as an identification query — play a chord you cannot name, send it over, and read the ranked answers.</p>
-    </section>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="screenshots/30-live-detect-light.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The Live Detect panel waiting to listen, reading “Tap Listen to detect what you play”.">
+        <img class="shot-dark" src="screenshots/30-live-detect-dark.webp"
+             width="1700" height="1400" loading="lazy" decoding="async"
+             alt="The Live Detect panel waiting to listen, reading “Tap Listen to detect what you play”.">
+        <figcaption class="figure-caption">Live Detect before you start: press Listen and play.</figcaption>
+      </figure>
+</section>
 
     <section class="section-card" id="microphone">
       <h2>Microphone access</h2>

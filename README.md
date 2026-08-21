@@ -61,10 +61,24 @@ Never edit them by hand — rebuild them from the icon set:
 
 ## Screenshots
 
-The guide currently ships without screenshots. The previous set was captured on 2026-02-07
-and no longer matches the app, so it was removed rather than published stale.
-[`screenshots/CAPTURE.md`](screenshots/CAPTURE.md) lists the 24 shots to take, the exact app
-state for each, the filename to save it under, and the markup to drop one into a page.
+The guide ships 30 screenshots, each in a light and a dark version, as WebP in
+`screenshots/`. They are **generated, never taken by hand**:
+
+```sh
+./build.sh debug
+scripts/site/capture-guide.sh
+```
+
+The script stages the app through launch arguments, captures both themes, crops
+to the region each section describes, converts to sRGB and encodes. Raw captures
+land in `screenshots/raw/` and are gitignored — regenerate rather than keep them.
+[`screenshots/CAPTURE.md`](screenshots/CAPTURE.md) documents the shot list, the
+flags, the crop-rect workflow, and the `<figure class="shot">` markup.
+
+The pages carry both versions and swap them in CSS, so screenshots follow the
+reader's theme. The Markdown mirrors in `markdown/` are deliberately **text-only**:
+Markdown has no theme mechanism, so a light-only image would render wrong for
+readers on a dark GitHub.
 
 ## Publishing
 
