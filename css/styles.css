@@ -1,316 +1,1344 @@
-/* Fretling Documentation – overrides and extras on top of Pico CSS */
-
 /*
-  Fretling app color palette (from ColorPalette.swift & AppTheme.swift).
-  RGB values converted from SwiftUI Color 0–1 to hex.
-*/
-:root {
-  /* Primary palette */
-  --fretling-deep-blue: #3366b3;
-  --fretling-teal: #339999;
-  --fretling-primary-blue: #4080cc;
-  --fretling-light-blue: #66b3e6;
-  --fretling-purple: #7f4db3;
-  --fretling-amber: #f29933;
-  --fretling-gold: #f2bf4d;
-  --fretling-emerald: #33b380;
-  --fretling-forest-green: #336633;
-  /* Backgrounds (light theme) */
-  --fretling-warm-bg: #faf7f2;
-  --fretling-card-bg: #ffffff;
-  /* Neutrals */
-  --fretling-neutral-gray: #808080;
-  --fretling-light-gray: #e6e6e6;
-  --fretling-dark-gray: #333333;
-  /* Text */
-  --fretling-text: #000000;
-  --fretling-text-dimmed: rgba(0, 0, 0, 0.7);
-  --fretling-shadow: rgba(0, 0, 0, 0.08);
-  --fretling-diagram-line: rgba(0, 0, 0, 0.45);
-  --fretling-diagram-fill: rgba(51, 153, 153, 0.10);
+  Fretling user guide — stylesheet.
 
-  /* Map Pico to Fretling palette (light) */
-  --pico-primary: var(--fretling-teal);
-  --pico-primary-hover: var(--fretling-deep-blue);
-  --pico-primary-focus: rgba(51, 153, 153, 0.15);
-  --pico-background-color: var(--fretling-warm-bg);
-  --pico-color: var(--fretling-text);
-  --pico-muted-color: var(--fretling-neutral-gray);
-  --pico-muted-border-color: var(--fretling-light-gray);
-  --pico-card-sectioning-background-color: var(--fretling-card-bg);
+  Self-contained: no framework, no CDN, no webfont. Every value below is either
+  lifted from the app's own design system (Fretling/Theme/ColorPalette.swift,
+  AppTheme.swift, DESIGN.md) or derived from it for the web, and the derivations
+  say so. The guide is meant to feel like the app it documents.
+
+  Contents
+    1. Tokens (light)
+    2. Tokens (dark)
+    3. Base + typography
+    4. Page chrome — header, chip nav, theme control, footer
+    5. Islands and reading blocks
+    6. Chips, callouts, badges
+    7. Tables
+    8. Fretboard figure
+    9. Interval palette
+   10. Responsive + motion
+*/
+
+/* ============================================================
+   1. Tokens (light)
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+
+  /* -- Interval wheel: AppTheme.intervalColors, 0-11 semitones ------------ */
+  --f-int-0:  #3366b3;  /* deepBlue      root      */
+  --f-int-1:  #339999;  /* teal          minor 2nd */
+  --f-int-2:  #66b3e6;  /* lightBlue     major 2nd */
+  --f-int-3:  #804db3;  /* purple        minor 3rd */
+  --f-int-4:  #664db3;  /* indigo        major 3rd */
+  --f-int-5:  #9966cc;  /* violet        perfect 4th */
+  --f-int-6:  #cc4d99;  /* magenta       tritone   */
+  --f-int-7:  #e66680;  /* rose          perfect 5th */
+  --f-int-8:  #f29933;  /* amber         minor 6th */
+  --f-int-9:  #f2bf4d;  /* gold          major 6th */
+  --f-int-10: #33b380;  /* emerald       minor 7th */
+  --f-int-11: #338066;  /* forestGreen   major 7th */
+
+  /* -- Header accents: the sentence at the top of the app ----------------- */
+  --f-accent-intent: #cc4d99;  /* magenta        — learn / identify */
+  --f-accent-mode:   #f2a633;  /* warningAmber   — scales / chords / triads */
+  --f-accent-note:   #4080cc;  /* primaryBlue    — root note */
+  --f-accent-scale:  #804db3;  /* purple         — scale type */
+  --f-accent-chord:  #33a666;  /* successGreen   — chord */
+  --f-accent-app:    #3366b3;  /* deepBlue       — sidebarAccent: settings, links */
+  --f-accent-looper: #9966cc;  /* violet         — looper island */
+  --f-accent-mixer:  #e66680;  /* rose           — mixer island */
+
+  /* Actions: AppTheme.playScale / .stop */
+  --f-action-play: #4080cc;
+  --f-action-stop: #d9404d;
+
+  /* Each page takes one accent, used for its heading rules and marks. */
+  --page-accent: var(--f-accent-app);
+
+  /* -- Surfaces ----------------------------------------------------------- */
+  --f-canvas:     #faf7f2;  /* warmBackground  — the app canvas */
+  --f-surface:    #ffffff;  /* surfaceElevated — fretboard island, settings cards */
+  --f-surface-2:  #fcfaf7;  /* surfaceSubtle   — card gradient end */
+  --f-band:       #f0ebe0;  /* sidebarHeader   — warm neutral band */
+  --f-board:      #ffffff;  /* fretboardBackground */
+
+  /* -- Ink ---------------------------------------------------------------- */
+  /* textOnLight is pure black in the app; body prose is softened one step
+     because the guide is read in paragraphs, not in 12pt marker labels. */
+  --f-ink:     #000000;
+  --f-ink-body: rgba(0, 0, 0, 0.86);
+  --f-ink-2:   rgba(0, 0, 0, 0.62);   /* secondary label */
+  --f-ink-3:   rgba(0, 0, 0, 0.55);   /* metadata — 4.6:1 on the canvas */
+  --f-hairline: rgba(0, 0, 0, 0.10);
+  --f-hairline-strong: rgba(0, 0, 0, 0.16);
+
+  /* -- Fretboard parts: AppTheme fretboard tokens ------------------------- */
+  --f-string: rgba(102, 102, 102, 0.4);   /* strings: white 0.4 @ 40% */
+  --f-fret:   #4d4d4d;                    /* frets:   white 0.3 */
+  --f-nut:    #333333;                    /* nut:     white 0.2 */
+  --f-fretnum:      rgba(0, 0, 0, 0.62);
+  --f-fretnum-bg:   #805940;              /* warm brown, marker frets */
+  --f-fretnum-on:   #ffffff;
+  --f-gray-fill:    #595959;              /* grayscaleFill: white 0.35 */
+  --f-gray-text:    #ffffff;
+
+  /* -- Elevation: dropdown shadow (r4 y2) and island shadow (r12) --------- */
+  --f-shadow-chip:   0 2px 4px rgba(0, 0, 0, 0.08);
+  --f-shadow-island: 0 1px 2px rgba(0, 0, 0, 0.04), 0 6px 18px rgba(0, 0, 0, 0.07);
+
+  /* -- Spacing: the app's 4 / 8 / 12 / 16 / 20 / 24 scale, extended for the
+        longer vertical rhythm a document needs. ---------------------------- */
+  --s-1: 4px;   --s-2: 8px;   --s-3: 12px;  --s-4: 16px;
+  --s-5: 20px;  --s-6: 24px;  --s-8: 32px;  --s-10: 40px;
+  --s-12: 48px; --s-16: 64px; --s-20: 80px;
+
+  /* -- Radii: widget island 12, dropdown chip 6, inner control 10 --------- */
+  --r-chip: 6px;
+  --r-control: 10px;
+  --r-island: 12px;
+  --r-pill: 999px;
+
+  /* -- Type: two faces only, matching DESIGN.md --------------------------- */
+  --font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+             system-ui, Roboto, sans-serif;
+  --font-serif: ui-serif, "New York", "Iowan Old Style", Palatino, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --t-display: 44px;   /* page title — the guide's own serif voice */
+  --t-lede: 21px;
+  --t-sentence: 32px;  /* LearningHeaderView, regular size class */
+  --t-h2: 22px;
+  --t-h3: 18px;
+  --t-body: 17px;
+  --t-label: 15px;     /* AppFont.settingsLabel */
+  --t-control: 13px;   /* AppFont.settingsControl */
+  --t-caption: 12px;   /* caption2 — chip labels */
+
+  --measure: 68ch;
+  --page-max: 1080px;
 }
 
-/*
-  Dark theme – Fretling dark palette.
-  Declared twice on purpose: once for the system preference (unless the reader has
-  explicitly asked for light) and once for an explicit dark choice, so a toggle wins
-  in both directions. A single combined `[data-theme="dark"], @media (...)` selector
-  list is invalid CSS and silently drops the whole block.
-*/
+/* ============================================================
+   2. Tokens (dark)
+
+   Declared twice on purpose: once for the system preference (unless the
+   reader has explicitly asked for light) and once for an explicit dark
+   choice, so the theme control wins in both directions. A single combined
+   `[data-theme="dark"], @media (...)` selector list is invalid CSS and
+   silently drops the whole block.
+   ============================================================ */
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --fretling-shadow: rgba(0, 0, 0, 0.35);
-    --fretling-diagram-line: rgba(255, 255, 255, 0.5);
-    --fretling-diagram-fill: rgba(77, 179, 179, 0.14);
+    color-scheme: dark;
 
-    --pico-primary: #4db3b3;
-    --pico-primary-hover: var(--fretling-light-blue);
-    --pico-primary-focus: rgba(77, 179, 179, 0.2);
-    --pico-background-color: #1a1a1a;
-    --pico-color: #ffffff;
-    --pico-muted-color: rgba(255, 255, 255, 0.65);
-    --pico-muted-border-color: #404040;
-    --pico-card-sectioning-background-color: #252525;
+    --f-int-0:  #6699e6;  --f-int-1:  #4db3b3;  --f-int-2:  #66b3e6;
+    --f-int-3:  #9966cc;  --f-int-4:  #664db3;  --f-int-5:  #9966cc;
+    --f-int-6:  #cc4d99;  --f-int-7:  #ff8099;  --f-int-8:  #ffb34d;
+    --f-int-9:  #f2bf4d;  --f-int-10: #4dcc99;  --f-int-11: #33b380;
+
+    --f-accent-intent: #e66bbf;  /* darkThemeMagenta */
+    --f-accent-mode:   #ffb34d;  /* darkThemeAmber — lifted for dark ground */
+    --f-accent-note:   #6699e6;  /* darkThemeDeepBlue */
+    --f-accent-scale:  #9966cc;  /* darkThemePurple */
+    --f-accent-chord:  #4dcc99;  /* darkThemeEmerald */
+    --f-accent-app:    #6699e6;
+    --f-accent-looper: #9966cc;
+    --f-accent-mixer:  #ff8099;  /* darkThemeRose */
+
+    --f-action-play: #6699e6;    /* darkThemeDeepBlue */
+    --f-action-stop: #ff5f6b;
+
+    --f-canvas:    #1a1a1a;  /* darkBackground */
+    --f-surface:   #2e2e2e;  /* surfaceElevated: white 0.18 */
+    --f-surface-2: #242424;  /* surfaceSubtle:   white 0.14 */
+    --f-band:      #292929;  /* sidebarHeader:   white 0.16 */
+    --f-board:     #1f1f1f;  /* fretboardBackground: white 0.12 */
+
+    --f-ink:      #ffffff;
+    --f-ink-body: rgba(255, 255, 255, 0.90);
+    --f-ink-2:    rgba(255, 255, 255, 0.68);
+    --f-ink-3:    rgba(255, 255, 255, 0.58);
+    --f-hairline: rgba(255, 255, 255, 0.10);
+    --f-hairline-strong: rgba(255, 255, 255, 0.18);
+
+    --f-string: rgba(128, 128, 128, 0.6);
+    --f-fret:   #999999;
+    --f-nut:    #b3b3b3;
+    --f-fretnum:    rgba(255, 255, 255, 0.62);
+    --f-fretnum-bg: #a67352;
+    --f-gray-fill:  #d9d9d9;
+    --f-gray-text:  #404040;
+
+    --f-shadow-chip:   0 2px 4px rgba(0, 0, 0, 0.45);
+    --f-shadow-island: 0 1px 2px rgba(0, 0, 0, 0.30), 0 8px 22px rgba(0, 0, 0, 0.45);
   }
 }
 
 :root[data-theme="dark"] {
-  --fretling-shadow: rgba(0, 0, 0, 0.35);
-  --fretling-diagram-line: rgba(255, 255, 255, 0.5);
-  --fretling-diagram-fill: rgba(77, 179, 179, 0.14);
+  color-scheme: dark;
 
-  --pico-primary: #4db3b3;
-  --pico-primary-hover: var(--fretling-light-blue);
-  --pico-primary-focus: rgba(77, 179, 179, 0.2);
-  --pico-background-color: #1a1a1a;
-  --pico-color: #ffffff;
-  --pico-muted-color: rgba(255, 255, 255, 0.65);
-  --pico-muted-border-color: #404040;
-  --pico-card-sectioning-background-color: #252525;
+  --f-int-0:  #6699e6;  --f-int-1:  #4db3b3;  --f-int-2:  #66b3e6;
+  --f-int-3:  #9966cc;  --f-int-4:  #664db3;  --f-int-5:  #9966cc;
+  --f-int-6:  #cc4d99;  --f-int-7:  #ff8099;  --f-int-8:  #ffb34d;
+  --f-int-9:  #f2bf4d;  --f-int-10: #4dcc99;  --f-int-11: #33b380;
+
+  --f-accent-intent: #e66bbf;
+  --f-accent-mode:   #ffb34d;
+  --f-accent-note:   #6699e6;
+  --f-accent-scale:  #9966cc;
+  --f-accent-chord:  #4dcc99;
+  --f-accent-app:    #6699e6;
+  --f-accent-looper: #9966cc;
+  --f-accent-mixer:  #ff8099;
+
+  --f-action-play: #6699e6;
+  --f-action-stop: #ff5f6b;
+
+  --f-canvas:    #1a1a1a;
+  --f-surface:   #2e2e2e;
+  --f-surface-2: #242424;
+  --f-band:      #292929;
+  --f-board:     #1f1f1f;
+
+  --f-ink:      #ffffff;
+  --f-ink-body: rgba(255, 255, 255, 0.90);
+  --f-ink-2:    rgba(255, 255, 255, 0.68);
+  --f-ink-3:    rgba(255, 255, 255, 0.58);
+  --f-hairline: rgba(255, 255, 255, 0.10);
+  --f-hairline-strong: rgba(255, 255, 255, 0.18);
+
+  --f-string: rgba(128, 128, 128, 0.6);
+  --f-fret:   #999999;
+  --f-nut:    #b3b3b3;
+  --f-fretnum:    rgba(255, 255, 255, 0.62);
+  --f-fretnum-bg: #a67352;
+  --f-gray-fill:  #d9d9d9;
+  --f-gray-text:  #404040;
+
+  --f-shadow-chip:   0 2px 4px rgba(0, 0, 0, 0.45);
+  --f-shadow-island: 0 1px 2px rgba(0, 0, 0, 0.30), 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+/* Light type on a dark ground reads tighter than it is; give it back a little. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body { line-height: 1.65; letter-spacing: 0.006em; }
+}
+:root[data-theme="dark"] body { line-height: 1.65; letter-spacing: 0.006em; }
+
+/* ============================================================
+   3. Base + typography
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;   /* sticky header + breathing room */
 }
 
 body {
-  background-color: var(--pico-background-color);
-  color: var(--pico-color);
+  margin: 0;
+  background-color: var(--f-canvas);
+  color: var(--f-ink-body);
+  font-family: var(--font-ui);
+  font-size: var(--t-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* Skip link (accessibility) */
+h1, h2, h3, h4 {
+  color: var(--f-ink);
+  font-family: var(--font-ui);
+  line-height: 1.2;
+  text-wrap: balance;
+  margin: 0;
+}
+
+/*
+  The page title speaks in the app's serif — the same face and light weight the
+  learning sentence uses. Structural headings below it stay in SF, so the two
+  voices divide the way they do in the app: prose in serif, chrome in SF.
+*/
+h1 {
+  font-family: var(--font-serif);
+  font-size: var(--t-display);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: var(--t-h2);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--t-h3);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+p, ul, ol, dl, blockquote, figure, table { margin: 0; }
+
+p, li { text-wrap: pretty; }
+p { max-width: var(--measure); }
+
+a {
+  color: var(--f-accent-app);
+  text-decoration-color: color-mix(in srgb, var(--f-accent-app) 35%, transparent);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease-out, text-decoration-color 0.15s ease-out;
+}
+a:hover { text-decoration-color: currentColor; }
+
+strong, b { color: var(--f-ink); font-weight: 600; }
+
+em { font-style: italic; }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  padding: 0.12em 0.36em;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--f-ink) 6%, transparent);
+  color: var(--f-ink);
+}
+
+:where(a, button, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--f-accent-note);
+  outline-offset: 3px;
+  border-radius: var(--r-chip);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .skip-link {
   position: absolute;
   top: -100px;
-  left: 0;
-  padding: 0.75rem 1rem;
-  background: var(--pico-primary);
-  color: var(--pico-color-inverse);
-  text-decoration: none;
+  left: var(--s-4);
   z-index: 100;
-  border-radius: 0 0 var(--pico-border-radius) 0;
+  padding: var(--s-3) var(--s-4);
+  border-radius: 0 0 var(--r-control) var(--r-control);
+  background: var(--f-accent-note);
+  color: #ffffff;
+  font-size: var(--t-label);
+  font-weight: 600;
+  text-decoration: none;
 }
 .skip-link:focus { top: 0; }
 
-/* Header: flex layout so brand and nav sit in one row */
-.site-header .header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+/* ============================================================
+   4. Page chrome
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--s-6);
 }
 
+/* Opaque, like the app's canvas — Fretling has no translucent chrome. */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  box-shadow: 0 1px 0 var(--pico-muted-border-color);
-  background-color: var(--pico-background-color);
+  background: var(--f-canvas);
+  border-bottom: 1px solid var(--f-hairline);
 }
 
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--s-5);
+  min-height: 60px;
+  padding-block: var(--s-2);
+  flex-wrap: wrap;
+}
+
+/* Wordmark — the app's serif voice, at label scale */
 .brand {
-  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-family: var(--font-serif);
+  font-size: 20px;
   font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--f-ink);
   text-decoration: none;
-  color: var(--pico-color);
+  white-space: nowrap;
 }
-.brand:hover { color: var(--pico-primary); }
+.brand:hover { color: var(--f-ink); }
+.brand .brand-mark { display: block; flex: none; }
+.brand .brand-mark .bm-string { stroke: var(--f-string); stroke-width: 1; }
+.brand .brand-mark .bm-fret { stroke: var(--f-fret); stroke-width: 1; opacity: 0.6; }
+.brand .brand-mark .bm-nut { stroke: var(--f-nut); stroke-width: 2; }
+.brand .brand-mark .bm-dot-a { fill: var(--f-int-0); }
+.brand .brand-mark .bm-dot-b { fill: var(--f-int-4); }
+.brand .brand-mark .bm-dot-c { fill: var(--f-int-7); }
 
-/* Horizontal nav (Pico often stacks nav links) */
-.site-header nav ul {
+/*
+  Chip bar — the app's ToggleChip grammar (8px mark, 6px gap, dimmed when off)
+  carried into site navigation. The label scales up from caption2 to 15px:
+  on the neck the chips are a dense overlay, here they are the primary nav.
+*/
+.chip-nav { margin-inline-start: auto; }
+
+.chip-nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.chip-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 44px;
+  padding-inline: var(--s-2);
+  border-radius: var(--r-chip);
+  color: var(--f-ink-2);
+  font-size: var(--t-label);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease-out;
+}
+
+.chip-nav a::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--chip-mark, var(--f-ink-3));
+  opacity: 0.35;
+  transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+}
+
+.chip-nav a:hover { color: var(--f-ink); }
+.chip-nav a:hover::before { opacity: 0.7; }
+
+.chip-nav a[aria-current="page"] {
+  color: var(--f-ink);
+  font-weight: 600;
+}
+.chip-nav a[aria-current="page"]::before { opacity: 1; }
+
+/* Per-item mark colors follow the app's accent for that concept. */
+.chip-nav a[data-mark="guide"]    { --chip-mark: var(--f-accent-intent); }
+.chip-nav a[data-mark="modes"]    { --chip-mark: var(--f-accent-mode); }
+.chip-nav a[data-mark="fretboard"]{ --chip-mark: var(--f-accent-note); }
+.chip-nav a[data-mark="tools"]    { --chip-mark: var(--f-accent-looper); }
+.chip-nav a[data-mark="settings"] { --chip-mark: var(--f-accent-app); }
+.chip-nav a[data-mark="privacy"]  { --chip-mark: var(--f-ink-3); }
+
+/* Segmented theme control — the app's Appearance picker (System / Light / Dark) */
+.theme-control { display: none; }
+:root.js .theme-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--r-control);
+  background: color-mix(in srgb, var(--f-ink) 7%, transparent);
+}
+
+.theme-control button {
+  appearance: none;
+  border: 0;
+  min-height: 30px;
+  padding: 0 var(--s-3);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--f-ink-2);
+  font-family: inherit;
+  font-size: var(--t-control);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease-out, color 0.15s ease-out;
+}
+.theme-control button:hover { color: var(--f-ink); }
+.theme-control button[aria-pressed="true"] {
+  background: var(--f-surface);
+  color: var(--f-ink);
+  font-weight: 600;
+  box-shadow: var(--f-shadow-chip);
+}
+
+.site-footer {
+  margin-top: var(--s-16);
+  border-top: 1px solid var(--f-hairline);
+  color: var(--f-ink-2);
+  font-size: var(--t-control);
+}
+.site-footer .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding-block: var(--s-6);
+}
+.site-footer p { margin: 0; max-width: none; }
+.site-footer a { color: var(--f-ink-2); }
+
+/* ============================================================
+   5. Islands and reading blocks
+   ============================================================ */
+
+main.container {
+  padding-top: var(--s-10);
+  padding-bottom: var(--s-16);
+}
+
+main > h1 { margin-bottom: var(--s-3); }
+
+/* A heading that sits on the canvas between islands, not inside one. */
+.section-heading {
+  margin-top: var(--s-12);
+  margin-bottom: var(--s-4);
+}
+
+/* A dateline or scope line directly under the page title. */
+.page-meta {
+  max-width: var(--measure);
+  margin-bottom: var(--s-10);
+  color: var(--f-ink-2);
+  font-size: var(--t-label);
+}
+.page-meta strong { color: var(--f-ink); font-weight: 600; }
+
+.lede {
+  max-width: 60ch;
+  margin-bottom: var(--s-10);
+  font-family: var(--font-serif);
+  font-size: var(--t-lede);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--f-ink-2);
+}
+
+/*
+  Island — surfaceElevated over the warm canvas, 12px corner, the app's soft
+  shadow. This is the fretboard island / settings card, translated.
+*/
+.section-card {
+  padding: var(--s-8);
+  margin-bottom: var(--s-6);
+  border-radius: var(--r-island);
+  background: linear-gradient(180deg, var(--f-surface) 0%, var(--f-surface-2) 100%);
+  box-shadow: var(--f-shadow-island);
+}
+
+/*
+  Nut, then frets: a short bar in the page's accent, then the hairline. Each
+  page takes its accent from the app control the page is about.
+*/
+.section-card > h2 {
+  margin-bottom: var(--s-4);
+  padding-bottom: var(--s-3);
+  background-image:
+    linear-gradient(var(--page-accent), var(--page-accent)),
+    linear-gradient(var(--f-hairline), var(--f-hairline));
+  background-size: 28px 2px, 100% 1px;
+  background-position: 0 100%, 0 100%;
+  background-repeat: no-repeat;
+}
+
+.section-card h3 { margin-top: var(--s-8); margin-bottom: var(--s-2); }
+.section-card > :first-child { margin-top: 0; }
+
+.section-card p + p,
+.section-card p + ul,
+.section-card p + ol,
+.section-card ul + p,
+.section-card ol + p { margin-top: var(--s-4); }
+
+.section-card h2 + p,
+.section-card h3 + p,
+.section-card h3 + ul { margin-top: 0; }
+
+.section-card ul,
+.section-card ol {
+  max-width: var(--measure);
+  padding-left: var(--s-5);
+}
+.section-card li { margin-bottom: var(--s-2); }
+.section-card li::marker { color: var(--f-ink-3); }
+.section-card li > strong:first-child { color: var(--f-ink); }
+
+.section-card blockquote {
+  margin: var(--s-5) 0;
+  padding: var(--s-4) var(--s-5);
+  border-radius: var(--r-control);
+  background: color-mix(in srgb, var(--f-band) 55%, transparent);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--f-ink);
+}
+.section-card blockquote strong { font-weight: 700; }
+
+/*
+  Guide index — wayfinding on the home page. A list, not a card grid: the
+  reader is choosing a destination, and rows compare faster than tiles.
+*/
+.guide-index {
+  display: grid;
+  gap: 0;
+  margin-top: var(--s-6);
+  border-radius: var(--r-island);
+  background: linear-gradient(180deg, var(--f-surface) 0%, var(--f-surface-2) 100%);
+  box-shadow: var(--f-shadow-island);
+  overflow: hidden;
+}
+
+.guide-index a {
+  display: grid;
+  grid-template-columns: 8px 1fr auto;
+  align-items: baseline;
+  column-gap: var(--s-4);
+  padding: var(--s-5) var(--s-6);
+  border-top: 1px solid var(--f-hairline);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.15s ease-out;
+}
+.guide-index a:first-child { border-top: 0; }
+.guide-index a:hover { background: color-mix(in srgb, var(--f-ink) 3%, transparent); }
+
+.guide-index .gi-mark {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--chip-mark, var(--f-ink-3));
+  transform: translateY(-3px);
+}
+.guide-index a[data-mark="modes"]     { --chip-mark: var(--f-accent-mode); }
+.guide-index a[data-mark="fretboard"] { --chip-mark: var(--f-accent-note); }
+.guide-index a[data-mark="tools"]     { --chip-mark: var(--f-accent-looper); }
+.guide-index a[data-mark="settings"]  { --chip-mark: var(--f-accent-app); }
+
+.guide-index .gi-title {
+  display: block;
+  color: var(--f-ink);
+  font-size: var(--t-h3);
+  font-weight: 600;
+}
+.guide-index .gi-desc {
+  display: block;
+  margin-top: var(--s-1);
+  color: var(--f-ink-2);
+  font-size: var(--t-label);
+  max-width: 74ch;
+}
+.guide-index .gi-go {
+  color: var(--f-ink-3);
+  font-size: var(--t-h3);
+  transition: transform 0.15s ease-out, color 0.15s ease-out;
+}
+.guide-index a:hover .gi-go { color: var(--f-accent-app); transform: translateX(3px); }
+
+/*
+  On this page — the marker display bar's chip rhythm: an 8px mark, a 6px gap,
+  a quiet caption, sitting on the canvas rather than in a card.
+*/
+.toc {
+  margin-bottom: var(--s-10);
+  padding: 0;
+  background: none;
+  border: 0;
+}
+.toc h2 {
+  margin-bottom: var(--s-3);
+  color: var(--f-ink-2);
+  font-size: var(--t-caption);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.toc ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-5);
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.site-header nav a {
-  display: block;
-  padding: 0.5rem 0.75rem;
-  border-radius: var(--pico-border-radius);
+.toc li { margin: 0; }
+.toc a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 36px;
+  color: var(--f-ink-2);
+  font-size: var(--t-label);
   text-decoration: none;
-  font-size: 0.95rem;
 }
-.site-header nav a:hover {
-  background: var(--pico-primary-focus);
-  color: var(--pico-primary);
+.toc a::before {
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  opacity: 0.45;
+  transition: opacity 0.15s ease-out, background 0.15s ease-out;
 }
-.site-header nav a.active {
-  color: var(--pico-primary);
+.toc a:hover { color: var(--f-accent-app); }
+.toc a:hover::before { opacity: 1; background: currentColor; }
+
+/* Page identity: the accent of the app surface each page documents. */
+body[data-page="guide"]     { --page-accent: var(--f-accent-intent); }
+body[data-page="modes"]     { --page-accent: var(--f-accent-mode); }
+body[data-page="fretboard"] { --page-accent: var(--f-accent-note); }
+body[data-page="tools"]     { --page-accent: var(--f-accent-looper); }
+body[data-page="settings"]  { --page-accent: var(--f-accent-app); }
+body[data-page="privacy"]   { --page-accent: var(--f-accent-chord); }
+
+/* ============================================================
+   6. Chips, callouts, badges
+   ============================================================ */
+
+/*
+  Sentence chip — StyledDropdown, exactly: serif bold in the accent color,
+  on an 8% fill of that same accent, 6px corner, r4/y2 shadow.
+*/
+.sentence {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  font-family: var(--font-serif);
+  font-size: var(--t-sentence);
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--f-ink);
+  text-align: center;
+  max-width: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  padding: 6px 10px;
+  border: 0;
+  border-radius: var(--r-chip);
+  background: color-mix(in srgb, var(--chip-accent) 8%, transparent);
+  box-shadow: var(--f-shadow-chip);
+  color: var(--chip-accent);
+  font-family: var(--font-serif);
+  font-size: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background 0.15s ease-out;
+}
+
+a.chip { text-decoration: none; }
+a.chip:hover { background: color-mix(in srgb, var(--chip-accent) 15%, transparent); }
+
+button.chip { cursor: pointer; }
+button.chip:hover { background: color-mix(in srgb, var(--chip-accent) 15%, transparent); }
+button.chip:active { transform: translateY(1px); }
+
+.chip .chev {
+  flex: none;
+  width: 11px; height: 11px;
+  opacity: 0.5;
+  transition: transform 0.15s ease-out;
+}
+button.chip:hover .chev { transform: translateY(1px); }
+/* The app flips the chevron while its menu is open. */
+.chip-wrap.is-open .chev { transform: rotate(180deg); }
+.chip-wrap.is-open .chip { background: color-mix(in srgb, var(--chip-accent) 15%, transparent); }
+
+[data-accent="intent"] { --chip-accent: var(--f-accent-intent); }
+[data-accent="mode"]   { --chip-accent: var(--f-accent-mode); }
+[data-accent="note"]   { --chip-accent: var(--f-accent-note); }
+[data-accent="scale"]  { --chip-accent: var(--f-accent-scale); }
+[data-accent="chord"]  { --chip-accent: var(--f-accent-chord); }
+
+/*
+  Sentence dropdown — StyledDropdown's panel: 10pt corner, the same soft
+  shadow, 44px rows. The root note breaks the app's vertical list into a
+  three-column chromatic keypad, because twelve 44px rows would cover the
+  neck the menu is meant to change.
+*/
+.chip-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.chip-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  z-index: 30;
+  min-width: 190px;
+  /* The app caps its dropdown at ten visible rows and scrolls the rest; keep
+     enough of the neck showing that you can see what the choice changes. */
+  max-height: min(60vh, 400px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--s-2);
+  border-radius: var(--r-control);
+  background: var(--f-surface);
+  box-shadow: 0 0 0 1px var(--f-hairline), var(--f-shadow-island);
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+  transform: translateX(-50%);
+  transform-origin: top center;
+  animation: menu-in 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.chip-menu[hidden] { display: none; }
+
+@keyframes menu-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(-6px) scale(0.98); }
+}
+
+.chip-menu-item {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 var(--s-3);
+  border: 0;
+  border-radius: 7px;
+  background: none;
+  color: var(--f-ink);
+  font-family: inherit;
+  font-size: var(--t-label);
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.12s ease-out, color 0.12s ease-out;
+}
+.chip-menu-item:hover {
+  background: color-mix(in srgb, var(--chip-accent) 12%, transparent);
+  color: var(--chip-accent);
+}
+.chip-menu-item[aria-selected="true"] {
+  background: color-mix(in srgb, var(--chip-accent) 10%, transparent);
+  color: var(--chip-accent);
   font-weight: 600;
 }
 
-/* Main content spacing */
-main.container {
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-}
-
-/* Lede paragraph under the page title */
-.lede {
-  font-size: 1.05rem;
-  color: var(--pico-muted-color);
-}
-
-/* Home page: link cards in a grid */
-.home-cards {
-  display: grid;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-@media (min-width: 640px) {
-  .home-cards { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
-}
-.home-card {
-  display: block;
-  padding: 1.5rem;
-  border-radius: var(--pico-border-radius);
-  border: 1px solid var(--pico-muted-border-color);
-  background: var(--pico-card-sectioning-background-color, var(--pico-background-color));
-  color: var(--pico-color);
-  text-decoration: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.home-card:hover {
-  border-color: var(--pico-primary);
-  box-shadow: 0 0 0 2px var(--pico-primary-focus);
-}
-.home-card h2 {
-  font-size: 1.15rem;
-  margin: 0 0 0.35rem;
-  border: none;
-  padding: 0;
-}
-.home-card p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--pico-muted-color);
-}
-
-/* Section cards (content blocks on sub-pages) */
-.section-card {
-  padding: 1.5rem;
-  border-radius: var(--pico-border-radius);
-  border: 1px solid var(--pico-muted-border-color);
-  background: var(--pico-card-sectioning-background-color, var(--pico-background-color));
-  margin-bottom: 1.5rem;
-  box-shadow: 0 1px 3px var(--fretling-shadow);
-}
-
-.section-card h2 {
-  margin-top: 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--pico-muted-border-color);
-}
-.section-card h3 { margin-top: 1.25rem; }
-
-/* In-page table of contents */
-.toc {
-  padding: 1.25rem;
-  margin-bottom: 2rem;
-  border-radius: var(--pico-border-radius);
-  border: 1px solid var(--pico-muted-border-color);
-  background: var(--pico-card-sectioning-background-color, var(--pico-background-color));
-  font-size: 0.95rem;
-}
-.toc h2 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  border: none;
-  padding: 0 0 0.5rem;
-}
-.toc ul { list-style: none; padding-left: 0; margin: 0; }
-.toc li { margin-bottom: 0.4rem; }
-.toc a { text-decoration: none; }
-.toc a:hover { text-decoration: underline; color: var(--pico-primary); }
-
-/* Platform badge — marks a feature that is not on every platform */
-.platform-badge {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0.5rem;
-  padding: 0.1rem 0.5rem;
-  border-radius: 999px;
-  border: 1px solid var(--pico-primary);
-  color: var(--pico-primary);
-  background: var(--pico-primary-focus);
-  font-size: 0.7rem;
+.chip-menu-section {
+  margin: var(--s-3) 0 var(--s-1);
+  padding: 0 var(--s-3);
+  max-width: none;
+  color: var(--f-ink-2);
+  font-size: var(--t-caption);
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+.chip-wrap[data-menu="root"] .chip-menu:not([hidden]) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(56px, 1fr));
+  gap: 2px;
+  min-width: 0;
+}
+.chip-wrap[data-menu="root"] .chip-menu-item { text-align: center; padding: 0 var(--s-2); }
+
+/*
+  Play scale — the app's playScale action, and its stop colour while running.
+  It sits at the free leading end of the marker display bar.
+*/
+.stage-play {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  margin-right: auto;
+  min-height: 36px;
+  padding: 0 var(--s-3) 0 var(--s-2);
+  border: 0;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--f-action-play) 12%, transparent);
+  color: var(--f-action-play);
+  font-family: inherit;
+  font-size: var(--t-control);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease-out, color 0.15s ease-out;
+}
+.stage-play:hover { background: color-mix(in srgb, var(--f-action-play) 20%, transparent); }
+.stage-play[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--f-action-stop) 12%, transparent);
+  color: var(--f-action-stop);
+}
+.stage-play[aria-pressed="true"]:hover { background: color-mix(in srgb, var(--f-action-stop) 20%, transparent); }
+.stage-play .icon-play { display: block; }
+.stage-play .icon-stop { display: none; }
+.stage-play[aria-pressed="true"] .icon-play { display: none; }
+.stage-play[aria-pressed="true"] .icon-stop { display: block; }
+
+/* The control only does something with scripting; hide it otherwise. */
+.stage-play { display: none; }
+:root.js .stage-play { display: inline-flex; }
+
+/*
+  Callout — a tinted field with a mark, not a rule. The app has no
+  left-bordered alert; it has quiet surfaces and coloured marks.
+*/
+.callout {
+  display: grid;
+  grid-template-columns: 8px 1fr;
+  align-items: start;
+  column-gap: var(--s-4);
+  max-width: var(--measure);
+  margin: var(--s-6) 0;
+  padding: var(--s-5) var(--s-5);
+  border-radius: var(--r-control);
+  background: color-mix(in srgb, var(--callout-accent, var(--f-accent-note)) 9%, transparent);
+  color: var(--f-ink-body);
+  font-size: var(--t-label);
+  line-height: 1.55;
+}
+.callout::before {
+  content: "";
+  width: 8px; height: 8px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: var(--callout-accent, var(--f-accent-note));
+}
+.callout p { max-width: none; margin: 0; }
+.callout p + p { margin-top: var(--s-2); }
+.callout[data-accent="platform"] { --callout-accent: var(--f-accent-app); }
+.callout[data-accent="tip"]      { --callout-accent: var(--f-accent-chord); }
+.callout[data-accent="caution"]  { --callout-accent: var(--f-accent-mode); }
+
+/* Platform badge — chip grammar at caption scale */
+.platform-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  vertical-align: middle;
+  margin-left: var(--s-3);
+  padding: 3px 10px 3px 8px;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--f-accent-app) 10%, transparent);
+  color: var(--f-accent-app);
+  font-size: var(--t-caption);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.platform-badge::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* ============================================================
+   7. Tables
+   ============================================================ */
+
+.table-scroll {
+  max-width: 100%;
+  margin: var(--s-5) 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--t-label);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+
+thead th {
+  padding: var(--s-2) var(--s-4) var(--s-3);
+  border-bottom: 1px solid var(--f-hairline-strong);
+  color: var(--f-ink-2);
+  font-size: var(--t-caption);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: left;
   white-space: nowrap;
 }
 
-/* Callout for notes and caveats */
-.callout {
-  padding: 1rem 1.25rem;
-  margin: 1.25rem 0;
-  border-left: 4px solid var(--pico-primary);
-  border-radius: 0 var(--pico-border-radius) var(--pico-border-radius) 0;
-  background: var(--pico-primary-focus);
-  font-size: 0.95rem;
+tbody td {
+  padding: var(--s-3) var(--s-4);
+  border-bottom: 1px solid var(--f-hairline);
+  vertical-align: top;
 }
-.callout p:last-child { margin-bottom: 0; }
+tbody tr:last-child td { border-bottom: 0; }
 
-/* Wide content must scroll inside its own box, never the page body */
-.table-scroll {
-  overflow-x: auto;
-  margin-bottom: 1rem;
+tbody td:first-child {
+  color: var(--f-ink);
+  font-weight: 500;
+  white-space: nowrap;
 }
-.table-scroll table { margin-bottom: 0; }
+tbody td:first-child strong { font-weight: 600; }
 
-/* Layout diagram (schematic, not a screenshot) */
-.diagram {
-  margin: 1.5rem 0;
-}
-.diagram svg {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  display: block;
-}
-.diagram-box { fill: var(--fretling-diagram-fill); stroke: var(--pico-primary); stroke-width: 1.5; }
-.diagram-neck { fill: none; stroke: var(--fretling-diagram-line); stroke-width: 1.5; }
-.diagram-string { stroke: var(--fretling-diagram-line); stroke-width: 1; }
-.diagram-fret { stroke: var(--fretling-diagram-line); stroke-width: 1; opacity: 0.55; }
-.diagram-dot { fill: var(--pico-primary); }
-.diagram-label {
-  fill: var(--pico-color);
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: 13px;
-}
-.diagram-label--muted { fill: var(--pico-muted-color); font-size: 12px; }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; }
 
-/* Documentation images */
-.doc-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--pico-border-radius);
-  border: 1px solid var(--pico-muted-border-color);
-  margin: 1rem 0;
-  box-shadow: 0 1px 3px var(--fretling-shadow);
-}
+/* ============================================================
+   8. Fretboard figure
+   ============================================================ */
+
+.figure { margin: var(--s-6) 0 0; }
+
 .figure-caption {
-  font-size: 0.9rem;
-  color: var(--pico-muted-color);
-  margin-top: 0.25rem;
-  margin-bottom: 1.5rem;
+  margin-top: var(--s-4);
+  color: var(--f-ink-2);
+  font-size: var(--t-control);
+  max-width: 78ch;
 }
 
-/* Footer */
-.site-footer {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--pico-muted-border-color);
-  font-size: 0.9rem;
-  color: var(--pico-muted-color);
+/* The app screen, rebuilt: sentence, marker bar, neck, groupings. */
+.stage {
+  padding: var(--s-8) var(--s-6) var(--s-6);
+  border-radius: var(--r-island);
+  background: linear-gradient(180deg, var(--f-surface) 0%, var(--f-surface-2) 100%);
+  box-shadow: var(--f-shadow-island);
+}
+
+.stage .sentence { margin-bottom: var(--s-8); }
+
+/* Both chip bars: 44px row, 12px within a group, 24px between groups */
+.chip-bar {
+  display: flex;
+  padding-inline: var(--s-2);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2) var(--s-6);
+  min-height: 44px;
+}
+.chip-bar--trailing { justify-content: flex-end; }
+.chip-bar--leading { justify-content: flex-start; }
+
+.chip-group {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.chip-group > .chip-group-label {
+  color: var(--f-ink-2);
+  font-size: var(--t-caption);
+  font-weight: 600;
+}
+
+/* ToggleChip: 8px mark, 6px gap, caption2 label, 1.0 / 0.35 on-off */
+.toggle-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--f-ink);
+  font-family: inherit;
+  font-size: var(--t-caption);
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.35;
+  transition: opacity 0.15s ease-out;
+  text-decoration: none;
+}
+.toggle-chip[aria-checked="true"],
+.toggle-chip.is-on { opacity: 1; }
+.toggle-chip:hover { opacity: 0.75; }
+.toggle-chip[aria-checked="true"]:hover { opacity: 1; }
+.toggle-chip:disabled { cursor: default; }
+
+.toggle-chip .tc-mark {
+  flex: none;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--tc-mark, var(--f-ink-2));
+}
+.toggle-chip .tc-mark--ring {
+  background: none;
+  border: 1.5px solid var(--f-ink-2);
+}
+.toggle-chip .tc-mark--swatch {
+  border-radius: 50%;
+  background:
+    conic-gradient(var(--f-int-0) 0 33.33%, var(--f-int-4) 0 66.66%, var(--f-int-7) 0 100%);
+}
+.toggle-chip .tc-glyph {
+  flex: none;
+  width: 8px;
+  color: var(--f-ink-2);
+  font-size: 13px;
+  line-height: 1;
   text-align: center;
+}
+
+/* Marks carry meaning — the marker display bar's own vocabulary. */
+.toggle-chip[data-value="notes"] .tc-mark     { background: var(--f-accent-note); }
+.toggle-chip[data-value="intervals"] .tc-mark { background: var(--f-accent-scale); }
+.toggle-chip[data-value="gray"] .tc-mark      { background: var(--f-gray-fill); }
+.chip-bar--leading .toggle-chip .tc-mark      { background: var(--f-accent-app); }
+
+.chip-group[data-state="disabled"] { opacity: 0.4; }
+.chip-group[data-state="disabled"] .toggle-chip { cursor: default; }
+
+/* Links styled as chips (the groupings row points into the guide) */
+a.toggle-chip { opacity: 0.75; }
+a.toggle-chip:hover { opacity: 1; text-decoration: none; }
+
+.fretboard {
+  margin: var(--s-3) 0;
+  padding: var(--s-3) var(--s-2);
+  border-radius: var(--r-island);
+  background: var(--f-board);
+  box-shadow: inset 0 0 0 1px var(--f-hairline);
+  overflow-x: auto;
+}
+.fretboard svg {
+  display: block;
+  width: 100%;
+  min-width: 620px;
+  height: auto;
+}
+
+.fb-nut { stroke: var(--f-nut); stroke-width: 5; stroke-linecap: round; }
+.fb-fret { stroke: var(--f-fret); stroke-width: 1; opacity: 0.55; }
+.fb-string { stroke: var(--f-string); stroke-width: 1; }
+.fb-fretnum {
+  fill: var(--f-fretnum);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+}
+.fb-fretnum--on { fill: var(--f-fretnum-on); }
+.fb-fretnum-bg { fill: var(--f-fretnum-bg); }
+.fb-open-label {
+  fill: var(--f-ink-3);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+}
+.fb-string-label {
+  fill: var(--f-ink-3);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+}
+/*
+  Marker motion, in the app's terms: a struck note blooms, and every other
+  place that same pitch sits echoes softly behind it (NoteStrike). SVG needs
+  `transform-box: fill-box`, or `center` resolves against the whole viewBox
+  and the marker scales from the middle of the neck.
+*/
+.fb-marker { cursor: pointer; transform-box: fill-box; transform-origin: center; }
+.fb-marker circle {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: filter 0.12s ease-out;
+}
+.fb-marker:hover circle { filter: brightness(1.08); }
+.fb-marker text {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+.fb-marker--root circle { stroke: #ffffff; stroke-width: 2.5; }
+
+.fb-marker.is-ringing circle { animation: fb-strike 460ms cubic-bezier(0.16, 1, 0.3, 1); }
+.fb-marker.is-echoing circle { animation: fb-echo 620ms ease-out; }
+
+@keyframes fb-strike {
+  0%   { transform: scale(1);    filter: brightness(1); }
+  20%  { transform: scale(1.22); filter: brightness(1.18); }
+  100% { transform: scale(1);    filter: brightness(1); }
+}
+
+@keyframes fb-echo {
+  0%   { transform: scale(1);    opacity: 1; }
+  28%  { transform: scale(1.07); opacity: 0.72; }
+  100% { transform: scale(1);    opacity: 1; }
+}
+
+/*
+  Redraw: when the sentence or a display chip changes the scale, the new
+  markers arrive left to right so the change is legible rather than a swap.
+  --x is the marker's position along the neck, written by the renderer.
+*/
+.fretboard svg.is-entering .fb-marker {
+  animation: fb-in 380ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--x, 0) * 200ms);
+}
+
+@keyframes fb-in {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/*
+  Marker fills and their label colour, one class per semitone.
+
+  The fill is the app's interval colour. The label colour is whichever of
+  black or white measures higher against that fill, which agrees with
+  AppTheme.lightColorSemitones on ten of the twelve and lifts the two the
+  app draws below 3.5:1 (teal and emerald in light, most of the wheel in
+  dark). A diagram in a guide has to stay readable at any size.
+*/
+.fb-t-0  { --m-fill: var(--f-int-0);  --m-text: #ffffff; }
+.fb-t-1  { --m-fill: var(--f-int-1);  --m-text: #000000; }
+.fb-t-2  { --m-fill: var(--f-int-2);  --m-text: #000000; }
+.fb-t-3  { --m-fill: var(--f-int-3);  --m-text: #ffffff; }
+.fb-t-4  { --m-fill: var(--f-int-4);  --m-text: #ffffff; }
+.fb-t-5  { --m-fill: var(--f-int-5);  --m-text: #000000; }
+.fb-t-6  { --m-fill: var(--f-int-6);  --m-text: #000000; }
+.fb-t-7  { --m-fill: var(--f-int-7);  --m-text: #000000; }
+.fb-t-8  { --m-fill: var(--f-int-8);  --m-text: #000000; }
+.fb-t-9  { --m-fill: var(--f-int-9);  --m-text: #000000; }
+.fb-t-10 { --m-fill: var(--f-int-10); --m-text: #000000; }
+.fb-t-11 { --m-fill: var(--f-int-11); --m-text: #ffffff; }
+.fb-t-gray { --m-fill: var(--f-gray-fill); --m-text: var(--f-gray-text); }
+
+/* The dark wheel is lighter: only indigo still carries white. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .fb-t-0,
+  :root:not([data-theme="light"]) .fb-t-3,
+  :root:not([data-theme="light"]) .fb-t-11 { --m-text: #000000; }
+}
+:root[data-theme="dark"] .fb-t-0,
+:root[data-theme="dark"] .fb-t-3,
+:root[data-theme="dark"] .fb-t-11 { --m-text: #000000; }
+
+/* ============================================================
+   9. Interval palette
+   ============================================================ */
+
+/* A figure, not prose — it takes the card's full width, not the measure.
+   Selector matches `.section-card ul` so it actually wins. */
+.section-card .palette,
+.palette {
+  max-width: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(164px, 1fr));
+  gap: var(--s-3);
+  margin: var(--s-5) 0 var(--s-2);
+  padding: 0;
+  list-style: none;
+}
+.palette li {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  margin: 0;
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-control);
+  background: color-mix(in srgb, var(--f-ink) 4%, transparent);
+}
+.palette .sw {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--m-fill);
+  color: var(--m-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+.palette .nm {
+  color: var(--f-ink-2);
+  font-size: var(--t-caption);
+  line-height: 1.25;
+}
+.palette .nm b {
+  display: block;
+  color: var(--f-ink);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   10. Responsive + motion
+   ============================================================ */
+
+@media (max-width: 900px) {
+  :root {
+    --t-sentence: 28px;   /* MainContentLayoutMetrics.headerFontSizeCompactSizeClass */
+    --t-display: 36px;
+    --t-lede: 19px;
+    --t-h2: 20px;
+  }
+  .section-card { padding: var(--s-6); }
+  .stage { padding: var(--s-6) var(--s-4) var(--s-4); }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --t-sentence: 22px;   /* MainContentLayoutMetrics.headerFontSizeTight */
+    --t-display: 30px;
+    --t-lede: 18px;
+    --t-body: 16px;
+  }
+  .container { padding-inline: var(--s-4); }
+  main.container { padding-top: var(--s-8); }
+  .header-inner { min-height: 56px; gap: var(--s-3); }
+  .brand { font-size: 18px; }
+  .chip-nav { margin-inline-start: 0; width: 100%; order: 3; }
+  /* The nav scrolls sideways here; a soft right edge says so. */
+  .chip-nav ul {
+    gap: var(--s-1) var(--s-4);
+    margin-inline: calc(var(--s-4) * -1);
+    padding-inline: var(--s-4);
+    padding-bottom: var(--s-1);
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent 100%);
+    mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 28px), transparent 100%);
+  }
+  .chip-nav ul::-webkit-scrollbar { display: none; }
+  .chip-nav a { min-height: 40px; }
+  .theme-control { margin-inline-start: auto; }
+  .lede { margin-bottom: var(--s-8); }
+  .chip-menu { max-height: min(50vh, 320px); }
+  .guide-index a { padding: var(--s-4) var(--s-5); column-gap: var(--s-3); }
+  .chip-bar--trailing { justify-content: flex-start; }
+  .section-card { padding: var(--s-5); }
+  th:first-child, td:first-child { padding-left: 0; }
+  tbody td:first-child { white-space: normal; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  /* The app keeps the chips' short opacity fade under Reduce Motion. */
+  .toggle-chip { transition-duration: 0.15s !important; }
+}
+
+@media print {
+  .site-header, .theme-control, .skip-link, .toc { display: none; }
+  body { background: #fff; color: #000; }
+  .section-card, .stage, .guide-index { box-shadow: none; border: 1px solid #ddd; }
 }

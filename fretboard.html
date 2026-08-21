@@ -5,24 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fretboard – Fretling</title>
   <meta name="description" content="The Fretling fretboard: note markers, the marker display bar, scale timeline, CAGED and pentatonic overlays, chord shapes, fret range limiter, and tap-to-play.">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
 </head>
-<body>
+<body data-page="fretboard">
   <a href="#main" class="skip-link">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">Fretling</a>
-      <nav aria-label="Main">
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="learning-modes.html">Learning Modes</a></li>
-          <li><a href="fretboard.html" class="active">Fretboard</a></li>
-          <li><a href="practice-tools.html">Practice Tools</a></li>
-          <li><a href="settings.html">Settings</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <line class="bm-string" x1="3" y1="5" x2="26" y2="5"/>
+          <line class="bm-string" x1="3" y1="10" x2="26" y2="10"/>
+          <line class="bm-string" x1="3" y1="15" x2="26" y2="15"/>
+          <line class="bm-fret" x1="10" y1="2.5" x2="10" y2="17.5"/>
+          <line class="bm-fret" x1="17" y1="2.5" x2="17" y2="17.5"/>
+          <line class="bm-fret" x1="24" y1="2.5" x2="24" y2="17.5"/>
+          <line class="bm-nut" x1="3" y1="2" x2="3" y2="18"/>
+          <circle class="bm-dot-a" cx="6.5" cy="10" r="2.6"/>
+          <circle class="bm-dot-b" cx="13.5" cy="5" r="2.6"/>
+          <circle class="bm-dot-c" cx="20.5" cy="15" r="2.6"/>
+        </svg>
+        Fretling
+      </a>
+      <nav class="chip-nav" aria-label="Guide sections">
+        <ul>
+          <li><a href="index.html" data-mark="guide">Guide</a></li>
+          <li><a href="learning-modes.html" data-mark="modes">Learning Modes</a></li>
+          <li><a href="fretboard.html" data-mark="fretboard" aria-current="page">Fretboard</a></li>
+          <li><a href="practice-tools.html" data-mark="tools">Practice Tools</a></li>
+          <li><a href="settings.html" data-mark="settings">Settings</a></li>
         </ul>
       </nav>
+      <div class="theme-control" role="group" aria-label="Appearance">
+        <button type="button" data-theme="system" aria-pressed="true">System</button>
+        <button type="button" data-theme="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+      </div>
     </div>
   </header>
 
@@ -87,7 +116,32 @@
         <li><strong>Shapes — Circles or Intervals.</strong> <em>Circles</em> draws every marker the same. <em>Intervals</em> gives each degree its own outline, so the root reads differently from a third even in Gray.</li>
       </ul>
       <p>The root note is always emphasised against the other tones.</p>
-      <div class="callout">
+
+      <h3>The interval wheel</h3>
+      <p>With <strong>Colors</strong> set to Color, a marker&rsquo;s fill is its distance from the
+      root — the same twelve colours everywhere in the app, so a major third looks like a major
+      third whatever key you are in. Switching the root recolours the whole neck; switching the
+      key does not.</p>
+      <figure class="figure">
+        <ul class="palette">
+          <li><span class="sw fb-t-0" aria-hidden="true">R</span><span class="nm"><b>Root</b>Unison</span></li>
+          <li><span class="sw fb-t-1" aria-hidden="true">♭2</span><span class="nm"><b>Minor 2nd</b>One semitone</span></li>
+          <li><span class="sw fb-t-2" aria-hidden="true">2</span><span class="nm"><b>Major 2nd</b>Two semitones</span></li>
+          <li><span class="sw fb-t-3" aria-hidden="true">♭3</span><span class="nm"><b>Minor 3rd</b>Three semitones</span></li>
+          <li><span class="sw fb-t-4" aria-hidden="true">3</span><span class="nm"><b>Major 3rd</b>Four semitones</span></li>
+          <li><span class="sw fb-t-5" aria-hidden="true">4</span><span class="nm"><b>Perfect 4th</b>Five semitones</span></li>
+          <li><span class="sw fb-t-6" aria-hidden="true">♭5</span><span class="nm"><b>Tritone</b>Six semitones</span></li>
+          <li><span class="sw fb-t-7" aria-hidden="true">5</span><span class="nm"><b>Perfect 5th</b>Seven semitones</span></li>
+          <li><span class="sw fb-t-8" aria-hidden="true">♭6</span><span class="nm"><b>Minor 6th</b>Eight semitones</span></li>
+          <li><span class="sw fb-t-9" aria-hidden="true">6</span><span class="nm"><b>Major 6th</b>Nine semitones</span></li>
+          <li><span class="sw fb-t-10" aria-hidden="true">♭7</span><span class="nm"><b>Minor 7th</b>Ten semitones</span></li>
+          <li><span class="sw fb-t-11" aria-hidden="true">7</span><span class="nm"><b>Major 7th</b>Eleven semitones</span></li>
+        </ul>
+        <figcaption class="figure-caption">The twelve interval colours, root first. In Gray, every
+        marker takes one neutral fill instead and the interval is carried by the label.</figcaption>
+      </figure>
+
+      <div class="callout" data-accent="tip">
         <p><strong>Chord tones are never hidden.</strong> When a chord is active alongside a key, notes belonging to the chord stay drawn even if they fall outside the scale. Altered chords, borrowed chords, secondary dominants and slash-bass notes therefore show up as they really are, rather than being filtered out by the key.</p>
       </div>
     </section>
@@ -173,7 +227,12 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">Fretling – Scale Tones and Chords. User guide for version 1.1.</div>
+    <div class="container">
+      <p>Fretling — Scale Tones and Chords. User guide for version 1.1.</p>
+      <p><a href="privacy.html">Privacy</a> &middot; <a href="index.html">Guide home</a></p>
+    </div>
   </footer>
+
+  <script src="js/site.js" defer></script>
 </body>
 </html>

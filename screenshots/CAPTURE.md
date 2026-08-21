@@ -15,7 +15,8 @@ of them showed a build that no longer exists. They predate:
 - the rename from Fretty to Fretling
 
 They are recoverable from git history if ever needed:
-`git log --diff-filter=D --name-only -- docs/screenshots/`
+`git log --diff-filter=D --name-only -- docs/screenshots/ docs/website/screenshots/`
+(they were deleted before the site moved into `docs/website/`, so both paths are needed).
 
 ## How to capture
 

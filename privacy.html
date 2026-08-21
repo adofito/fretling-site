@@ -5,30 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy – Fretling</title>
   <meta name="description" content="Fretling's privacy policy. Fretling runs entirely on your device: no account, no analytics, no cloud sync.">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
 </head>
-<body>
+<body data-page="privacy">
   <a href="#main" class="skip-link">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">Fretling</a>
-      <nav aria-label="Main">
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="learning-modes.html">Learning Modes</a></li>
-          <li><a href="fretboard.html">Fretboard</a></li>
-          <li><a href="practice-tools.html">Practice Tools</a></li>
-          <li><a href="settings.html">Settings</a></li>
-          <li><a href="privacy.html" class="active">Privacy</a></li>
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <line class="bm-string" x1="3" y1="5" x2="26" y2="5"/>
+          <line class="bm-string" x1="3" y1="10" x2="26" y2="10"/>
+          <line class="bm-string" x1="3" y1="15" x2="26" y2="15"/>
+          <line class="bm-fret" x1="10" y1="2.5" x2="10" y2="17.5"/>
+          <line class="bm-fret" x1="17" y1="2.5" x2="17" y2="17.5"/>
+          <line class="bm-fret" x1="24" y1="2.5" x2="24" y2="17.5"/>
+          <line class="bm-nut" x1="3" y1="2" x2="3" y2="18"/>
+          <circle class="bm-dot-a" cx="6.5" cy="10" r="2.6"/>
+          <circle class="bm-dot-b" cx="13.5" cy="5" r="2.6"/>
+          <circle class="bm-dot-c" cx="20.5" cy="15" r="2.6"/>
+        </svg>
+        Fretling
+      </a>
+      <nav class="chip-nav" aria-label="Guide sections">
+        <ul>
+          <li><a href="index.html" data-mark="guide">Guide</a></li>
+          <li><a href="learning-modes.html" data-mark="modes">Learning Modes</a></li>
+          <li><a href="fretboard.html" data-mark="fretboard">Fretboard</a></li>
+          <li><a href="practice-tools.html" data-mark="tools">Practice Tools</a></li>
+          <li><a href="settings.html" data-mark="settings">Settings</a></li>
         </ul>
       </nav>
+      <div class="theme-control" role="group" aria-label="Appearance">
+        <button type="button" data-theme="system" aria-pressed="true">System</button>
+        <button type="button" data-theme="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+      </div>
     </div>
   </header>
 
   <main id="main" class="container">
     <h1>Privacy Policy</h1>
-    <p class="lede"><strong>Effective date:</strong> 2026-08-20 · <strong>Applies to:</strong> Fretling for iPad and Mac</p>
+    <p class="page-meta"><strong>Effective date:</strong> 2026-08-20 · <strong>Applies to:</strong> Fretling for iPad and Mac</p>
 
     <section class="section-card">
       <h2>The short version</h2>
@@ -91,7 +120,12 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">Fretling – Scale Tones and Chords. User guide for version 1.1.</div>
+    <div class="container">
+      <p>Fretling — Scale Tones and Chords. User guide for version 1.1.</p>
+      <p><a href="privacy.html" aria-current="page">Privacy</a> &middot; <a href="index.html">Guide home</a></p>
+    </div>
   </footer>
+
+  <script src="js/site.js" defer></script>
 </body>
 </html>

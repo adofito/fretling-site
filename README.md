@@ -17,9 +17,28 @@ This folder is the source for the published site. It is also where the App Store
 | `settings.html` | Every option in the settings sidebar |
 | `privacy.html` | Privacy policy |
 
-`css/styles.css` carries the Fretling palette on top of [Pico CSS](https://picocss.com),
-loaded from a CDN. There is no build step — the pages are plain HTML and open directly in a
-browser.
+`css/styles.css` is the whole visual system, written from the app's own design tokens —
+the interval wheel, the header accents, the warm canvas and elevated islands, the chip
+grammar of the bars that bracket the neck. No framework, no CDN, no webfont. `js/site.js`
+is the only script: it runs the appearance control, the marker display bar on the home
+page, and the fretboard it draws. There is no build step — the pages are plain HTML and
+open directly in a browser.
+
+The home page's neck is pre-rendered into `index.html` so it is correct with scripting
+turned off. If you change the renderer in `js/site.js`, regenerate it:
+
+```sh
+node -e 'const f=require("./docs/website/js/site.js"),s=require("fs");
+  const h=s.readFileSync("docs/website/index.html","utf8");
+  s.writeFileSync("docs/website/index.html", h.replace(/<div class="fretboard" data-fretboard>[\s\S]*?<\/div>/, `<div class="fretboard" data-fretboard>${f.renderFretboard({})}</div>`));'
+```
+
+To preview the site locally, serve this folder and open it — the pages use relative paths,
+so `file://` works too, minus the pre-render check:
+
+```sh
+python3 -m http.server 8765 --directory docs/website
+```
 
 `markdown/` holds a plain-Markdown mirror of the same content, for reading in an editor or
 on GitHub.
@@ -35,8 +54,8 @@ state for each, the filename to save it under, and the markup to drop one into a
 
 `scripts/publish-site.sh` in the app repo copies the public subset of this folder into the
 public site repo and pushes it. Only the files listed above are published — the App Store
-prep notes, plans, specs, design-review captures and backlog that also live under `docs/`
-in the app repo stay private.
+prep notes, plans, specs, design-review captures and backlog that live beside it under
+`docs/` in the app repo stay private.
 
 ## Keeping it accurate
 
