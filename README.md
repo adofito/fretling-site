@@ -95,6 +95,13 @@ Run `./scripts/publish-site.sh --dry-run` to exercise both without publishing.
 
 ## Keeping it accurate
 
+In the app repo, run `/check-site` before a release, or after landing anything that adds or
+renames a mode, a setting, a practice tool, or a platform requirement. It runs three
+mechanical checks (`scripts/site/check-freshness.py`, `check-anchors.py`,
+`check-spelling.py`) and then reads the prose for drift they cannot see. It reports; it
+never edits. `docs/website/MAINTENANCE.md` there is the runbook: what to re-capture when,
+and why the screenshot pipeline is built the way it is. Neither is published with the site.
+
 The guide describes the shipping build. When a feature lands, changes shape, or moves
 between surfaces, update the page that covers it in the same change — a guide that describes
 last quarter's app is worse than no guide, because it is believed.
