@@ -21,7 +21,7 @@ sidebar.
 | Group | Chips | What it does |
 |-------|-------|--------------|
 | **Labels** | Notes / Intervals / None | *Notes* prints note names (G, A♯). *Intervals* prints scale degrees (1, 2, ♭3). *None* leaves bare dots — useful for testing yourself. |
-| **Colors** | Color / Gray | *Color* gives each interval its own colour, so a degree is recognisable before you read it. *Gray* makes every marker the same, which keeps shapes and geometry in focus. |
+| **Colors** | Color / Gray | *Color* gives each interval its own color, so a degree is recognizable before you read it. *Gray* makes every marker the same, which keeps shapes and geometry in focus. |
 | **Accidentals** | ♯ Sharps / ♭ Flats | Whether black-key notes read as F♯ or G♭. Only meaningful when labels show note names, so this group dims — but stays visible — when Labels is set to Intervals or None. |
 
 Each group is radio-style: one chip is lit, and tapping the lit chip does nothing. On a
@@ -35,7 +35,7 @@ bar above, one more control lives in [Settings → Fretboard → Markers](settin
 - **Shapes — Circles or Intervals.** *Circles* draws every marker the same. *Intervals* gives
   each degree its own outline, so the root reads differently from a third even in Gray.
 
-The root note is always emphasised against the other tones.
+The root note is always emphasized against the other tones.
 
 > **Chord tones are never hidden.** When a chord is active alongside a key, notes belonging
 > to the chord stay drawn even if they fall outside the scale. Altered chords, borrowed
@@ -147,5 +147,5 @@ notes at once to sound a chord, and slide a finger along the neck to move the so
 with it. Only visible markers respond, so tapping empty wood stays silent.
 
 Notes light up while they sound — including notes played back by the Scale and Chord chips,
-and notes recognised by [Live Detect](practice-tools.md#live-detect), so you can see what you
+and notes recognized by [Live Detect](practice-tools.md#live-detect), so you can see what you
 just played.

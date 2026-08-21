@@ -1,6 +1,6 @@
 # Learning Modes
 
-Everything starts from one sentence at the top of the screen. Each coloured word is a
+Everything starts from one sentence at the top of the screen. Each colored word is a
 dropdown; changing one rewrites what the fretboard shows.
 
 ## The sentence header
@@ -68,7 +68,7 @@ a CAGED shape.
 
 ## Triads
 
-**Purpose:** practise three-note voicings on specific sets of strings.
+**Purpose:** practice three-note voicings on specific sets of strings.
 
 **What you pick:** a root note and a triad type — **Major**, **Minor**, **Augmented**, or
 **Diminished**.

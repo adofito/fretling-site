@@ -31,9 +31,9 @@ right now are dimmed rather than hidden, so the sidebar does not rearrange itsel
 
 | Setting | Options | Description |
 |---------|---------|-------------|
-| **Shapes** | Circles / Intervals | Plain circles, or a distinct shape per interval so degrees are readable even without colour. |
+| **Shapes** | Circles / Intervals | Plain circles, or a distinct shape per interval so degrees are readable even without color. |
 
-Labels, colours and accidentals are not here — they are on the
+Labels, colors and accidentals are not here — they are on the
 [marker display bar](fretboard.md#marker-display-bar) above the neck.
 
 ### Timeline

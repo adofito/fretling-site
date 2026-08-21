@@ -48,7 +48,7 @@ on GitHub.
 The site's mark is the app's **Fret Monogram** icon — one of the fourteen in the app's icon
 picker, not a separate drawing. It is not the shipping `AppIcon`: that one is a magnifier
 over a fretboard, and below roughly 64px it collapses into a beige smudge, so a browser tab
-would show nothing recognisable. The monogram is a few large shapes and still reads as F,
+would show nothing recognizable. The monogram is a few large shapes and still reads as F,
 bar and marker at 16px.
 
 `favicon.ico` (16/32/48), `favicon-16.png`, `favicon-32.png` and `apple-touch-icon.png`

@@ -186,7 +186,7 @@
   function neckSummary(s, names) {
     return 'Fretboard showing ' + names[s.root] + ' ' + scaleById(s.scale).name +
       ' in standard tuning, open position to fret ' + FRET_COUNT +
-      '. Each marker is a note in the scale, coloured by its interval from the root.';
+      '. Each marker is a note in the scale, colored by its interval from the root.';
   }
 
   function esc(str) {

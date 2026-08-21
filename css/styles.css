@@ -860,7 +860,7 @@ button.chip:hover .chev { transform: translateY(1px); }
 .chip-wrap[data-menu="root"] .chip-menu-item { text-align: center; padding: 0 var(--s-2); }
 
 /*
-  Play scale — the app's playScale action, and its stop colour while running.
+  Play scale — the app's playScale action, and its stop color while running.
   It sits at the free leading end of the marker display bar.
 */
 .stage-play {
@@ -897,7 +897,7 @@ button.chip:hover .chev { transform: translateY(1px); }
 
 /*
   Callout — a tinted field with a mark, not a rule. The app has no
-  left-bordered alert; it has quiet surfaces and coloured marks.
+  left-bordered alert; it has quiet surfaces and colored marks.
 */
 .callout {
   display: grid;
@@ -1196,9 +1196,9 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
 }
 
 /*
-  Marker fills and their label colour, one class per semitone.
+  Marker fills and their label color, one class per semitone.
 
-  The fill is the app's interval colour. The label colour is whichever of
+  The fill is the app's interval color. The label color is whichever of
   black or white measures higher against that fill, which agrees with
   AppTheme.lightColorSemitones on ten of the twelve and lifts the two the
   app draws below 3.5:1 (teal and emerald in light, most of the wheel in
@@ -1232,7 +1232,7 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
    9. Screenshots
 
    A capture of the app, framed like the neck itself: an inset well in board
-   colour, so the window's own rounded corners sit inside a hairline rather
+   color, so the window's own rounded corners sit inside a hairline rather
    than against the page.
 
    Every shot ships twice, once per theme, and the pair is swapped by class —

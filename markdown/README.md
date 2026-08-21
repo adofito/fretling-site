@@ -38,7 +38,7 @@ Everything sits around one stable fretboard:
 
 ## Quick start
 
-1. Read the sentence at the top and tap any coloured word to change it: the **verb** (learn
+1. Read the sentence at the top and tap any colored word to change it: the **verb** (learn
    or identify), the **mode** (scales, chords, triads), the **root note**, and the
    **scale type**.
 2. Tap notes on the neck to hear them. The instrument comes from Settings → Audio.

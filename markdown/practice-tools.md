@@ -43,7 +43,7 @@ sub-cent reading is only as good as the stretch of signal it was fitted over.
 | **Meter** | 4/4, 3/4, 2/4, 6/8, 5/4, 7/8, 9/8, 12/8, 1/4 | The beat indicator shows your place in the bar. |
 | **Subdivision** | Quarter, Eighth, Triplet, Dotted Eighth, Sixteenth | Subdivides the beat without changing the tempo. |
 | **Sound** | Classic, Woodblock, Click, Drums | *Drums* plays a real kit pattern instead of a click — see below. |
-| **Accent** | On / off | Emphasises the downbeat of each bar. |
+| **Accent** | On / off | Emphasizes the downbeat of each bar. |
 
 ## Drum sequencer
 
@@ -145,6 +145,6 @@ query — play a chord you cannot name, send it over, and read the ranked answer
 ## Microphone access
 
 The tuner, Live Detect, and the amp all need audio input, so the first time you open one,
-your device asks permission. Audio is analysed live and never recorded, stored, or
+your device asks permission. Audio is analyzed live and never recorded, stored, or
 transmitted; capture stops when you close the tools. Full detail is in the
 [privacy policy](../privacy.html).
