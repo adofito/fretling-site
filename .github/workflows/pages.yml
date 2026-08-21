@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+# The site is plain HTML with no build step, so this only needs to package the
+# repository as-is and hand it to Pages.
+#
+# `configure-pages` runs with `enablement: true` because Pages could not be turned
+# on ahead of time: the environment that publishes this site reaches the GitHub API
+# through a proxy that does not allow the /pages endpoints. The workflow's own token
+# has `pages: write` and runs on a GitHub runner, so it can do what that environment
+# could not — the first successful run switches Pages on and every push after this
+# just redeploys.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deploys race; queue instead of cancelling, so a run that is mid-deploy
+# is allowed to finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Configure Pages (enabling it if it is not already on)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Package the repository as the site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
