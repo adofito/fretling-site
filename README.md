@@ -43,6 +43,22 @@ python3 -m http.server 8765 --directory docs/website
 `markdown/` holds a plain-Markdown mirror of the same content, for reading in an editor or
 on GitHub.
 
+## The favicon
+
+The site's mark is the app's **Fret Monogram** icon — one of the fourteen in the app's icon
+picker, not a separate drawing. It is not the shipping `AppIcon`: that one is a magnifier
+over a fretboard, and below roughly 64px it collapses into a beige smudge, so a browser tab
+would show nothing recognisable. The monogram is a few large shapes and still reads as F,
+bar and marker at 16px.
+
+`favicon.ico` (16/32/48), `favicon-16.png`, `favicon-32.png` and `apple-touch-icon.png`
+(180px, from the full-bleed iOS art so iOS can apply its own corner mask) are all generated.
+Never edit them by hand — rebuild them from the icon set:
+
+```sh
+./scripts/make-favicon.sh                  # or pass another AppIcon* set name
+```
+
 ## Screenshots
 
 The guide currently ships without screenshots. The previous set was captured on 2026-02-07
