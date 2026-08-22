@@ -27,19 +27,23 @@
 :root {
   color-scheme: light;
 
-  /* -- Interval wheel: AppTheme.intervalColors, 0-11 semitones ------------ */
-  --f-int-0:  #3366b3;  /* deepBlue      root      */
-  --f-int-1:  #339999;  /* teal          minor 2nd */
-  --f-int-2:  #66b3e6;  /* lightBlue     major 2nd */
-  --f-int-3:  #804db3;  /* purple        minor 3rd */
-  --f-int-4:  #664db3;  /* indigo        major 3rd */
-  --f-int-5:  #9966cc;  /* violet        perfect 4th */
-  --f-int-6:  #cc4d99;  /* magenta       tritone   */
-  --f-int-7:  #e66680;  /* rose          perfect 5th */
-  --f-int-8:  #f29933;  /* amber         minor 6th */
-  --f-int-9:  #f2bf4d;  /* gold          major 6th */
-  --f-int-10: #33b380;  /* emerald       minor 7th */
-  --f-int-11: #338066;  /* forestGreen   major 7th */
+  /* -- Interval wheel: ColorPalette.IntervalWheel.light, 0-11 semitones ----
+     Built, not picked: hue advances 30 degrees per semitone from the root's
+     blue, and each fill takes one of three lightness bands so no two chromatic
+     neighbors share one. Mirror the Swift values exactly -- the guide's
+     screenshots sit beside the swatches. */
+  --f-int-0:  #22539d;  /* hue 216  deep    root      */
+  --f-int-1:  #7a6cfe;  /* hue 246  mid     minor 2nd */
+  --f-int-2:  #d18eff;  /* hue 276  bright  major 2nd */
+  --f-int-3:  #d540c7;  /* hue 306  mid     minor 3rd */
+  --f-int-4:  #fe81b3;  /* hue 336  bright  major 3rd */
+  --f-int-5:  #9b2e22;  /* hue   6  deep    perfect 4th */
+  --f-int-6:  #a77832;  /* hue  36  mid     tritone   */
+  --f-int-7:  #a6b143;  /* hue  66  bright  perfect 5th */
+  --f-int-8:  #54902b;  /* hue  96  mid     minor 6th */
+  --f-int-9:  #16621d;  /* hue 126  deep    major 6th */
+  --f-int-10: #48bd8f;  /* hue 156  bright  minor 7th */
+  --f-int-11: #2e8d98;  /* hue 186  mid     major 7th */
 
   /* -- Header accents: the sentence at the top of the app ----------------- */
   --f-accent-intent: #cc4d99;  /* magenta        — learn / identify */
@@ -144,10 +148,12 @@
   :root:not([data-theme="light"]) {
     color-scheme: dark;
 
-    --f-int-0:  #6699e6;  --f-int-1:  #4db3b3;  --f-int-2:  #66b3e6;
-    --f-int-3:  #9966cc;  --f-int-4:  #664db3;  --f-int-5:  #9966cc;
-    --f-int-6:  #cc4d99;  --f-int-7:  #ff8099;  --f-int-8:  #ffb34d;
-    --f-int-9:  #f2bf4d;  --f-int-10: #4dcc99;  --f-int-11: #33b380;
+    /* ColorPalette.IntervalWheel.dark -- the same wheel and the same bands,
+       lifted for a dark canvas. */
+    --f-int-0:  #3368b7;  --f-int-1:  #8c7ffe;  --f-int-2:  #daa2fe;
+    --f-int-3:  #e653d8;  --f-int-4:  #fe9ac2;  --f-int-5:  #b74033;
+    --f-int-6:  #b78842;  --f-int-7:  #b5c054;  --f-int-8:  #62a03a;
+    --f-int-9:  #22782a;  --f-int-10: #5acc9f;  --f-int-11: #3c9da8;
 
     --f-accent-intent: #e66bbf;  /* darkThemeMagenta */
     --f-accent-mode:   #ffb34d;  /* darkThemeAmber — lifted for dark ground */
@@ -191,10 +197,10 @@
 :root[data-theme="dark"] {
   color-scheme: dark;
 
-  --f-int-0:  #6699e6;  --f-int-1:  #4db3b3;  --f-int-2:  #66b3e6;
-  --f-int-3:  #9966cc;  --f-int-4:  #664db3;  --f-int-5:  #9966cc;
-  --f-int-6:  #cc4d99;  --f-int-7:  #ff8099;  --f-int-8:  #ffb34d;
-  --f-int-9:  #f2bf4d;  --f-int-10: #4dcc99;  --f-int-11: #33b380;
+  --f-int-0:  #3368b7;  --f-int-1:  #8c7ffe;  --f-int-2:  #daa2fe;
+  --f-int-3:  #e653d8;  --f-int-4:  #fe9ac2;  --f-int-5:  #b74033;
+  --f-int-6:  #b78842;  --f-int-7:  #b5c054;  --f-int-8:  #62a03a;
+  --f-int-9:  #22782a;  --f-int-10: #5acc9f;  --f-int-11: #3c9da8;
 
   --f-accent-intent: #e66bbf;
   --f-accent-mode:   #ffb34d;
@@ -561,10 +567,10 @@ main > h1 { margin-bottom: var(--s-5); }
    ------------------------------------------------------------------ */
 
 .hero {
-  --f-int-0:  #6699e6;  --f-int-1:  #4db3b3;  --f-int-2:  #66b3e6;
-  --f-int-3:  #9966cc;  --f-int-4:  #664db3;  --f-int-5:  #9966cc;
-  --f-int-6:  #cc4d99;  --f-int-7:  #ff8099;  --f-int-8:  #ffb34d;
-  --f-int-9:  #f2bf4d;  --f-int-10: #4dcc99;  --f-int-11: #33b380;
+  --f-int-0:  #3368b7;  --f-int-1:  #8c7ffe;  --f-int-2:  #daa2fe;
+  --f-int-3:  #e653d8;  --f-int-4:  #fe9ac2;  --f-int-5:  #b74033;
+  --f-int-6:  #b78842;  --f-int-7:  #b5c054;  --f-int-8:  #62a03a;
+  --f-int-9:  #22782a;  --f-int-10: #5acc9f;  --f-int-11: #3c9da8;
 
   --f-accent-intent: #e66bbf;
   --f-accent-mode:   #ffb34d;
@@ -604,9 +610,6 @@ main > h1 { margin-bottom: var(--s-5); }
   color: var(--f-ink-body);
   overflow: hidden;
 }
-
-/* The dark wheel is lighter than the light one: three tones take black labels. */
-.hero .fb-t-0, .hero .fb-t-3, .hero .fb-t-11 { --m-text: #000000; }
 
 /*
   A single warm bloom behind the neck, thrown from the amber the app uses for
@@ -1472,26 +1475,21 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
 .fb-t-0  { --m-fill: var(--f-int-0);  --m-text: #ffffff; }
 .fb-t-1  { --m-fill: var(--f-int-1);  --m-text: #000000; }
 .fb-t-2  { --m-fill: var(--f-int-2);  --m-text: #000000; }
-.fb-t-3  { --m-fill: var(--f-int-3);  --m-text: #ffffff; }
-.fb-t-4  { --m-fill: var(--f-int-4);  --m-text: #ffffff; }
-.fb-t-5  { --m-fill: var(--f-int-5);  --m-text: #000000; }
+.fb-t-3  { --m-fill: var(--f-int-3);  --m-text: #000000; }
+.fb-t-4  { --m-fill: var(--f-int-4);  --m-text: #000000; }
+.fb-t-5  { --m-fill: var(--f-int-5);  --m-text: #ffffff; }
 .fb-t-6  { --m-fill: var(--f-int-6);  --m-text: #000000; }
 .fb-t-7  { --m-fill: var(--f-int-7);  --m-text: #000000; }
 .fb-t-8  { --m-fill: var(--f-int-8);  --m-text: #000000; }
-.fb-t-9  { --m-fill: var(--f-int-9);  --m-text: #000000; }
+.fb-t-9  { --m-fill: var(--f-int-9);  --m-text: #ffffff; }
 .fb-t-10 { --m-fill: var(--f-int-10); --m-text: #000000; }
-.fb-t-11 { --m-fill: var(--f-int-11); --m-text: #ffffff; }
+.fb-t-11 { --m-fill: var(--f-int-11); --m-text: #000000; }
 .fb-t-gray { --m-fill: var(--f-gray-fill); --m-text: var(--f-gray-text); }
 
-/* The dark wheel is lighter: only indigo still carries white. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .fb-t-0,
-  :root:not([data-theme="light"]) .fb-t-3,
-  :root:not([data-theme="light"]) .fb-t-11 { --m-text: #000000; }
-}
-:root[data-theme="dark"] .fb-t-0,
-:root[data-theme="dark"] .fb-t-3,
-:root[data-theme="dark"] .fb-t-11 { --m-text: #000000; }
+/* No per-theme override: the deep band (root, perfect 4th, major 6th) is the
+   white-label set in both themes. That is `lightColorSemitones` in the app,
+   which is now one set for light and dark because the ladder is built rather
+   than hand-picked. */
 
 /* ============================================================
    9. Screenshots

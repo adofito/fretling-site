@@ -137,6 +137,7 @@
         </table>
       </div>
       <p>Each group is radio-style: one chip is lit, and tapping the lit chip does nothing. On a narrow window the bar scrolls sideways instead of wrapping.</p>
+      <p>Three of the four groups reach past the neck. <strong>Labels</strong>, <strong>Colors</strong> and <strong>Accidentals</strong> also set how the <a href="#timeline">scale timeline</a> and the Chord Atlas read, so a pitch is named, spelled and colored the same way wherever you meet it. (The Atlas keeps note names when Labels is None &mdash; a picker whose options carry no label has nothing to pick by.) <strong>Shapes</strong> is the neck&rsquo;s alone: the timeline and the Atlas draw round markers.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/08-marker-bar-notes-light.webp"
              width="1936" height="290" loading="lazy" decoding="async"
@@ -182,9 +183,11 @@
 
       <h3>The interval wheel</h3>
       <p>With <strong>Colors</strong> set to Color, a marker&rsquo;s fill is its distance from the
-      root — the same twelve colors everywhere in the app, so a major third looks like a major
-      third whatever key you are in. Switching the root recolours the whole neck; switching the
-      key does not.</p>
+      key&rsquo;s root — the same twelve colors everywhere in the app, so a major third looks like a
+      major third whatever key you are in. That root is the one anchor: the neck, the timeline and
+      the Chord Atlas all measure from it, and it stays the key&rsquo;s root even while a chord is
+      active, so a pitch keeps a single color across all three. Switching the root recolors the
+      whole neck; switching the scale type does not.</p>
       <figure class="figure">
         <ul class="palette">
           <li><span class="sw fb-t-0" aria-hidden="true">R</span><span class="nm"><b>Root</b>Unison</span></li>
