@@ -119,6 +119,11 @@
               <td><em>Notes</em> prints note names (G, A♯). <em>Intervals</em> prints scale degrees (1, 2, ♭3). <em>None</em> leaves bare dots — useful for testing yourself.</td>
             </tr>
             <tr>
+              <td><strong>Shapes</strong></td>
+              <td>Circles / Intervals</td>
+              <td><em>Circles</em> draws every marker the same. <em>Intervals</em> gives each degree its own outline &mdash; square, diamond, hexagon &mdash; so the root reads differently from a third even in Gray.</td>
+            </tr>
+            <tr>
               <td><strong>Colors</strong></td>
               <td>Color / Gray</td>
               <td><em>Color</em> gives each interval its own color, so a degree is recognizable before you read it. <em>Gray</em> makes every marker the same, which keeps shapes and geometry in focus.</td>
@@ -154,11 +159,8 @@
 
     <section class="section-card" id="markers">
       <h2>Note markers</h2>
-      <p>Markers show which notes belong to the current scale, chord, or triad. Beyond the display bar above, one more control lives in <a href="settings.html#fretboard-tab">Settings → Fretboard → Markers</a>:</p>
-      <ul>
-        <li><strong>Shapes — Circles or Intervals.</strong> <em>Circles</em> draws every marker the same. <em>Intervals</em> gives each degree its own outline, so the root reads differently from a third even in Gray.</li>
-      </ul>
-      <p>The root note is always emphasized against the other tones.</p>
+      <p>Markers show which notes belong to the current scale, chord, or triad. Everything about how they read &mdash; their labels, shapes, colors and accidentals &mdash; is set on the <a href="#marker-bar">marker display bar</a> above the neck. The root note is always emphasized against the other tones.</p>
+      <p>The two shots below show the <strong>Shapes</strong> group at work.</p>
       <figure class="shot">
         <img class="shot-light" src="screenshots/10-markers-circles-light.webp"
              width="1936" height="579" loading="lazy" decoding="async"
@@ -166,7 +168,7 @@
         <img class="shot-dark" src="screenshots/10-markers-circles-dark.webp"
              width="1936" height="579" loading="lazy" decoding="async"
              alt="The neck with every marker drawn as a plain filled circle.">
-        <figcaption class="figure-caption">Marker Shapes = Circles.</figcaption>
+        <figcaption class="figure-caption">Shapes = Circles.</figcaption>
       </figure>
       <figure class="shot">
         <img class="shot-light" src="screenshots/11-markers-intervals-light.webp"
@@ -175,7 +177,7 @@
         <img class="shot-dark" src="screenshots/11-markers-intervals-dark.webp"
              width="1936" height="579" loading="lazy" decoding="async"
              alt="The neck with markers drawn as distinct per-degree shapes instead of plain circles.">
-        <figcaption class="figure-caption">Marker Shapes = Intervals: each scale degree takes its own outline.</figcaption>
+        <figcaption class="figure-caption">Shapes = Intervals: each scale degree takes its own outline.</figcaption>
       </figure>
 
       <h3>The interval wheel</h3>
@@ -210,12 +212,7 @@
     <section class="section-card" id="timeline">
       <h2>Scale timeline</h2>
       <p>Above the neck, the timeline lays out all twelve semitones in a row. Notes that belong to the current scale are filled in; the rest sit faded. When a chord is active, its tones are marked too, so you can read the chord against its key in one line.</p>
-      <p>How the structure is drawn is set in <a href="settings.html#fretboard-tab">Settings → Fretboard → Timeline</a>:</p>
-      <ul>
-        <li><strong>Brackets</strong> — horizontal rails, chord above and scale below.</li>
-        <li><strong>Ticks</strong> — a baseline with ticks, chord upward and scale downward.</li>
-      </ul>
-      <p>The sidebar shows a one-line description of whichever style is selected, so you do not have to guess which is which.</p>
+      <p>Horizontal rails bracket the row to show the structure: the chord's tones are tied together above it, the scale's below. Small Chord and Scale captions name each rail, and triangles mark each root.</p>
       <figure class="shot" style="--shot-max: 900px">
         <img class="shot-light" src="screenshots/12-timeline-brackets-light.webp"
              width="1800" height="330" loading="lazy" decoding="async"
@@ -223,16 +220,7 @@
         <img class="shot-dark" src="screenshots/12-timeline-brackets-dark.webp"
              width="1800" height="330" loading="lazy" decoding="async"
              alt="The scale timeline showing twelve semitones with the chord bracketed above the row and the scale bracketed below it.">
-        <figcaption class="figure-caption">Structure = Brackets. The chord rail sits above, the scale rail below.</figcaption>
-      </figure>
-      <figure class="shot" style="--shot-max: 900px">
-        <img class="shot-light" src="screenshots/13-timeline-ticks-light.webp"
-             width="1800" height="330" loading="lazy" decoding="async"
-             alt="The same twelve-semitone timeline with chord and scale membership marked by ticks above and below the row instead of brackets.">
-        <img class="shot-dark" src="screenshots/13-timeline-ticks-dark.webp"
-             width="1800" height="330" loading="lazy" decoding="async"
-             alt="The same twelve-semitone timeline with chord and scale membership marked by ticks above and below the row instead of brackets.">
-        <figcaption class="figure-caption">Structure = Ticks — the same information, drawn lighter.</figcaption>
+        <figcaption class="figure-caption">The chord rail sits above the row, the scale rail below.</figcaption>
       </figure>
 
       <h3>Play chips</h3>

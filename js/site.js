@@ -6,7 +6,7 @@
        AppThemePreference.
     2. The sentence header: real dropdowns for the root note and the scale
        type, ordered the way StyledDropdown orders them.
-    3. The marker display bar — the app's Labels / Colors / Accidentals radio
+    3. The marker display bar — the app's Labels / Shapes / Colors / Accidentals radio
        groups — driving the neck below it.
     4. Drawing that neck, sounding a note when one is tapped, and playing the
        scale up its degrees the way the app's Play Scale button does.
@@ -66,6 +66,7 @@
     root: 4,                 // E
     scale: 'major',
     labels: 'notes',         // notes | intervals | none
+    shapes: 'intervals',     // circles | intervals
     colors: 'color',         // color | gray
     flats: false
   };
@@ -170,7 +171,7 @@
           (isPrimary ? ' data-primary="1"' : '') +
           ' style="--x:' + (mx / GEO.width).toFixed(3) + '"' +
           ' aria-label="' + esc(names[pc] + ', string ' + STRINGS[st2].label + ', fret ' + fr2 + '. Play') + '">');
-        out.push('<circle cx="' + mx + '" cy="' + stringY(st2) + '" r="' + GEO.radius + '" fill="var(--m-fill)"/>');
+        out.push(markerShape(s.shapes, semitone, mx, stringY(st2), GEO.radius));
         if (label) {
           out.push('<text x="' + mx + '" y="' + (stringY(st2) + 4.5) +
             '" text-anchor="middle" fill="var(--m-text)">' + label + '</text>');
@@ -181,6 +182,34 @@
 
     out.push('</svg>');
     return out.join('');
+  }
+
+  /* Marker silhouette, mirroring FretboardCalculator.intervalTypeForNote +
+     IntervalShapeFactory: perfect intervals take a hexagon, minor a square, the
+     tritone a diamond, everything else the plain circle. */
+  function markerShape(mode, semitone, cx, cy, r) {
+    var fill = ' fill="var(--m-fill)"/>';
+    if (mode !== 'intervals') return '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '"' + fill;
+
+    var points;
+    if (semitone === 6) {                                        // tritone → diamond
+      points = [[cx, cy - r], [cx + r, cy], [cx, cy + r], [cx - r, cy]];
+    } else if (semitone === 0 || semitone === 5 || semitone === 7) {  // perfect → hexagon
+      points = [];
+      for (var i = 0; i < 6; i++) {
+        var a = (-90 + i * 60) * Math.PI / 180;
+        points.push([cx + r * Math.cos(a), cy + r * Math.sin(a)]);
+      }
+    } else if (semitone === 1 || semitone === 3 || semitone === 8 || semitone === 10) {  // minor → square
+      return '<rect x="' + (cx - r) + '" y="' + (cy - r) +
+        '" width="' + (2 * r) + '" height="' + (2 * r) + '"' + fill;
+    } else {                                                     // major → circle
+      return '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '"' + fill;
+    }
+
+    return '<polygon points="' + points.map(function (p) {
+      return p[0].toFixed(2) + ',' + p[1].toFixed(2);
+    }).join(' ') + '"' + fill;
   }
 
   function neckSummary(s, names) {
@@ -383,7 +412,7 @@
       });
     }
 
-    /* -- Marker display bar: three radio groups ----------------------------- */
+    /* -- Marker display bar: four radio groups ------------------------------ */
 
     var groups = stage.querySelectorAll('[role="radiogroup"]');
     for (var i = 0; i < groups.length; i++) { wireGroup(groups[i]); }

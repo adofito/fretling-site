@@ -21,6 +21,7 @@ sidebar.
 | Group | Chips | What it does |
 |-------|-------|--------------|
 | **Labels** | Notes / Intervals / None | *Notes* prints note names (G, A♯). *Intervals* prints scale degrees (1, 2, ♭3). *None* leaves bare dots — useful for testing yourself. |
+| **Shapes** | Circles / Intervals | *Circles* draws every marker the same. *Intervals* gives each degree its own outline — square, diamond, hexagon — so the root reads differently from a third even in Gray. |
 | **Colors** | Color / Gray | *Color* gives each interval its own color, so a degree is recognizable before you read it. *Gray* makes every marker the same, which keeps shapes and geometry in focus. |
 | **Accidentals** | ♯ Sharps / ♭ Flats | Whether black-key notes read as F♯ or G♭. Only meaningful when labels show note names, so this group dims — but stays visible — when Labels is set to Intervals or None. |
 
@@ -29,13 +30,10 @@ narrow window the bar scrolls sideways instead of wrapping.
 
 ## Note markers
 
-Markers show which notes belong to the current scale, chord, or triad. Beyond the display
-bar above, one more control lives in [Settings → Fretboard → Markers](settings.md#fretboard-tab):
-
-- **Shapes — Circles or Intervals.** *Circles* draws every marker the same. *Intervals* gives
-  each degree its own outline, so the root reads differently from a third even in Gray.
-
-The root note is always emphasized against the other tones.
+Markers show which notes belong to the current scale, chord, or triad. Everything about how
+they read — their labels, shapes, colors and accidentals — is set on the
+[marker display bar](#marker-display-bar) above the neck. The root note is always emphasized
+against the other tones.
 
 > **Chord tones are never hidden.** When a chord is active alongside a key, notes belonging
 > to the chord stay drawn even if they fall outside the scale. Altered chords, borrowed
@@ -48,13 +46,9 @@ Above the neck, the timeline lays out all twelve semitones in a row. Notes that 
 current scale are filled in; the rest sit faded. When a chord is active, its tones are marked
 too, so you can read the chord against its key in one line.
 
-How the structure is drawn is set in [Settings → Fretboard → Timeline](settings.md#fretboard-tab):
-
-- **Brackets** — horizontal rails, chord above and scale below.
-- **Ticks** — a baseline with ticks, chord upward and scale downward.
-
-The sidebar shows a one-line description of whichever style is selected, so you do not have
-to guess which is which.
+Horizontal rails bracket the row to show the structure: the chord's tones are tied together
+above it, the scale's below. Small Chord and Scale captions name each rail, and triangles
+mark each root.
 
 ### Play chips
 

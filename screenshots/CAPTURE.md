@@ -79,7 +79,7 @@ one place, so the table below cannot drift out of sync with what actually runs.
 | 07 | `identify-placement` | `learning-modes#identify` |
 | 08 / 09 | `marker-bar-notes` / `-intervals` | `fretboard#marker-bar` — a matched pair, same crop |
 | 10 / 11 | `markers-circles` / `-intervals` | `fretboard#markers` — matched pair |
-| 12 / 13 | `timeline-brackets` / `-ticks` | `fretboard#timeline` — matched pair |
+| 12 | `timeline-brackets` | `fretboard#timeline` |
 | 14 / 15 / 16 | `caged-a-both`, `pentatonic-shape-4`, `three-notes-per-string` | `fretboard#overlays` |
 | 17 | `chord-shapes-legend` | `fretboard#chord-shapes` |
 | 18 | `fret-range-limiter` | `fretboard#fret-range` |

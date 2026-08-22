@@ -11,7 +11,7 @@ bottom.
 
 ## Fretboard tab
 
-Six groups, some of which appear only in the modes they apply to. Options that do not apply
+Four groups, some of which appear only in the modes they apply to. Options that do not apply
 right now are dimmed rather than hidden, so the sidebar does not rearrange itself under you.
 
 ### Appearance
@@ -27,20 +27,9 @@ right now are dimmed rather than hidden, so the sidebar does not rearrange itsel
 | **Secondary Dominants** | Toggle | Adds the secondary dominants of the key (V7/ii, V7/V and so on) to the chord picker. These are seventh-quality chords, so switching this on also enables advanced chords. |
 | **Modal Interchange** | Toggle | Adds chords borrowed from the parallel mode. |
 
-### Markers
-
-| Setting | Options | Description |
-|---------|---------|-------------|
-| **Shapes** | Circles / Intervals | Plain circles, or a distinct shape per interval so degrees are readable even without color. |
-
-Labels, colors and accidentals are not here — they are on the
-[marker display bar](fretboard.md#marker-display-bar) above the neck.
-
-### Timeline
-
-| Setting | Options | Description |
-|---------|---------|-------------|
-| **Structure** | Brackets / Ticks | How chord and scale structure is drawn on the [scale timeline](fretboard.md#scale-timeline). A line of text under the control describes whichever style is selected. |
+Marker settings are not here — labels, shapes, colors and accidentals all live on the
+[marker display bar](fretboard.md#marker-display-bar) above the neck, where they stay
+visible while you play.
 
 ### Practice Focus
 

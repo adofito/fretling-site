@@ -252,7 +252,7 @@ html {
   scroll-padding-top: 88px;   /* sticky header + breathing room */
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   html { scroll-padding-top: var(--s-4); }   /* header no longer sticky here */
 }
 
@@ -1354,6 +1354,15 @@ th:last-child, td:last-child { padding-right: 0; }
 .toggle-chip[data-value="gray"] .tc-mark      { background: var(--f-gray-fill); }
 .chip-bar--leading .toggle-chip .tc-mark      { background: var(--f-accent-app); }
 
+/* Shapes: the silhouette is the whole message, so these marks stay neutral and
+   leave hue to the Colors group — the app fills them with `.primary` too. Must
+   follow the [data-value="intervals"] rule above to win on equal specificity. */
+.chip-group[data-setting="shapes"] .tc-mark { background: var(--f-ink); }
+.chip-group[data-setting="shapes"] .tc-mark--diamond {
+  border-radius: 0;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
 .chip-group[data-state="disabled"] { opacity: 0.4; }
 .chip-group[data-state="disabled"] .toggle-chip { cursor: default; }
 
@@ -1606,7 +1615,7 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   background-attachment: local, local, scroll, scroll;
 }
 
-/* The neck keeps its board colour underneath and matches the edge to it. */
+/* The neck keeps its board color underneath and matches the edge to it. */
 .fretboard {
   --scroll-edge: var(--f-board);
   background-color: var(--f-board);
@@ -1678,6 +1687,19 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   }
   .hero-head { margin-bottom: var(--s-5); }
   .hero .lede { max-width: var(--measure); }
+
+  .chip-nav { margin-inline-start: 0; width: 100%; order: 3; }
+  .theme-control { margin-inline-start: auto; }
+
+  /*
+    One rule for both: the header is pinned only while it is a single
+    compact row. Below this width it wraps to two (three on a 320px phone),
+    which is 117–183px — an eighth to a fifth of the screen, held forever,
+    for chrome a reader touches twice a session. So it scrolls away with the
+    page instead. Wayfinding still opens every page and the contents list
+    handles movement inside one.
+  */
+  .site-header { position: static; }
 }
 
 @media (max-width: 900px) {
@@ -1696,15 +1718,6 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   .container { padding-inline: var(--s-4); }
   main.container { padding-top: var(--s-8); }
 
-  /*
-    The header wraps to two rows on a phone — brand and appearance above,
-    the section nav below — which is 127px, or a seventh of the screen.
-    Held sticky that is a permanent tax on a small viewport for chrome the
-    reader needs twice a session, so here it scrolls away with the page.
-    Wayfinding still opens every page, and the contents list handles
-    movement within one.
-  */
-  .site-header { position: static; }
   .hero > .container { padding-top: var(--s-10); padding-bottom: var(--s-8); }
   .header-inner { min-height: 56px; gap: var(--s-3); }
   .brand { font-size: 18px; }
