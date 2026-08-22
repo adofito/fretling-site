@@ -108,9 +108,13 @@
   --font-serif: ui-serif, "New York", "Iowan Old Style", Palatino, Georgia, serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
-  --t-display: clamp(42px, 6.2vw, 82px);  /* page title — serif, at real scale */
+  /* Continuous from phone to desktop: 30px at 320, 82px from ~1300 up. Do not
+     override this at a breakpoint — a step here re-wraps the whole headline. */
+  --t-display: clamp(30px, calc(5.4vw + 12px), 82px);
   --t-lede: 21px;
-  --t-sentence: 32px;  /* LearningHeaderView, regular size class */
+  /* Ends match the app's size classes (32 regular / 22 tight); the web ramps
+     between them rather than stepping, since a browser resizes continuously. */
+  --t-sentence: clamp(22px, calc(2.4vw + 12px), 32px);
   --t-h2: 22px;
   --t-h3: 18px;
   --t-body: 17px;
@@ -1672,14 +1676,12 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
     display: block;
     margin-bottom: var(--s-8);
   }
-  .hero-head { max-width: 16ch; margin-bottom: var(--s-5); }
+  .hero-head { margin-bottom: var(--s-5); }
   .hero .lede { max-width: var(--measure); }
 }
 
 @media (max-width: 900px) {
   :root {
-    --t-sentence: 28px;   /* MainContentLayoutMetrics.headerFontSizeCompactSizeClass */
-    --t-display: 36px;
     --t-lede: 19px;
     --t-h2: 20px;
   }
@@ -1688,8 +1690,6 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
 
 @media (max-width: 700px) {
   :root {
-    --t-sentence: 22px;   /* MainContentLayoutMetrics.headerFontSizeTight */
-    --t-display: 30px;
     --t-lede: 18px;
     --t-body: 16px;
   }
@@ -1706,7 +1706,6 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   */
   .site-header { position: static; }
   .hero > .container { padding-top: var(--s-10); padding-bottom: var(--s-8); }
-  .hero-head { max-width: none; }
   .header-inner { min-height: 56px; gap: var(--s-3); }
   .brand { font-size: 18px; }
   .chip-nav { margin-inline-start: 0; width: 100%; order: 3; }
