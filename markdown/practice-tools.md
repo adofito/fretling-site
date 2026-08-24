@@ -7,6 +7,12 @@ and usable underneath.
 > **The amp and the looper are Mac-only.** They ride the same macOS monitoring engine, which
 > iPadOS does not offer. Everything else on this page works on both platforms.
 
+Every panel is built to look like the hardware it stands in for — a machined faceplate,
+recessed displays, indicator lamps, knurled fader caps. Two finishes ship: **Machined**, a
+light panel, and **Studio**, a graphite one. `Settings › Fretboard › Appearance › Modules`
+picks between them, and the default follows your theme — light panels on the light canvas,
+graphite on the dark one.
+
 ## Tuner
 
 A chromatic tuner that listens through your microphone or audio interface. It names the note

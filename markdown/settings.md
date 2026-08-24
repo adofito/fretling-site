@@ -19,6 +19,7 @@ right now are dimmed rather than hidden, so the sidebar does not rearrange itsel
 | Setting | Options | Description |
 |---------|---------|-------------|
 | **Theme** | System / Light / Dark | Follow the device appearance, or pin Fretling to light or dark. |
+| **Modules** | Auto / Machined / Studio | How the floating practice tools are drawn. Auto gives the light canvas the Machined panel and the dark canvas the Studio one; pin either to keep it everywhere. |
 
 ### Borrowed Harmony
 
