@@ -78,11 +78,16 @@ How a shape is drawn is set in Settings → Fretboard → Shape Overlays → CAG
 - **Lines** — connecting lines through the shape's notes.
 - **Both** — outline and lines together.
 
-### Shapes (pentatonic)
+### Box Shapes (pentatonic)
 
 **Off / All / 1 / 2 / 3 / 4 / 5.** Overlays pentatonic position boxes. In Scales and Triads
 modes you pick a single position or All; in Chords mode the same five positions are drawn in
 the context of the selected chord.
+
+### Chord Shapes (Chords and Progressions)
+
+**Off / On.** Turns the chord-shape overlays on the neck on and off — see
+[Chord shapes](#chord-shapes) below for what they draw and the settings that go with them.
 
 ### 3 Notes Per String
 
@@ -96,6 +101,17 @@ scales offer fewer.
 adjacent strings so you can work a triad shape without the rest of the neck competing for
 attention.
 
+### Non-Chord Notes
+
+**Off / On.** Chords mode only. **Off** shows the chord's tones alone; **On** keeps the rest of
+the notes visible underneath in gray, so the chord reads inside its key rather than floating on
+an empty neck.
+
+### Fret Range
+
+**Full / Limited.** Every mode. **Limited** puts the [fret range limiter](#fret-range-limiter)
+below the neck so you can work a window of frets; **Full** gives the whole neck back.
+
 ### Triad boxes
 
 Triads mode, switched on with **Show Triad Boxes** in Settings: outlines each triad position
@@ -103,9 +119,10 @@ on the neck.
 
 ## Chord shapes
 
-In Chords mode, **Show Chord Shapes** draws real, playable fingerings for the selected chord
-on the neck, taken from an open chord-fingering database. Three settings shape how they
-behave:
+In Chords mode, the **Chord Shapes** group in the Visual Groupings bar draws real, playable
+fingerings for the selected chord on the neck, taken from an open chord-fingering database.
+Set it to **On** to show them and **Off** to hide them. Three settings in Settings → Fretboard
+→ Shape Overlays shape how they behave:
 
 - **Show Finger Numbers** — prints which finger plays each note.
 - **Timeline Shape Cues** — marks the shape's tones on the scale timeline as well as the neck.
@@ -116,12 +133,14 @@ behave:
   - **Replace CAGED** — chord shapes stand in for CAGED entirely, and the CAGED chip group
     disappears from Visual Groupings.
 
-A legend below the neck names the shapes currently drawn.
+A legend below the neck names the shapes currently drawn. It carries the same **Chord Shapes**
+caption as the switch, because it lists the same system: turn the switch off and the legend
+goes with it.
 
 ## Fret range limiter
 
-Turn on **Limit Fret Range** in [Settings → Fretboard → Practice Focus](settings.md#fretboard-tab)
-and a range bar appears below the neck. The handles sit on fret boundaries and are
+Set **Fret Range** to **Limited** in the Visual Groupings bar under the neck and a range bar
+appears below the fretboard. The handles sit on fret boundaries and are
 full-height, so they are easy to grab.
 
 - **Drag the left handle** — set the first fret.

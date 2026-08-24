@@ -473,6 +473,7 @@ body[data-page="guide"] .site-header { border-bottom-color: transparent; }
 .chip-nav a[data-mark="tools"]    { --chip-mark: var(--f-accent-looper); }
 .chip-nav a[data-mark="settings"] { --chip-mark: var(--f-accent-app); }
 .chip-nav a[data-mark="privacy"]  { --chip-mark: var(--f-ink-3); }
+.chip-nav a[data-mark="pro"]      { --chip-mark: var(--f-accent-mode); }
 
 /* Segmented theme control — the app's Appearance picker (System / Light / Dark) */
 .theme-control { display: none; }
@@ -895,6 +896,7 @@ main > h1 { margin-bottom: var(--s-5); }
 .guide-index a[data-mark="fretboard"] { --chip-mark: var(--f-accent-note); }
 .guide-index a[data-mark="tools"]     { --chip-mark: var(--f-accent-looper); }
 .guide-index a[data-mark="settings"]  { --chip-mark: var(--f-accent-app); }
+.guide-index a[data-mark="pro"]       { --chip-mark: var(--f-accent-mode); }
 
 .guide-index .gi-title {
   color: var(--f-ink);
@@ -970,6 +972,7 @@ body[data-page="fretboard"] { --page-accent: var(--f-accent-note); }
 body[data-page="tools"]     { --page-accent: var(--f-accent-looper); }
 body[data-page="settings"]  { --page-accent: var(--f-accent-app); }
 body[data-page="privacy"]   { --page-accent: var(--f-accent-chord); }
+body[data-page="pro"]       { --page-accent: var(--f-accent-mode); }
 
 /* ============================================================
    6. Chips, callouts, badges

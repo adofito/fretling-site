@@ -35,19 +35,25 @@ visible while you play.
 
 | Setting | Options | Description |
 |---------|---------|-------------|
-| **Show Non-Chord Notes** | Toggle | Keeps the rest of the scale visible under an active chord. Available in Chords mode, and in Scales mode when a chord is selected; dimmed otherwise. |
-| **Limit Fret Range** | Toggle | Shows the [fret range limiter](fretboard.md#fret-range-limiter) below the neck. |
 | **Show Triad Boxes** | Toggle | Triads mode only. Outlines each triad position. |
+
+**Non-Chord Notes** and **Fret Range** used to sit here. They are chips in the
+[Visual Groupings](fretboard.md#visual-groupings-overlays-and-boxes) bar under the neck now —
+both are flipped mid-practice and both change what the neck shows, so they belong beside it.
 
 ### Shape Overlays
 
 | Setting | Options | Description |
 |---------|---------|-------------|
 | **CAGED Display** | Box / Lines / Both | How a CAGED shape is drawn: region outline, connecting lines through its notes, or both. |
-| **Show Chord Shapes** | Toggle | Chords mode. Draws playable fingerings for the selected chord on the neck. |
-| **Timeline Shape Cues** | Toggle | Also marks the shape's tones on the timeline. Requires Show Chord Shapes. |
-| **Show Finger Numbers** | Toggle | Prints finger numbers on chord shapes. Requires Show Chord Shapes. |
+| **Timeline Shape Cues** | Toggle | Also marks the shape's tones on the timeline. Requires chord shapes to be on. |
+| **Show Finger Numbers** | Toggle | Prints finger numbers on chord shapes. Requires chord shapes to be on. |
 | **CAGED Interaction** | Coexist / Exclusive / Replace CAGED | Chords mode. What happens when chord shapes and CAGED are both on — draw both, let shapes take over while they are on, or have shapes replace CAGED entirely (which also removes the CAGED chips from Visual Groupings). |
+
+Chord shapes themselves are switched on and off in the **Chord Shapes** group of the
+[Visual Groupings](fretboard.md#chord-shapes-chords-and-progressions) bar under the neck, not here — it is an overlay
+you reach for often, so it sits beside the fretboard it changes. The two rows above follow it
+and dim while it is off.
 
 The whole Shape Overlays group is dimmed while you are identifying a chord — there is no key
 to lay a shape against.

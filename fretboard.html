@@ -60,7 +60,7 @@
           <li><a href="learning-modes.html" data-mark="modes">Learning Modes</a></li>
           <li><a href="fretboard.html" data-mark="fretboard" aria-current="page">Fretboard</a></li>
           <li><a href="practice-tools.html" data-mark="tools">Practice Tools</a></li>
-          <li><a href="settings.html" data-mark="settings">Settings</a></li>
+          <li><a href="settings.html" data-mark="settings">Settings</a></li><li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
         </ul>
       </nav>
       <div class="theme-control" role="group" aria-label="Appearance">
@@ -257,7 +257,7 @@
         <figcaption class="figure-caption">CAGED = A with CAGED Display set to Both: the box and its connecting lines.</figcaption>
       </figure>
 
-      <h3>Shapes (pentatonic)</h3>
+      <h3 id="box-shapes">Box Shapes (pentatonic)</h3>
       <p><strong>Off / All / 1 / 2 / 3 / 4 / 5.</strong> Overlays pentatonic position boxes. In Scales and Triads modes you pick a single position or All; in Chords mode the same five positions are drawn in the context of the selected chord.</p>
       <figure class="shot">
         <img class="shot-light" src="screenshots/15-pentatonic-shape-4-light.webp"
@@ -266,8 +266,11 @@
         <img class="shot-dark" src="screenshots/15-pentatonic-shape-4-dark.webp"
              width="1936" height="1210" loading="lazy" decoding="async"
              alt="Pentatonic position 4 outlined on the neck over the E Major scale.">
-        <figcaption class="figure-caption">Shapes = 4: one pentatonic position, boxed in place.</figcaption>
+        <figcaption class="figure-caption">Box Shapes = 4: one pentatonic position, boxed in place.</figcaption>
       </figure>
+
+      <h3 id="chord-shapes-chords-and-progressions">Chord Shapes (Chords and Progressions)</h3>
+      <p><strong>Off / On.</strong> Turns the chord-shape overlays on the neck on and off — see <a href="#chord-shapes">Chord shapes</a> below for what they draw and the settings that go with them.</p>
 
       <h3>3 Notes Per String</h3>
       <p><strong>Off / 1 … 7.</strong> Scales mode only. Draws a pattern with three scale notes on every string. How many patterns exist depends on the scale — a seven-note scale gives seven, and smaller scales offer fewer.</p>
@@ -284,13 +287,19 @@
       <h3>Strings</h3>
       <p><strong>Off / 123 / 234 / 345 / 456.</strong> Triads mode only. Narrows the neck to one set of three adjacent strings so you can work a triad shape without the rest of the neck competing for attention.</p>
 
+      <h3 id="non-chord-notes">Non-Chord Notes</h3>
+      <p><strong>Off / On.</strong> Chords mode only. <strong>Off</strong> shows the chord's tones alone; <strong>On</strong> keeps the rest of the notes visible underneath in gray, so the chord reads inside its key rather than floating on an empty neck.</p>
+
+      <h3 id="fret-range-group">Fret Range</h3>
+      <p><strong>Full / Limited.</strong> Every mode. <strong>Limited</strong> puts the <a href="#fret-range">fret range limiter</a> below the neck so you can work a window of frets; <strong>Full</strong> gives the whole neck back.</p>
+
       <h3>Triad boxes</h3>
       <p>Triads mode, switched on with <strong>Show Triad Boxes</strong> in Settings: outlines each triad position on the neck.</p>
     </section>
 
     <section class="section-card" id="chord-shapes">
       <h2>Chord shapes</h2>
-      <p>In Chords mode, <strong>Show Chord Shapes</strong> draws real, playable fingerings for the selected chord on the neck, taken from an open chord-fingering database. Three settings shape how they behave:</p>
+      <p>In Chords mode, the <strong>Chord Shapes</strong> group in the Visual Groupings bar draws real, playable fingerings for the selected chord on the neck, taken from an open chord-fingering database. Set it to <strong>On</strong> to show them and <strong>Off</strong> to hide them. Three settings in <a href="settings.html#fretboard-tab">Settings → Fretboard → Shape Overlays</a> shape how they behave:</p>
       <ul>
         <li><strong>Show Finger Numbers</strong> — prints which finger plays each note.</li>
         <li><strong>Timeline Shape Cues</strong> — marks the shape's tones on the scale timeline as well as the neck.</li>
@@ -302,7 +311,7 @@
           </ul>
         </li>
       </ul>
-      <p>A legend below the neck names the shapes currently drawn.</p>
+      <p>A legend below the neck names the shapes currently drawn. It carries the same <strong>Chord Shapes</strong> caption as the switch, because it lists the same system: turn the switch off and the legend goes with it.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/17-chord-shapes-legend-light.webp"
              width="1936" height="1210" loading="lazy" decoding="async"
@@ -316,7 +325,7 @@
 
     <section class="section-card" id="fret-range">
       <h2>Fret range limiter</h2>
-      <p>Turn on <strong>Limit Fret Range</strong> in <a href="settings.html#fretboard-tab">Settings → Fretboard → Practice Focus</a> and a range bar appears below the neck. The handles sit on fret boundaries and are full-height, so they are easy to grab.</p>
+      <p>Set <strong>Fret Range</strong> to <strong>Limited</strong> in the Visual Groupings bar under the neck and a range bar appears below the fretboard. The handles sit on fret boundaries and are full-height, so they are easy to grab.</p>
       <ul>
         <li><strong>Drag the left handle</strong> — set the first fret.</li>
         <li><strong>Drag the right handle</strong> — set the last fret.</li>
@@ -330,7 +339,7 @@
         <img class="shot-dark" src="screenshots/18-fret-range-limiter-dark.webp"
              width="1936" height="666" loading="lazy" decoding="async"
              alt="The neck limited to frets five through nine, with the range bar below it and the rest of the neck dimmed.">
-        <figcaption class="figure-caption">Limit Fret Range narrowed to frets 5–9.</figcaption>
+        <figcaption class="figure-caption">Fret Range set to Limited, narrowed to frets 5–9.</figcaption>
       </figure>
 </section>
 

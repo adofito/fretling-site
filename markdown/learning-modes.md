@@ -33,9 +33,11 @@ let you overlay CAGED shapes, one of five pentatonic positions, or a three-notes
 pattern.
 
 **Adding a chord:** Scales mode has an optional chord slot at the end of the sentence. Pick a
-chord from the Chord Atlas and its tones are marked over the scale — including tones that
-are *not* in the scale, which stay visible rather than being filtered away. That is how
-borrowed chords, secondary dominants and slash-bass notes stay honest on the neck.
+chord from the Chord Atlas and it becomes the key's context — the scale timeline, the Chord
+play button and the Atlas all follow it. It deliberately leaves the fretboard alone: in Scales
+mode the scale is the subject, and a chord tone drawn louder than its neighbors answers a
+question you did not ask. Clear it with the **✕** beside the chord to go back to the scale on
+its own. To see a chord's tones marked on the neck, switch to Chords mode.
 
 **Use it to:** learn one key thoroughly, then switch on pentatonic or CAGED to see how the
 patterns you already know line up inside it.
@@ -55,13 +57,14 @@ widen the list:
 - **Secondary Dominants** — the V7 of each degree (V7/ii, V7/V and so on).
 - **Modal Interchange** — chords borrowed from the parallel mode.
 
-**On the fretboard:** chord tones are marked. Turn on **Show Non-Chord Notes** in Settings to
-keep the rest of the scale visible underneath, dimmed, so you can see the chord inside its
-key. Non-diatonic chord tones are always drawn, whatever the scale filter is doing.
+**On the fretboard:** chord tones are marked in full color. Set **Non-Chord Notes** to **On**
+in the chip bar under the neck to keep the rest of the scale visible underneath in gray, so you
+can see the chord inside its key. Non-diatonic chord tones are always drawn, whatever the scale
+filter is doing.
 
-**Chord shapes:** with **Show Chord Shapes** on, real fingerings for the selected chord are
-drawn on the neck, optionally with finger numbers, and optionally cued on the timeline. See
-[Chord shapes](fretboard.md#chord-shapes).
+**Chord shapes:** with the **Chord Shapes** chips below the neck set to **On**, real
+fingerings for the selected chord are drawn on the neck, optionally with finger numbers, and
+optionally cued on the timeline. See [Chord shapes](fretboard.md#chord-shapes).
 
 **Use it to:** see how the chords of a key relate to one another, and how each one maps onto
 a CAGED shape.
