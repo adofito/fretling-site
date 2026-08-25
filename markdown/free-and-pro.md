@@ -36,9 +36,12 @@ later.**
 | **The looper** (Mac) | Record a phrase and play over it, locked to the click. |
 | **Live Detect** | Hearing what you play, named on the neck — including sending it into identify. |
 
-Locked features stay visible where they live, dimmed with a small lock — so you always
-know what is there. Tapping one shows what Pro holds and the price; it never counts down,
-nags, or interrupts on its own.
+Locked features stay visible where they live, dimmed with a small lock, so you always know
+what is there. A locked scale or setting opens one quiet paywall sheet when you tap it: what
+Pro holds, and the price. The three Pro practice tools — the amp, the looper and Live
+Detect — wear a lock badge on their icon and still *open* when tapped: the panel says what
+the tool does and offers an **Unlock Fretling Pro** button, so you meet the feature before
+you meet the price. Nothing counts down, nags, or interrupts on its own.
 
 ## How unlocking works
 

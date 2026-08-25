@@ -1,8 +1,8 @@
 # Settings
 
-The settings sidebar slides in from the left, opened with the button in the top-left corner.
-It has three tabs — **Fretboard**, **Audio**, and **Icon** — and a link to About at the
-bottom.
+The settings sidebar slides in from the left, opened with the button at the left end of the
+top bar. It has three tabs — **Fretboard**, **Audio**, and **Icon** — and a link to About at
+the bottom.
 
 > Not everything lives in here. The settings you change constantly sit on the chip bars that
 > bracket the neck: [marker display](fretboard.md#marker-display-bar) above it,

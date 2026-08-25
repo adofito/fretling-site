@@ -29,8 +29,9 @@ neck.
 
 Everything sits around one stable fretboard:
 
-- **Top-left** — the settings button, which slides the sidebar in.
-- **Top-right** — the practice tool icons: tuner, amp, looper, Live Detect, mixer, metronome.
+- **The top bar** — one band across the top of the canvas: the settings button at the
+  leading end, which slides the sidebar in, and the six practice tool icons at the trailing
+  end — tuner, amp, looper, Live Detect, mixer, metronome.
 - **Above the neck** — the learning sentence, the scale timeline, and the marker display bar
   (Labels / Shapes / Colors / Accidentals).
 - **The neck** — six strings, 15 frets plus open position, tap any note to hear it.
@@ -47,8 +48,8 @@ Everything sits around one stable fretboard:
    note names and interval numbers.
 4. Use the **Visual Groupings** chips below the neck to lay CAGED shapes, pentatonic boxes,
    chord shapes, or 3NPS patterns over what you are seeing.
-5. Open the tools you need from the icon row in the top-right corner — they float over the
-   fretboard and can be dragged out of the way.
+5. Open the tools you need from the icon row at the right of the top bar — they float over
+   the fretboard and can be dragged out of the way.
 
 ## Platforms and requirements
 

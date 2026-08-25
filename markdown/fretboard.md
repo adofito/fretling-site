@@ -52,20 +52,32 @@ mark each root.
 
 ### Play chips
 
-Beside the timeline are up to two playback chips:
+Beside the timeline are up to two playback chips. Each wears the same transport button the
+[metronome](practice-tools.md#metronome) uses — press to make sound, press again to stop —
+and each spells out what it is about to play:
 
-- **Scale** — plays the current scale as a run, following whatever pattern and fret range you
-  have on screen. If the visible range holds no playable notes, the chip says so rather than
-  doing nothing.
-- **Chord** — sustains the current chord.
+- **Scale** — names the scale and lists its tones, then plays them as a run, following
+  whatever pattern and fret range you have on screen. If the visible range holds no playable
+  notes, the chip says so rather than doing nothing.
+- **Chord** — names the chord and lists its tones, then sustains it.
+
+The tone line is spelled the way the rest of the app is: **Labels** decides whether you read
+note names or interval degrees, and **Accidentals** whether they are sharp or flat. It
+answers a different question from the timeline underneath — the timeline maps the key, the
+tone line says what this one button will sound.
 
 The Scale chip appears in Scales and Chords modes whenever a scale is selected; the Chord
-chip appears whenever a chord is active. Press again to stop.
+chip appears whenever a chord is active.
 
 ## Visual Groupings: overlays and boxes
 
 Directly below the neck, a matching chip bar draws pattern systems over what is already
 there. Which groups appear depends on the mode you are in.
+
+The row is wider than a narrow window can hold, so it breaks on purpose rather than
+truncating: the switches you flip mid-practice — Fret Range, and Non-Chord Notes in Chords —
+stay pinned in place while the pattern systems scroll behind them. Where content really is
+cut off it passes under a soft fade, so a sliced chip reads as more row rather than damage.
 
 ### CAGED
 
@@ -109,8 +121,10 @@ an empty neck.
 
 ### Fret Range
 
-**Full / Limited.** Every mode. **Limited** puts the [fret range limiter](#fret-range-limiter)
-below the neck so you can work a window of frets; **Full** gives the whole neck back.
+**Full / Limited.** Every mode. **Limited** frames a
+[position window](#fret-range-limiter) on the neck so you can work a span of frets; **Full**
+gives the whole neck back. While the window is up, the group carries a third chip reading the
+span — **3–8** — which opens as a menu of named positions.
 
 ### Triad boxes
 
@@ -139,18 +153,24 @@ goes with it.
 
 ## Fret range limiter
 
-Set **Fret Range** to **Limited** in the Visual Groupings bar under the neck and a range bar
-appears below the fretboard. The handles sit on fret boundaries and are
-full-height, so they are easy to grab.
+Set **Fret Range** to **Limited** in the Visual Groupings bar and a position window is drawn
+on the neck itself — a framed span with a slim grab tab on each edge. The frets outside it
+are quieted rather than emptied, because *set aside* and *not in the scale* must not look
+alike.
 
-- **Drag the left handle** — set the first fret.
-- **Drag the right handle** — set the last fret.
-- **Drag the track between them** — slide the whole window up or down the neck without
+- **Drag an edge tab** — moves that boundary, snapping to the nearest fret line.
+- **Drag the fret numbers inside the frame** — slides the whole window along the neck without
   changing its width.
+- **Double-tap an edge tab** — opens the window out to that end of the neck.
 
-Vertical marks inside the track show which frets hold at least one visible note, so you can
-see where the material is before you move the window. The neck dims everything outside the
-range, and Scale playback follows the range too.
+The boundary frets name themselves as blue chips in the number row, on the same disc the
+inlay numbers wear. The frame is never filled in: it claims the span with its edge alone, so
+the markers it is drawn around stay exactly as legible as they were — and every note inside
+it stays tappable.
+
+While the window is up, the **Fret Range** group carries a value chip reading the span —
+**3–8**. It is also a menu: open it to jump straight to a named position — *Open*, *3rd*,
+*5th*, *7th*, *9th* or *12th*. Scale playback follows the window too.
 
 ## Tap to play
 

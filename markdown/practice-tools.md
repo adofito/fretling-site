@@ -1,8 +1,8 @@
 # Practice Tools
 
-Six tools open from the icon row in the top-right corner. Each is a floating panel over the
-fretboard — drag it where you want it, and close it when you are done. The neck stays visible
-and usable underneath.
+Six tools open from the icon row at the right of the top bar. Each is a floating panel over
+the fretboard — drag it where you want it, and close it when you are done. The neck stays
+visible and usable underneath.
 
 > **The amp and the looper are Mac-only.** They ride the same macOS monitoring engine, which
 > iPadOS does not offer. Everything else on this page works on both platforms.

@@ -140,19 +140,19 @@
       <p>Three of the four groups reach past the neck. <strong>Labels</strong>, <strong>Colors</strong> and <strong>Accidentals</strong> also set how the <a href="#timeline">scale timeline</a> and the Chord Atlas read, so a pitch is named, spelled and colored the same way wherever you meet it. (The Atlas keeps note names when Labels is None &mdash; a picker whose options carry no label has nothing to pick by.) <strong>Shapes</strong> is the neck&rsquo;s alone: the timeline and the Atlas draw round markers.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/08-marker-bar-notes-light.webp"
-             width="1936" height="290" loading="lazy" decoding="async"
+             width="1936" height="280" loading="lazy" decoding="async"
              alt="The marker display bar with Labels set to Notes, so every marker on the neck below prints a note name.">
         <img class="shot-dark" src="screenshots/08-marker-bar-notes-dark.webp"
-             width="1936" height="290" loading="lazy" decoding="async"
+             width="1936" height="280" loading="lazy" decoding="async"
              alt="The marker display bar with Labels set to Notes, so every marker on the neck below prints a note name.">
         <figcaption class="figure-caption">Labels = Notes. Accidentals stays live, because note names can be sharp or flat.</figcaption>
       </figure>
       <figure class="shot">
         <img class="shot-light" src="screenshots/09-marker-bar-intervals-light.webp"
-             width="1936" height="290" loading="lazy" decoding="async"
+             width="1936" height="280" loading="lazy" decoding="async"
              alt="The marker display bar with Labels set to Intervals, so markers print scale degrees and the Accidentals group is dimmed.">
         <img class="shot-dark" src="screenshots/09-marker-bar-intervals-dark.webp"
-             width="1936" height="290" loading="lazy" decoding="async"
+             width="1936" height="280" loading="lazy" decoding="async"
              alt="The marker display bar with Labels set to Intervals, so markers print scale degrees and the Accidentals group is dimmed.">
         <figcaption class="figure-caption">Labels = Intervals. Accidentals dims — it no longer applies — but stays visible.</figcaption>
       </figure>
@@ -164,19 +164,19 @@
       <p>The two shots below show the <strong>Shapes</strong> group at work.</p>
       <figure class="shot">
         <img class="shot-light" src="screenshots/10-markers-circles-light.webp"
-             width="1936" height="579" loading="lazy" decoding="async"
+             width="1936" height="545" loading="lazy" decoding="async"
              alt="The neck with every marker drawn as a plain filled circle.">
         <img class="shot-dark" src="screenshots/10-markers-circles-dark.webp"
-             width="1936" height="579" loading="lazy" decoding="async"
+             width="1936" height="545" loading="lazy" decoding="async"
              alt="The neck with every marker drawn as a plain filled circle.">
         <figcaption class="figure-caption">Shapes = Circles.</figcaption>
       </figure>
       <figure class="shot">
         <img class="shot-light" src="screenshots/11-markers-intervals-light.webp"
-             width="1936" height="579" loading="lazy" decoding="async"
+             width="1936" height="545" loading="lazy" decoding="async"
              alt="The neck with markers drawn as distinct per-degree shapes instead of plain circles.">
         <img class="shot-dark" src="screenshots/11-markers-intervals-dark.webp"
-             width="1936" height="579" loading="lazy" decoding="async"
+             width="1936" height="545" loading="lazy" decoding="async"
              alt="The neck with markers drawn as distinct per-degree shapes instead of plain circles.">
         <figcaption class="figure-caption">Shapes = Intervals: each scale degree takes its own outline.</figcaption>
       </figure>
@@ -218,26 +218,28 @@
       <p>Horizontal rails bracket the row to show the structure: the chord's tones are tied together above it, the scale's below. Small Chord and Scale captions name each rail, and triangles mark each root.</p>
       <figure class="shot" style="--shot-max: 900px">
         <img class="shot-light" src="screenshots/12-timeline-brackets-light.webp"
-             width="1800" height="330" loading="lazy" decoding="async"
+             width="1720" height="390" loading="lazy" decoding="async"
              alt="The scale timeline showing twelve semitones with the chord bracketed above the row and the scale bracketed below it.">
         <img class="shot-dark" src="screenshots/12-timeline-brackets-dark.webp"
-             width="1800" height="330" loading="lazy" decoding="async"
+             width="1720" height="390" loading="lazy" decoding="async"
              alt="The scale timeline showing twelve semitones with the chord bracketed above the row and the scale bracketed below it.">
         <figcaption class="figure-caption">The chord rail sits above the row, the scale rail below.</figcaption>
       </figure>
 
       <h3>Play chips</h3>
-      <p>Beside the timeline are up to two playback chips:</p>
+      <p>Beside the timeline are up to two playback chips. Each wears the same transport button the <a href="practice-tools.html#metronome">metronome</a> uses — press to make sound, press again to stop — and each spells out what it is about to play:</p>
       <ul>
-        <li><strong>Scale</strong> — plays the current scale as a run, following whatever pattern and fret range you have on screen. If the visible range holds no playable notes, the chip says so rather than doing nothing.</li>
-        <li><strong>Chord</strong> — sustains the current chord.</li>
+        <li><strong>Scale</strong> — names the scale and lists its tones, then plays them as a run, following whatever pattern and fret range you have on screen. If the visible range holds no playable notes, the chip says so rather than doing nothing.</li>
+        <li><strong>Chord</strong> — names the chord and lists its tones, then sustains it.</li>
       </ul>
-      <p>The Scale chip appears in Scales and Chords modes whenever a scale is selected; the Chord chip appears whenever a chord is active. Press again to stop.</p>
+      <p>The tone line is spelled the way the rest of the app is: <strong>Labels</strong> decides whether you read note names or interval degrees, and <strong>Accidentals</strong> whether they are sharp or flat. It answers a different question from the timeline underneath — the timeline maps the key, the tone line says what this one button will sound.</p>
+      <p>The Scale chip appears in Scales and Chords modes whenever a scale is selected; the Chord chip appears whenever a chord is active.</p>
     </section>
 
     <section class="section-card" id="overlays">
       <h2>Visual Groupings: overlays and boxes</h2>
       <p>Directly below the neck, a matching chip bar draws pattern systems over what is already there. Which groups appear depends on the mode you are in.</p>
+      <p>The row is wider than a narrow window can hold, so it breaks on purpose rather than truncating: the switches you flip mid-practice — <a href="#fret-range-group">Fret Range</a>, and <a href="#non-chord-notes">Non-Chord Notes</a> in Chords — stay pinned in place while the pattern systems scroll behind them. Where content really is cut off it passes under a soft fade, so a sliced chip reads as more row rather than damage.</p>
 
       <h3>CAGED</h3>
       <p><strong>Off / All / C / A / G / E / D.</strong> Overlays one of the five CAGED shapes — or all of them at once — on the current scale, chord, or triad. Available in every learning mode.</p>
@@ -291,7 +293,7 @@
       <p><strong>Off / On.</strong> Chords mode only. <strong>Off</strong> shows the chord's tones alone; <strong>On</strong> keeps the rest of the notes visible underneath in gray, so the chord reads inside its key rather than floating on an empty neck.</p>
 
       <h3 id="fret-range-group">Fret Range</h3>
-      <p><strong>Full / Limited.</strong> Every mode. <strong>Limited</strong> puts the <a href="#fret-range">fret range limiter</a> below the neck so you can work a window of frets; <strong>Full</strong> gives the whole neck back.</p>
+      <p><strong>Full / Limited.</strong> Every mode. <strong>Limited</strong> frames a <a href="#fret-range">position window</a> on the neck so you can work a span of frets; <strong>Full</strong> gives the whole neck back. While the window is up, the group carries a third chip reading the span — <strong>3–8</strong> — which opens as a menu of named positions.</p>
 
       <h3>Triad boxes</h3>
       <p>Triads mode, switched on with <strong>Show Triad Boxes</strong> in Settings: outlines each triad position on the neck.</p>
@@ -325,21 +327,22 @@
 
     <section class="section-card" id="fret-range">
       <h2>Fret range limiter</h2>
-      <p>Set <strong>Fret Range</strong> to <strong>Limited</strong> in the Visual Groupings bar under the neck and a range bar appears below the fretboard. The handles sit on fret boundaries and are full-height, so they are easy to grab.</p>
+      <p>Set <strong>Fret Range</strong> to <strong>Limited</strong> in the Visual Groupings bar and a position window is drawn on the neck itself — a framed span with a slim grab tab on each edge. The frets outside it are quieted rather than emptied, because <em>set aside</em> and <em>not in the scale</em> must not look alike.</p>
       <ul>
-        <li><strong>Drag the left handle</strong> — set the first fret.</li>
-        <li><strong>Drag the right handle</strong> — set the last fret.</li>
-        <li><strong>Drag the track between them</strong> — slide the whole window up or down the neck without changing its width.</li>
+        <li><strong>Drag an edge tab</strong> — moves that boundary, snapping to the nearest fret line.</li>
+        <li><strong>Drag the fret numbers inside the frame</strong> — slides the whole window along the neck without changing its width.</li>
+        <li><strong>Double-tap an edge tab</strong> — opens the window out to that end of the neck.</li>
       </ul>
-      <p>Vertical marks inside the track show which frets hold at least one visible note, so you can see where the material is before you move the window. The neck dims everything outside the range, and Scale playback follows the range too.</p>
+      <p>The boundary frets name themselves as blue chips in the number row, on the same disc the inlay numbers wear. The frame is never filled in: it claims the span with its edge alone, so the markers it is drawn around stay exactly as legible as they were — and every note inside it stays tappable.</p>
+      <p>While the window is up, the <strong>Fret Range</strong> group carries a value chip reading the span — <strong>3–8</strong>. It is also a menu: open it to jump straight to a named position — <em>Open</em>, <em>3rd</em>, <em>5th</em>, <em>7th</em>, <em>9th</em> or <em>12th</em>. Scale playback follows the window too.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/18-fret-range-limiter-light.webp"
-             width="1936" height="666" loading="lazy" decoding="async"
-             alt="The neck limited to frets five through nine, with the range bar below it and the rest of the neck dimmed.">
+             width="1936" height="638" loading="lazy" decoding="async"
+             alt="The neck with a framed position window over frets five through nine, its boundary frets marked as blue chips in the number row and the frets outside it quieted.">
         <img class="shot-dark" src="screenshots/18-fret-range-limiter-dark.webp"
-             width="1936" height="666" loading="lazy" decoding="async"
-             alt="The neck limited to frets five through nine, with the range bar below it and the rest of the neck dimmed.">
-        <figcaption class="figure-caption">Fret Range set to Limited, narrowed to frets 5–9.</figcaption>
+             width="1936" height="638" loading="lazy" decoding="async"
+             alt="The neck with a framed position window over frets five through nine, its boundary frets marked as blue chips in the number row and the frets outside it quieted.">
+        <figcaption class="figure-caption">Fret Range set to Limited: the window framed on the neck, its boundaries named 5 and 9.</figcaption>
       </figure>
 </section>
 
