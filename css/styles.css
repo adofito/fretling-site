@@ -1187,6 +1187,7 @@ button.chip:hover .chev { transform: translateY(1px); }
 .callout[data-accent="platform"] { --callout-accent: var(--f-accent-app); }
 .callout[data-accent="tip"]      { --callout-accent: var(--f-accent-chord); }
 .callout[data-accent="caution"]  { --callout-accent: var(--f-accent-mode); }
+.callout[data-accent="pro"]      { --callout-accent: var(--f-accent-mode); }
 
 /* Platform badge — chip grammar at caption scale */
 .platform-badge {
@@ -1210,6 +1211,47 @@ button.chip:hover .chev { transform: translateY(1px); }
   border-radius: 50%;
   background: currentColor;
 }
+
+/* Pro badge — the tier mark, and the platform badge's partner.
+
+   Two different questions, so two different treatments: "Mac only" tints its
+   field, "Pro" fills it. The amp and the looper wear both, and the pair has to
+   read as two facts rather than one chip stuttered — a shared tint with only a
+   hue between them would not. Amber is the Free & Pro page's own `--page-accent`,
+   so the mark agrees with the page it points at.
+
+   The ink on top is a fixed dark in both themes, because amber is a light hue in
+   both: dark-on-amber clears 8:1 on the warm canvas and 9:1 on the dark one,
+   where amber-as-text would sit at 1.9:1 and fail outright. Tinting like the
+   platform badge was the first instinct and this is why it was dropped.
+
+   It is also the one badge that links. A reader who meets "Pro" against a
+   feature wants the promise and the price, and both are one page away. */
+.pro-badge {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: var(--s-3);
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  background: var(--f-accent-mode);
+  color: #241a08;
+  font-size: var(--t-caption);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: filter 0.15s ease-out;
+}
+a.pro-badge:hover { filter: brightness(1.07); text-decoration: none; }
+
+/* Against a heading the badge needs its own approach room. Set into running
+   prose — a list item, a table cell, a sentence naming the mark — the word
+   space beside it is already the gap, and the margin doubles it. */
+td .pro-badge,
+li .pro-badge { margin-left: var(--s-2); }
+.callout p .pro-badge,
+p .pro-badge { margin-left: 0; }
 
 /* ============================================================
    7. Tables
