@@ -74,6 +74,10 @@ chip appears whenever a chord is active.
 Directly below the neck, a matching chip bar draws pattern systems over what is already
 there. Which groups appear depends on the mode you are in.
 
+A thin line under a group means that system is live — it is drawing on the neck right now.
+A group left at **Off**, **Full**, or **All** lays nothing over the board and carries no line,
+so you can see what is switched on without reading the row.
+
 The row is wider than a narrow window can hold, so it breaks on purpose rather than
 truncating: the switches you flip mid-practice — Fret Range, and Non-Chord Notes in Chords —
 stay pinned in place while the pattern systems scroll behind them. Where content really is

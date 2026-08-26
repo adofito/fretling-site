@@ -76,7 +76,7 @@
     <p class="lede">Six tools open from the icon row at the right of the top bar. Each is a floating panel over the fretboard — drag it where you want it, and close it when you are done. The neck stays visible and usable underneath.</p>
 
     <div class="callout" data-accent="platform">
-      <p><strong>The amp and the looper are Mac-only.</strong> They ride the same macOS monitoring engine, which iPadOS does not offer. Everything else on this page works on both platforms.</p>
+      <p><strong>Everything on this page works on Mac and iPad.</strong> The amp and the looper used to be Mac-only; they now run on iPad too. Plug in a USB-C audio interface, or use headphones — monitoring through the built-in speaker feeds back into the built-in mic, and the amp will tell you so.</p>
     </div>
 
     <div class="callout" data-accent="pro">
@@ -189,7 +189,7 @@
 </section>
 
     <section class="section-card" id="amp">
-      <h2>Guitar amp <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> <span class="platform-badge">Mac only</span></h2>
+      <h2>Guitar amp <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a></h2>
       <p>Plug a guitar into an audio interface and monitor it through a <strong>Neural Amp Modeler</strong> profile — the amp captures shared as <code>.nam</code> files. Fretling ships with a set of starter models and loads any other <code>.nam</code> file you point it at.</p>
 
       <h3>Amp tab</h3>
@@ -212,7 +212,8 @@
 
       <h3>Advanced tab</h3>
       <ul>
-        <li><strong>Input device</strong> and <strong>Channel</strong> — choose the interface and which of its inputs your guitar is on. If a saved device is gone, the picker says so rather than failing silently, and there is a shortcut into macOS Sound settings.</li>
+        <li><strong>Input device</strong> and <strong>Channel</strong> (Mac) — choose the interface and which of its inputs your guitar is on. If a saved device is gone, the picker says so rather than failing silently, and there is a shortcut into macOS Sound settings.</li>
+        <li><strong>Route</strong> (iPad) — iPadOS picks the input and output itself, so instead of a chooser the amp names the route in use and warns when it would feed back.</li>
         <li><strong>Buffer size</strong> and <strong>Sample rate</strong> — the latency trade. Fretling supports 44.1, 48, 88.2, 96 and 192 kHz.</li>
         <li><strong>Latency</strong> — the resulting monitoring latency, reported in milliseconds so the trade is a number rather than a guess.</li>
       </ul>
@@ -229,7 +230,7 @@
 </section>
 
     <section class="section-card" id="looper">
-      <h2>Looper <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> <span class="platform-badge">Mac only</span></h2>
+      <h2>Looper <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a></h2>
       <p>Record a phrase and play over it. The looper sits on the amp's monitoring path, so <strong>turn Monitor on in the amp first</strong> — the looper says as much if you have not.</p>
       <ul>
         <li><strong>Record</strong> — press once to start, press again to close the loop. It then repeats until you clear it.</li>
@@ -266,8 +267,8 @@
             <tr><td><strong>Chord</strong></td><td>Chords played from the timeline and the Chord Atlas.</td></tr>
             <tr><td><strong>Prog</strong></td><td>Progression playback.</td></tr>
             <tr><td><strong>Click</strong></td><td>Metronome and drums.</td></tr>
-            <tr><td><strong>Amp</strong> <span class="platform-badge">Mac</span></td><td>Your monitored guitar.</td></tr>
-            <tr><td><strong>Loop</strong> <span class="platform-badge">Mac</span></td><td>Looper playback.</td></tr>
+            <tr><td><strong>Amp</strong></td><td>Your monitored guitar.</td></tr>
+            <tr><td><strong>Loop</strong></td><td>Looper playback.</td></tr>
             <tr><td><strong>Main</strong></td><td>Master output.</td></tr>
           </tbody>
         </table>

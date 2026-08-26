@@ -32,8 +32,8 @@ later.**
 | **Borrowed harmony** | Secondary Dominants and Modal Interchange in Settings → Fretboard. |
 | **Precision tuning** | The tuner's ±0.5¢ bench mode, plus the Trace, Strobe, and Disc displays. |
 | **Drum grooves** | The step sequencer and pattern library behind the metronome's Drums sound. |
-| **The guitar amp** (Mac) | Monitoring through Neural Amp Modeler profiles — the starter set or any .nam file you load. |
-| **The looper** (Mac) | Record a phrase and play over it, locked to the click. |
+| **The guitar amp** | Monitoring through Neural Amp Modeler profiles — the starter set or any .nam file you load. |
+| **The looper** | Record a phrase and play over it, locked to the click. |
 | **Live Detect** | Hearing what you play, named on the neck — including sending it into identify. |
 
 Locked features stay visible where they live, dimmed with a small lock, so you always know

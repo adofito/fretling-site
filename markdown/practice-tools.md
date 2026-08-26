@@ -4,8 +4,10 @@ Six tools open from the icon row at the right of the top bar. Each is a floating
 the fretboard — drag it where you want it, and close it when you are done. The neck stays
 visible and usable underneath.
 
-> **The amp and the looper are Mac-only.** They ride the same macOS monitoring engine, which
-> iPadOS does not offer. Everything else on this page works on both platforms.
+> **Everything on this page works on Mac and iPad.** The amp and the looper used to be
+> Mac-only; they now run on iPad too. Plug in a USB-C audio interface, or use headphones —
+> monitoring through the built-in speaker feeds back into the built-in mic, and the amp
+> will tell you so.
 
 Every panel is built to look like the hardware it stands in for — a machined faceplate,
 recessed displays, indicator lamps, knurled fader caps. Two finishes ship: **Machined**, a
@@ -72,7 +74,7 @@ Open the pattern editor from the metronome to build your own:
 Changing the meter while a custom pattern is loaded asks what you want done with it rather
 than silently reshaping your work.
 
-## Guitar amp (Mac only)
+## Guitar amp
 
 Plug a guitar into an audio interface and monitor it through a **Neural Amp Modeler**
 profile — the amp captures shared as `.nam` files. Fretling ships with a set of starter
@@ -89,9 +91,11 @@ models and loads any other `.nam` file you point it at.
 
 ### Advanced tab
 
-- **Input device** and **Channel** — choose the interface and which of its inputs your guitar
-  is on. If a saved device is gone, the picker says so rather than failing silently, and
-  there is a shortcut into macOS Sound settings.
+- **Input device** and **Channel** (Mac) — choose the interface and which of its inputs your
+  guitar is on. If a saved device is gone, the picker says so rather than failing silently,
+  and there is a shortcut into macOS Sound settings.
+- **Route** (iPad) — iPadOS picks the input and output itself, so instead of a chooser the
+  amp names the route in use and warns when it would feed back.
 - **Buffer size** and **Sample rate** — the latency trade. Fretling supports 44.1, 48, 88.2,
   96 and 192 kHz.
 - **Latency** — the resulting monitoring latency, reported in milliseconds so the trade is a
@@ -99,7 +103,7 @@ models and loads any other `.nam` file you point it at.
 
 Every slider has tick marks, a dB readout, and a double-click reset back to its default.
 
-## Looper (Mac only)
+## Looper
 
 Record a phrase and play over it. The looper sits on the amp's monitoring path, so **turn
 Monitor on in the amp first** — the looper says as much if you have not.
@@ -131,8 +135,8 @@ level that is too loud.
 | **Chord** | Chords played from the timeline and the Chord Atlas. |
 | **Prog** | Progression playback. |
 | **Click** | Metronome and drums. |
-| **Amp** (Mac) | Your monitored guitar. |
-| **Loop** (Mac) | Looper playback. |
+| **Amp** | Your monitored guitar. |
+| **Loop** | Looper playback. |
 | **Main** | Master output. |
 
 Every strip except Main has **mute** and **solo**; a badge on the panel reminds you when
