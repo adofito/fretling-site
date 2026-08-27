@@ -91,8 +91,9 @@
 
     <section class="section-card" id="layout">
       <h2>Layout</h2>
-      <p>Six strings, low E at the bottom to high e at the top, and <strong>15 frets</strong> plus the open position. Fret numbers run along the neck, with the usual inlay frets — 3, 5, 7, 9, 12, 15 — called out so you can find your place at a glance.</p>
-      <p>The neck fills the width it is given and does not scroll horizontally. If you want a smaller span, use the <a href="#fret-range">fret range limiter</a> rather than scrolling.</p>
+      <p>Six strings, low E at the bottom to high e at the top, and <strong>15 frets</strong> plus the open position to start with. Fret numbers run along the neck, with the usual inlay frets — 3, 5, 7, 9, 12, 15, 17, 19, 21 — called out so you can find your place at a glance.</p>
+      <p>Set the neck to your own guitar with <strong>Frets</strong> at the left of the <a href="#marker-bar">marker display bar</a>: anywhere from 12 to 22.</p>
+      <p>The neck always fills the width it is given and never scrolls sideways, so a longer neck draws narrower frets and slightly smaller markers rather than running off the edge. To work a span of the neck rather than shorten it, use the <a href="#fret-range">fret range limiter</a> &mdash; that frames a position on the board you have, while <strong>Frets</strong> changes how much board there is.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/01-app-scales-light.webp"
              width="1936" height="1210" loading="lazy" decoding="async"
@@ -100,7 +101,7 @@
         <img class="shot-dark" src="screenshots/01-app-scales-dark.webp"
              width="1936" height="1210" loading="lazy" decoding="async"
              alt="The Fretling window in Scales mode: the sentence header across the top, the scale timeline and marker display bar above the neck, six strings of E Major markers, and the Visual Groupings chips below.">
-        <figcaption class="figure-caption">Six strings and fifteen frets, with the inlay frets numbered along the top.</figcaption>
+        <figcaption class="figure-caption">Six strings and the default fifteen frets, with the inlay frets numbered along the top.</figcaption>
       </figure>
 </section>
 
@@ -113,6 +114,11 @@
             <tr><th>Group</th><th>Chips</th><th>What it does</th></tr>
           </thead>
           <tbody>
+            <tr>
+              <td><strong>Frets</strong></td>
+              <td>&minus; / &plus;</td>
+              <td>How many frets the neck draws, from 12 to 22 &mdash; set it to match your own guitar. The default is 15. This is the one group that is a stepper rather than a row of chips, and it leads the bar because it describes the board rather than the markers standing on it.</td>
+            </tr>
             <tr>
               <td><strong>Labels</strong></td>
               <td>Notes / Intervals / None</td>
@@ -136,8 +142,8 @@
           </tbody>
         </table>
       </div>
-      <p>Each group is radio-style: one chip is lit, and tapping the lit chip does nothing. On a narrow window the bar scrolls sideways instead of wrapping.</p>
-      <p>Three of the four groups reach past the neck. <strong>Labels</strong>, <strong>Colors</strong> and <strong>Accidentals</strong> also set how the <a href="#timeline">scale timeline</a> and the Chord Atlas read, so a pitch is named, spelled and colored the same way wherever you meet it. (The Atlas keeps note names when Labels is None &mdash; a picker whose options carry no label has nothing to pick by.) <strong>Shapes</strong> is the neck&rsquo;s alone: the timeline and the Atlas draw round markers.</p>
+      <p>Every group except <strong>Frets</strong> is radio-style: one chip is lit, and tapping the lit chip does nothing. On a narrow window the bar scrolls sideways instead of wrapping.</p>
+      <p>Three of the four marker groups reach past the neck. <strong>Labels</strong>, <strong>Colors</strong> and <strong>Accidentals</strong> also set how the <a href="#timeline">scale timeline</a> and the Chord Atlas read, so a pitch is named, spelled and colored the same way wherever you meet it. (The Atlas keeps note names when Labels is None &mdash; a picker whose options carry no label has nothing to pick by.) <strong>Shapes</strong> is the neck&rsquo;s alone: the timeline and the Atlas draw round markers.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/08-marker-bar-notes-light.webp"
              width="1936" height="280" loading="lazy" decoding="async"

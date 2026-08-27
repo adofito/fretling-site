@@ -212,9 +212,10 @@
 
       <h3>Advanced tab</h3>
       <ul>
-        <li><strong>Input device</strong> and <strong>Channel</strong> (Mac) — choose the interface and which of its inputs your guitar is on. If a saved device is gone, the picker says so rather than failing silently, and there is a shortcut into macOS Sound settings.</li>
-        <li><strong>Route</strong> (iPad) — iPadOS picks the input and output itself, so instead of a chooser the amp names the route in use and warns when it would feed back.</li>
-        <li><strong>Buffer size</strong> and <strong>Sample rate</strong> — the latency trade. Fretling supports 44.1, 48, 88.2, 96 and 192 kHz.</li>
+        <li><strong>Input device</strong> — choose the interface your guitar is on. On Mac this is an audio device and there is a shortcut into Sound settings; on iPad it is one of the inputs iPadOS offers. Either way, if a saved one is gone the picker says so rather than failing silently.</li>
+        <li><strong>Channel</strong> — which of that interface's inputs your guitar is plugged into. It appears whenever the input has more than one, so a one-in interface never shows it. The tuner and Live Detect follow the same choice, so everything listens to the same jack.</li>
+        <li><strong>Route</strong> (iPad) — what the input and output actually resolved to. iPadOS still picks the <strong>output</strong> for you: plug in headphones or an interface and it switches automatically. The amp warns here when the route would feed back.</li>
+        <li><strong>Buffer size</strong> and <strong>Sample rate</strong> — the latency trade. Fretling supports 44.1, 48, 88.2, 96 and 192 kHz. On iPad these are requests rather than settings: iPadOS answers them when the amp starts, so a line under the pickers reports what it actually granted.</li>
         <li><strong>Latency</strong> — the resulting monitoring latency, reported in milliseconds so the trade is a number rather than a guess.</li>
       </ul>
       <p>Every slider has tick marks, a dB readout, and a double-click reset back to its default.</p>

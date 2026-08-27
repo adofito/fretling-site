@@ -51,11 +51,11 @@ chord picker is the **Chord Atlas**: it lists the chords of the key with their R
 numerals, lets you preview each one, and reaches beyond the diatonic seven when you want it
 to.
 
-**Borrowed harmony:** two switches in [Settings → Fretboard](settings.md#fretboard-tab)
-widen the list:
-
-- **Secondary Dominants** — the V7 of each degree (V7/ii, V7/V and so on).
-- **Modal Interchange** — chords borrowed from the parallel mode.
+**Borrowed harmony:** the Atlas does not stop at the seven chords of the key. Pick a chord
+from outside it and the Atlas names the borrowing rather than shrugging: a secondary
+dominant reads **Borrowed · V/V**, a chord taken from the parallel mode reads
+**Borrowed · iv**, and both sort up with the chords of the key. There is nothing to switch
+on.
 
 **On the fretboard:** chord tones are marked in full color. Set **Non-Chord Notes** to **On**
 in the chip bar under the neck to keep the rest of the scale visible underneath in gray, so you

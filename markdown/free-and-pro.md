@@ -10,7 +10,8 @@ most of the intermediate one:
 
 - All three learning modes — Scales, Chords, Triads — and the sentence header.
 - The core scales: Major, Minor, both Pentatonics, and Blues.
-- The Chord Atlas with the chords of the key, Roman numerals, and previews.
+- The Chord Atlas with the chords of the key, Roman numerals, borrowed-harmony labels,
+  and previews.
 - Identifying a chord by tapping notes onto the neck.
 - Every overlay: CAGED, pentatonic positions, 3NPS, string sets, triad boxes — and chord
   shapes with finger numbers.
@@ -29,7 +30,6 @@ later.**
 | Pro feature | What it is |
 |-------------|------------|
 | **The rest of music theory** | Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor under *More scales*. |
-| **Borrowed harmony** | Secondary Dominants and Modal Interchange in Settings → Fretboard. |
 | **Precision tuning** | The tuner's ±0.5¢ bench mode, plus the Trace, Strobe, and Disc displays. |
 | **Drum grooves** | The step sequencer and pattern library behind the metronome's Drums sound. |
 | **The guitar amp** | Monitoring through Neural Amp Modeler profiles — the starter set or any .nam file you load. |

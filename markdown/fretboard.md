@@ -6,11 +6,17 @@ the chip bars, the floating tools — arranges itself around it.
 ## Layout
 
 Six strings, low E at the bottom to high e at the top, and **15 frets** plus the open
-position. Fret numbers run along the neck, with the usual inlay frets — 3, 5, 7, 9, 12, 15 —
-called out so you can find your place at a glance.
+position to start with. Fret numbers run along the neck, with the usual inlay frets — 3, 5,
+7, 9, 12, 15, 17, 19, 21 — called out so you can find your place at a glance.
 
-The neck fills the width it is given and does not scroll horizontally. If you want a smaller
-span, use the [fret range limiter](#fret-range-limiter) rather than scrolling.
+Set the neck to your own guitar with **Frets** at the left of the [marker display
+bar](#marker-display-bar): anywhere from 12 to 22.
+
+The neck always fills the width it is given and never scrolls sideways, so a longer neck
+draws narrower frets and slightly smaller markers rather than running off the edge. To work
+a span of the neck rather than shorten it, use the [fret range
+limiter](#fret-range-limiter) — that frames a position on the board you have, while
+**Frets** changes how much board there is.
 
 ## Marker display bar
 
@@ -20,13 +26,14 @@ sidebar.
 
 | Group | Chips | What it does |
 |-------|-------|--------------|
+| **Frets** | − / + | How many frets the neck draws, from 12 to 22 — set it to match your own guitar. The default is 15. This is the one group that is a stepper rather than a row of chips, and it leads the bar because it describes the board rather than the markers standing on it. |
 | **Labels** | Notes / Intervals / None | *Notes* prints note names (G, A♯). *Intervals* prints scale degrees (1, 2, ♭3). *None* leaves bare dots — useful for testing yourself. |
 | **Shapes** | Circles / Intervals | *Circles* draws every marker the same. *Intervals* gives each degree its own outline — square, diamond, hexagon — so the root reads differently from a third even in Gray. |
 | **Colors** | Color / Gray | *Color* gives each interval its own color, so a degree is recognizable before you read it. *Gray* makes every marker the same, which keeps shapes and geometry in focus. |
 | **Accidentals** | ♯ Sharps / ♭ Flats | Whether black-key notes read as F♯ or G♭. Only meaningful when labels show note names, so this group dims — but stays visible — when Labels is set to Intervals or None. |
 
-Each group is radio-style: one chip is lit, and tapping the lit chip does nothing. On a
-narrow window the bar scrolls sideways instead of wrapping.
+Every group except **Frets** is radio-style: one chip is lit, and tapping the lit chip does
+nothing. On a narrow window the bar scrolls sideways instead of wrapping.
 
 ## Note markers
 

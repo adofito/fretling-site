@@ -34,7 +34,7 @@ Everything sits around one stable fretboard:
   end — tuner, amp, looper, Live Detect, mixer, metronome.
 - **Above the neck** — the learning sentence, the scale timeline, and the marker display bar
   (Labels / Shapes / Colors / Accidentals).
-- **The neck** — six strings, 15 frets plus open position, tap any note to hear it.
+- **The neck** — six strings, 12 to 22 frets (15 by default) plus open position, tap any note to hear it.
 - **Below the neck** — the Visual Groupings bar (CAGED / Box Shapes / Chord Shapes / 3NPS /
   Strings).
 

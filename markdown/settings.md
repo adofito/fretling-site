@@ -11,7 +11,7 @@ the bottom.
 
 ## Fretboard tab
 
-Four groups, some of which appear only in the modes they apply to. Options that do not apply
+Three groups, some of which appear only in the modes they apply to. Options that do not apply
 right now are dimmed rather than hidden, so the sidebar does not rearrange itself under you.
 
 ### Appearance
@@ -20,13 +20,6 @@ right now are dimmed rather than hidden, so the sidebar does not rearrange itsel
 |---------|---------|-------------|
 | **Theme** | System / Light / Dark | Follow the device appearance, or pin Fretling to light or dark. |
 | **Modules** | Auto / Machined / Studio | How the floating practice tools are drawn. Auto gives the light canvas the Machined panel and the dark canvas the Studio one; pin either to keep it everywhere. |
-
-### Borrowed Harmony
-
-| Setting | Options | Description |
-|---------|---------|-------------|
-| **Secondary Dominants** | Toggle | Adds the secondary dominants of the key (V7/ii, V7/V and so on) to the chord picker. These are seventh-quality chords, so switching this on also enables advanced chords. |
-| **Modal Interchange** | Toggle | Adds chords borrowed from the parallel mode. |
 
 Marker settings are not here — labels, shapes, colors and accidentals all live on the
 [marker display bar](fretboard.md#marker-display-bar) above the neck, where they stay

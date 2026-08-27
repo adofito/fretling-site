@@ -91,13 +91,19 @@ models and loads any other `.nam` file you point it at.
 
 ### Advanced tab
 
-- **Input device** and **Channel** (Mac) — choose the interface and which of its inputs your
-  guitar is on. If a saved device is gone, the picker says so rather than failing silently,
-  and there is a shortcut into macOS Sound settings.
-- **Route** (iPad) — iPadOS picks the input and output itself, so instead of a chooser the
-  amp names the route in use and warns when it would feed back.
+- **Input device** — choose the interface your guitar is on. On Mac this is an audio
+  device and there is a shortcut into Sound settings; on iPad it is one of the inputs
+  iPadOS offers. Either way, if a saved one is gone the picker says so rather than failing
+  silently.
+- **Channel** — which of that interface's inputs your guitar is plugged into. It appears
+  whenever the input has more than one, so a one-in interface never shows it. The tuner and
+  Live Detect follow the same choice, so everything listens to the same jack.
+- **Route** (iPad) — what the input and output actually resolved to. iPadOS still picks the
+  **output** for you: plug in headphones or an interface and it switches automatically. The
+  amp warns here when the route would feed back.
 - **Buffer size** and **Sample rate** — the latency trade. Fretling supports 44.1, 48, 88.2,
-  96 and 192 kHz.
+  96 and 192 kHz. On iPad these are requests rather than settings: iPadOS answers them when
+  the amp starts, so a line under the pickers reports what it actually granted.
 - **Latency** — the resulting monitoring latency, reported in milliseconds so the trade is a
   number rather than a guess.
 
