@@ -57,24 +57,35 @@ Horizontal rails bracket the row to show the structure: the chord's tones are ti
 above it, the scale's below. Small Chord and Scale captions name each rail, and triangles
 mark each root.
 
-### Play chips
+### Timeline transports
 
-Beside the timeline are up to two playback chips. Each wears the same transport button the
-[metronome](practice-tools.md#metronome) uses — press to make sound, press again to stop —
-and each spells out what it is about to play:
+At the leading edge of the timeline stand up to two round transports, each on the rail it
+plays — the Chord transport beside the chord rail above the row, the Scale transport beside
+the scale rail below it. Press one to make sound, press it again to stop; a transport that is
+sounding fills in solid.
 
-- **Scale** — names the scale and lists its tones, then plays them as a run, following
-  whatever pattern and fret range you have on screen. If the visible range holds no playable
-  notes, the chip says so rather than doing nothing.
-- **Chord** — names the chord and lists its tones, then sustains it.
+- **Scale** — plays the scale as a run, following whatever pattern and fret range you have on
+  screen.
+- **Chord** — sustains the chord.
 
-The tone line is spelled the way the rest of the app is: **Labels** decides whether you read
-note names or interval degrees, and **Accidentals** whether they are sharp or flat. It
-answers a different question from the timeline underneath — the timeline maps the key, the
-tone line says what this one button will sound.
+A transport is mounted on a rail, so a rail is all it takes for one to appear: the Scale
+transport is there whenever a scale is on the timeline, the Chord transport whenever a chord
+is active. That includes Triads, which can now sound the triad it is showing you.
 
-The Scale chip appears in Scales and Chords modes whenever a scale is selected; the Chord
-chip appears whenever a chord is active.
+Under the row, a single tone line spells what the transport is about to sound. It follows the
+subject of the mode you are in — the chord in Chords and Triads, the scale in Scales — except
+while something is playing, when it follows the sound instead. When both transports are up it
+puts **Scale** or **Chord** in front, so you can tell which one it is describing.
+
+The scale's line is spelled from the notes that will *actually be struck*, so narrowing the
+fret range or switching on a box narrows the line the same way it narrows the run. If the
+visible range holds no playable notes, the line says *No notes in this fret range* rather than
+leaving you to press a dead button.
+
+The spelling follows the rest of the app: **Labels** decides whether you read note names or
+interval degrees, and **Accidentals** whether they are sharp or flat. It answers a different
+question from the timeline above it — the timeline maps the key, the tone line says what this
+one transport will sound.
 
 ## Visual Groupings: overlays and boxes
 

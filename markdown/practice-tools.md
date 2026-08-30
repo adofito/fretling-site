@@ -80,30 +80,58 @@ Plug a guitar into an audio interface and monitor it through a **Neural Amp Mode
 profile — the amp captures shared as `.nam` files. Fretling ships with a set of starter
 models and loads any other `.nam` file you point it at.
 
-### Amp tab
+The panel holds amp matters only. Anything about the *input* — which interface, which
+channel, how much gain, buffer size and sample rate — lives in the [input console](#input)
+in the top bar, because the tuner and Live Detect listen through the same input and none of
+it needs a model loaded.
 
-- **Input level** — a live meter, so you can set gain before you hear anything.
 - **Model** — pick a starter profile, or **Load .nam…** to use your own.
-- **Monitor / Stop** — starts and stops live monitoring.
-- **Input gain** and **Output gain** — level into and out of the amp path.
+- **Monitor / Stop** — starts and stops live monitoring. Stopping genuinely releases the
+  microphone; a loop that is playing keeps playing.
+- **Output gain** — level out of the amp path.
 - **Model input level** and **Model output level** — trim around the model itself, which is
   how you match a profile that was captured hot or quiet.
 
-### Advanced tab
+## Input
 
-- **Input device** — choose the interface your guitar is on. On Mac this is an audio
-  device and there is a shortcut into Sound settings; on iPad it is one of the inputs
-  iPadOS offers. Either way, if a saved one is gone the picker says so rather than failing
-  silently.
+Choosing an interface is not an amp question, so it does not live in the amp. The top bar
+carries a microphone lamp and a level meter: the lamp is the master switch, and the meter
+shows what is arriving before you open any tool at all. Press the meter to open the console,
+which is where every input setting lives — for the amp, the tuner and Live Detect alike.
+
+The lamp lights whenever the microphone is genuinely open *somewhere* — whether you opened
+it yourself or the tuner, Live Detect or the amp's Monitor did. Pressing a lit lamp is
+always the release: it lets go everywhere at once, and every tool listening through it
+stops. A loop that is already playing keeps playing. On both platforms the same switch sits
+in the **Input** menu as **Turn Microphone On / Off**, on `⌘⇧M`.
+
+If the system refuses the microphone, the lamp shows a struck-through mic with a red rim and
+the console opens by itself with the reason named and **Open Sound settings** — **Open
+Settings** on iPad — in reach.
+
+The console opens on **Level**, which is what you need mid-session, and keeps routing and
+timing behind **Setup**.
+
+- **Microphone** — the same master switch as the lamp. Under it a status line says what is
+  happening, and when something else is holding the input it names what: *In use by Amp ·
+  Tuner · Live Detect*, so turning it off is never a surprise.
+- **Input gain** — applied before anything listens, so the amp, the tuner and Live Detect
+  all hear the same level.
+
+Under **Setup**:
+
+- **Input device** — the interface your guitar is on. On Mac an audio device; on iPad one of
+  the inputs iPadOS offers. Either way, if a saved one is gone the picker says so rather than
+  failing silently.
 - **Channel** — which of that interface's inputs your guitar is plugged into. It appears
-  whenever the input has more than one, so a one-in interface never shows it. The tuner and
-  Live Detect follow the same choice, so everything listens to the same jack.
+  whenever the input has more than one, and says so plainly when there is nothing yet to
+  choose between.
 - **Route** (iPad) — what the input and output actually resolved to. iPadOS still picks the
   **output** for you: plug in headphones or an interface and it switches automatically. The
-  amp warns here when the route would feed back.
+  console warns here when the route would feed back.
 - **Buffer size** and **Sample rate** — the latency trade. Fretling supports 44.1, 48, 88.2,
   96 and 192 kHz. On iPad these are requests rather than settings: iPadOS answers them when
-  the amp starts, so a line under the pickers reports what it actually granted.
+  the input starts, so a line under the pickers reports what it actually granted.
 - **Latency** — the resulting monitoring latency, reported in milliseconds so the trade is a
   number rather than a guess.
 
@@ -160,7 +188,8 @@ query — play a chord you cannot name, send it over, and read the ranked answer
 
 ## Microphone access
 
-The tuner, Live Detect, and the amp all need audio input, so the first time you open one,
-your device asks permission. Audio is analyzed live and never recorded, stored, or
-transmitted; capture stops when you close the tools. Full detail is in the
-[privacy policy](../privacy.html).
+The tuner, Live Detect, and the amp all need audio input, so the first time you open one —
+or turn the microphone on from the top bar — your device asks permission. Audio is analyzed
+live and never recorded, stored, or transmitted. Capture stops when you close the tools, and
+turning the microphone off from the [top bar](#input) releases it everywhere at once. Full
+detail is in the [privacy policy](../privacy.html).

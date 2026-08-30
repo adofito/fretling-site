@@ -221,25 +221,28 @@
     <section class="section-card" id="timeline">
       <h2>Scale timeline</h2>
       <p>Above the neck, the timeline lays out all twelve semitones in a row. Notes that belong to the current scale are filled in; the rest sit faded. When a chord is active, its tones are marked too, so you can read the chord against its key in one line.</p>
+      <p>The row starts at whatever you are learning, so it never splits in two. In Scales the leftmost key is the key you picked, and the scale climbs from there — set Labels to Intervals and you can read the degrees straight across, R first. In Chords the chord takes the front of the row instead, and the key's scale shifts around it.</p>
       <p>Horizontal rails bracket the row to show the structure: the chord's tones are tied together above it, the scale's below. Small Chord and Scale captions name each rail, and triangles mark each root.</p>
       <figure class="shot" style="--shot-max: 900px">
         <img class="shot-light" src="screenshots/12-timeline-brackets-light.webp"
              width="1720" height="390" loading="lazy" decoding="async"
-             alt="The scale timeline showing twelve semitones with the chord bracketed above the row and the scale bracketed below it.">
+             alt="The scale timeline showing twelve semitones, with the chord bracketed above the row and the scale below it, a round transport at the head of each rail, and the scale's tones spelled underneath.">
         <img class="shot-dark" src="screenshots/12-timeline-brackets-dark.webp"
              width="1720" height="390" loading="lazy" decoding="async"
-             alt="The scale timeline showing twelve semitones with the chord bracketed above the row and the scale bracketed below it.">
+             alt="The scale timeline showing twelve semitones, with the chord bracketed above the row and the scale below it, a round transport at the head of each rail, and the scale's tones spelled underneath.">
         <figcaption class="figure-caption">The chord rail sits above the row, the scale rail below.</figcaption>
       </figure>
 
-      <h3>Play chips</h3>
-      <p>Beside the timeline are up to two playback chips. Each wears the same transport button the <a href="practice-tools.html#metronome">metronome</a> uses — press to make sound, press again to stop — and each spells out what it is about to play:</p>
+      <h3 id="transports">Timeline transports</h3>
+      <p>At the leading edge of the timeline stand up to two round transports, each on the rail it plays — the Chord transport beside the chord rail above the row, the Scale transport beside the scale rail below it. Press one to make sound, press it again to stop; a transport that is sounding fills in solid.</p>
       <ul>
-        <li><strong>Scale</strong> — names the scale and lists its tones, then plays them as a run, following whatever pattern and fret range you have on screen. If the visible range holds no playable notes, the chip says so rather than doing nothing.</li>
-        <li><strong>Chord</strong> — names the chord and lists its tones, then sustains it.</li>
+        <li><strong>Scale</strong> — plays the scale as a run, following whatever pattern and fret range you have on screen.</li>
+        <li><strong>Chord</strong> — sustains the chord.</li>
       </ul>
-      <p>The tone line is spelled the way the rest of the app is: <strong>Labels</strong> decides whether you read note names or interval degrees, and <strong>Accidentals</strong> whether they are sharp or flat. It answers a different question from the timeline underneath — the timeline maps the key, the tone line says what this one button will sound.</p>
-      <p>The Scale chip appears in Scales and Chords modes whenever a scale is selected; the Chord chip appears whenever a chord is active.</p>
+      <p>A transport is mounted on a rail, so a rail is all it takes for one to appear: the Scale transport is there whenever a scale is on the timeline, the Chord transport whenever a chord is active. That includes Triads, which can now sound the triad it is showing you.</p>
+      <p>Under the row, a single tone line spells what the transport is about to sound. It follows the subject of the mode you are in — the chord in Chords and Triads, the scale in Scales — except while something is playing, when it follows the sound instead. When both transports are up it puts <strong>Scale</strong> or <strong>Chord</strong> in front, so you can tell which one it is describing.</p>
+      <p>The scale's line is spelled from the notes that will <em>actually be struck</em>, so narrowing the fret range or switching on a box narrows the line the same way it narrows the run. If the visible range holds no playable notes, the line says <em>No notes in this fret range</em> rather than leaving you to press a dead button.</p>
+      <p>The spelling follows the rest of the app: <strong>Labels</strong> decides whether you read note names or interval degrees, and <strong>Accidentals</strong> whether they are sharp or flat. It answers a different question from the timeline above it — the timeline maps the key, the tone line says what this one transport will sound.</p>
     </section>
 
     <section class="section-card" id="overlays">

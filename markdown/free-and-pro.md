@@ -15,7 +15,7 @@ most of the intermediate one:
 - Identifying a chord by tapping notes onto the neck.
 - Every overlay: CAGED, pentatonic positions, 3NPS, string sets, triad boxes — and chord
   shapes with finger numbers.
-- The marker display bar, tap to play, the scale timeline, play chips, and the fret range
+- The marker display bar, tap to play, the scale timeline, the timeline transports, and the fret range
   limiter.
 - The tuner's Fast mode with the Needle and Bar displays.
 - The complete metronome — full tempo range, every meter and subdivision, tap tempo, three
