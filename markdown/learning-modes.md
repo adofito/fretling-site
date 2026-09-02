@@ -29,7 +29,7 @@ minor.
 **On the fretboard:** every note of the scale is marked. The [scale timeline](fretboard.md#scale-timeline)
 above the neck lays the twelve semitones out in a row so you can see the shape of the key
 itself. Below the neck, [Visual Groupings](fretboard.md#visual-groupings-overlays-and-boxes)
-let you overlay CAGED shapes, one of five pentatonic positions, or a three-notes-per-string
+let you overlay CAGED shapes, one of the scale's five position boxes, or a three-notes-per-string
 pattern.
 
 **Adding a chord:** Scales mode has an optional chord slot at the end of the sentence. Pick a
@@ -39,7 +39,7 @@ mode the scale is the subject, and a chord tone drawn louder than its neighbors 
 question you did not ask. Clear it with the **✕** beside the chord to go back to the scale on
 its own. To see a chord's tones marked on the neck, switch to Chords mode.
 
-**Use it to:** learn one key thoroughly, then switch on pentatonic or CAGED to see how the
+**Use it to:** learn one key thoroughly, then switch on Box Shapes or CAGED to see how the
 patterns you already know line up inside it.
 
 ## Chords
@@ -79,8 +79,8 @@ a CAGED shape.
 **On the fretboard:** triad tones are marked across the neck. Turn on **Show Triad Lines** in
 [Settings → Fretboard](settings.md#fretboard-tab) to join each triad voicing with a line. The
 **Strings** group in Visual Groupings narrows the view to one string set — **123**, **234**,
-**345**, or **456** — so you work one shape at a time. CAGED and pentatonic overlays are
-available here too.
+**345**, or **456** — so you work one shape at a time. CAGED and Box Shapes are available here
+too; the boxes come from the pentatonic that fits the triad.
 
 **Use it to:** learn a triad on one string set, then move the same shape up the neck and
 across to the next set.

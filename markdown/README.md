@@ -7,14 +7,14 @@ neck.
 
 ## What it does
 
-- **Learn** scales, diatonic chords, and triads in any key, with CAGED, pentatonic, and
-  three-notes-per-string overlays.
+- **Learn** scales, diatonic chords, and triads in any key, with CAGED shapes, position boxes, and
+  three-notes-per-string patterns laid over the neck.
 - **Identify** a chord by tapping notes onto the neck, or by playing it into the mic —
   Fretling ranks the readings.
 - **Hear** anything you see: tap-to-play notes, one-tap scale and chord playback, six
   instrument voices.
-- **Practice** with a chromatic tuner, a metronome with a step-sequenced drum machine, and
-  (on Mac) a Neural Amp Modeler amp and a looper.
+- **Practice** with a chromatic tuner, a metronome with a step-sequenced drum machine, a Neural
+  Amp Modeler amp, and a looper.
 
 ## Documentation
 
@@ -46,7 +46,7 @@ Everything sits around one stable fretboard:
 2. Tap notes on the neck to hear them. The instrument comes from Settings → Audio.
 3. Use the **Labels / Shapes / Colors / Accidentals** chips above the neck to switch between
    note names and interval numbers.
-4. Use the **Visual Groupings** chips below the neck to lay CAGED shapes, pentatonic boxes,
+4. Use the **Visual Groupings** chips below the neck to lay CAGED shapes, position boxes,
    chord shapes, or 3NPS patterns over what you are seeing.
 5. Open the tools you need from the icon row at the right of the top bar — they float over
    the fretboard and can be dragged out of the way.

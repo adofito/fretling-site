@@ -112,11 +112,14 @@ How a shape is drawn is set in Settings → Fretboard → Shape Overlays → CAG
 - **Lines** — connecting lines through the shape's notes.
 - **Both** — outline and lines together.
 
-### Box Shapes (pentatonic)
+### Box Shapes
 
-**Off / All / 1 / 2 / 3 / 4 / 5.** Overlays pentatonic position boxes. In Scales and Triads
-modes you pick a single position or All; in Chords mode the same five positions are drawn in
-the context of the selected chord.
+**Off / All / 1 / 2 / 3 / 4 / 5.** Outlines one of the five position boxes on the neck, or all
+five at once. Whose boxes they are depends on the mode. In Scales they belong to the scale you
+chose — each of the twelve scales has its own five, so a Major scale gets the major positions
+rather than a pentatonic stand-in. In Chords they are the key's positions, drawn under the
+chord. In Triads they come from the pentatonic that fits the triad: major pentatonic for major
+and augmented, minor pentatonic for minor and diminished.
 
 ### Chord Shapes (Chords and Progressions)
 

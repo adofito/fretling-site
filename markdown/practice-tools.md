@@ -1,8 +1,9 @@
 # Practice Tools
 
 Six tools open from the icon row at the right of the top bar. Each is a floating panel over
-the fretboard — drag it where you want it, and close it when you are done. The neck stays
-visible and usable underneath.
+the fretboard — drag it where you want it, and close it when you are done. When panels overlap,
+pressing one brings it to the front, and the arrangement is kept between launches. The neck
+stays visible and usable underneath.
 
 > **Everything on this page works on Mac and iPad.** The amp and the looper used to be
 > Mac-only; they now run on iPad too. Plug in a USB-C audio interface, or use headphones —
@@ -28,7 +29,7 @@ Five ways of drawing the same measurement — pick whichever you read fastest:
 - **Bar** — a horizontal deviation bar against a cents scale.
 - **Trace** — plots pitch over time, so drift and vibrato are visible.
 - **Strobe** — a strobe band that stands still when you are in tune.
-- **Disc** — a rotating disc that stops turning at true pitch.
+- **Disc** — a rotating disc, seen through a half-moon window, that stops turning at true pitch.
 
 ### Fast or Precision
 
