@@ -545,6 +545,7 @@ main > h1 { margin-bottom: var(--s-5); }
 @media (min-width: 1001px) {
   main > .lede,
   main > .page-meta,
+  main > .page-intro,
   main > .toc,
   main > .callout {
     margin-left: calc(var(--rail) + var(--s-10));
@@ -756,6 +757,14 @@ main > h1 { margin-bottom: var(--s-5); }
 }
 .page-meta strong { color: var(--f-ink); font-weight: 600; }
 
+/*
+  Body prose that belongs to the page head rather than to a section — a
+  paragraph that carries on from the lede after the opening callouts. It is
+  listed with the lede above so it stands in the content column on the wide
+  layout; a bare <p> under <main> used to fall back to the rail's edge.
+*/
+.page-intro { max-width: var(--measure); }
+
 .lede {
   max-width: 60ch;
   margin-bottom: var(--s-10);
@@ -923,6 +932,11 @@ main > h1 { margin-bottom: var(--s-5); }
   a quiet caption, sitting on the canvas rather than in a card.
 */
 .toc {
+  /* Its own headroom, because what precedes it varies by page — the lede,
+     a callout, or an intro paragraph — and only the lede carried a bottom
+     margin. Sibling margins collapse, so pages where the lede already
+     leaves --s-10 stay at --s-10 rather than doubling. */
+  margin-top: var(--s-10);
   margin-bottom: var(--s-10);
   padding: 0;
   background: none;
