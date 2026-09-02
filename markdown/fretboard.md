@@ -148,10 +148,12 @@ an empty neck.
 gives the whole neck back. While the window is up, the group carries a third chip reading the
 span — **3–8** — which opens as a menu of named positions.
 
-### Triad boxes
+### Triad lines
 
-Triads mode, switched on with **Show Triad Boxes** in Settings: outlines each triad position
-on the neck.
+Triads mode, switched on with **Show Triad Lines** in Settings: draws a line through each
+triad voicing on the neck, the same connect-the-dots grammar the CAGED overlay uses. Only
+voicings one hand can hold get a line, so a tone that belongs to no shape on the chosen
+string set stays marked without one.
 
 ## Chord shapes
 

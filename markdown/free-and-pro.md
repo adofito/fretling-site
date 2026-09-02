@@ -13,7 +13,7 @@ most of the intermediate one:
 - The Chord Atlas with the chords of the key, Roman numerals, borrowed-harmony labels,
   and previews.
 - Identifying a chord by tapping notes onto the neck.
-- Every overlay: CAGED, pentatonic positions, 3NPS, string sets, triad boxes — and chord
+- Every overlay: CAGED, pentatonic positions, 3NPS, string sets, triad lines — and chord
   shapes with finger numbers.
 - The marker display bar, tap to play, the scale timeline, the timeline transports, and the fret range
   limiter.

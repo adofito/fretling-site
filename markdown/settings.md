@@ -29,7 +29,7 @@ visible while you play.
 
 | Setting | Options | Description |
 |---------|---------|-------------|
-| **Show Triad Boxes** | Toggle | Triads mode only. Outlines each triad position. |
+| **Show Triad Lines** | Toggle | Triads mode only. Joins each triad voicing with a line. |
 
 **Non-Chord Notes** and **Fret Range** used to sit here. They are chips in the
 [Visual Groupings](fretboard.md#visual-groupings-overlays-and-boxes) bar under the neck now —

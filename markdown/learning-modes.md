@@ -76,8 +76,8 @@ a CAGED shape.
 **What you pick:** a root note and a triad type — **Major**, **Minor**, **Augmented**, or
 **Diminished**.
 
-**On the fretboard:** triad tones are marked across the neck. Turn on **Show Triad Boxes** in
-[Settings → Fretboard](settings.md#fretboard-tab) to outline each triad position. The
+**On the fretboard:** triad tones are marked across the neck. Turn on **Show Triad Lines** in
+[Settings → Fretboard](settings.md#fretboard-tab) to join each triad voicing with a line. The
 **Strings** group in Visual Groupings narrows the view to one string set — **123**, **234**,
 **345**, or **456** — so you work one shape at a time. CAGED and pentatonic overlays are
 available here too.
