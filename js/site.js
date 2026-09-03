@@ -27,6 +27,23 @@
   var FLAT_NAMES  = ['C', 'D♭', 'D', 'E♭', 'E', 'F', 'G♭', 'G', 'A♭', 'A', 'B♭', 'B'];
   var INTERVAL_NAMES = ['R', '♭2', '2', '♭3', '3', '4', '♭5', '5', '♭6', '6', '♭7', '7'];
 
+  // The Spanish mirror (docs/website/es/) loads this same file with <html lang="es">.
+  // Everything the script writes into the page at runtime goes through T(), so the
+  // demo neck stays in the page's language after the first interaction; the scale
+  // names match Fretling's own ScaleTypes table.
+  var LANG_ES = document.documentElement.lang === 'es';
+  var STRINGS_ES = {
+    'More scales': 'Más escalas',
+    'Play scale': 'Reproducir escala',
+    'Stop': 'Detener',
+    'Major': 'Mayor', 'Minor': 'Menor',
+    'Pentatonic Major': 'Pentatónica mayor', 'Pentatonic Minor': 'Pentatónica menor',
+    'Blues': 'Blues', 'Dorian': 'Dórico', 'Mixolydian': 'Mixolidio', 'Phrygian': 'Frigio',
+    'Lydian': 'Lidio', 'Locrian': 'Locrio', 'Harmonic Minor': 'Menor armónica',
+    'Melodic Minor': 'Menor melódica'
+  };
+  function T(text) { return (LANG_ES && STRINGS_ES[text]) || text; }
+
   // Scale types. `lane: 'beginner'` are the four the app's menu shows first;
   // the rest sit under "More scales" (ScaleTypeMenuOrdering).
   var SCALES = [
@@ -170,7 +187,7 @@
           ' data-midi="' + midi + '" data-degree="' + semitone + '"' +
           (isPrimary ? ' data-primary="1"' : '') +
           ' style="--x:' + (mx / GEO.width).toFixed(3) + '"' +
-          ' aria-label="' + esc(names[pc] + ', string ' + STRINGS[st2].label + ', fret ' + fr2 + '. Play') + '">');
+          ' aria-label="' + esc(markerLabel(names[pc], STRINGS[st2].label, fr2)) + '">');
         out.push(markerShape(s.shapes, semitone, mx, stringY(st2), GEO.radius));
         if (label) {
           out.push('<text x="' + mx + '" y="' + (stringY(st2) + 4.5) +
@@ -213,9 +230,21 @@
   }
 
   function neckSummary(s, names) {
-    return 'Fretboard showing ' + names[s.root] + ' ' + scaleById(s.scale).name +
+    var scaleName = T(scaleById(s.scale).name);
+    if (LANG_ES) {
+      return 'Diapasón con ' + names[s.root] + ' ' + scaleName +
+        ' en afinación estándar, de la posición al aire al traste ' + FRET_COUNT +
+        '. Cada marcador es una nota de la escala, coloreada según su intervalo desde la fundamental.';
+    }
+    return 'Fretboard showing ' + names[s.root] + ' ' + scaleName +
       ' in standard tuning, open position to fret ' + FRET_COUNT +
       '. Each marker is a note in the scale, colored by its interval from the root.';
+  }
+
+  function markerLabel(note, string, fret) {
+    return LANG_ES
+      ? note + ', cuerda ' + string + ', traste ' + fret + '. Reproducir'
+      : note + ', string ' + string + ', fret ' + fret + '. Play';
   }
 
   function esc(str) {
@@ -350,7 +379,7 @@
       var note = stage.querySelector('[data-sentence-note]');
       if (note) note.textContent = names()[state.root];
       var scale = stage.querySelector('[data-sentence-scale]');
-      if (scale) scale.textContent = scaleById(state.scale).name;
+      if (scale) scale.textContent = T(scaleById(state.scale).name);
     }
 
     /* -- Playing the scale up its degrees ---------------------------------- */
@@ -362,7 +391,7 @@
       running = false;
       if (playButton) {
         playButton.setAttribute('aria-pressed', 'false');
-        playButton.querySelector('[data-play-label]').textContent = 'Play scale';
+        playButton.querySelector('[data-play-label]').textContent = T('Play scale');
       }
       var lit = board.querySelectorAll('.is-ringing, .is-echoing');
       for (var i = 0; i < lit.length; i++) lit[i].classList.remove('is-ringing', 'is-echoing');
@@ -373,7 +402,7 @@
       running = true;
       if (withSound && playButton) {
         playButton.setAttribute('aria-pressed', 'true');
-        playButton.querySelector('[data-play-label]').textContent = 'Stop';
+        playButton.querySelector('[data-play-label]').textContent = T('Stop');
       }
 
       // Degrees of the scale, then the octave — the app's ascending run.
@@ -503,9 +532,9 @@
       return SCALES.map(function (scale) {
         return {
           value: scale.id,
-          label: scale.name,
+          label: T(scale.name),
           selected: scale.id === state.scale,
-          section: scale.lane === 'beginner' ? null : 'More scales'
+          section: scale.lane === 'beginner' ? null : T('More scales')
         };
       });
     }, function (value) {

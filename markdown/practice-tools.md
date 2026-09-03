@@ -5,6 +5,13 @@ the fretboard — drag it where you want it, and close it when you are done. Whe
 pressing one brings it to the front, and the arrangement is kept between launches. The neck
 stays visible and usable underneath.
 
+Every panel also **minimizes** to a one-row strip that keeps its main control and readout
+live — the metronome's play button, tempo and beat lamp; the tuner's Listen button, note and
+cents; the looper's Record and Play; the mixer's Main fader; the amp's Monitor and output gain;
+Live Detect's Listen and detected chord. Click the chevron beside the panel's close button, or
+double-click its header (double-tap on iPad); the same chevron expands it again. Which panels
+are minimized is remembered between launches, along with where they sit.
+
 > **Everything on this page works on Mac and iPad.** The amp and the looper used to be
 > Mac-only; they now run on iPad too. Plug in a USB-C audio interface, or use headphones —
 > monitoring through the built-in speaker feeds back into the built-in mic, and the amp
@@ -27,7 +34,7 @@ Five ways of drawing the same measurement — pick whichever you read fastest:
 
 - **Needle** — a classic swinging needle.
 - **Bar** — a horizontal deviation bar against a cents scale.
-- **Trace** — plots pitch over time, so drift and vibrato are visible.
+- **Trace** — plots pitch over time, so drift and vibrato are visible. With Reduce Motion on, the trace sweeps across the display instead of scrolling, so what it has drawn stays put.
 - **Strobe** — a strobe band that stands still when you are in tune.
 - **Disc** — a rotating disc, seen through a half-moon window, that stops turning at true pitch.
 
@@ -43,6 +50,19 @@ These are two different instruments, not a quality slider:
 Precision measures phase over a settled baseline, which is why it needs a held note — a
 sub-cent reading is only as good as the stretch of signal it was fitted over.
 
+### Reference and calibration
+
+At the bottom of the panel, a **Reference** disclosure holds the Fast / Precision switch and
+two settings you set once and leave alone:
+
+- **A4** — the reference pitch, from 430 to 450 Hz in whole hertz, 440 by default. Turn it
+  for an orchestra that tunes to 442, or a recording at 432.
+- **Offset** — a manual correction of up to ±5 cents, in tenths, for an instrument or an
+  interface that reads consistently sharp or flat. Under it, after the tuner has listened
+  for a while, a line reports how far your audio input's clock runs from its nominal rate,
+  in parts per million and in cents. That part is measured and corrected automatically, so
+  the slider only ever carries your own preference.
+
 ## Metronome
 
 | Control | Range / options | Notes |
@@ -50,30 +70,48 @@ sub-cent reading is only as good as the stretch of signal it was fitted over.
 | **Tempo** | 40–250 BPM, default 120 | Steppers move one BPM at a time; hold to run. |
 | **TAP** | — | Tap in time and the tempo follows your taps. |
 | **Meter** | 4/4, 3/4, 2/4, 6/8, 5/4, 7/8, 9/8, 12/8, 1/4 | The beat indicator shows your place in the bar. |
-| **Subdivision** | Quarter, Eighth, Triplet, Dotted Eighth, Sixteenth | Subdivides the beat without changing the tempo. |
+| **Subdivision** | Quarter, Eighth, Triplet, Dotted Eighth, Sixteenth | Subdivides the beat without changing the tempo. Dotted Eighth is the long–short pair — a dotted eighth and a sixteenth — two clicks to every beat. |
 | **Sound** | Classic, Woodblock, Click, Drums | *Drums* plays a real kit pattern instead of a click — see below. |
 | **Accent** | On / off | Emphasizes the downbeat of each bar. |
 
 ## Drum sequencer
 
 With the **Drums** sound pack selected, the metronome plays a step-sequenced pattern across
-three lanes — **Kick**, **Snare**, and **Hat** — instead of a bare click. Every meter ships
-with a musical default rather than a mechanical one, so 6/8 feels like 6/8 without you
-editing anything.
+six lanes — **Crash**, **Ride**, **Open Hat**, **Hat**, **Snare**, and **Kick** — instead of
+a bare click. The kit is a recorded acoustic drum kit, and every hit rings for its natural
+length: a kick keeps sounding under the hats that follow it, and an open hat rings until
+the closed hat shuts it, as on a real kit. Every meter ships with a musical default rather
+than a mechanical one — hats on the beat hit harder than the hats between — so 6/8 feels
+like 6/8 without you editing anything.
 
 Open the pattern editor from the metronome to build your own:
 
-- **The grid** — one row per lane, one column per step. Tap a cell to switch that hit on or
-  off; the grid scrolls sideways when a meter needs more steps than fit.
+- **The grid** — one row per lane, one column per step. Each cell shows how hard that hit
+  lands: the fill rises from the bottom of the cell to its level, full at the top. The grid
+  scrolls sideways when a meter needs more steps than fit.
+- **Set a level** — tap a cell at the height you want it to hit; the bottom band of a cell
+  is off. Drag up or down inside a cell to ride its level, or drag across the row to paint
+  that level onto every cell you cross. Right-click (or long-press on iPad) a cell for Full,
+  75, 50, 25, or Off. While you drag, the readout at the top shows the lane, the step, and
+  the level.
 - **Play while you edit** — the pattern loops as you work, so you hear each change
   immediately.
-- **Library** — save a pattern under a name, mark one as active, duplicate one as a starting
-  point, rename, or delete. Edited-but-unsaved patterns are badged *Edited*, and closing with
-  unsaved work asks before discarding it.
-- **Reset** — restores the default kick, snare and hat steps for the current meter.
+- **Meter and Subdivision** — change either from the editor's transport row, next to the
+  tempo, and the grid regroups to match. Each combination keeps its own active pattern,
+  so switching loads that one; unsaved edits ask to be saved or discarded first.
+- **Rows at once** — right-click (or long-press) a lane's name for *Fill Row*, *Accent
+  Beats*, or *Clear Row*. Accent Beats keeps the row's hits and re-levels them the way the
+  defaults are built: full on the beat, lighter in between.
+- **Library** — every meter ships with a few *Defaults*: *Basic*, and where the meter earns
+  them *Rock*, *Hats only*, *Light* and *Shuffle*; the odd meters get their groupings
+  instead, *3+2* and *2+3* in 5/4, *2+2+3* and *3+2+2* in 7/8. Save a pattern under a name,
+  mark one as active, duplicate one as a starting point, rename, or delete.
+  Edited-but-unsaved patterns are badged *Edited*, and closing with unsaved work asks
+  before discarding it.
+- **Reset** — restores the default steps and levels for the current meter.
 
-Changing the meter while a custom pattern is loaded asks what you want done with it rather
-than silently reshaping your work.
+From the metronome panel itself, changing the meter or the subdivision loads that
+combination's active pattern straight away — the editor is the place that asks first.
 
 ## Guitar amp
 
@@ -86,12 +124,19 @@ channel, how much gain, buffer size and sample rate — lives in the [input cons
 in the top bar, because the tuner and Live Detect listen through the same input and none of
 it needs a model loaded.
 
-- **Model** — pick a starter profile, or **Load .nam…** to use your own.
+- **Model** — pick a starter profile — *Starter Clean (A1)*, *Starter Clean (A2)*,
+  *Starter Acoustic*, *Starter Warm* or *Starter Crunch* — or **Load .nam…** to use your
+  own. A badge names the generation of the loaded model, and if a file uses a newer NAM
+  format than Fretling fully supports, or carries built-in controls Fretling cannot set yet,
+  the panel says so instead of sounding wrong in silence.
 - **Monitor / Stop** — starts and stops live monitoring. Stopping genuinely releases the
   microphone; a loop that is playing keeps playing.
 - **Output gain** — level out of the amp path.
 - **Model input level** and **Model output level** — trim around the model itself, which is
   how you match a profile that was captured hot or quiet.
+- **Model size** — appears for a model that carries several sizes of the same network, from
+  *Light* up to *Full*. Smaller sizes cost less CPU and keep less detail; Full is the model
+  as captured, and it is what loads by default.
 
 ## Input
 
@@ -138,23 +183,65 @@ Under **Setup**:
 
 Every slider has tick marks, a dB readout, and a double-click reset back to its default.
 
+## Performance
+
+Fretling does a lot at once — an amp model, a looper, the tuner and Live Detect listening,
+the click — so the top bar shows how hard it is working, in a small readout to the left of
+the microphone lamp. Two rows:
+
+- **Audio** — how much of each audio cycle's time the audio engines are using. This is the
+  number that predicts trouble: as it nears 100% the engine runs out of time to fill the
+  next buffer, and you hear clicks or dropouts. The bar turns amber above 70% and red above
+  90%.
+- **CPU** — Fretling's share of your whole Mac or iPad, the number behind fans and battery.
+
+Press the readout to open the Performance console. It shows the two audio engines
+separately — **Playback** carries notes, chords and the click; **Amp** carries the amp model
+and the looper, and reads *Not running* while the amp is down — each with the buffer it is
+measured against (frames, sample rate, and the milliseconds a cycle has) and a count of
+overloads: cycles that ran past their deadline since that engine started. Below a seam, the
+CPU share, and a warning when the machine itself is running hot and may be slowing things
+down.
+
+If Audio runs hot, raise the buffer size in [Input settings](#input) or choose a smaller amp
+model. A bigger buffer gives every cycle more time; a smaller model needs less of it.
+
 ## Looper
 
 Record a phrase and play over it. The looper sits on the amp's monitoring path, so **turn
-Monitor on in the amp first** — the looper says as much if you have not.
+Monitor on in the amp first** — the looper says as much if you have not. Once a loop exists
+it keeps playing on its own: turning Monitor off releases the microphone but leaves the loop
+running, and Play brings it back even with the amp down.
 
-- **Record** — press once to start, press again to close the loop. It then repeats until you
-  clear it.
-- **Bars** — set a length in bars and recording stops itself on the bar line, so the loop is
-  in time without you catching it by hand.
-- **Count-in** — a bar of clicks before recording starts.
+One big button drives the take, and its label always says what it will do next:
+
+- **Record** — starts the take, after the count-in if you set one; while the count runs, the
+  same button reads **Cancel**. Press it again, now reading **Set Loop**, to close the loop
+  and start it playing. With **Bars** set it closes itself on the bar line instead, and a
+  free-length take closes at 60 seconds if you have not closed it yourself.
+- **Overdub** — while the loop plays, press again to record a new layer on top of it;
+  **End Overdub** keeps the layer. Stack as many as you like.
+- **Undo / Redo** — takes back the last overdub layer, or puts it back.
+- **Play / Stop** — stops the loop, and starts it again on the bar line. With the loop
+  stopped, the big button reads **Record New**: press it and a fresh take replaces the old
+  loop.
+- **Clear** — throws the loop away.
+
+Under the transport:
+
+- **Bars** — *Free*, 1, 2, 4 or 8. With a length set, recording stops itself on the bar
+  line, so the loop is in time without you catching it by hand; *Free* leaves the close to
+  you.
+- **Count-in** — *Off*, 1 or 2 bars of clicks before recording starts.
 - **Click while recording** — keeps the metronome audible through the take.
 - **Loop volume** — how loud the loop plays back under you.
 - **Layer fade** — how much earlier layers fade back as you stack new ones on top.
-- **Clear** — throws the loop away.
 
-A beat readout shows where in the loop you are. Changing the sample rate clears the loop —
-the recording no longer matches the engine — and the looper tells you when that has happened.
+The record button doubles as the beat readout: the count-in counts down to the punch, then
+the beat counts up the bar, and a status line under the controls names the state —
+recording, playing, overdubbing — with the bar and the time. Changing the sample rate clears
+the loop — the recording no longer matches the engine — and the looper tells you when that
+has happened.
 
 Loops live in memory for the session only. Nothing is written to disk, and quitting the app
 discards them.

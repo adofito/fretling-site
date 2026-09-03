@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración – Fretling</title>
+  <meta name="description" content="Cada opción de la barra lateral de configuración de Fretling: las pestañas Diapasón, Audio e Ícono, más las barras de chips alrededor del mástil.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fretling">
+  <meta property="og:title" content="Configuración – Fretling">
+  <meta property="og:description" content="Cada opción de la barra lateral de configuración de Fretling: las pestañas Diapasón, Audio e Ícono, más las barras de chips alrededor del mástil.">
+  <meta property="og:url" content="https://www.fretling.app/es/settings.html">
+  <meta property="og:image" content="https://www.fretling.app/es/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.fretling.app/es/og-image.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/settings.html">
+  <link rel="alternate" hreflang="es" href="https://www.fretling.app/es/settings.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/settings.html">
+</head>
+<body data-page="settings">
+  <a href="#main" class="skip-link">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <line class="bm-string" x1="3" y1="5" x2="26" y2="5"/>
+          <line class="bm-string" x1="3" y1="10" x2="26" y2="10"/>
+          <line class="bm-string" x1="3" y1="15" x2="26" y2="15"/>
+          <line class="bm-fret" x1="10" y1="2.5" x2="10" y2="17.5"/>
+          <line class="bm-fret" x1="17" y1="2.5" x2="17" y2="17.5"/>
+          <line class="bm-fret" x1="24" y1="2.5" x2="24" y2="17.5"/>
+          <line class="bm-nut" x1="3" y1="2" x2="3" y2="18"/>
+          <circle class="bm-dot-a" cx="6.5" cy="10" r="2.6"/>
+          <circle class="bm-dot-b" cx="13.5" cy="5" r="2.6"/>
+          <circle class="bm-dot-c" cx="20.5" cy="15" r="2.6"/>
+        </svg>
+        Fretling
+      </a>
+      <nav class="chip-nav" aria-label="Secciones de la guía">
+        <ul>
+          <li><a href="index.html" data-mark="guide">Guía</a></li>
+          <li><a href="learning-modes.html" data-mark="modes">Modos de aprendizaje</a></li>
+          <li><a href="fretboard.html" data-mark="fretboard">Diapasón</a></li>
+          <li><a href="practice-tools.html" data-mark="tools">Herramientas de práctica</a></li>
+          <li><a href="settings.html" data-mark="settings" aria-current="page">Configuración</a></li><li><a href="free-and-pro.html" data-mark="pro">Gratis y Pro</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+      <div class="theme-control" role="group" aria-label="Apariencia">
+        <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
+        <button type="button" data-theme="light" aria-pressed="false">Claro</button>
+        <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
+      </div>
+      <a class="lang-switch" href="../settings.html" hreflang="en" lang="en" aria-label="English version">English</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Configuración</h1>
+    <p class="lede">La barra lateral de configuración se desliza desde la izquierda y se abre con el botón del extremo izquierdo de la barra superior. Tiene tres pestañas: <strong>Diapasón</strong>, <strong>Audio</strong> e <strong>Ícono</strong>, y un enlace a Acerca de al final.</p>
+
+    <div class="callout">
+      <p>No todo vive aquí. Los ajustes que cambias constantemente están en las barras de chips que enmarcan el mástil: <a href="fretboard.html#marker-bar">visualización de marcadores</a> encima, <a href="fretboard.html#overlays">Agrupaciones visuales</a> debajo. La barra lateral guarda lo que ajustas una vez y dejas en paz.</p>
+    </div>
+
+    <nav class="toc" aria-label="Índice">
+      <h2>En esta página</h2>
+      <ul>
+        <li><a href="#fretboard-tab">Pestaña Diapasón</a></li>
+        <li><a href="#audio-tab">Pestaña Audio</a></li>
+        <li><a href="#icon-tab">Pestaña Ícono</a></li>
+        <li><a href="#about">Acerca de y propinas</a></li>
+      </ul>
+    </nav>
+
+    <section class="section-card" id="fretboard-tab">
+      <h2>Pestaña Diapasón</h2>
+      <p>Tres grupos, algunos de los cuales aparecen solo en los modos a los que aplican. Las opciones que no aplican en este momento se atenúan en lugar de ocultarse, así que la barra lateral no se reorganiza bajo tus manos.</p>
+      <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/19-settings-fretboard-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La barra lateral de configuración abierta en la pestaña Diapasón, mostrando los grupos Apariencia, Enfoque de práctica y Superposiciones de formas.">
+        <img class="shot-dark" src="../screenshots/es-419/19-settings-fretboard-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La barra lateral de configuración abierta en la pestaña Diapasón, mostrando los grupos Apariencia, Enfoque de práctica y Superposiciones de formas.">
+        <figcaption class="figure-caption">La pestaña Diapasón, mostrada en el modo Acordes para que aplique cada fila de Superposiciones de formas.</figcaption>
+      </figure>
+
+      <h3>Apariencia</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Ajuste</th><th>Opciones</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Tema</strong></td><td>Sistema / Claro / Oscuro</td><td>Sigue la apariencia del dispositivo, o fija Fretling en claro u oscuro.</td></tr>
+            <tr><td><strong>Módulos</strong></td><td>Auto / Cromado / Estudio</td><td>Cómo se dibujan las herramientas de práctica flotantes. Auto da al lienzo claro el panel Cromado y al lienzo oscuro el Estudio; fija cualquiera para conservarlo en todas partes.</td></tr>
+            <tr><td><strong>Idioma</strong></td><td>Sistema / English / Español</td><td>Sigue el idioma del dispositivo, o fija Fretling en inglés o en español. Un cambio se aplica la próxima vez que se abre la app: Fretling ofrece reiniciar de inmediato en Mac (<em>Reiniciar ahora</em>) o salir en iPad (<em>Salir de Fretling</em>), o elige <em>Más tarde</em> y cambia por su cuenta la próxima vez que la abras.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Los ajustes de marcadores no están aquí: etiquetas, formas, colores y alteraciones viven en la <a href="fretboard.html#marker-bar">barra de visualización de marcadores</a> sobre el mástil, donde siguen visibles mientras tocas.</p>
+
+      <h3>Enfoque de práctica</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Ajuste</th><th>Opciones</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Mostrar líneas de tríadas</strong></td><td>Interruptor</td><td>Solo en el modo Tríadas. Une cada voicing de la tríada con una línea.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Notas fuera del acorde</strong> y <strong>Rango de trastes</strong> estaban aquí. Ahora son chips de la barra <a href="fretboard.html#overlays">Agrupaciones visuales</a> bajo el mástil: ambos se cambian en plena práctica y ambos cambian lo que muestra el mástil, así que van junto a él.</p>
+
+      <h3>Superposiciones de formas</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Ajuste</th><th>Opciones</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Vista CAGED</strong></td><td>Recuadro / Líneas / Ambos</td><td>Cómo se dibuja una forma CAGED: contorno de la región, líneas que conectan sus notas, o ambos.</td></tr>
+            <tr><td><strong>Pistas de forma en la línea de tiempo</strong></td><td>Interruptor</td><td>También marca las notas de la forma en la línea de tiempo. Requiere que las formas de acorde estén activadas.</td></tr>
+            <tr><td><strong>Mostrar números de dedos</strong></td><td>Interruptor</td><td>Imprime los números de dedos en las formas de acorde. Requiere que las formas de acorde estén activadas.</td></tr>
+            <tr><td><strong>Interacción CAGED</strong></td><td>Coexistir / Exclusivo / Reemplazar CAGED</td><td>Modo Acordes. Qué pasa cuando las formas de acorde y CAGED están activados a la vez: dibujar ambos, dejar que las formas tomen el control mientras están activas, o que las formas reemplacen a CAGED por completo (lo que también quita los chips CAGED de Agrupaciones visuales).</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Las formas de acorde en sí se activan y desactivan en el grupo <strong>Formas de acorde</strong> de la barra <a href="fretboard.html#chord-shapes-chords-and-progressions">Agrupaciones visuales</a> bajo el mástil, no aquí: es una superposición que usas a menudo, así que está junto al diapasón que cambia. Las dos filas de arriba la siguen y se atenúan mientras está desactivada.</p>
+      <p>Todo el grupo Superposiciones de formas se atenúa mientras identificas un acorde: no hay tonalidad contra la cual apoyar una forma.</p>
+    </section>
+
+    <section class="section-card" id="audio-tab">
+      <h2>Pestaña Audio</h2>
+      <h3>Reproducción</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Ajuste</th><th>Opciones</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Instrumento</strong></td><td>Piano acústico, Guitarra acústica (nailon), Guitarra acústica (acero), Guitarra de jazz, Guitarra eléctrica limpia, Onda senoidal</td><td>La voz que se usa cuando tocas notas en el mástil. Onda senoidal es sintetizada; el resto viene de un SoundFont General MIDI.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Capas del pad de acordes</h3>
+      <p>Los acordes pueden sonar apilando hasta tres instrumentos, que es cómo consigues un pad detrás de un acorde en lugar de una sola muestra plana. Cada capa tiene su propio instrumento, volumen y silencio; <strong>Añadir capa</strong> añade una, hasta el máximo.</p>
+      <p>Las capas aplican a la reproducción de acordes: el chip Acorde junto a la línea de tiempo, las vistas previas del Atlas de acordes y la reproducción de progresiones. Tocar notas sueltas siempre usa el ajuste Instrumento de arriba.</p>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/20-settings-audio-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La barra lateral de configuración abierta en la pestaña Audio, mostrando el selector de instrumento y las capas apiladas del pad de acordes.">
+        <img class="shot-dark" src="../screenshots/es-419/20-settings-audio-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La barra lateral de configuración abierta en la pestaña Audio, mostrando el selector de instrumento y las capas apiladas del pad de acordes.">
+        <figcaption class="figure-caption">La pestaña Audio: un instrumento para notas sueltas, hasta tres capas para acordes.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="icon-tab">
+      <h2>Pestaña Ícono</h2>
+      <p>Fretling incluye catorce íconos de app; elige uno y cambia el ícono de la pantalla de inicio o del Dock. Las opciones son <strong>Hexágono cálido</strong>, <strong>Clásico</strong>, <strong>Madera noble</strong>, <strong>Ventana de trastes</strong>, <strong>Cielo rosado</strong>, <strong>Aurora suave</strong>, <strong>Acuarela</strong>, <strong>Champaña</strong>, <strong>Halo de intervalos</strong>, <strong>Monograma de traste</strong>, <strong>Constelación</strong>, <strong>Brasa</strong>, <strong>Ultravioleta</strong> e <strong>Luz de día</strong>. Cada uno se muestra como un mosaico de vista previa antes de que te decidas.</p>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/21-settings-icon-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La barra lateral de configuración abierta en la pestaña Ícono, mostrando los catorce íconos de app como una cuadrícula de mosaicos de vista previa.">
+        <img class="shot-dark" src="../screenshots/es-419/21-settings-icon-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La barra lateral de configuración abierta en la pestaña Ícono, mostrando los catorce íconos de app como una cuadrícula de mosaicos de vista previa.">
+        <figcaption class="figure-caption">Catorce íconos para elegir; la elección se guarda.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="about">
+      <h2>Acerca de y propinas</h2>
+      <p>Al final de la barra lateral, <strong>Acerca de Fretling</strong> abre una pantalla con la versión y el número de compilación, un resumen de privacidad en lenguaje sencillo y los créditos de los componentes de código abierto sobre los que está hecho Fretling: la base de datos de digitaciones de acordes, el SoundFont usado para la reproducción de instrumentos, la batería grabada detrás del paquete Batería y el motor Neural Amp Modeler con sus dependencias.</p>
+      <p>La pantalla Acerca de también tiene un <strong>bote de propinas</strong>opcional. Las propinas son compras dentro de la app comunes gestionadas por Apple, en tres tamaños. <strong>No desbloquean nada</strong>: cada función está disponible, des propina o no.</p>
+          <figure class="shot" style="--shot-max: 620px">
+        <img class="shot-light" src="../screenshots/es-419/22-about-sheet-light.webp"
+             width="1240" height="1760" loading="lazy" decoding="async"
+             alt="La hoja Acerca de mostrando la versión y la compilación, un resumen de qué es Fretling, el bote de propinas opcional, la declaración de privacidad y los créditos de código abierto.">
+        <img class="shot-dark" src="../screenshots/es-419/22-about-sheet-dark.webp"
+             width="1240" height="1760" loading="lazy" decoding="async"
+             alt="La hoja Acerca de mostrando la versión y la compilación, un resumen de qué es Fretling, el bote de propinas opcional, la declaración de privacidad y los créditos de código abierto.">
+        <figcaption class="figure-caption">Acerca de: versión, privacidad en una línea, créditos y el bote de propinas opcional.</figcaption>
+      </figure>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.1.</p>
+      <p><a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio de la guía</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

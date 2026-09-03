@@ -20,6 +20,7 @@ right now are dimmed rather than hidden, so the sidebar does not rearrange itsel
 |---------|---------|-------------|
 | **Theme** | System / Light / Dark | Follow the device appearance, or pin Fretling to light or dark. |
 | **Modules** | Auto / Machined / Studio | How the floating practice tools are drawn. Auto gives the light canvas the Machined panel and the dark canvas the Studio one; pin either to keep it everywhere. |
+| **Language** | System / English / Español | Follow the device language, or pin Fretling to English or Spanish. A change takes effect when the app next opens: Fretling offers to relaunch right away on Mac (*Relaunch Now*) or to quit on iPad (*Quit Fretling*), or choose *Later* and it switches on its own the next time you open it. |
 
 Marker settings are not here — labels, shapes, colors and accidentals all live on the
 [marker display bar](fretboard.md#marker-display-bar) above the neck, where they stay
@@ -58,7 +59,7 @@ to lay a shape against.
 
 | Setting | Options | Description |
 |---------|---------|-------------|
-| **Instrument** | Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel), Jazz Guitar, Clean Electric Guitar, Sine Wave | The voice used when you tap notes on the neck. Sine Wave is synthesised; the rest come from a General MIDI SoundFont. |
+| **Instrument** | Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel), Jazz Guitar, Clean Electric Guitar, Sine Wave | The voice used when you tap notes on the neck. Sine Wave is synthesized; the rest come from a General MIDI SoundFont. |
 
 ### Chord Pad Layers
 
@@ -82,7 +83,8 @@ tile before you commit.
 At the bottom of the sidebar, **About Fretling** opens a screen with the version and build
 number, a plain-language privacy summary, and credits for the open-source components Fretling
 is built on — the chord fingering database, the SoundFont used for instrument playback, and
-the Neural Amp Modeler engine with its dependencies.
+the recorded drum kit behind the Drums pack, and the Neural Amp Modeler engine with its
+dependencies.
 
 The About screen also holds an optional **tip jar**. Tips are ordinary in-app purchases
 handled by Apple, in three sizes. **They unlock nothing** — every feature is available whether

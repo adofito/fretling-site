@@ -508,6 +508,33 @@ body[data-page="guide"] .site-header { border-bottom-color: transparent; }
   box-shadow: var(--f-shadow-chip);
 }
 
+/* The theme control and the language switch travel together: one flex unit, so when the
+   header wraps they wrap as a pair instead of stranding the switch under the brand. */
+.header-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  flex: none;
+}
+
+/* Language switch — the header's one link that is not a section: it wears the theme
+   control's chip so the two read as one row of controls, and it is the only element on
+   the page written in the other language on purpose. */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 var(--s-3);
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--f-ink) 7%, transparent);
+  color: var(--f-ink-2);
+  font-size: var(--t-control);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s ease-out, color 0.15s ease-out;
+}
+.lang-switch:hover { color: var(--f-ink); background: color-mix(in srgb, var(--f-ink) 11%, transparent); }
+
 .site-footer {
   margin-top: var(--s-16);
   border-top: 1px solid var(--f-hairline);

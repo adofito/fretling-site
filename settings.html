@@ -63,10 +63,13 @@
           <li><a href="settings.html" data-mark="settings" aria-current="page">Settings</a></li><li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
         </ul>
       </nav>
+      <div class="header-controls">
       <div class="theme-control" role="group" aria-label="Appearance">
         <button type="button" data-theme="system" aria-pressed="true">System</button>
         <button type="button" data-theme="light" aria-pressed="false">Light</button>
         <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+      </div>
+      <a class="lang-switch" href="es/settings.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
       </div>
     </div>
   </header>
@@ -109,6 +112,7 @@
           <tbody>
             <tr><td><strong>Theme</strong></td><td>System / Light / Dark</td><td>Follow the device appearance, or pin Fretling to light or dark.</td></tr>
             <tr><td><strong>Modules</strong></td><td>Auto / Machined / Studio</td><td>How the floating practice tools are drawn. Auto gives the light canvas the Machined panel and the dark canvas the Studio one; pin either to keep it everywhere.</td></tr>
+            <tr><td><strong>Language</strong></td><td>System / English / Español</td><td>Follow the device language, or pin Fretling to English or Spanish. A change takes effect when the app next opens: Fretling offers to relaunch right away on Mac (<em>Relaunch Now</em>) or to quit on iPad (<em>Quit Fretling</em>), or choose <em>Later</em> and it switches on its own the next time you open it.</td></tr>
           </tbody>
         </table>
       </div>
@@ -149,7 +153,7 @@
         <table>
           <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
           <tbody>
-            <tr><td><strong>Instrument</strong></td><td>Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel), Jazz Guitar, Clean Electric Guitar, Sine Wave</td><td>The voice used when you tap notes on the neck. Sine Wave is synthesised; the rest come from a General MIDI SoundFont.</td></tr>
+            <tr><td><strong>Instrument</strong></td><td>Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel), Jazz Guitar, Clean Electric Guitar, Sine Wave</td><td>The voice used when you tap notes on the neck. Sine Wave is synthesized; the rest come from a General MIDI SoundFont.</td></tr>
           </tbody>
         </table>
       </div>
@@ -184,7 +188,7 @@
 
     <section class="section-card" id="about">
       <h2>About and tips</h2>
-      <p>At the bottom of the sidebar, <strong>About Fretling</strong> opens a screen with the version and build number, a plain-language privacy summary, and credits for the open-source components Fretling is built on — the chord fingering database, the SoundFont used for instrument playback, and the Neural Amp Modeler engine with its dependencies.</p>
+      <p>At the bottom of the sidebar, <strong>About Fretling</strong> opens a screen with the version and build number, a plain-language privacy summary, and credits for the open-source components Fretling is built on — the chord fingering database, the SoundFont used for instrument playback, the recorded drum kit behind the Drums pack, and the Neural Amp Modeler engine with its dependencies.</p>
       <p>The About screen also holds an optional <strong>tip jar</strong>. Tips are ordinary in-app purchases handled by Apple, in three sizes. <strong>They unlock nothing</strong> — every feature is available whether or not you ever tip.</p>
           <figure class="shot" style="--shot-max: 620px">
         <img class="shot-light" src="screenshots/22-about-sheet-light.webp"

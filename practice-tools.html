@@ -63,10 +63,13 @@
           <li><a href="settings.html" data-mark="settings">Settings</a></li><li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
         </ul>
       </nav>
+      <div class="header-controls">
       <div class="theme-control" role="group" aria-label="Appearance">
         <button type="button" data-theme="system" aria-pressed="true">System</button>
         <button type="button" data-theme="light" aria-pressed="false">Light</button>
         <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+      </div>
+      <a class="lang-switch" href="es/practice-tools.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
       </div>
     </div>
   </header>
@@ -74,6 +77,17 @@
   <main id="main" class="container">
     <h1>Practice Tools</h1>
     <p class="lede">Six tools open from the icon row at the right of the top bar. Each is a floating panel over the fretboard — drag it where you want it, and close it when you are done. When panels overlap, pressing one brings it to the front, and the arrangement is kept between launches. The neck stays visible and usable underneath.</p>
+
+    <p>Every panel also <strong>minimizes</strong> to a one-row strip that keeps its main control and readout live — the metronome's play button, tempo and beat lamp; the tuner's Listen button, note and cents; the looper's Record and Play; the mixer's Main fader; the amp's Monitor and output gain; Live Detect's Listen and detected chord. Click the chevron beside the panel's close button, or double-click its header (double-tap on iPad); the same chevron expands it again. Which panels are minimized is remembered between launches, along with where they sit.</p>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="screenshots/31-minimized-strips-light.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="The metronome, tuner and looper each folded to a one-row strip and piled over the neck.">
+        <img class="shot-dark" src="screenshots/31-minimized-strips-dark.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="The metronome, tuner and looper each folded to a one-row strip and piled over the neck.">
+        <figcaption class="figure-caption">Three panels minimized: the click, the tuner and the looper still working, in a fraction of the room.</figcaption>
+      </figure>
 
     <div class="callout" data-accent="platform">
       <p><strong>Everything on this page works on Mac and iPad.</strong> The amp and the looper used to be Mac-only; they now run on iPad too. Plug in a USB-C audio interface, or use headphones — monitoring through the built-in speaker feeds back into the built-in mic, and the amp will tell you so.</p>
@@ -93,6 +107,7 @@
         <li><a href="#drums">Drum sequencer</a></li>
         <li><a href="#amp">Guitar amp</a></li>
         <li><a href="#input">Input</a></li>
+        <li><a href="#performance">Performance</a></li>
         <li><a href="#looper">Looper</a></li>
         <li><a href="#mixer">Mixer</a></li>
         <li><a href="#live-detect">Live Detect</a></li>
@@ -118,7 +133,7 @@
       <ul>
         <li><strong>Needle</strong> — a classic swinging needle.</li>
         <li><strong>Bar</strong> — a horizontal deviation bar against a cents scale.</li>
-        <li><strong>Trace</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> — plots pitch over time, so drift and vibrato are visible.</li>
+        <li><strong>Trace</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> — plots pitch over time, so drift and vibrato are visible. With Reduce Motion on, the trace sweeps across the display instead of scrolling, so what it has drawn stays put.</li>
         <li><strong>Strobe</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> — a strobe band that stands still when you are in tune.</li>
         <li><strong>Disc</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> — a rotating disc, seen through a half-moon window, that stops turning at true pitch.</li>
       </ul>
@@ -137,6 +152,13 @@
         </table>
       </div>
       <p>Precision measures phase over a settled baseline, which is why it needs a held note — a sub-cent reading is only as good as the stretch of signal it was fitted over.</p>
+
+      <h3>Reference and calibration</h3>
+      <p>At the bottom of the panel, a <strong>Reference</strong> disclosure holds the Fast / Precision switch and two settings you set once and leave alone:</p>
+      <ul>
+        <li><strong>A4</strong> — the reference pitch, from 430 to 450 Hz in whole hertz, 440 by default. Turn it for an orchestra that tunes to 442, or a recording at 432.</li>
+        <li><strong>Offset</strong> — a manual correction of up to ±5 cents, in tenths, for an instrument or an interface that reads consistently sharp or flat. Under it, after the tuner has listened for a while, a line reports how far your audio input's clock runs from its nominal rate, in parts per million and in cents. That part is measured and corrected automatically, so the slider only ever carries your own preference.</li>
+      </ul>
     </section>
 
     <section class="section-card" id="metronome">
@@ -150,7 +172,7 @@
             <tr><td><strong>Tempo</strong></td><td>40–250 BPM, default 120</td><td>Steppers move one BPM at a time; hold to run.</td></tr>
             <tr><td><strong>TAP</strong></td><td>—</td><td>Tap in time and the tempo follows your taps.</td></tr>
             <tr><td><strong>Meter</strong></td><td>4/4, 3/4, 2/4, 6/8, 5/4, 7/8, 9/8, 12/8, 1/4</td><td>The beat indicator shows your place in the bar.</td></tr>
-            <tr><td><strong>Subdivision</strong></td><td>Quarter, Eighth, Triplet, Dotted Eighth, Sixteenth</td><td>Subdivides the beat without changing the tempo.</td></tr>
+            <tr><td><strong>Subdivision</strong></td><td>Quarter, Eighth, Triplet, Dotted Eighth, Sixteenth</td><td>Subdivides the beat without changing the tempo. Dotted Eighth is the long–short pair — a dotted eighth and a sixteenth — two clicks to every beat.</td></tr>
             <tr><td><strong>Sound</strong></td><td>Classic, Woodblock, Click, Drums</td><td><em>Drums</em> plays a real kit pattern instead of a click — see below.</td></tr>
             <tr><td><strong>Accent</strong></td><td>On / off</td><td>Emphasizes the downbeat of each bar.</td></tr>
           </tbody>
@@ -169,22 +191,25 @@
 
     <section class="section-card" id="drums">
       <h2>Drum sequencer <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a></h2>
-      <p>With the <strong>Drums</strong> sound pack selected, the metronome plays a step-sequenced pattern across three lanes — <strong>Kick</strong>, <strong>Snare</strong>, and <strong>Hat</strong> — instead of a bare click. Every meter ships with a musical default rather than a mechanical one, so 6/8 feels like 6/8 without you editing anything.</p>
+      <p>With the <strong>Drums</strong> sound pack selected, the metronome plays a step-sequenced pattern across six lanes — <strong>Crash</strong>, <strong>Ride</strong>, <strong>Open Hat</strong>, <strong>Hat</strong>, <strong>Snare</strong>, and <strong>Kick</strong> — instead of a bare click. The kit is a recorded acoustic drum kit, and every hit rings for its natural length: a kick keeps sounding under the hats that follow it, and an open hat rings until the closed hat shuts it, as on a real kit. Every meter ships with a musical default rather than a mechanical one — hats on the beat hit harder than the hats between — so 6/8 feels like 6/8 without you editing anything.</p>
       <p>Open the pattern editor from the metronome to build your own:</p>
       <ul>
-        <li><strong>The grid</strong> — one row per lane, one column per step. Tap a cell to switch that hit on or off; the grid scrolls sideways when a meter needs more steps than fit.</li>
+        <li><strong>The grid</strong> — one row per lane, one column per step. Each cell shows how hard that hit lands: the fill rises from the bottom of the cell to its level, full at the top. The grid scrolls sideways when a meter needs more steps than fit.</li>
+        <li><strong>Set a level</strong> — tap a cell at the height you want it to hit; the bottom band of a cell is off. Drag up or down inside a cell to ride its level, or drag across the row to paint that level onto every cell you cross. Right-click (or long-press on iPad) a cell for <em>Full</em>, <em>75</em>, <em>50</em>, <em>25</em>, or <em>Off</em>. While you drag, the readout at the top shows the lane, the step, and the level.</li>
         <li><strong>Play while you edit</strong> — the pattern loops as you work, so you hear each change immediately.</li>
-        <li><strong>Library</strong> — save a pattern under a name, mark one as active, duplicate one as a starting point, rename, or delete. Edited-but-unsaved patterns are badged <em>Edited</em>, and closing with unsaved work asks before discarding it.</li>
-        <li><strong>Reset</strong> — restores the default kick, snare and hat steps for the current meter.</li>
+        <li><strong>Meter and Subdivision</strong> — change either from the editor's transport row, next to the tempo, and the grid regroups to match. Each combination keeps its own active pattern, so switching loads that one; unsaved edits ask to be saved or discarded first.</li>
+        <li><strong>Rows at once</strong> — right-click (or long-press) a lane's name for <em>Fill Row</em>, <em>Accent Beats</em>, or <em>Clear Row</em>. Accent Beats keeps the row's hits and re-levels them the way the defaults are built: full on the beat, lighter in between.</li>
+        <li><strong>Library</strong> — every meter ships with a few <em>Defaults</em>: <em>Basic</em>, and where the meter earns them <em>Rock</em>, <em>Hats only</em>, <em>Light</em> and <em>Shuffle</em>; the odd meters get their groupings instead, <em>3+2</em> and <em>2+3</em> in 5/4, <em>2+2+3</em> and <em>3+2+2</em> in 7/8. Save a pattern under a name, mark one as active, duplicate one as a starting point, rename, or delete. Edited-but-unsaved patterns are badged <em>Edited</em>, and closing with unsaved work asks before discarding it.</li>
+        <li><strong>Reset</strong> — restores the default steps and levels for the current meter.</li>
       </ul>
-      <p>Changing the meter while a custom pattern is loaded asks what you want done with it rather than silently reshaping your work.</p>
+      <p>From the metronome panel itself, changing the meter or the subdivision loads that combination's active pattern straight away — the editor is the place that asks first.</p>
           <figure class="shot" style="--shot-max: 500px">
         <img class="shot-light" src="screenshots/25-drum-sequencer-light.webp"
              width="1030" height="973" loading="lazy" decoding="async"
-             alt="The drum pattern editor with kick, snare and hat lanes over a step grid.">
+             alt="The drum pattern editor with six lanes over a step grid, the fill of each lit cell showing how hard that hit lands.">
         <img class="shot-dark" src="screenshots/25-drum-sequencer-dark.webp"
              width="1030" height="973" loading="lazy" decoding="async"
-             alt="The drum pattern editor with kick, snare and hat lanes over a step grid.">
+             alt="The drum pattern editor with six lanes over a step grid, the fill of each lit cell showing how hard that hit lands.">
         <figcaption class="figure-caption">The drum sequencer. Edits play live; Save keeps a pattern in your library.</figcaption>
       </figure>
 </section>
@@ -195,10 +220,11 @@
 
       <p>The panel holds amp matters only. Anything about the <em>input</em> — which interface, which channel, how much gain, buffer size and sample rate — lives in the <a href="#input">input console</a> in the top bar, because the tuner and Live Detect listen through the same input and none of it needs a model loaded.</p>
       <ul>
-        <li><strong>Model</strong> — pick a starter profile, or <strong>Load .nam…</strong> to use your own.</li>
+        <li><strong>Model</strong> — pick a starter profile — <em>Starter Clean (A1)</em>, <em>Starter Clean (A2)</em>, <em>Starter Acoustic</em>, <em>Starter Warm</em> or <em>Starter Crunch</em> — or <strong>Load .nam…</strong> to use your own. A badge names the generation of the loaded model, and if a file uses a newer NAM format than Fretling fully supports, or carries built-in controls Fretling cannot set yet, the panel says so instead of sounding wrong in silence.</li>
         <li><strong>Monitor / Stop</strong> — starts and stops live monitoring. Stopping genuinely releases the microphone; a loop that is playing keeps playing.</li>
         <li><strong>Output gain</strong> — level out of the amp path.</li>
         <li><strong>Model input level</strong> and <strong>Model output level</strong> — trim around the model itself, which is how you match a profile that was captured hot or quiet.</li>
+        <li><strong>Model size</strong> — appears for a model that carries several sizes of the same network, from Light up to Full. Smaller sizes cost less CPU and keep less detail; Full is the model as captured, and it is what loads by default.</li>
       </ul>
       <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="screenshots/26-amp-light.webp"
@@ -242,19 +268,46 @@
       </figure>
 </section>
 
+    <section class="section-card" id="performance">
+      <h2>Performance</h2>
+      <p>Fretling does a lot at once — an amp model, a looper, the tuner and Live Detect listening, the click — so the top bar shows how hard it is working, in a small readout to the left of the microphone lamp. Two rows:</p>
+      <ul>
+        <li><strong>Audio</strong> — how much of each audio cycle's time the audio engines are using. This is the number that predicts trouble: as it nears 100% the engine runs out of time to fill the next buffer, and you hear clicks or dropouts. The bar turns amber above 70% and red above 90%.</li>
+        <li><strong>CPU</strong> — Fretling's share of your whole Mac or iPad, the number behind fans and battery.</li>
+      </ul>
+      <p>Press the readout to open the Performance console. It shows the two audio engines separately — <strong>Playback</strong> carries notes, chords and the click; <strong>Amp</strong> carries the amp model and the looper, and reads <em>Not running</em> while the amp is down — each with the buffer it is measured against (frames, sample rate, and the milliseconds a cycle has) and a count of overloads: cycles that ran past their deadline since that engine started. Below a seam, the CPU share, and a warning when the machine itself is running hot and may be slowing things down.</p>
+      <p>If Audio runs hot, raise the buffer size in <a href="#input">Input settings</a> or choose a smaller amp model. A bigger buffer gives every cycle more time; a smaller model needs less of it.</p>
+      <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="screenshots/32-performance-console-light.webp"
+             width="1520" height="1300" loading="lazy" decoding="async"
+             alt="The performance console open below the top bar's readout, showing the Playback engine in the amber hot zone with its cycle budget, the Amp engine not running, the coaching line, and the CPU share.">
+        <img class="shot-dark" src="screenshots/32-performance-console-dark.webp"
+             width="1520" height="1300" loading="lazy" decoding="async"
+             alt="The performance console open below the top bar's readout, showing the Playback engine in the amber hot zone with its cycle budget, the Amp engine not running, the coaching line, and the CPU share.">
+        <figcaption class="figure-caption">The performance console: each audio engine against its own deadline, then the machine.</figcaption>
+      </figure>
+    </section>
+
     <section class="section-card" id="looper">
       <h2>Looper <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a></h2>
       <p>Record a phrase and play over it. The looper sits on the amp's monitoring path, so <strong>turn Monitor on in the amp first</strong> — the looper says as much if you have not. Once a loop exists it keeps playing on its own: turning Monitor off releases the microphone but leaves the loop running, and Play brings it back even with the amp down.</p>
+      <p>One big button drives the take, and its label always says what it will do next:</p>
       <ul>
-        <li><strong>Record</strong> — press once to start, press again to close the loop. It then repeats until you clear it.</li>
-        <li><strong>Bars</strong> — set a length in bars and recording stops itself on the bar line, so the loop is in time without you catching it by hand.</li>
-        <li><strong>Count-in</strong> — a bar of clicks before recording starts.</li>
+        <li><strong>Record</strong> — starts the take, after the count-in if you set one; while the count runs, the same button reads <strong>Cancel</strong>. Press it again, now reading <strong>Set Loop</strong>, to close the loop and start it playing. With <strong>Bars</strong> set it closes itself on the bar line instead, and a free-length take closes at 60 seconds if you have not closed it yourself.</li>
+        <li><strong>Overdub</strong> — while the loop plays, press again to record a new layer on top of it; <strong>End Overdub</strong> keeps the layer. Stack as many as you like.</li>
+        <li><strong>Undo / Redo</strong> — takes back the last overdub layer, or puts it back.</li>
+        <li><strong>Play / Stop</strong> — stops the loop, and starts it again on the bar line. With the loop stopped, the big button reads <strong>Record New</strong>: press it and a fresh take replaces the old loop.</li>
+        <li><strong>Clear</strong> — throws the loop away.</li>
+      </ul>
+      <p>Under the transport:</p>
+      <ul>
+        <li><strong>Bars</strong> — <em>Free</em>, 1, 2, 4 or 8. With a length set, recording stops itself on the bar line, so the loop is in time without you catching it by hand; <em>Free</em> leaves the close to you.</li>
+        <li><strong>Count-in</strong> — <em>Off</em>, 1 or 2 bars of clicks before recording starts.</li>
         <li><strong>Click while recording</strong> — keeps the metronome audible through the take.</li>
         <li><strong>Loop volume</strong> — how loud the loop plays back under you.</li>
         <li><strong>Layer fade</strong> — how much earlier layers fade back as you stack new ones on top.</li>
-        <li><strong>Clear</strong> — throws the loop away.</li>
       </ul>
-      <p>A beat readout shows where in the loop you are. Changing the sample rate clears the loop — the recording no longer matches the engine — and the looper tells you when that has happened.</p>
+      <p>The record button doubles as the beat readout: the count-in counts down to the punch, then the beat counts up the bar, and a status line under the controls names the state — recording, playing, overdubbing — with the bar and the time. Changing the sample rate clears the loop — the recording no longer matches the engine — and the looper tells you when that has happened.</p>
       <p>Loops live in memory for the session only. Nothing is written to disk, and quitting the app discards them.</p>
           <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="screenshots/28-looper-light.webp"

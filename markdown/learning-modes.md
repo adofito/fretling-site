@@ -99,8 +99,11 @@ are named on their own terms.
 
 - **Tap them onto the neck.** Tap a position to place a note, tap it again to remove it. A
   placement toolbar gives you **Undo**, **Clear**, and a running count of placed notes.
-- **Play them.** Open [Live Detect](practice-tools.md#live-detect), play the chord, and use
-  **Send to fretboard** to drop what it heard onto the neck as placed notes.
+- **Play them.** Press **Listen** in the placement toolbar — it opens
+  [Live Detect](practice-tools.md#live-detect) and starts it listening — play the chord, and
+  press **Capture what I played** to place what it heard on the neck, in place of whatever
+  you had put there (Undo brings that back). The same move is on Live Detect's own panel as
+  **Send to fretboard**.
 
 ### Reading the results
 

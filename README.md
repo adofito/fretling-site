@@ -15,7 +15,9 @@ This folder is the source for the published site. It is also where the App Store
 | `fretboard.html` | Markers, chip bars, timeline, overlays, chord shapes, fret range, tap-to-play |
 | `practice-tools.html` | Tuner, metronome, drum sequencer, amp, looper, mixer, Live Detect |
 | `settings.html` | Every option in the settings sidebar |
+| `free-and-pro.html` | What is free for good, and what the one-time Pro unlock adds |
 | `privacy.html` | Privacy policy |
+| `es/*.html` | The same seven pages in Latin American Spanish — see below |
 
 `css/styles.css` is the whole visual system, written from the app's own design tokens —
 the interval wheel, the header accents, the warm canvas and elevated islands, the chip
@@ -43,6 +45,20 @@ python3 -m http.server 8765 --directory docs/website
 `markdown/` holds a plain-Markdown mirror of the same content, for reading in an editor or
 on GitHub.
 
+## The Spanish mirror
+
+Every page has a Spanish twin under `es/`, reached from the **Español** switch in the header
+(and back through **English** on the Spanish side). The Spanish pages are **generated, never
+edited by hand**: `scripts/site/build-es-pages.py` in the app repo rewrites the English pages
+through the translation table `i18n/es-419.json`, keeps every id and anchor identical, and
+refuses to build while any English string has no Spanish — so the two trees cannot drift.
+Each page declares its twin with `hreflang` alternates. One Latin American Spanish serves
+every Spanish-speaking region, the same way the app's own catalog does.
+
+The Spanish pages carry their own screenshots, captured from the app running in Spanish
+(`scripts/site/capture-guide.sh --language es-419`, written under `screenshots/es-419/`),
+so a panel's labels in the picture match the words beside it.
+
 ## The favicon
 
 The site's mark is the app's **Fret Monogram** icon — one of the fourteen in the app's icon
@@ -61,8 +77,9 @@ Never edit them by hand — rebuild them from the icon set:
 
 ## Screenshots
 
-The guide ships 30 screenshots, each in a light and a dark version, as WebP in
-`screenshots/`. They are **generated, never taken by hand**:
+The guide ships 31 screenshots (numbered to 32; 13 was retired), each in a light and a dark version, as WebP in
+`screenshots/`, plus the same set captured in Spanish under `screenshots/es-419/` for the
+Spanish pages. They are **generated, never taken by hand**:
 
 ```sh
 ./build.sh debug

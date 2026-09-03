@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diapasón – Fretling</title>
+  <meta name="description" content="El diapasón de Fretling: marcadores de notas, la barra de visualización de marcadores, la línea de tiempo de la escala, superposiciones CAGED y pentatónicas, formas de acorde, limitador de rango de trastes y tocar para oír.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fretling">
+  <meta property="og:title" content="Diapasón – Fretling">
+  <meta property="og:description" content="El diapasón de Fretling: marcadores de notas, la barra de visualización de marcadores, la línea de tiempo de la escala, superposiciones CAGED y pentatónicas, formas de acorde, limitador de rango de trastes y tocar para oír.">
+  <meta property="og:url" content="https://www.fretling.app/es/fretboard.html">
+  <meta property="og:image" content="https://www.fretling.app/es/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.fretling.app/es/og-image.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/fretboard.html">
+  <link rel="alternate" hreflang="es" href="https://www.fretling.app/es/fretboard.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/fretboard.html">
+</head>
+<body data-page="fretboard">
+  <a href="#main" class="skip-link">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <line class="bm-string" x1="3" y1="5" x2="26" y2="5"/>
+          <line class="bm-string" x1="3" y1="10" x2="26" y2="10"/>
+          <line class="bm-string" x1="3" y1="15" x2="26" y2="15"/>
+          <line class="bm-fret" x1="10" y1="2.5" x2="10" y2="17.5"/>
+          <line class="bm-fret" x1="17" y1="2.5" x2="17" y2="17.5"/>
+          <line class="bm-fret" x1="24" y1="2.5" x2="24" y2="17.5"/>
+          <line class="bm-nut" x1="3" y1="2" x2="3" y2="18"/>
+          <circle class="bm-dot-a" cx="6.5" cy="10" r="2.6"/>
+          <circle class="bm-dot-b" cx="13.5" cy="5" r="2.6"/>
+          <circle class="bm-dot-c" cx="20.5" cy="15" r="2.6"/>
+        </svg>
+        Fretling
+      </a>
+      <nav class="chip-nav" aria-label="Secciones de la guía">
+        <ul>
+          <li><a href="index.html" data-mark="guide">Guía</a></li>
+          <li><a href="learning-modes.html" data-mark="modes">Modos de aprendizaje</a></li>
+          <li><a href="fretboard.html" data-mark="fretboard" aria-current="page">Diapasón</a></li>
+          <li><a href="practice-tools.html" data-mark="tools">Herramientas de práctica</a></li>
+          <li><a href="settings.html" data-mark="settings">Configuración</a></li><li><a href="free-and-pro.html" data-mark="pro">Gratis y Pro</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+      <div class="theme-control" role="group" aria-label="Apariencia">
+        <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
+        <button type="button" data-theme="light" aria-pressed="false">Claro</button>
+        <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
+      </div>
+      <a class="lang-switch" href="../fretboard.html" hreflang="en" lang="en" aria-label="English version">English</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Diapasón</h1>
+    <p class="lede">El mástil es lo único que nunca se mueve. Todo lo demás (la oración, la línea de tiempo, las barras de chips, las herramientas flotantes) se organiza a su alrededor.</p>
+
+    <nav class="toc" aria-label="Índice">
+      <h2>En esta página</h2>
+      <ul>
+        <li><a href="#layout">Distribución</a></li>
+        <li><a href="#marker-bar">Barra de visualización de marcadores</a></li>
+        <li><a href="#markers">Marcadores de notas</a></li>
+        <li><a href="#timeline">Línea de tiempo de la escala</a></li>
+        <li><a href="#overlays">Agrupaciones visuales: superposiciones y cajas</a></li>
+        <li><a href="#chord-shapes">Formas de acorde</a></li>
+        <li><a href="#fret-range">Limitador de rango de trastes</a></li>
+        <li><a href="#interaction">Tocar para oír</a></li>
+      </ul>
+    </nav>
+
+    <section class="section-card" id="layout">
+      <h2>Distribución</h2>
+      <p>Seis cuerdas, de la E grave abajo a la e aguda arriba, y <strong>15 trastes</strong> más la posición al aire para empezar. Los números de traste recorren el mástil, con los trastes de incrustación habituales (3, 5, 7, 9, 12, 15, 17, 19, 21) señalados para que ubiques tu posición de un vistazo.</p>
+      <p>Ajusta el mástil a tu propia guitarra con <strong>Trastes</strong> a la izquierda de la <a href="#marker-bar">barra de visualización de marcadores</a>: de 12 a 22.</p>
+      <p>El mástil siempre llena el ancho que se le da y nunca se desplaza de lado, así que un mástil más largo dibuja trastes más angostos y marcadores un poco más pequeños en vez de salirse del borde. Para trabajar un tramo del mástil en lugar de acortarlo, usa el <a href="#fret-range">limitador de rango de trastes</a>, que enmarca una posición en el mástil que tienes, mientras que <strong>Trastes</strong> cambia cuánto mástil hay.</p>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/01-app-scales-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La ventana de Fretling en modo Escalas: el encabezado con la oración arriba, la línea de tiempo de la escala y la barra de visualización de marcadores sobre el mástil, seis cuerdas con marcadores de E Mayor y los chips de Agrupaciones visuales debajo.">
+        <img class="shot-dark" src="../screenshots/es-419/01-app-scales-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La ventana de Fretling en modo Escalas: el encabezado con la oración arriba, la línea de tiempo de la escala y la barra de visualización de marcadores sobre el mástil, seis cuerdas con marcadores de E Mayor y los chips de Agrupaciones visuales debajo.">
+        <figcaption class="figure-caption">Seis cuerdas y los quince trastes por defecto, con los trastes de incrustación numerados a lo largo del borde superior.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="marker-bar">
+      <h2>Barra de visualización de marcadores</h2>
+      <p>Justo sobre el mástil hay una fila de chips que cambia cómo se leen los marcadores. Son los ajustes que usas constantemente, así que siempre están visibles en lugar de enterrados en la barra lateral.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Grupo</th><th>Chips</th><th>Qué hace</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Trastes</strong></td>
+              <td>&minus; / &plus;</td>
+              <td>Cuántos trastes dibuja el mástil, de 12 a 22; ajústalo a tu propia guitarra. El valor por defecto es 15. Es el único grupo que es un paso a paso en vez de una fila de chips, y encabeza la barra porque describe el mástil y no los marcadores que están sobre él.</td>
+            </tr>
+            <tr>
+              <td><strong>Etiquetas</strong></td>
+              <td>Notas / Intervalos / Ninguna</td>
+              <td><em>Notas</em> imprime nombres de notas (G, A♯). <em>Intervalos</em> imprime grados de la escala (1, 2, ♭3). <em>Ninguna</em> deja puntos sin nada; útil para ponerte a prueba.</td>
+            </tr>
+            <tr>
+              <td><strong>Formas</strong></td>
+              <td>Círculos / Intervalos</td>
+              <td><em>Círculos</em> dibuja todos los marcadores iguales. <em>Intervalos</em> da a cada grado su propio contorno (cuadrado, rombo, hexágono) para que la fundamental se lea distinto de una tercera incluso en Gris.</td>
+            </tr>
+            <tr>
+              <td><strong>Colores</strong></td>
+              <td>Color / Gris</td>
+              <td><em>Color</em> da a cada intervalo su propio color, así que un grado se reconoce antes de leerlo. <em>Gris</em> hace todos los marcadores iguales, lo que mantiene el foco en las formas y la geometría.</td>
+            </tr>
+            <tr>
+              <td><strong>Alteraciones</strong></td>
+              <td>♯ Sostenidos / ♭ Bemoles</td>
+              <td>Si las notas de tecla negra se leen como F♯ o G♭. Solo tiene sentido cuando las etiquetas muestran nombres de notas, así que este grupo se atenúa (pero sigue visible) cuando Etiquetas está en Intervalos o Ninguna.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Todos los grupos excepto <strong>Trastes</strong> son de tipo radio: un chip está encendido y tocar el chip encendido no hace nada. En una ventana angosta la barra se desplaza de lado en vez de partirse.</p>
+      <p>Tres de los cuatro grupos de marcadores llegan más allá del mástil. <strong>Etiquetas</strong>, <strong>Colores</strong> y <strong>Alteraciones</strong> también definen cómo se leen la <a href="#timeline">línea de tiempo de la escala</a> y el Atlas de acordes, así que una nota se nombra, se deletrea y se colorea igual dondequiera que la encuentres. (El Atlas conserva los nombres de las notas cuando Etiquetas está en Ninguna: un selector cuyas opciones no llevan etiqueta no tiene con qué elegir.) <strong>Formas</strong> es solo del mástil: la línea de tiempo y el Atlas dibujan marcadores redondos.</p>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/08-marker-bar-notes-light.webp"
+             width="1936" height="280" loading="lazy" decoding="async"
+             alt="La barra de visualización de marcadores con Etiquetas en Notas, de modo que cada marcador del mástil imprime un nombre de nota.">
+        <img class="shot-dark" src="../screenshots/es-419/08-marker-bar-notes-dark.webp"
+             width="1936" height="280" loading="lazy" decoding="async"
+             alt="La barra de visualización de marcadores con Etiquetas en Notas, de modo que cada marcador del mástil imprime un nombre de nota.">
+        <figcaption class="figure-caption">Etiquetas = Notas. Alteraciones sigue activo, porque los nombres de las notas pueden ser sostenidos o bemoles.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/09-marker-bar-intervals-light.webp"
+             width="1936" height="280" loading="lazy" decoding="async"
+             alt="La barra de visualización de marcadores con Etiquetas en Intervalos, de modo que los marcadores imprimen grados de la escala y el grupo Alteraciones está atenuado.">
+        <img class="shot-dark" src="../screenshots/es-419/09-marker-bar-intervals-dark.webp"
+             width="1936" height="280" loading="lazy" decoding="async"
+             alt="La barra de visualización de marcadores con Etiquetas en Intervalos, de modo que los marcadores imprimen grados de la escala y el grupo Alteraciones está atenuado.">
+        <figcaption class="figure-caption">Etiquetas = Intervalos. Alteraciones se atenúa (ya no aplica), pero sigue visible.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="markers">
+      <h2>Marcadores de notas</h2>
+      <p>Los marcadores muestran qué notas pertenecen a la escala, el acorde o la tríada actual. Todo lo relativo a cómo se leen (sus etiquetas, formas, colores y alteraciones) se define en la <a href="#marker-bar">barra de visualización de marcadores</a> sobre el mástil. La nota raíz siempre se destaca frente a las demás notas.</p>
+      <p>Las dos capturas de abajo muestran el grupo <strong>Formas</strong> en acción.</p>
+      <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/10-markers-circles-light.webp"
+             width="1936" height="545" loading="lazy" decoding="async"
+             alt="El mástil con cada marcador dibujado como un círculo relleno simple.">
+        <img class="shot-dark" src="../screenshots/es-419/10-markers-circles-dark.webp"
+             width="1936" height="545" loading="lazy" decoding="async"
+             alt="El mástil con cada marcador dibujado como un círculo relleno simple.">
+        <figcaption class="figure-caption">Formas = Círculos.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/11-markers-intervals-light.webp"
+             width="1936" height="545" loading="lazy" decoding="async"
+             alt="El mástil con marcadores dibujados como formas distintas por grado en lugar de círculos simples.">
+        <img class="shot-dark" src="../screenshots/es-419/11-markers-intervals-dark.webp"
+             width="1936" height="545" loading="lazy" decoding="async"
+             alt="El mástil con marcadores dibujados como formas distintas por grado en lugar de círculos simples.">
+        <figcaption class="figure-caption">Formas = Intervalos: cada grado de la escala toma su propio contorno.</figcaption>
+      </figure>
+
+      <h3>La rueda de intervalos</h3>
+      <p>Con <strong>Colores</strong> en Color, el relleno de un marcador es su distancia desde la fundamental de la tonalidad: los mismos doce colores en toda la app, así que una tercera mayor se ve como una tercera mayor en cualquier tonalidad. Esa fundamental es el único ancla: el mástil, la línea de tiempo y el Atlas de acordes miden desde ella, y sigue siendo la fundamental de la tonalidad incluso mientras hay un acorde activo, así que una nota conserva un solo color en los tres. Cambiar la fundamental recolorea todo el mástil; cambiar el tipo de escala no.</p>
+      <figure class="figure">
+        <ul class="palette">
+          <li><span class="sw fb-t-0" aria-hidden="true">R</span><span class="nm"><b>Fundamental</b>Unísono</span></li>
+          <li><span class="sw fb-t-1" aria-hidden="true">♭2</span><span class="nm"><b>Segunda menor</b>Un semitono</span></li>
+          <li><span class="sw fb-t-2" aria-hidden="true">2</span><span class="nm"><b>Segunda mayor</b>Dos semitonos</span></li>
+          <li><span class="sw fb-t-3" aria-hidden="true">♭3</span><span class="nm"><b>Tercera menor</b>Tres semitonos</span></li>
+          <li><span class="sw fb-t-4" aria-hidden="true">3</span><span class="nm"><b>Tercera mayor</b>Cuatro semitonos</span></li>
+          <li><span class="sw fb-t-5" aria-hidden="true">4</span><span class="nm"><b>Cuarta justa</b>Cinco semitonos</span></li>
+          <li><span class="sw fb-t-6" aria-hidden="true">♭5</span><span class="nm"><b>Tritono</b>Seis semitonos</span></li>
+          <li><span class="sw fb-t-7" aria-hidden="true">5</span><span class="nm"><b>Quinta justa</b>Siete semitonos</span></li>
+          <li><span class="sw fb-t-8" aria-hidden="true">♭6</span><span class="nm"><b>Sexta menor</b>Ocho semitonos</span></li>
+          <li><span class="sw fb-t-9" aria-hidden="true">6</span><span class="nm"><b>Sexta mayor</b>Nueve semitonos</span></li>
+          <li><span class="sw fb-t-10" aria-hidden="true">♭7</span><span class="nm"><b>Séptima menor</b>Diez semitonos</span></li>
+          <li><span class="sw fb-t-11" aria-hidden="true">7</span><span class="nm"><b>Séptima mayor</b>Once semitonos</span></li>
+        </ul>
+        <figcaption class="figure-caption">Los doce colores de intervalo, la fundamental primero. En Gris, cada marcador toma un solo relleno neutro y el intervalo lo lleva la etiqueta.</figcaption>
+      </figure>
+
+      <div class="callout" data-accent="tip">
+        <p><strong>Las notas del acorde nunca se ocultan.</strong> Cuando hay un acorde activo junto a una tonalidad, las notas que pertenecen al acorde siguen dibujadas aunque caigan fuera de la escala. Los acordes alterados, los acordes prestados, las dominantes secundarias y las notas de bajo con barra aparecen, por tanto, tal como son, en lugar de ser filtrados por la tonalidad.</p>
+      </div>
+    </section>
+
+    <section class="section-card" id="timeline">
+      <h2>Línea de tiempo de la escala</h2>
+      <p>Sobre el mástil, la línea de tiempo dispone los doce semitonos en fila. Las notas que pertenecen a la escala actual están rellenas; el resto se ve atenuado. Cuando hay un acorde activo, sus notas también se marcan, así que puedes leer el acorde frente a su tonalidad en una sola línea.</p>
+      <p>La fila empieza en lo que estás aprendiendo, así que nunca se parte en dos. En Escalas la casilla del extremo izquierdo es la tonalidad que elegiste y la escala sube desde ahí; pon Etiquetas en Intervalos y podrás leer los grados de corrido, R primero. En Acordes es el acorde el que toma el frente de la fila y la escala de la tonalidad se desplaza a su alrededor.</p>
+      <p>Unos rieles horizontales enmarcan la fila para mostrar la estructura: las notas del acorde se unen por encima, las de la escala por debajo. Pequeños rótulos Acorde y Escala nombran cada riel, y unos triángulos marcan cada fundamental.</p>
+      <figure class="shot" style="--shot-max: 900px">
+        <img class="shot-light" src="../screenshots/es-419/12-timeline-brackets-light.webp"
+             width="1720" height="390" loading="lazy" decoding="async"
+             alt="La línea de tiempo de la escala con doce semitonos, el acorde enmarcado sobre la fila y la escala debajo, un transporte redondo a la cabeza de cada riel y las notas de la escala deletreadas debajo.">
+        <img class="shot-dark" src="../screenshots/es-419/12-timeline-brackets-dark.webp"
+             width="1720" height="390" loading="lazy" decoding="async"
+             alt="La línea de tiempo de la escala con doce semitonos, el acorde enmarcado sobre la fila y la escala debajo, un transporte redondo a la cabeza de cada riel y las notas de la escala deletreadas debajo.">
+        <figcaption class="figure-caption">El riel del acorde está sobre la fila; el de la escala, debajo.</figcaption>
+      </figure>
+
+      <h3 id="transports">Transportes de la línea de tiempo</h3>
+      <p>En el borde inicial de la línea de tiempo hay hasta dos transportes redondos, cada uno en el riel que reproduce: el transporte Acorde junto al riel del acorde sobre la fila, el transporte Escala junto al riel de la escala debajo. Presiona uno para que suene; presiónalo de nuevo para detenerlo. Un transporte que está sonando se rellena de sólido.</p>
+      <ul>
+        <li><strong>Escala</strong>: reproduce la escala como una corrida, siguiendo el patrón y el rango de trastes que tengas en pantalla.</li>
+        <li><strong>Acorde</strong>: sostiene el acorde.</li>
+      </ul>
+      <p>Un transporte va montado en un riel, así que basta un riel para que aparezca uno: el transporte Escala está ahí siempre que hay una escala en la línea de tiempo; el transporte Acorde, siempre que hay un acorde activo. Eso incluye Tríadas, que ahora puede hacer sonar la tríada que te está mostrando.</p>
+      <p>Bajo la fila, una sola línea de notas deletrea lo que el transporte está a punto de hacer sonar. Sigue al sujeto del modo en que estás (el acorde en Acordes y Tríadas, la escala en Escalas), salvo mientras algo suena, cuando sigue al sonido. Cuando los dos transportes están arriba antepone <strong>Escala</strong> o <strong>Acorde</strong>, para que sepas cuál está describiendo.</p>
+      <p>La línea de la escala se deletrea a partir de las notas que <em>realmente sonarán</em>, así que reducir el rango de trastes o activar una caja reduce la línea igual que reduce la corrida. Si el rango visible no contiene notas tocables, la línea dice <em>No hay notas en este rango de trastes</em> en lugar de dejarte presionar un botón muerto.</p>
+      <p>El deletreo sigue al resto de la app: <strong>Etiquetas</strong> decide si lees nombres de notas o grados de intervalo, y <strong>Alteraciones</strong> si son sostenidos o bemoles. Responde a una pregunta distinta de la línea de tiempo que tiene encima: la línea de tiempo mapea la tonalidad; la línea de notas dice qué hará sonar este transporte.</p>
+    </section>
+
+    <section class="section-card" id="overlays">
+      <h2>Agrupaciones visuales: superposiciones y cajas</h2>
+      <p>Justo debajo del mástil, una barra de chips a juego dibuja sistemas de patrones sobre lo que ya está ahí. Qué grupos aparecen depende del modo en que estés.</p>
+      <p>La fila es más ancha de lo que cabe en una ventana angosta, así que se parte a propósito en lugar de truncarse: los interruptores que cambias en plena práctica (<a href="#fret-range-group">Rango de trastes</a> y <a href="#non-chord-notes">Notas fuera del acorde</a> en Acordes) se quedan fijos en su lugar mientras los sistemas de patrones se desplazan detrás. Donde el contenido de verdad se corta, pasa bajo un desvanecimiento suave, así que un chip rebanado se lee como más fila y no como un daño.</p>
+
+      <h3>CAGED</h3>
+      <p><strong>No / Todas / C / A / G / E / D.</strong> Superpone una de las cinco formas CAGED (o todas a la vez) sobre la escala, el acorde o la tríada actual. Disponible en todos los modos de aprendizaje.</p>
+      <p>Cómo se dibuja una forma se define en <a href="settings.html#fretboard-tab">Configuración → Diapasón → Superposiciones de formas → Vista CAGED</a>:</p>
+      <ul>
+        <li><strong>Recuadro</strong>: el contorno de la región de la forma.</li>
+        <li><strong>Líneas</strong>: líneas que conectan las notas de la forma.</li>
+        <li><strong>Ambos</strong>: contorno y líneas juntos.</li>
+      </ul>
+      <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/14-caged-a-both-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La caja CAGED de forma A delineada sobre la escala de E Mayor, con líneas de conexión dibujadas a través de las notas que contiene.">
+        <img class="shot-dark" src="../screenshots/es-419/14-caged-a-both-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La caja CAGED de forma A delineada sobre la escala de E Mayor, con líneas de conexión dibujadas a través de las notas que contiene.">
+        <figcaption class="figure-caption">CAGED = A con Vista CAGED en Ambos: la caja y sus líneas de conexión.</figcaption>
+      </figure>
+
+      <h3 id="box-shapes">Formas de caja</h3>
+      <p><strong>No / Todas / 1 / 2 / 3 / 4 / 5.</strong> Delinea una de las cinco cajas de posición en el mástil, o las cinco a la vez. De quién son las cajas depende del modo. En Escalas pertenecen a la escala que elegiste: cada una de las doce escalas tiene sus propias cinco, así que una escala Mayor recibe las posiciones mayores y no un sustituto pentatónico. En Acordes son las posiciones de la tonalidad, dibujadas bajo el acorde. En Tríadas vienen de la pentatónica que corresponde a la tríada: pentatónica mayor para mayor y aumentada, pentatónica menor para menor y disminuida.</p>
+      <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/15-pentatonic-shape-4-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Posición 4 de la escala de E Mayor delineada en el mástil.">
+        <img class="shot-dark" src="../screenshots/es-419/15-pentatonic-shape-4-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Posición 4 de la escala de E Mayor delineada en el mástil.">
+        <figcaption class="figure-caption">Formas de caja = 4: una posición de la escala de E Mayor, enmarcada en su lugar.</figcaption>
+      </figure>
+
+      <h3 id="chord-shapes-chords-and-progressions">Formas de acorde (Acordes y Progresiones)</h3>
+      <p><strong>No / Sí.</strong> Activa y desactiva las superposiciones de formas de acorde en el mástil; ver <a href="#chord-shapes">Formas de acorde</a> más abajo para saber qué dibujan y los ajustes que las acompañan.</p>
+
+      <h3>3 notas por cuerda</h3>
+      <p><strong>No / 1 … 7.</strong> Solo en el modo Escalas. Dibuja un patrón con tres notas de la escala en cada cuerda. Cuántos patrones existen depende de la escala: una escala de siete notas da siete, y las escalas más pequeñas ofrecen menos.</p>
+      <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/16-three-notes-per-string-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Un patrón de tres notas por cuerda delineado a lo largo del mástil en E Mayor.">
+        <img class="shot-dark" src="../screenshots/es-419/16-three-notes-per-string-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Un patrón de tres notas por cuerda delineado a lo largo del mástil en E Mayor.">
+        <figcaption class="figure-caption">3 notas por cuerda = 3.</figcaption>
+      </figure>
+
+      <h3>Cuerdas</h3>
+      <p><strong>No / 123 / 234 / 345 / 456.</strong> Solo en el modo Tríadas. Reduce el mástil a un conjunto de tres cuerdas adyacentes para que trabajes una forma de tríada sin que el resto del mástil compita por tu atención.</p>
+
+      <h3 id="non-chord-notes">Notas fuera del acorde</h3>
+      <p><strong>No / Sí.</strong> Solo en el modo Acordes. <strong>No</strong> muestra solo las notas del acorde; <strong>Sí</strong> mantiene el resto de las notas visibles debajo, en gris, para que el acorde se lea dentro de su tonalidad en lugar de flotar en un mástil vacío.</p>
+
+      <h3 id="fret-range-group">Rango de trastes</h3>
+      <p><strong>Completo / Limitado.</strong> Todos los modos. <strong>Limitado</strong> enmarca una <a href="#fret-range">ventana de posición</a> en el mástil para que trabajes un tramo de trastes; <strong>Completo</strong> devuelve el mástil entero. Mientras la ventana está arriba, el grupo lleva un tercer chip que indica el tramo (<strong>3–8</strong>), que se abre como un menú de posiciones con nombre.</p>
+
+      <h3>Líneas de tríada</h3>
+      <p>En el modo Tríadas, se activa con <strong>Mostrar líneas de tríadas</strong> en Configuración: dibuja una línea a través de cada voicing de la tríada en el mástil, la misma gramática de unir puntos que usa la superposición CAGED. Solo los voicings que una mano puede sostener reciben línea, así que una nota que no pertenece a ninguna forma en el conjunto de cuerdas elegido queda marcada sin ella.</p>
+    </section>
+
+    <section class="section-card" id="chord-shapes">
+      <h2>Formas de acorde</h2>
+      <p>En el modo Acordes, el grupo <strong>Formas de acorde</strong> de la barra de Agrupaciones visuales dibuja en el mástil digitaciones reales y tocables del acorde seleccionado, tomadas de una base de datos abierta de digitaciones. Ponlo en <strong>Sí</strong> para mostrarlas y en <strong>No</strong> para ocultarlas. Tres ajustes en <a href="settings.html#fretboard-tab">Configuración → Diapasón → Superposiciones de formas</a> definen cómo se comportan:</p>
+      <ul>
+        <li><strong>Mostrar números de dedos</strong>: imprime qué dedo toca cada nota.</li>
+        <li><strong>Pistas de forma en la línea de tiempo</strong>: marca las notas de la forma también en la línea de tiempo de la escala, además del mástil.</li>
+        <li><strong>Interacción CAGED</strong>: decide qué pasa cuando las formas de acorde y las superposiciones CAGED están activadas a la vez:
+          <ul>
+            <li><strong>Coexistir</strong>: dibuja ambas.</li>
+            <li><strong>Exclusivo</strong>: ganan las formas de acorde; CAGED se oculta mientras las formas están activas.</li>
+            <li><strong>Reemplazar CAGED</strong>: las formas de acorde sustituyen a CAGED por completo, y el grupo de chips CAGED desaparece de Agrupaciones visuales.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Una leyenda bajo el mástil nombra las formas dibujadas en ese momento. Lleva el mismo rótulo <strong>Formas de acorde</strong> que el interruptor, porque enumera el mismo sistema: apaga el interruptor y la leyenda se va con él.</p>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/17-chord-shapes-legend-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Formas del acorde de E mayor dibujadas en el mástil con números de dedos, y una leyenda bajo el mástil que nombra cada forma y su posición.">
+        <img class="shot-dark" src="../screenshots/es-419/17-chord-shapes-legend-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Formas del acorde de E mayor dibujadas en el mástil con números de dedos, y una leyenda bajo el mástil que nombra cada forma y su posición.">
+        <figcaption class="figure-caption">Digitaciones reales con los números de dedos activados, y la leyenda que nombra cada forma.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="fret-range">
+      <h2>Limitador de rango de trastes</h2>
+      <p>Pon <strong>Rango de trastes</strong> en <strong>Limitado</strong> en la barra de Agrupaciones visuales y se dibuja una ventana de posición en el propio mástil: un tramo enmarcado con una pestaña delgada de agarre en cada borde. Los trastes de fuera se silencian en lugar de vaciarse, porque <em>apartado</em> y <em>fuera de la escala</em> no deben verse iguales.</p>
+      <ul>
+        <li><strong>Arrastra una pestaña de borde</strong>: mueve ese límite, ajustándose a la línea de traste más cercana.</li>
+        <li><strong>Arrastra los números de traste dentro del marco</strong>: desliza toda la ventana a lo largo del mástil sin cambiar su ancho.</li>
+        <li><strong>Toca dos veces una pestaña de borde</strong>: abre la ventana hasta ese extremo del mástil.</li>
+      </ul>
+      <p>Los trastes límite se nombran a sí mismos como chips azules en la fila de números, sobre el mismo disco que llevan los números de incrustación. El marco nunca se rellena: reclama el tramo solo con su borde, así que los marcadores que rodea siguen exactamente igual de legibles, y cada nota dentro de él sigue siendo tocable.</p>
+      <p>Mientras la ventana está arriba, el grupo <strong>Rango de trastes</strong> lleva un chip de valor que indica el tramo: <strong>3–8</strong>. También es un menú: ábrelo para saltar directo a una posición con nombre: <em>Abierta</em>, <em>3.ª</em>, <em>5.ª</em>, <em>7.ª</em>, <em>9.ª</em> o <em>12.ª</em>. La reproducción de la escala también sigue la ventana.</p>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/18-fret-range-limiter-light.webp"
+             width="1936" height="638" loading="lazy" decoding="async"
+             alt="El mástil con una ventana de posición enmarcada sobre los trastes cinco a nueve, sus trastes límite marcados como chips azules en la fila de números y los trastes de fuera silenciados.">
+        <img class="shot-dark" src="../screenshots/es-419/18-fret-range-limiter-dark.webp"
+             width="1936" height="638" loading="lazy" decoding="async"
+             alt="El mástil con una ventana de posición enmarcada sobre los trastes cinco a nueve, sus trastes límite marcados como chips azules en la fila de números y los trastes de fuera silenciados.">
+        <figcaption class="figure-caption">Rango de trastes en Limitado: la ventana enmarcada en el mástil, con sus límites nombrados 5 y 9.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="interaction">
+      <h2>Tocar para oír</h2>
+      <p>Toca cualquier marcador visible para oír esa nota, con el instrumento definido en <a href="settings.html#audio-tab">Configuración → Audio</a>. En iPad el mástil es totalmente multitáctil: mantén varias notas a la vez para hacer sonar un acorde y desliza un dedo a lo largo del mástil para mover con él la nota que suena. Solo responden los marcadores visibles, así que tocar madera vacía no suena.</p>
+      <p>Las notas se iluminan mientras suenan, incluidas las que reproducen los chips Escala y Acorde y las que reconoce <a href="practice-tools.html#live-detect">Detección en vivo</a>, para que veas lo que acabas de tocar.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.1.</p>
+      <p><a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio de la guía</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

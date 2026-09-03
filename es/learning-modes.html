@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modos de aprendizaje – Fretling</title>
+  <meta name="description" content="Los modos de aprendizaje de Fretling: Escalas, Acordes y Tríadas, además de identificar un acorde a partir de notas que colocas o tocas.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fretling">
+  <meta property="og:title" content="Modos de aprendizaje – Fretling">
+  <meta property="og:description" content="Los modos de aprendizaje de Fretling: Escalas, Acordes y Tríadas, además de identificar un acorde a partir de notas que colocas o tocas.">
+  <meta property="og:url" content="https://www.fretling.app/es/learning-modes.html">
+  <meta property="og:image" content="https://www.fretling.app/es/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.fretling.app/es/og-image.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/learning-modes.html">
+  <link rel="alternate" hreflang="es" href="https://www.fretling.app/es/learning-modes.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/learning-modes.html">
+</head>
+<body data-page="modes">
+  <a href="#main" class="skip-link">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <line class="bm-string" x1="3" y1="5" x2="26" y2="5"/>
+          <line class="bm-string" x1="3" y1="10" x2="26" y2="10"/>
+          <line class="bm-string" x1="3" y1="15" x2="26" y2="15"/>
+          <line class="bm-fret" x1="10" y1="2.5" x2="10" y2="17.5"/>
+          <line class="bm-fret" x1="17" y1="2.5" x2="17" y2="17.5"/>
+          <line class="bm-fret" x1="24" y1="2.5" x2="24" y2="17.5"/>
+          <line class="bm-nut" x1="3" y1="2" x2="3" y2="18"/>
+          <circle class="bm-dot-a" cx="6.5" cy="10" r="2.6"/>
+          <circle class="bm-dot-b" cx="13.5" cy="5" r="2.6"/>
+          <circle class="bm-dot-c" cx="20.5" cy="15" r="2.6"/>
+        </svg>
+        Fretling
+      </a>
+      <nav class="chip-nav" aria-label="Secciones de la guía">
+        <ul>
+          <li><a href="index.html" data-mark="guide">Guía</a></li>
+          <li><a href="learning-modes.html" data-mark="modes" aria-current="page">Modos de aprendizaje</a></li>
+          <li><a href="fretboard.html" data-mark="fretboard">Diapasón</a></li>
+          <li><a href="practice-tools.html" data-mark="tools">Herramientas de práctica</a></li>
+          <li><a href="settings.html" data-mark="settings">Configuración</a></li><li><a href="free-and-pro.html" data-mark="pro">Gratis y Pro</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+      <div class="theme-control" role="group" aria-label="Apariencia">
+        <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
+        <button type="button" data-theme="light" aria-pressed="false">Claro</button>
+        <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
+      </div>
+      <a class="lang-switch" href="../learning-modes.html" hreflang="en" lang="en" aria-label="English version">English</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Modos de aprendizaje</h1>
+    <p class="lede">Todo empieza desde una oración en la parte superior de la pantalla. Cada palabra coloreada es un menú desplegable; cambiar una reescribe lo que muestra el diapasón.</p>
+
+    <nav class="toc" aria-label="Índice">
+      <h2>En esta página</h2>
+      <ul>
+        <li><a href="#sentence">El encabezado de la oración</a></li>
+        <li><a href="#scales">Escalas</a></li>
+        <li><a href="#chords">Acordes</a></li>
+        <li><a href="#triads">Tríadas</a></li>
+        <li><a href="#identify">Identificar un acorde</a></li>
+      </ul>
+    </nav>
+
+    <section class="section-card" id="sentence">
+      <h2>El encabezado de la oración</h2>
+      <p>El encabezado se lee como prosa común y cada palabra resaltada abre un selector:</p>
+      <blockquote>Quiero <strong>aprender</strong> <strong>escalas</strong> en <strong>E</strong> <strong>Mayor</strong>.</blockquote>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Palabra</th><th>Opciones</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>aprender / identificar</strong></td><td>El verbo decide para qué sirve la app en este momento: mostrarte algo (<a href="#scales">aprender</a>) o nombrar algo que tocas (<a href="#identify">identificar</a>). Cambiar a identificar deja intacta tu configuración de aprender, así que al volver se restaura exactamente.</td></tr>
+            <tr><td><strong>Modo</strong></td><td>Escalas, Acordes, Tríadas.</td></tr>
+            <tr><td><strong>Nota raíz</strong></td><td>Las doce notas. Los nombres siguen la elección ♯/♭ de la barra de visualización de marcadores.</td></tr>
+            <tr><td><strong>Tipo de escala</strong></td><td>Mayor, Menor y Pentatónica mayor están arriba; <em>Más escalas</em> abre el resto: Pentatónica menor, Blues, Dórico, Mixolidio, Frigio, Lidio, Locrio, Menor armónica y Menor melódica.</td></tr>
+            <tr><td><strong>Acorde</strong></td><td>En el modo Acordes, y opcionalmente en el modo Escalas, un selector de acordes respaldado por el Atlas de acordes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>En ventanas angostas el encabezado se desplaza en horizontal en vez de partirse, así que la oración siempre se lee en una sola línea.</p>
+          <figure class="shot" style="--shot-max: 810px">
+        <img class="shot-light" src="../screenshots/es-419/02-header-sentence-light.webp"
+             width="1680" height="138" loading="lazy" decoding="async"
+             alt="El encabezado en lenguaje natural que dice “Quiero aprender escalas en E Mayor: A”, con cada palabra cambiable dibujada como un chip de color y el chip del acorde al final.">
+        <img class="shot-dark" src="../screenshots/es-419/02-header-sentence-dark.webp"
+             width="1680" height="138" loading="lazy" decoding="async"
+             alt="El encabezado en lenguaje natural que dice “Quiero aprender escalas en E Mayor: A”, con cada palabra cambiable dibujada como un chip de color y el chip del acorde al final.">
+        <figcaption class="figure-caption">Cada palabra coloreada es un menú desplegable. La oración es toda la superficie de control.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="scales">
+      <h2>Escalas</h2>
+      <p><strong>Propósito:</strong> aprender una escala a lo largo de todo el mástil en cualquier tonalidad.</p>
+      <p><strong>Qué eliges:</strong> una nota raíz y un tipo de escala: doce escalas en total, que cubren las escalas mayor y menor, ambas pentatónicas, la escala de blues, cinco modos y las menores armónica y melódica.</p>
+      <p><strong>Gratis o Pro:</strong> Mayor, Menor, ambas pentatónicas y Blues son gratis. Los cinco modos, la menor armónica y la menor melódica son <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a>.</p>
+      <p><strong>En el diapasón:</strong> cada nota de la escala está marcada. La <a href="fretboard.html#timeline">línea de tiempo de la escala</a> sobre el mástil dispone los doce semitonos en fila para que veas la forma de la tonalidad misma. Debajo del mástil, <a href="fretboard.html#overlays">Agrupaciones visuales</a> te deja superponer formas CAGED, una de las cinco cajas de posición de la escala o un patrón de tres notas por cuerda.</p>
+      <p><strong>Añadir un acorde:</strong> El modo Escalas tiene un espacio opcional para un acorde al final de la oración. Elige un acorde del Atlas de acordes y se convierte en el contexto de la tonalidad: la línea de tiempo de la escala, el botón de reproducción del acorde y el Atlas lo siguen. Deja el diapasón en paz a propósito: en el modo Escalas la escala es el sujeto, y una nota del acorde dibujada más fuerte que sus vecinas responde a una pregunta que no hiciste. Bórralo con la <strong>✕</strong> junto al acorde para volver a la escala sola. Para ver las notas de un acorde marcadas en el mástil, cambia al modo Acordes.</p>
+      <p><strong>Úsalo para:</strong> aprender una tonalidad a fondo y luego activar Formas de caja o CAGED para ver cómo encajan en ella los patrones que ya conoces.</p>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/04-scales-with-chord-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="E Mayor dibujada a lo largo de todo el mástil con un acorde de A mayor seleccionado, de modo que las notas del acorde se mantienen sólidas mientras el resto de las notas de la escala se atenúan.">
+        <img class="shot-dark" src="../screenshots/es-419/04-scales-with-chord-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="E Mayor dibujada a lo largo de todo el mástil con un acorde de A mayor seleccionado, de modo que las notas del acorde se mantienen sólidas mientras el resto de las notas de la escala se atenúan.">
+        <figcaption class="figure-caption">Modo Escalas con un acorde añadido: las notas del acorde siguen encendidas, el resto de la escala retrocede.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="chords">
+      <h2>Acordes</h2>
+      <p><strong>Propósito:</strong> explorar los acordes de una tonalidad y ver dónde se ubica cada uno en el mástil.</p>
+      <p><strong>Qué eliges:</strong> una nota raíz, un tipo de escala (que fija la tonalidad) y luego un acorde. El selector de acordes es el <strong>Atlas de acordes</strong>: enumera los acordes de la tonalidad con sus números romanos, te deja escuchar cada uno y va más allá de los siete diatónicos cuando tú quieras.</p>
+      <p><strong>Armonía prestada:</strong> el Atlas no se detiene en los siete acordes de la tonalidad. Elige un acorde de fuera y el Atlas nombra el préstamo en lugar de encogerse de hombros: una dominante secundaria se lee <strong>Prestado · V/V</strong>, un acorde tomado del modo paralelo se lee <strong>Prestado · iv</strong>, y ambos se ordenan junto a los acordes de la tonalidad. No hay nada que activar.</p>
+      <p><strong>En el diapasón:</strong> las notas del acorde se marcan a todo color. Pon <strong>Notas fuera del acorde</strong> en <strong>Sí</strong> en la barra de chips bajo el mástil para mantener visible el resto de la escala debajo, en gris, y así ver el acorde dentro de su tonalidad. Las notas no diatónicas del acorde siempre se dibujan, haga lo que haga el filtro de la escala.</p>
+      <p><strong>Formas de acorde:</strong> con los chips <strong>Formas de acorde</strong> bajo el mástil puestos en <strong>Sí</strong>, se dibujan en el mástil digitaciones reales del acorde seleccionado, opcionalmente con números de dedos y opcionalmente señaladas en la línea de tiempo. Ver <a href="fretboard.html#chord-shapes">Formas de acorde</a>.</p>
+      <p><strong>Úsalo para:</strong> ver cómo se relacionan entre sí los acordes de una tonalidad y cómo cada uno corresponde a una forma CAGED.</p>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/05-chords-mode-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Modo Acordes mostrando E mayor en la tonalidad de E Mayor, con las notas del acorde coloreadas y el resto de las notas de la escala en gris.">
+        <img class="shot-dark" src="../screenshots/es-419/05-chords-mode-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Modo Acordes mostrando E mayor en la tonalidad de E Mayor, con las notas del acorde coloreadas y el resto de las notas de la escala en gris.">
+        <figcaption class="figure-caption">Modo Acordes con Notas fuera del acorde activado, de modo que el acorde se asienta dentro de su escala.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="triads">
+      <h2>Tríadas</h2>
+      <p><strong>Propósito:</strong> practicar voicings de tres notas en conjuntos específicos de cuerdas.</p>
+      <p><strong>Qué eliges:</strong> una nota raíz y un tipo de tríada: <strong>Mayor</strong>, <strong>Menor</strong>, <strong>Aumentada</strong> o <strong>Disminuida</strong>.</p>
+      <p><strong>En el diapasón:</strong> las notas de la tríada se marcan a lo largo del mástil. Activa <strong>Mostrar líneas de tríadas</strong> en <a href="settings.html#fretboard-tab">Configuración → Diapasón</a> para unir cada voicing de la tríada con una línea. El grupo <strong>Cuerdas</strong> de Agrupaciones visuales reduce la vista a un solo conjunto de cuerdas: <strong>123</strong>, <strong>234</strong>, <strong>345</strong> o <strong>456</strong>, para que trabajes una forma a la vez. CAGED y Formas de caja también están disponibles aquí; las cajas vienen de la pentatónica que corresponde a la tríada.</p>
+      <p><strong>Úsalo para:</strong> aprender una tríada en un conjunto de cuerdas y luego mover la misma forma hacia arriba en el mástil y al siguiente conjunto.</p>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/06-triads-strings-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Modo Tríadas con tríadas mayores enmarcadas en la segunda, tercera y cuarta cuerda.">
+        <img class="shot-dark" src="../screenshots/es-419/06-triads-strings-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Modo Tríadas con tríadas mayores enmarcadas en la segunda, tercera y cuarta cuerda.">
+        <figcaption class="figure-caption">Modo Tríadas, Cuerdas en 2-3-4: cada inversión a lo largo de un conjunto de cuerdas.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="identify">
+      <h2>Identificar un acorde</h2>
+      <p><strong>Propósito:</strong> la búsqueda inversa: tienes una forma bajo los dedos y quieres saber cómo se llama.</p>
+      <p>Cambia el verbo del encabezado de <em>aprender</em> en <em>identificar</em> y la oración se convierte en <em>“Quiero identificar un acorde en C Mayor”</em>. Un chip te permite quitar la tonalidad: <em>“… un acorde sin tonalidad”</em>. Con tonalidad, las lecturas también se nombran por su número romano en esa tonalidad; sin ella, se nombran por sí mismas.</p>
+
+      <h3>Darle las notas a Fretling</h3>
+      <ul>
+        <li><strong>Tócalas en el mástil.</strong> Toca una posición para colocar una nota; tócala de nuevo para quitarla. Una barra de colocación te da <strong>Deshacer</strong>, <strong>Borrar</strong> y un conteo de las notas colocadas.</li>
+        <li><strong>Tócalas.</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a> Presiona <strong>Escuchar</strong> en la barra de colocación: abre <a href="practice-tools.html#live-detect">Detección en vivo</a> y lo pone a escuchar; toca el acorde y presiona <strong>Capturar lo que toqué</strong> para colocar en el mástil lo que oyó, en lugar de lo que hubieras puesto (Deshacer lo recupera). El mismo paso está en el propio panel de Detección en vivo como <strong>Enviar al diapasón</strong>.</li>
+      </ul>
+
+      <h3>Leer los resultados</h3>
+      <p>Fretling clasifica los nombres posibles bajo un encabezado <strong>Lecturas</strong> en lugar de comprometerse con una sola respuesta: el mismo conjunto de notas suele ser varios acordes, y cuál es el correcto depende de un contexto que la app no puede ver. Los acordes con barra se muestran con su nota de bajo señalada. Desde una lectura puedes:</p>
+      <ul>
+        <li><strong>Escúchalo</strong>: reproduce el acorde.</li>
+        <li><strong>Mostrar voicings</strong>: muestra digitaciones tocables para ese nombre.</li>
+        <li><strong>Abrir en el Atlas de acordes</strong>: salta a la entrada completa del acorde.</li>
+      </ul>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/07-identify-placement-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Modo Identificar con cuatro notas colocadas en el mástil y una tarjeta de resultados que nombra el acorde, enumera sus intervalos y ofrece lecturas alternativas.">
+        <img class="shot-dark" src="../screenshots/es-419/07-identify-placement-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="Modo Identificar con cuatro notas colocadas en el mástil y una tarjeta de resultados que nombra el acorde, enumera sus intervalos y ofrece lecturas alternativas.">
+        <figcaption class="figure-caption">Coloca las notas que estás digitando y Fretling nombra el acorde.</figcaption>
+      </figure>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.1.</p>
+      <p><a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio de la guía</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

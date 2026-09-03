@@ -30,8 +30,10 @@ neck.
 Everything sits around one stable fretboard:
 
 - **The top bar** — one band across the top of the canvas: the settings button at the
-  leading end, which slides the sidebar in, and the six practice tool icons at the trailing
-  end — tuner, amp, looper, Live Detect, mixer, metronome.
+  leading end, which slides the sidebar in; the performance readout and the microphone
+  lamp and meter; and the six practice tool icons at the trailing end — tuner, amp, looper,
+  Live Detect, mixer, metronome. Each opens a floating panel that can be dragged,
+  minimized to a one-row strip, or closed.
 - **Above the neck** — the learning sentence, the scale timeline, and the marker display bar
   (Labels / Shapes / Colors / Accidentals).
 - **The neck** — six strings, 12 to 22 frets (15 by default) plus open position, tap any note to hear it.

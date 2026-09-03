@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herramientas de práctica – Fretling</title>
+  <meta name="description" content="Las herramientas de práctica de Fretling: afinador cromático, metrónomo y secuenciador de batería, amplificador de guitarra, looper, mezclador y Detección en vivo.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fretling">
+  <meta property="og:title" content="Herramientas de práctica – Fretling">
+  <meta property="og:description" content="Las herramientas de práctica de Fretling: afinador cromático, metrónomo y secuenciador de batería, amplificador de guitarra, looper, mezclador y Detección en vivo.">
+  <meta property="og:url" content="https://www.fretling.app/es/practice-tools.html">
+  <meta property="og:image" content="https://www.fretling.app/es/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.fretling.app/es/og-image.png">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/practice-tools.html">
+  <link rel="alternate" hreflang="es" href="https://www.fretling.app/es/practice-tools.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/practice-tools.html">
+</head>
+<body data-page="tools">
+  <a href="#main" class="skip-link">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <line class="bm-string" x1="3" y1="5" x2="26" y2="5"/>
+          <line class="bm-string" x1="3" y1="10" x2="26" y2="10"/>
+          <line class="bm-string" x1="3" y1="15" x2="26" y2="15"/>
+          <line class="bm-fret" x1="10" y1="2.5" x2="10" y2="17.5"/>
+          <line class="bm-fret" x1="17" y1="2.5" x2="17" y2="17.5"/>
+          <line class="bm-fret" x1="24" y1="2.5" x2="24" y2="17.5"/>
+          <line class="bm-nut" x1="3" y1="2" x2="3" y2="18"/>
+          <circle class="bm-dot-a" cx="6.5" cy="10" r="2.6"/>
+          <circle class="bm-dot-b" cx="13.5" cy="5" r="2.6"/>
+          <circle class="bm-dot-c" cx="20.5" cy="15" r="2.6"/>
+        </svg>
+        Fretling
+      </a>
+      <nav class="chip-nav" aria-label="Secciones de la guía">
+        <ul>
+          <li><a href="index.html" data-mark="guide">Guía</a></li>
+          <li><a href="learning-modes.html" data-mark="modes">Modos de aprendizaje</a></li>
+          <li><a href="fretboard.html" data-mark="fretboard">Diapasón</a></li>
+          <li><a href="practice-tools.html" data-mark="tools" aria-current="page">Herramientas de práctica</a></li>
+          <li><a href="settings.html" data-mark="settings">Configuración</a></li><li><a href="free-and-pro.html" data-mark="pro">Gratis y Pro</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+      <div class="theme-control" role="group" aria-label="Apariencia">
+        <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
+        <button type="button" data-theme="light" aria-pressed="false">Claro</button>
+        <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
+      </div>
+      <a class="lang-switch" href="../practice-tools.html" hreflang="en" lang="en" aria-label="English version">English</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Herramientas de práctica</h1>
+    <p class="lede">Seis herramientas se abren desde la fila de íconos a la derecha de la barra superior. Cada una es un panel flotante sobre el diapasón: arrástralo adonde quieras y ciérralo cuando termines. Cuando los paneles se superponen, presionar uno lo trae al frente, y la disposición se conserva entre sesiones. El mástil sigue visible y utilizable debajo.</p>
+
+    <p>Cada panel también se <strong>minimiza</strong> a una tira de una fila que mantiene activos su control principal y su lectura: el botón de reproducción, el tempo y la lámpara de pulso del metrónomo; el botón Escuchar, la nota y los cents del afinador; Grabar y Reproducir del looper; el fader Mix del mezclador; Monitor y la ganancia de salida del amplificador; Escuchar y el acorde detectado de Detección en vivo. Haz clic en el chevrón junto al botón de cerrar del panel, o doble clic en su encabezado (doble toque en iPad); el mismo chevrón lo expande de nuevo. Qué paneles están minimizados se recuerda entre aperturas, junto con dónde quedaron.</p>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="../screenshots/es-419/31-minimized-strips-light.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El metrónomo, el afinador y el looper, cada uno plegado a una tira de una fila y apilados sobre el mástil.">
+        <img class="shot-dark" src="../screenshots/es-419/31-minimized-strips-dark.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El metrónomo, el afinador y el looper, cada uno plegado a una tira de una fila y apilados sobre el mástil.">
+        <figcaption class="figure-caption">Tres paneles minimizados: el clic, el afinador y el looper siguen trabajando, en una fracción del espacio.</figcaption>
+      </figure>
+
+    <div class="callout" data-accent="platform">
+      <p><strong>Todo lo de esta página funciona en Mac y iPad.</strong> El amp y el looper eran solo para Mac; ahora también funcionan en iPad. Conecta una interfaz de audio USB-C o usa audífonos: monitorear por la bocina integrada retroalimenta el micrófono integrado, y el amp te lo avisará.</p>
+    </div>
+
+    <div class="callout" data-accent="pro">
+      <p><strong>Cuatro de estas herramientas son parte de Fretling Pro</strong>: el secuenciador de batería, el amp, el looper y Detección en vivo, junto con el modo Precisión del afinador y sus indicadores Trazo, Estroboscopio y Disco. Todo lo marcado <span class="pro-badge">Pro</span> más abajo necesita ese desbloqueo único; el resto de la página es gratis. <a href="free-and-pro.html#whats-pro">Qué añade Pro</a> tiene la lista completa.</p>
+    </div>
+
+    <p class="page-intro">Cada panel está hecho para parecerse al hardware que reemplaza: una placa frontal mecanizada, pantallas empotradas, lámparas indicadoras, perillas de fader moleteadas. Vienen dos acabados: <strong>Cromado</strong>, un panel claro, y <strong>Estudio</strong>, uno de grafito. <em>Configuración › Diapasón › Apariencia › Módulos</em> elige entre ellos, y el valor por defecto sigue tu tema: paneles claros en el lienzo claro, grafito en el oscuro.</p>
+
+    <nav class="toc" aria-label="Índice">
+      <h2>En esta página</h2>
+      <ul>
+        <li><a href="#tuner">Afinador</a></li>
+        <li><a href="#metronome">Metrónomo</a></li>
+        <li><a href="#drums">Secuenciador de batería</a></li>
+        <li><a href="#amp">Amplificador de guitarra</a></li>
+        <li><a href="#input">Entrada</a></li>
+        <li><a href="#performance">Rendimiento</a></li>
+        <li><a href="#looper">Looper</a></li>
+        <li><a href="#mixer">Mezclador</a></li>
+        <li><a href="#live-detect">Detección en vivo</a></li>
+        <li><a href="#microphone">Acceso al micrófono</a></li>
+      </ul>
+    </nav>
+
+    <section class="section-card" id="tuner">
+      <h2>Afinador</h2>
+      <p>Un afinador cromático que escucha por tu micrófono o interfaz de audio. Nombra la nota que estás tocando y muestra cuánto te desvías, en cents.</p>
+      <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="../screenshots/es-419/23-tuner-light.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel del afinador leyendo A2 bemol, con el indicador de barra a la izquierda del centro.">
+        <img class="shot-dark" src="../screenshots/es-419/23-tuner-dark.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel del afinador leyendo A2 bemol, con el indicador de barra a la izquierda del centro.">
+        <figcaption class="figure-caption">El afinador en modo Rápido, mostrando una nota que está baja.</figcaption>
+      </figure>
+
+      <h3>Estilos de indicador</h3>
+      <p>Cinco maneras de dibujar la misma medición; elige la que leas más rápido:</p>
+      <ul>
+        <li><strong>Aguja</strong>: una aguja oscilante clásica.</li>
+        <li><strong>Barra</strong>: una barra horizontal de desviación sobre una escala de cents.</li>
+        <li><strong>Trazo</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a>: grafica la afinación en el tiempo, así que la deriva y el vibrato se ven. Con Reducir movimiento activado, el trazo barre la pantalla en vez de desplazarse, así que lo que ya dibujó se queda quieto.</li>
+        <li><strong>Estroboscopio</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a>: una banda estroboscópica que se queda quieta cuando estás afinado.</li>
+        <li><strong>Disco</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a>: un disco giratorio, visto por una ventana de media luna, que deja de girar en la afinación exacta.</li>
+      </ul>
+
+      <h3>Rápido o Precisión</h3>
+      <p>Son dos instrumentos distintos, no un control de calidad:</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Modo</th><th>Lectura</th><th>Afinado dentro de</th><th>Úsalo cuando</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Rápido</strong></td><td>Responde de inmediato, en cents enteros</td><td>±5 cents</td><td>Reafinas una cuerda a media canción o revisas rápido entre tomas.</td></tr>
+            <tr><td><strong>Precisión</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a></td><td>Sostén una nota cerca de un segundo; décimas de cent</td><td>±0.5 cents</td><td>Ajustas la guitarra como es debido, con ella en el banco.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Precisión mide la fase sobre una línea base estable, y por eso necesita una nota sostenida: una lectura por debajo del cent solo es tan buena como el tramo de señal sobre el que se ajustó.</p>
+
+      <h3>Referencia y calibración</h3>
+      <p>Al final del panel, un desplegable <strong>Referencia</strong> contiene el interruptor Rápido / Precisión y dos ajustes que fijas una vez y dejas quietos:</p>
+      <ul>
+        <li><strong>A4</strong>: la altura de referencia, de 430 a 450 Hz en hercios enteros, 440 por defecto. Cámbiala para una orquesta que afina en 442 o una grabación en 432.</li>
+        <li><strong>Desfase</strong>: una corrección manual de hasta ±5 cents, en décimas, para un instrumento o una interfaz que lee siempre alto o bajo. Debajo, cuando el afinador lleva un rato escuchando, una línea informa cuánto se desvía el reloj de tu entrada de audio de su frecuencia nominal, en partes por millón y en cents. Esa parte se mide y se corrige sola, así que el control solo lleva tu propia preferencia.</li>
+      </ul>
+    </section>
+
+    <section class="section-card" id="metronome">
+      <h2>Metrónomo</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Control</th><th>Rango / opciones</th><th>Notas</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Tempo</strong></td><td>40–250 BPM, 120 por defecto</td><td>Los botones de paso mueven un BPM a la vez; mantén presionado para avanzar de corrido.</td></tr>
+            <tr><td><strong>TAP</strong></td><td>—</td><td>Marca el pulso y el tempo sigue tus toques.</td></tr>
+            <tr><td><strong>Compás</strong></td><td>4/4, 3/4, 2/4, 6/8, 5/4, 7/8, 9/8, 12/8, 1/4</td><td>El indicador de pulso muestra en qué parte del compás vas.</td></tr>
+            <tr><td><strong>Subdivisión</strong></td><td>Negra, Corchea, Tresillo, Corchea con puntillo, Semicorchea</td><td>Subdivide el pulso sin cambiar el tempo. Corchea con puntillo es el par largo–corto (una corchea con puntillo y una semicorchea): dos clics por pulso.</td></tr>
+            <tr><td><strong>Sonido</strong></td><td>Clásico, Caja china, Clic, Batería</td><td><em>Batería</em> toca un patrón de batería real en lugar de un clic; ver más abajo.</td></tr>
+            <tr><td><strong>Acento</strong></td><td>Sí / no</td><td>Acentúa el primer tiempo de cada compás.</td></tr>
+          </tbody>
+        </table>
+      </div>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="../screenshots/es-419/24-metronome-light.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel del metrónomo a 120 BPM en 4/4 con subdivisión de negra y el paquete de sonido de batería seleccionado.">
+        <img class="shot-dark" src="../screenshots/es-419/24-metronome-dark.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel del metrónomo a 120 BPM en 4/4 con subdivisión de negra y el paquete de sonido de batería seleccionado.">
+        <figcaption class="figure-caption">El metrónomo, detenido: tempo, compás, subdivisión, sonido y acento.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="drums">
+      <h2>Secuenciador de batería <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a></h2>
+      <p>Con el paquete de sonido <strong>Batería</strong> seleccionado, el metrónomo toca un patrón secuenciado por pasos en seis pistas (<strong>Crash</strong>, <strong>Ride</strong>, <strong>Hi-hat abierto</strong>, <strong>Hi-hat</strong>, <strong>Caja</strong> y <strong>Bombo</strong>) en lugar de un clic pelado. La batería es una batería acústica grabada, y cada golpe suena toda su duración natural: un bombo sigue sonando bajo los hi-hats que le siguen, y un hi-hat abierto suena hasta que el cerrado lo apaga, como en una batería real. Cada compás trae un patrón por defecto musical y no mecánico (los hi-hats en el pulso golpean más fuerte que los intermedios), así que 6/8 se siente como 6/8 sin que edites nada.</p>
+      <p>Abre el editor de patrones desde el metrónomo para crear los tuyos:</p>
+      <ul>
+        <li><strong>La cuadrícula</strong>: una fila por pista, una columna por paso. Cada celda muestra qué tan fuerte cae ese golpe: el relleno sube desde el fondo de la celda hasta su nivel, lleno arriba del todo. La cuadrícula se desplaza de lado cuando un compás necesita más pasos de los que caben.</li>
+        <li><strong>Fija un nivel</strong>: toca una celda a la altura a la que quieres que golpee; la banda inferior de una celda es apagado. Arrastra hacia arriba o abajo dentro de una celda para llevar su nivel, o arrastra a lo largo de la fila para pintar ese nivel en cada celda que cruces. Haz clic derecho (o mantén presionada en iPad) una celda para <em>Completo</em>, <em>75</em>, <em>50</em>, <em>25</em> o <em>No</em>. Mientras arrastras, la lectura de arriba muestra la pista, el paso y el nivel.</li>
+        <li><strong>Reproduce mientras editas</strong>: el patrón se repite mientras trabajas, así que oyes cada cambio de inmediato.</li>
+        <li><strong>Compás y Subdivisión</strong>: cambia cualquiera de los dos desde la fila de transporte del editor, junto al tempo, y la cuadrícula se reagrupa para coincidir. Cada combinación conserva su propio patrón activo, así que cambiar carga ese; las ediciones sin guardar piden guardarse o descartarse primero.</li>
+        <li><strong>Filas enteras</strong>: haz clic derecho (o mantén presionado) el nombre de una pista para <em>Llenar fila</em>, <em>Acentuar pulsos</em> o <em>Borrar fila</em>. Acentuar pulsos conserva los golpes de la fila y les reasigna nivel como están hechos los predeterminados: completo en el pulso, más suave en medio.</li>
+        <li><strong>Biblioteca</strong>: cada compás trae unos cuantos <em>Predeterminados</em>: <em>Básico</em>, y donde el compás los merece <em>Rock</em>, <em>Solo hi-hat</em>, <em>Claro</em> y <em>Shuffle</em>; los compases irregulares reciben en cambio sus agrupaciones, <em>3+2</em> y <em>2+3</em> en 5/4, <em>2+2+3</em> y <em>3+2+2</em> en 7/8. Guarda un patrón con un nombre, marca uno como activo, duplica uno como punto de partida, renombra o elimina. Los patrones editados sin guardar llevan la insignia <em>Editado</em>, y cerrar con trabajo sin guardar pregunta antes de descartarlo.</li>
+        <li><strong>Restablecer</strong>: restaura los pasos y niveles por defecto para el compás actual.</li>
+      </ul>
+      <p>Desde el propio panel del metrónomo, cambiar el compás o la subdivisión carga de inmediato el patrón activo de esa combinación; el editor es el lugar que pregunta primero.</p>
+          <figure class="shot" style="--shot-max: 500px">
+        <img class="shot-light" src="../screenshots/es-419/25-drum-sequencer-light.webp"
+             width="1030" height="973" loading="lazy" decoding="async"
+             alt="El editor de patrones de batería con seis pistas sobre una cuadrícula de pasos; el relleno de cada celda encendida muestra qué tan fuerte cae ese golpe.">
+        <img class="shot-dark" src="../screenshots/es-419/25-drum-sequencer-dark.webp"
+             width="1030" height="973" loading="lazy" decoding="async"
+             alt="El editor de patrones de batería con seis pistas sobre una cuadrícula de pasos; el relleno de cada celda encendida muestra qué tan fuerte cae ese golpe.">
+        <figcaption class="figure-caption">El secuenciador de batería. Las ediciones suenan en vivo; Guardar conserva un patrón en tu biblioteca.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="amp">
+      <h2>Amplificador de guitarra <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a></h2>
+      <p>Conecta una guitarra a una interfaz de audio y monitoréala a través de un perfil de <strong>Neural Amp Modeler</strong>: las capturas de amplificador que se comparten como archivos <code>.nam</code>. Fretling incluye un conjunto de modelos iniciales y carga cualquier otro archivo <code>.nam</code> que le indiques.</p>
+
+      <p>El panel contiene solo asuntos del amplificador. Todo lo relativo a la <em>entrada</em> (qué interfaz, qué canal, cuánta ganancia, tamaño del búfer y frecuencia de muestreo) vive en la <a href="#input">consola de entrada</a> de la barra superior, porque el afinador y Detección en vivo escuchan por la misma entrada y nada de eso necesita un modelo cargado.</p>
+      <ul>
+        <li><strong>Modelo</strong>: elige un perfil inicial (<em>Limpio inicial (A1)</em>, <em>Limpio inicial (A2)</em>, <em>Acústico inicial</em>, <em>Cálido inicial</em> o <em>Crunch inicial</em>) o <strong>Cargar .nam…</strong> para usar el tuyo. Una insignia nombra la generación del modelo cargado, y si un archivo usa un formato NAM más nuevo del que Fretling admite por completo, o trae controles integrados que Fretling aún no puede ajustar, el panel lo dice en lugar de sonar mal en silencio.</li>
+        <li><strong>Monitor / Detener</strong>: inicia y detiene el monitoreo en vivo. Detener libera de verdad el micrófono; un loop que está sonando sigue sonando.</li>
+        <li><strong>Ganancia de salida</strong>: nivel a la salida de la cadena del amplificador.</li>
+        <li><strong>Nivel de entrada del modelo</strong> y <strong>Nivel de salida del modelo</strong>: ajuste fino alrededor del propio modelo, que es cómo compensas un perfil capturado muy caliente o muy bajo.</li>
+        <li><strong>Tamaño del modelo</strong>: aparece para un modelo que trae varios tamaños de la misma red, desde Ligero hasta Completo. Los tamaños más pequeños usan menos CPU y conservan menos detalle; Completo es el modelo tal como se capturó, y es el que se carga por defecto.</li>
+      </ul>
+      <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="../screenshots/es-419/26-amp-light.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel del amplificador de guitarra con un perfil de Neural Amp Modeler cargado, los ajustes de nivel del modelo debajo y Monitor en reposo.">
+        <img class="shot-dark" src="../screenshots/es-419/26-amp-dark.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel del amplificador de guitarra con un perfil de Neural Amp Modeler cargado, los ajustes de nivel del modelo debajo y Monitor en reposo.">
+        <figcaption class="figure-caption">El amplificador con un modelo inicial cargado, antes de encender Monitor.</figcaption>
+      </figure>
+
+</section>
+
+    <section class="section-card" id="input">
+      <h2>Entrada</h2>
+      <p>Elegir una interfaz no es una cuestión del amplificador, así que no vive en él. La barra superior lleva una lámpara de micrófono y un medidor de nivel: la lámpara es el interruptor maestro, y el medidor muestra lo que llega antes de que abras herramienta alguna. Presiona el medidor para abrir la consola, que es donde vive cada ajuste de entrada, para el amplificador, el afinador y Detección en vivo por igual.</p>
+      <p>La lámpara se enciende siempre que el micrófono está realmente abierto <em>en algún lugar</em>, ya sea que lo abrieras tú o que lo hicieran el afinador, Detección en vivo o el Monitor del amplificador. Presionar una lámpara encendida es siempre la liberación: suelta todo a la vez, y cada herramienta que escucha por ella se detiene. Un loop que ya está sonando sigue sonando. En ambas plataformas el mismo interruptor está en el menú <strong>Entrada</strong> como <strong>Encender / apagar el micrófono</strong>, en <kbd>⌘⇧M</kbd>.</p>
+      <p>Si el sistema rechaza el micrófono, la lámpara muestra un micrófono tachado con un borde rojo y la consola se abre sola con el motivo indicado y <strong>Abrir la configuración de Sonido</strong> — <strong>Abrir Configuración</strong> en iPad, al alcance.</p>
+      <p>La consola se abre en <strong>Nivel</strong>, que es lo que necesitas a media sesión, y deja el enrutamiento y los tiempos detrás de <strong>Ajustes</strong>.</p>
+      <ul>
+        <li><strong>Micrófono</strong>: el mismo interruptor maestro que la lámpara. Debajo, una línea de estado dice qué está pasando, y cuando otra cosa retiene la entrada nombra cuál: <em>En uso por Amp · Afinador · Detección en vivo</em>, así que apagarlo nunca es una sorpresa.</li>
+        <li><strong>Ganancia de entrada</strong>: se aplica antes de que nada escuche, así que el amplificador, el afinador y Detección en vivo oyen el mismo nivel.</li>
+      </ul>
+      <p>Bajo <strong>Ajustes</strong>:</p>
+      <ul>
+        <li><strong>Dispositivo de entrada</strong>: la interfaz en la que está tu guitarra. En Mac, un dispositivo de audio; en iPad, una de las entradas que ofrece iPadOS. En cualquier caso, si uno guardado ya no está, el selector lo dice en lugar de fallar en silencio.</li>
+        <li><strong>Canal</strong>: en cuál de las entradas de esa interfaz está conectada tu guitarra. Aparece siempre que la entrada tiene más de una, y lo dice claramente cuando todavía no hay entre qué elegir.</li>
+        <li><strong>Ruta</strong> (iPad): a qué se resolvieron realmente la entrada y la salida. iPadOS sigue eligiendo la <strong>salida</strong> por ti: conecta audífonos o una interfaz y cambia automáticamente. La consola avisa aquí cuando la ruta se retroalimentaría.</li>
+        <li><strong>Tamaño del búfer</strong> y <strong>Frecuencia de muestreo</strong>: el intercambio de latencia. Fretling admite 44.1, 48, 88.2, 96 y 192 kHz. En iPad son solicitudes y no ajustes: iPadOS las responde cuando arranca la entrada, así que una línea bajo los selectores informa lo que realmente concedió.</li>
+        <li><strong>Latencia</strong>: la latencia de monitoreo resultante, informada en milisegundos para que el intercambio sea un número y no una suposición.</li>
+      </ul>
+      <p>Cada deslizador tiene marcas, una lectura en dB y un restablecimiento a su valor por defecto con doble clic.</p>
+      <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="../screenshots/es-419/27-input-console-light.webp"
+             width="1380" height="1200" loading="lazy" decoding="async"
+             alt="La consola de entrada abierta bajo la barra superior, mostrando el interruptor Micrófono, su línea de estado, el medidor de entrada, la ganancia de entrada y las pestañas Nivel y Ajustes.">
+        <img class="shot-dark" src="../screenshots/es-419/27-input-console-dark.webp"
+             width="1380" height="1200" loading="lazy" decoding="async"
+             alt="La consola de entrada abierta bajo la barra superior, mostrando el interruptor Micrófono, su línea de estado, el medidor de entrada, la ganancia de entrada y las pestañas Nivel y Ajustes.">
+        <figcaption class="figure-caption">La consola de entrada: un solo lugar para la entrada que escuchan todas las herramientas.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="performance">
+      <h2>Rendimiento</h2>
+      <p>Fretling hace muchas cosas a la vez (un modelo de amp, un looper, el afinador y Detección en vivo escuchando, el clic), así que la barra superior muestra cuánto está trabajando, en un pequeño indicador a la izquierda de la lámpara del micrófono. Dos filas:</p>
+      <ul>
+        <li><strong>Audio</strong>: cuánto del tiempo de cada ciclo de audio están usando los motores de audio. Es el número que anticipa problemas: al acercarse al 100% el motor se queda sin tiempo para llenar el siguiente búfer y se oyen clics o cortes. La barra se pone ámbar por encima del 70% y roja por encima del 90%.</li>
+        <li><strong>CPU</strong>: la parte de toda tu Mac o iPad que usa Fretling, el número detrás de los ventiladores y la batería.</li>
+      </ul>
+      <p>Presiona el indicador para abrir la consola de Rendimiento. Muestra los dos motores de audio por separado: <strong>Reproducción</strong> lleva las notas, los acordes y el clic; <strong>Amp</strong> lleva el modelo de amp y el looper, y marca <em>Apagado</em> mientras el amp está apagado; cada uno con el búfer contra el que se mide (muestras, frecuencia de muestreo y los milisegundos que tiene un ciclo) y un conteo de sobrecargas: ciclos que se pasaron de su plazo desde que arrancó ese motor. Bajo una línea, la parte de CPU y un aviso cuando la propia máquina se está calentando y puede estar frenando las cosas.</p>
+      <p>Si Audio se pone alto, sube el tamaño del búfer en <a href="#input">Configuración de entrada</a> o elige un modelo de amp más pequeño. Un búfer más grande da más tiempo a cada ciclo; un modelo más pequeño necesita menos.</p>
+      <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="../screenshots/es-419/32-performance-console-light.webp"
+             width="1520" height="1300" loading="lazy" decoding="async"
+             alt="La consola de rendimiento abierta bajo el indicador de la barra superior, mostrando el motor de Reproducción en la zona ámbar con su presupuesto de ciclo, el motor del Amp apagado, la línea de consejo y la parte de CPU.">
+        <img class="shot-dark" src="../screenshots/es-419/32-performance-console-dark.webp"
+             width="1520" height="1300" loading="lazy" decoding="async"
+             alt="La consola de rendimiento abierta bajo el indicador de la barra superior, mostrando el motor de Reproducción en la zona ámbar con su presupuesto de ciclo, el motor del Amp apagado, la línea de consejo y la parte de CPU.">
+        <figcaption class="figure-caption">La consola de rendimiento: cada motor de audio frente a su propio plazo, y luego la máquina.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section-card" id="looper">
+      <h2>Looper <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a></h2>
+      <p>Graba una frase y toca encima. El looper está en la cadena de monitoreo del amplificador, así que <strong>enciende primero Monitor en el amplificador</strong>; el looper te lo dice si no lo has hecho. Una vez que existe un loop, sigue sonando solo: apagar Monitor libera el micrófono pero deja el loop corriendo, y Reproducir lo trae de vuelta incluso con el amplificador apagado.</p>
+      <p>Un botón grande maneja la toma, y su etiqueta siempre dice qué hará a continuación:</p>
+      <ul>
+        <li><strong>Grabar</strong>: inicia la toma, tras la cuenta de entrada si fijaste una; mientras corre la cuenta, el mismo botón se lee <strong>Cancelar</strong>. Presiónalo de nuevo, ahora con el texto <strong>Fijar loop</strong>, para cerrar el loop y ponerlo a sonar. Con <strong>Compases</strong> fijado se cierra solo en la línea de compás, y una toma de duración libre se cierra a los 60 segundos si no la has cerrado tú.</li>
+        <li><strong>Overdub</strong>: mientras el loop suena, presiona de nuevo para grabar una capa nueva encima; <strong>Terminar overdub</strong> conserva la capa. Apila tantas como quieras.</li>
+        <li><strong>Deshacer / Rehacer</strong>: quita la última capa de overdub, o la vuelve a poner.</li>
+        <li><strong>Reproducir / Detener</strong>: detiene el loop y lo arranca de nuevo en la línea de compás. Con el loop detenido, el botón grande se lee <strong>Grabar nuevo</strong>: presiónalo y una toma nueva reemplaza el loop anterior.</li>
+        <li><strong>Borrar</strong>: desecha el loop.</li>
+      </ul>
+      <p>Bajo el transporte:</p>
+      <ul>
+        <li><strong>Compases</strong> — <em>Libre</em>, 1, 2, 4 u 8. Con una duración fijada, la grabación se detiene sola en la línea de compás, así que el loop queda a tiempo sin que lo atrapes a mano; <em>Libre</em> te deja el cierre a ti.</li>
+        <li><strong>Cuenta de entrada</strong> — <em>No</em>, 1 o 2 compases de clics antes de que empiece la grabación.</li>
+        <li><strong>Clic al grabar</strong>: mantiene el metrónomo audible durante la toma.</li>
+        <li><strong>Volumen del loop</strong>: qué tan fuerte suena el loop debajo de ti.</li>
+        <li><strong>Desvanecimiento de capas</strong>: cuánto se atenúan las capas anteriores a medida que apilas nuevas encima.</li>
+      </ul>
+      <p>El botón de grabar hace también de lectura de pulsos: la cuenta de entrada cuenta hacia atrás hasta la entrada, luego el pulso cuenta el compás hacia adelante, y una línea de estado bajo los controles nombra el estado (grabando, reproduciendo, overdub) con el compás y el tiempo. Cambiar la frecuencia de muestreo borra el loop (la grabación ya no coincide con el motor) y el looper te avisa cuando eso ha pasado.</p>
+      <p>Los loops viven en memoria solo durante la sesión. Nada se escribe en disco, y salir de la app los descarta.</p>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="../screenshots/es-419/28-looper-light.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel del looper armado y vacío, mostrando el botón de grabar, el ajuste de compases y los controles del loop.">
+        <img class="shot-dark" src="../screenshots/es-419/28-looper-dark.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel del looper armado y vacío, mostrando el botón de grabar, el ajuste de compases y los controles del loop.">
+        <figcaption class="figure-caption">El looper antes de grabar nada.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="mixer">
+      <h2>Mezclador</h2>
+      <p>Un panel para cada sonido que hace Fretling, para que los equilibres en lugar de buscar el nivel que está demasiado alto.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Canal</th><th>Controla</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Notas</strong></td><td>Las notas que tocas en el mástil y la reproducción de escalas.</td></tr>
+            <tr><td><strong>Acorde</strong></td><td>Los acordes reproducidos desde la línea de tiempo y el Atlas de acordes.</td></tr>
+            <tr><td><strong>Prog</strong></td><td>La reproducción de progresiones.</td></tr>
+            <tr><td><strong>Clic</strong></td><td>Metrónomo y batería.</td></tr>
+            <tr><td><strong>Amp</strong></td><td>Tu guitarra monitoreada.</td></tr>
+            <tr><td><strong>Loop</strong></td><td>La reproducción del looper.</td></tr>
+            <tr><td><strong>Mix</strong></td><td>La salida maestra.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Cada canal excepto Mix tiene <strong>silencio</strong> y <strong>solo</strong>; una insignia en el panel te recuerda cuando algo está silenciado o en solo, así que una app muda nunca es un misterio. Los niveles se conservan entre sesiones.</p>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="../screenshots/es-419/29-mixer-light.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel del mezclador con un canal para cada voz, uno de ellos silenciado y con su insignia encendida.">
+        <img class="shot-dark" src="../screenshots/es-419/29-mixer-dark.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel del mezclador con un canal para cada voz, uno de ellos silenciado y con su insignia encendida.">
+        <figcaption class="figure-caption">El mezclador, con el clic silenciado: la insignia te recuerda por qué está mudo.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="live-detect">
+      <h2>Detección en vivo <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a></h2>
+      <p>Detección en vivo escucha lo que tocas y lo marca en el mástil en tiempo real, para que compruebes que lo que estás digitando es lo que crees.</p>
+      <p>En el modo <a href="learning-modes.html#identify">identificar</a> gana un botón <strong>Enviar al diapasón</strong>, que toma las notas que acaba de oír y las coloca en el mástil como una consulta de identificación: toca un acorde que no sabes nombrar, envíalo y lee las respuestas clasificadas.</p>
+          <figure class="shot" style="--shot-max: 850px">
+        <img class="shot-light" src="../screenshots/es-419/30-live-detect-light.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel de Detección en vivo esperando para escuchar, con el texto “Toca Escuchar para detectar lo que tocas”.">
+        <img class="shot-dark" src="../screenshots/es-419/30-live-detect-dark.webp"
+             width="1700" height="1388" loading="lazy" decoding="async"
+             alt="El panel de Detección en vivo esperando para escuchar, con el texto “Toca Escuchar para detectar lo que tocas”.">
+        <figcaption class="figure-caption">Detección en vivo antes de empezar: presiona Escuchar y toca.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="microphone">
+      <h2>Acceso al micrófono</h2>
+      <p>El afinador, Detección en vivo y el amplificador necesitan entrada de audio, así que la primera vez que abres uno (o enciendes el micrófono desde la barra superior) tu dispositivo pide permiso. El audio se analiza en vivo y nunca se graba, se guarda ni se transmite. La captura se detiene cuando cierras las herramientas, y apagar la entrada desde la <a href="#input">barra superior</a> libera el micrófono en todas partes a la vez. El detalle completo está en la <a href="privacy.html">política de privacidad</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.1.</p>
+      <p><a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio de la guía</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

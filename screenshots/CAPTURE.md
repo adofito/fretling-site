@@ -7,7 +7,8 @@ WebP by one script:
 
 ```sh
 ./build.sh debug                    # the script captures the built app
-scripts/site/capture-guide.sh       # all 30 shots, both themes, ~12 minutes
+scripts/site/capture-guide.sh       # all 31 shots (numbered to 32), both themes, ~12 minutes
+scripts/site/capture-guide.sh --language es-419   # the same set in Spanish
 ```
 
 | Flag | What it does |
@@ -16,13 +17,21 @@ scripts/site/capture-guide.sh       # all 30 shots, both themes, ~12 minutes
 | `--theme Light` \| `Dark` | One theme instead of both |
 | `--export-only` | Re-crop and re-encode from the cached raws without relaunching the app — this is how you tune a crop rect in under a second |
 | `--probe 01` | Capture shot 01, print its size and profile, and open it so you can measure a crop rect against a real capture |
+| `--language es-419` | Launch the app in Spanish and write everything under `screenshots/es-419/` (its own `raw/` beside it) — the set the Spanish pages show |
 
 Output:
 
 ```
 screenshots/raw/{light,dark}/NN-stem.png    2880 x 1800, gitignored
 screenshots/NN-stem-{light,dark}.webp       committed, published
+screenshots/es-419/...                      the same two layers, captured in Spanish
 ```
+
+The Spanish set shares every crop rect with the English one, so a Spanish page shows the
+same framing as its twin with the panel's own Spanish labels inside it. Re-capture both
+sets together: `build-es-pages.py` points a Spanish page at `es-419/` for any shot that
+exists there, and at the English file for any that does not, so a half-refreshed set is
+visible on the page rather than broken.
 
 ## Rules the script depends on
 
@@ -85,7 +94,9 @@ one place, so the table below cannot drift out of sync with what actually runs.
 | 18 | `fret-range-limiter` | `fretboard#fret-range` |
 | 19 / 20 / 21 | `settings-fretboard` / `-audio` / `-icon` | `settings.html`, one per tab |
 | 22 | `about-sheet` | `settings#about` |
-| 23–30 | `tuner`, `metronome`, `drum-sequencer`, `amp`, `amp-advanced`, `looper`, `mixer`, `live-detect` | `practice-tools.html`, one per section |
+| 23–30 | `tuner`, `metronome`, `drum-sequencer`, `amp`, `input-console`, `looper`, `mixer`, `live-detect` | `practice-tools.html`, one per section |
+| 31 | `minimized-strips` | `practice-tools.html` — three panels folded to their strips |
+| 32 | `performance-console` | `practice-tools#performance` |
 
 Matched pairs share a crop rect on purpose: if the frame moves between the two,
 the reader sees the framing change instead of the setting.
