@@ -15,6 +15,10 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.fretling.app/es/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/es/practice-tools.html">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/practice-tools.html">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/es/practice-tools.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/practice-tools.html">
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
@@ -34,9 +38,6 @@
       } catch (e) { /* private mode */ }
     })();
   </script>
-  <link rel="alternate" hreflang="en" href="https://www.fretling.app/practice-tools.html">
-  <link rel="alternate" hreflang="es" href="https://www.fretling.app/es/practice-tools.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/practice-tools.html">
 </head>
 <body data-page="tools">
   <a href="#main" class="skip-link">Ir al contenido</a>
@@ -59,20 +60,21 @@
       </a>
       <nav class="chip-nav" aria-label="Secciones de la guía">
         <ul>
-          <li><a href="index.html" data-mark="guide">Guía</a></li>
+          <li><a href="guide.html" data-mark="guide">Guía</a></li>
           <li><a href="learning-modes.html" data-mark="modes">Modos de aprendizaje</a></li>
           <li><a href="fretboard.html" data-mark="fretboard">Diapasón</a></li>
           <li><a href="practice-tools.html" data-mark="tools" aria-current="page">Herramientas de práctica</a></li>
-          <li><a href="settings.html" data-mark="settings">Configuración</a></li><li><a href="free-and-pro.html" data-mark="pro">Gratis y Pro</a></li>
+          <li><a href="settings.html" data-mark="settings">Configuración</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Gratis y Pro</a></li>
         </ul>
       </nav>
       <div class="header-controls">
-      <div class="theme-control" role="group" aria-label="Apariencia">
-        <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
-        <button type="button" data-theme="light" aria-pressed="false">Claro</button>
-        <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
-      </div>
-      <a class="lang-switch" href="../practice-tools.html" hreflang="en" lang="en" aria-label="English version">English</a>
+        <div class="theme-control" role="group" aria-label="Apariencia">
+          <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
+          <button type="button" data-theme="light" aria-pressed="false">Claro</button>
+          <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
+        </div>
+        <a class="lang-switch" href="../practice-tools.html" hreflang="en" lang="en" aria-label="English version">English</a>
       </div>
     </div>
   </header>
@@ -101,6 +103,18 @@
     </div>
 
     <p class="page-intro">Cada panel está hecho para parecerse al hardware que reemplaza: una placa frontal mecanizada, pantallas empotradas, lámparas indicadoras, perillas de fader moleteadas. Vienen dos acabados: <strong>Cromado</strong>, un panel claro, y <strong>Estudio</strong>, uno de grafito. <em>Configuración › Diapasón › Apariencia › Módulos</em> elige entre ellos, y el valor por defecto sigue tu tema: paneles claros en el lienzo claro, grafito en el oscuro.</p>
+
+    <p>Cada panel recuerda tres cosas por separado: si está abierto, a dónde lo arrastraste y si lo dejaste plegado a una tira. Vuelven así en el siguiente arranque. Abrir una herramienta desde la barra superior cuando su panel ya está arriba lo <em>eleva</em> en vez de no hacer nada, así que un panel perdido bajo otros tres vuelve al frente. Cada encabezado lleva además una acción <strong>Restablecer posición</strong> para VoiceOver, por si un panel acaba en un lugar inalcanzable.</p>
+
+    <figure class="shot">
+      <img class="shot-light" src="../screenshots/es-419/34-modules-studio-light.webp"
+           width="1936" height="1408" loading="lazy" decoding="async"
+           alt="El afinador y el metrónomo abiertos uno junto al otro sobre el mástil con el acabado Estudio: cajas de grafito con frentes de acero cepillado, el afinador leyendo un A bajo y el metrónomo en 120 BPM con la batería.">
+      <img class="shot-dark" src="../screenshots/es-419/34-modules-studio-dark.webp"
+           width="1936" height="1408" loading="lazy" decoding="async"
+           alt="El afinador y el metrónomo abiertos uno junto al otro sobre el mástil con el acabado Estudio: cajas de grafito con frentes de acero cepillado, el afinador leyendo un A bajo y el metrónomo en 120 BPM con la batería.">
+      <figcaption class="figure-caption">Estudio fijado sobre el lienzo claro, donde <em>Auto</em> habría elegido Cromado. Los dos paneles llevan el mismo acabado, sea cual sea el tema en el que estés.</figcaption>
+    </figure>
 
     <nav class="toc" aria-label="Índice">
       <h2>En esta página</h2>
@@ -132,7 +146,7 @@
       </figure>
 
       <h3>Estilos de indicador</h3>
-      <p>Cinco maneras de dibujar la misma medición; elige la que leas más rápido:</p>
+      <p>Cinco maneras de dibujar la misma medición: elige la que leas más rápido. El control <strong>Indicador</strong> es un menú desplegable en el propio encabezado del panel, junto al nombre del afinador, y no allá abajo en los ajustes, porque es algo que cambias mientras estás mirando la lectura. Aguja es el predeterminado; Aguja y Barra son gratis.</p>
       <ul>
         <li><strong>Aguja</strong>: una aguja oscilante clásica.</li>
         <li><strong>Barra</strong>: una barra horizontal de desviación sobre una escala de cents.</li>
@@ -174,13 +188,14 @@
           <tbody>
             <tr><td><strong>Tempo</strong></td><td>40–250 BPM, 120 por defecto</td><td>Los botones de paso mueven un BPM a la vez; mantén presionado para avanzar de corrido.</td></tr>
             <tr><td><strong>TAP</strong></td><td>—</td><td>Marca el pulso y el tempo sigue tus toques.</td></tr>
-            <tr><td><strong>Compás</strong></td><td>4/4, 3/4, 2/4, 6/8, 5/4, 7/8, 9/8, 12/8, 1/4</td><td>El indicador de pulso muestra en qué parte del compás vas.</td></tr>
+            <tr><td><strong>Compás</strong></td><td>Once compases: 4/4, 3/4, 2/4, 1/4, 5/4, 6/8, 7/8, 9/8, 12/8, 6/4, 3/8</td><td>El indicador de pulso muestra en qué parte del compás vas.</td></tr>
             <tr><td><strong>Subdivisión</strong></td><td>Negra, Corchea, Tresillo, Corchea con puntillo, Semicorchea</td><td>Subdivide el pulso sin cambiar el tempo. Corchea con puntillo es el par largo–corto (una corchea con puntillo y una semicorchea): dos clics por pulso.</td></tr>
-            <tr><td><strong>Sonido</strong></td><td>Clásico, Caja china, Clic, Batería</td><td><em>Batería</em> toca un patrón de batería real en lugar de un clic; ver más abajo.</td></tr>
-            <tr><td><strong>Acento</strong></td><td>Sí / no</td><td>Acentúa el primer tiempo de cada compás.</td></tr>
+            <tr><td><strong>Sonido</strong></td><td>Clásico (predeterminado), Caja china, Clic: gratis. Batería: <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a></td><td><em>Batería</em> reproduce un patrón de batería real en vez de un clic; ver más abajo. Si Batería era tu ajuste cuando terminó una prueba, el metrónomo reproduce Clásico mientras está bloqueado y tu elección se queda intacta, así que al desbloquear la recuperas tal cual.</td></tr>
+            <tr><td><strong>Acento</strong> / <strong>Patrón</strong></td><td>Activado / desactivado, o el ritmo activo</td><td>Acentúa el primer tiempo de cada compás. Con Sonido en <em>Batería</em> la celda pasa a ser <strong>Patrón</strong>, que nombra el ritmo cargado y abre el editor: un patrón de batería se acentúa solo, así que no queda un interruptor muerto ahí.</td></tr>
           </tbody>
         </table>
       </div>
+      <p>En Mac, la <strong>barra espaciadora</strong> es un solo transporte resuelto y no la tecla de un botón. Si algo está sonando, lo detiene: el clic, el loop o ambos. Si nada suena, arranca el clic, y un <a href="#looper">loop</a> cargado y detenido arranca con él, en el mismo primer tiempo. Un looper cerrado, bloqueado, vacío o a media toma no forma parte de esto, y la tecla sigue siendo lo que siempre fue: el clic. El panel no tiene que estar abierto, y un clic en marcha sigue sonando cuando lo cierras. Dentro del editor de patrones de batería la tecla es solo el clic, porque ahí el looper no está en pantalla. <strong>Mayús-Espacio</strong> activa en cambio los transportes de escala y acorde: mira <a href="fretboard.html#transports">Transportes de la línea de tiempo</a> y <a href="guide.html#shortcuts">atajos de teclado</a>.</p>
           <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="../screenshots/es-419/24-metronome-light.webp"
              width="1700" height="1388" loading="lazy" decoding="async"
@@ -194,17 +209,30 @@
 
     <section class="section-card" id="drums">
       <h2>Secuenciador de batería <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a></h2>
-      <p>Con el paquete de sonido <strong>Batería</strong> seleccionado, el metrónomo toca un patrón secuenciado por pasos en seis pistas (<strong>Crash</strong>, <strong>Ride</strong>, <strong>Hi-hat abierto</strong>, <strong>Hi-hat</strong>, <strong>Caja</strong> y <strong>Bombo</strong>) en lugar de un clic pelado. La batería es una batería acústica grabada, y cada golpe suena toda su duración natural: un bombo sigue sonando bajo los hi-hats que le siguen, y un hi-hat abierto suena hasta que el cerrado lo apaga, como en una batería real. Cada compás trae un patrón por defecto musical y no mecánico (los hi-hats en el pulso golpean más fuerte que los intermedios), así que 6/8 se siente como 6/8 sin que edites nada.</p>
+      <p>Con el paquete de sonido <strong>Batería</strong> seleccionado, el metrónomo toca un patrón secuenciado por pasos en seis pistas (<strong>Crash</strong>, <strong>Ride</strong>, <strong>Hi-hat abierto</strong>, <strong>Hi-hat</strong>, <strong>Caja</strong> y <strong>Bombo</strong>) en lugar de un clic pelado. La batería es una batería acústica grabada, y cada golpe suena toda su duración natural: un bombo sigue sonando bajo los hi-hats que le siguen, y un hi-hat abierto suena hasta que el cerrado lo apaga, como en una batería real. Cada compás trae una biblioteca de ritmos musicales y no mecánica (los hi-hats en el pulso golpean más fuerte que los intermedios), así que 6/8 se siente como 6/8 sin que edites nada.</p>
       <p>Abre el editor de patrones desde el metrónomo para crear los tuyos:</p>
       <ul>
         <li><strong>La cuadrícula</strong>: una fila por pista, una columna por paso. Cada celda muestra qué tan fuerte cae ese golpe: el relleno sube desde el fondo de la celda hasta su nivel, lleno arriba del todo. La cuadrícula se desplaza de lado cuando un compás necesita más pasos de los que caben.</li>
-        <li><strong>Fija un nivel</strong>: toca una celda a la altura a la que quieres que golpee; la banda inferior de una celda es apagado. Arrastra hacia arriba o abajo dentro de una celda para llevar su nivel, o arrastra a lo largo de la fila para pintar ese nivel en cada celda que cruces. Haz clic derecho (o mantén presionada en iPad) una celda para <em>Completo</em>, <em>75</em>, <em>50</em>, <em>25</em> o <em>No</em>. Mientras arrastras, la lectura de arriba muestra la pista, el paso y el nivel.</li>
+        <li><strong>Fija un nivel</strong> — toca una celda vacía para activarla al máximo; toca dos veces una celda para borrarla. Arrastra hacia arriba o abajo sobre una celda para subir o bajar su nivel —el valor aparece en un indicador sobre tu dedo y en el encabezado— o arrastra a lo ancho de la fila para pintar el nivel de esa celda en todas las que cruces. En la Mac, haz clic derecho sobre una celda para <em>Completo</em>, <em>75</em>, <em>50</em>, <em>25</em> o <em>No</em>.</li>
         <li><strong>Reproduce mientras editas</strong>: el patrón se repite mientras trabajas, así que oyes cada cambio de inmediato.</li>
         <li><strong>Compás y Subdivisión</strong>: cambia cualquiera de los dos desde la fila de transporte del editor, junto al tempo, y la cuadrícula se reagrupa para coincidir. Cada combinación conserva su propio patrón activo, así que cambiar carga ese; las ediciones sin guardar piden guardarse o descartarse primero.</li>
         <li><strong>Filas enteras</strong>: haz clic derecho (o mantén presionado) el nombre de una pista para <em>Llenar fila</em>, <em>Acentuar pulsos</em> o <em>Borrar fila</em>. Acentuar pulsos conserva los golpes de la fila y les reasigna nivel como están hechos los predeterminados: completo en el pulso, más suave en medio.</li>
-        <li><strong>Biblioteca</strong>: cada compás trae unos cuantos <em>Predeterminados</em>: <em>Básico</em>, y donde el compás los merece <em>Rock</em>, <em>Solo hi-hat</em>, <em>Claro</em> y <em>Shuffle</em>; los compases irregulares reciben en cambio sus agrupaciones, <em>3+2</em> y <em>2+3</em> en 5/4, <em>2+2+3</em> y <em>3+2+2</em> en 7/8. Guarda un patrón con un nombre, marca uno como activo, duplica uno como punto de partida, renombra o elimina. Los patrones editados sin guardar llevan la insignia <em>Editado</em>, y cerrar con trabajo sin guardar pregunta antes de descartarlo.</li>
+        <li><strong>Biblioteca</strong>: cada compás y subdivisión trae ritmos que puedes cargar, <strong>61</strong> en total, en cuatro secciones. Un ritmo aparece solo en las subdivisiones que pueden sostenerlo: un funk de semicorcheas vive en Semicorchea, un shuffle en Tresillo. Las filas de género y clásicos muestran un tempo típico; cargar un clásico ajusta el metrónomo a él, cargar un género deja tu tempo en paz. También hay una sección <em>Tus patrones</em> para los que guardes. Guarda con un nombre, marca uno como activo, duplica uno como punto de partida, renombra o elimina; la hoja también lleva <em>Nuevo</em>, <em>Guardar como…</em> y <em>Restablecer</em>. Los patrones editados y sin guardar llevan la marca <em>Editado</em>, y cerrar con trabajo sin guardar pregunta antes de descartarlo. La barra espaciadora hace sonar el clic desde dentro de la hoja, así que puedes oír el tempo mientras editas.</li>
         <li><strong>Restablecer</strong>: restaura los pasos y niveles por defecto para el compás actual.</li>
       </ul>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Sección</th><th>Ritmos</th><th>Qué contiene</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Básicos</strong></td><td>12</td><td>Los grooves simples: <em>Básico</em>, <em>Rock</em>, <em>Solo hi-hat</em>, <em>Claro</em>, <em>Shuffle</em> y las agrupaciones de los compases impares: <em>3+2</em> y <em>2+3</em> en 5/4, <em>2+2+3</em>, <em>3+2+2</em> y <em>2+3+2</em> en 7/8, <em>2+2+2+3</em> en 9/8.</td></tr>
+            <tr><td><strong>Ritmos</strong></td><td>8</td><td>Bloques de construcción más que estilos: <em>Cuatro al piso</em>, <em>Pulse</em>, <em>Medio tiempo</em>, <em>Double-time</em>, <em>Sincopado</em>, <em>Ride</em>, <em>Crash en 1</em>, <em>Dotted</em>.</td></tr>
+            <tr><td><strong>Géneros</strong></td><td>31</td><td>Desde <em>Disco</em>, <em>House</em>, <em>Funk</em>, <em>Boom Bap</em> y <em>Trap</em> pasando por <em>One Drop</em>, <em>Ska</em>, <em>Motown</em>, <em>Bossa Nova</em>, <em>Reguetón</em>, <em>Swing</em> y <em>D-beat</em> en <em>Samba</em> en 2/4, <em>Vals de jazz</em> en 3/4, <em>Blues lento</em> y <em>Bembé</em> en 12/8, y <em>Aksak</em> y <em>Ruchenitsa</em> en los compases impares.</td></tr>
+            <tr><td><strong>Clásicos</strong></td><td>10</td><td>Feels famosos, nombrados por el feel y no por el disco: <em>Pies y palmas</em>, <em>Heavy Rock</em>, <em>Breakbeat</em>, <em>Snare on 4</em>, <em>Medio shuffle</em>, <em>Hard Rock</em>, <em>Grunge</em>, <em>Garage Rock</em>, <em>Galope</em>, <em>Funk Rock</em>.</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p>Desde el propio panel del metrónomo, cambiar el compás o la subdivisión carga de inmediato el patrón activo de esa combinación; el editor es el lugar que pregunta primero.</p>
           <figure class="shot" style="--shot-max: 500px">
         <img class="shot-light" src="../screenshots/es-419/25-drum-sequencer-light.webp"
@@ -239,6 +267,7 @@
         <figcaption class="figure-caption">El amplificador con un modelo inicial cargado, antes de encender Monitor.</figcaption>
       </figure>
 
+      <p>Un archivo <code>.nam</code> que cargas se copia al propio almacenamiento de Fretling, así que el modelo sigue ahí después de reiniciar aunque desde entonces hayas movido o borrado el archivo del que lo cargaste.</p>
 </section>
 
     <section class="section-card" id="input">
@@ -256,7 +285,8 @@
         <li><strong>Dispositivo de entrada</strong>: la interfaz en la que está tu guitarra. En Mac, un dispositivo de audio; en iPad, una de las entradas que ofrece iPadOS. En cualquier caso, si uno guardado ya no está, el selector lo dice en lugar de fallar en silencio.</li>
         <li><strong>Canal</strong>: en cuál de las entradas de esa interfaz está conectada tu guitarra. Aparece siempre que la entrada tiene más de una, y lo dice claramente cuando todavía no hay entre qué elegir.</li>
         <li><strong>Ruta</strong> (iPad): a qué se resolvieron realmente la entrada y la salida. iPadOS sigue eligiendo la <strong>salida</strong> por ti: conecta audífonos o una interfaz y cambia automáticamente. La consola avisa aquí cuando la ruta se retroalimentaría.</li>
-        <li><strong>Tamaño del búfer</strong> y <strong>Frecuencia de muestreo</strong>: el intercambio de latencia. Fretling admite 44.1, 48, 88.2, 96 y 192 kHz. En iPad son solicitudes y no ajustes: iPadOS las responde cuando arranca la entrada, así que una línea bajo los selectores informa lo que realmente concedió.</li>
+        <li><strong>Tamaño del búfer</strong>: el intercambio de latencia. De 16 a 1024 cuadros en la Mac, de 64 a 1024 en iPad, y <strong>128</strong> es la recomendación. iPadOS nunca concede nada por debajo de 64, así que ofrecer 16 o 32 ahí sería un control que en silencio no hace nada.</li>
+        <li><strong>Frecuencia de muestreo</strong> — <strong>Sistema</strong> (deja el dispositivo como está), <strong>44.1</strong>, <strong>48</strong> y <strong>96 kHz</strong>. 48 kHz es la recomendación y la fila lo dice: los modelos NAM se entrenan a 48 kHz, así que nada en la ruta del amp se remuestrea, y es la frecuencia a la que está ajustada la etapa gruesa del afinador. 88.2 y 192 kHz no se ofrecen aquí a propósito —no aportan nada en la ruta del amp y multiplican el trabajo de la red—, aunque la cadena de procesamiento las maneja si el dispositivo está configurado así desde otro lado. En iPad ambos son solicitudes y no ajustes: iPadOS las responde cuando arranca la entrada, así que una línea bajo los selectores informa lo que concedió de verdad.</li>
         <li><strong>Latencia</strong>: la latencia de monitoreo resultante, informada en milisegundos para que el intercambio sea un número y no una suposición.</li>
       </ul>
       <p>Cada deslizador tiene marcas, una lectura en dB y un restablecimiento a su valor por defecto con doble clic.</p>
@@ -306,9 +336,9 @@
       <ul>
         <li><strong>Compases</strong> — <em>Libre</em>, 1, 2, 4 u 8. Con una duración fijada, la grabación se detiene sola en la línea de compás, así que el loop queda a tiempo sin que lo atrapes a mano; <em>Libre</em> te deja el cierre a ti.</li>
         <li><strong>Cuenta de entrada</strong> — <em>No</em>, 1 o 2 compases de clics antes de que empiece la grabación.</li>
-        <li><strong>Clic al grabar</strong>: mantiene el metrónomo audible durante la toma.</li>
+        <li><strong>Clic al grabar</strong>: mantiene el metrónomo audible durante la toma. Aplica a la primera toma y no hace nada cuando el clic ya está en marcha, porque entonces no le queda nada que arrancar.</li>
         <li><strong>Volumen del loop</strong>: qué tan fuerte suena el loop debajo de ti.</li>
-        <li><strong>Desvanecimiento de capas</strong>: cuánto se atenúan las capas anteriores a medida que apilas nuevas encima.</li>
+        <li><strong>Desvanecimiento de capas</strong>: cuánto se atenúan las capas anteriores conforme apilas nuevas encima. La parte superior de la regla dice <strong>Nunca</strong> en vez de un número, porque lo que significa ahí es que no se atenúa nada.</li>
       </ul>
       <p>El botón de grabar hace también de lectura de pulsos: la cuenta de entrada cuenta hacia atrás hasta la entrada, luego el pulso cuenta el compás hacia adelante, y una línea de estado bajo los controles nombra el estado (grabando, reproduciendo, overdub) con el compás y el tiempo. Cambiar la frecuencia de muestreo borra el loop (la grabación ya no coincide con el motor) y el looper te avisa cuando eso ha pasado.</p>
       <p>Los loops viven en memoria solo durante la sesión. Nada se escribe en disco, y salir de la app los descarta.</p>
@@ -334,7 +364,7 @@
           <tbody>
             <tr><td><strong>Notas</strong></td><td>Las notas que tocas en el mástil y la reproducción de escalas.</td></tr>
             <tr><td><strong>Acorde</strong></td><td>Los acordes reproducidos desde la línea de tiempo y el Atlas de acordes.</td></tr>
-            <tr><td><strong>Prog</strong></td><td>La reproducción de progresiones.</td></tr>
+            <tr><td><strong>Prog</strong></td><td>Reservada para la reproducción de progresiones, que no forma parte de esta versión. La tira está ahí y todavía no tiene nada que controlar.</td></tr>
             <tr><td><strong>Clic</strong></td><td>Metrónomo y batería.</td></tr>
             <tr><td><strong>Amp</strong></td><td>Tu guitarra monitoreada.</td></tr>
             <tr><td><strong>Loop</strong></td><td>La reproducción del looper.</td></tr>
@@ -342,7 +372,8 @@
           </tbody>
         </table>
       </div>
-      <p>Cada canal excepto Mix tiene <strong>silencio</strong> y <strong>solo</strong>; una insignia en el panel te recuerda cuando algo está silenciado o en solo, así que una app muda nunca es un misterio. Los niveles se conservan entre sesiones.</p>
+      <p>Cada canal excepto Mix tiene <strong>silencio</strong> y <strong>solo</strong>; una insignia en el panel te recuerda cuando algo está silenciado o en solo, así que una app callada nunca es un misterio. <strong>Silenciar manda sobre solo</strong>: un canal que silenciaste sigue callado aunque lo pongas en solo, así que un solo nunca puede quitar el silencio a tus espaldas. Principal es un fader de salida simple y está exento de ambos.</p>
+      <p>Casi todas las tiras van de 0 a 1 y arrancan al máximo. <strong>Amp</strong> llega a 2 y arranca en 0.8, igual que el deslizador Salida del propio panel del amp; <strong>Loop</strong> llega a 1.5 y arranca en 0.9, igual que el volumen de Loop del looper; <strong>Clic</strong> arranca en 0.8. Los niveles se conservan entre sesiones. Un solo no: reabrir la app en solo, casi en silencio, sería un acertijo y no un ajuste.</p>
           <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="../screenshots/es-419/29-mixer-light.webp"
              width="1700" height="1388" loading="lazy" decoding="async"
@@ -357,7 +388,11 @@
     <section class="section-card" id="live-detect">
       <h2>Detección en vivo <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a></h2>
       <p>Detección en vivo escucha lo que tocas y lo marca en el mástil en tiempo real, para que compruebes que lo que estás digitando es lo que crees.</p>
-      <p>En el modo <a href="learning-modes.html#identify">identificar</a> gana un botón <strong>Enviar al diapasón</strong>, que toma las notas que acaba de oír y las coloca en el mástil como una consulta de identificación: toca un acorde que no sabes nombrar, envíalo y lee las respuestas clasificadas.</p>
+      <p><strong>El panel</strong> es un pozo de escucha con un solo control debajo: <strong>Escuchar</strong>, que pasa a ser <strong>Detener</strong> mientras está en marcha. Encima, una línea de estado dice qué está pasando antes de que hayas tocado nada: <em>Toca Escuchar para detectar lo que tocas</em>. En cuanto llegan notas, la lectura las nombra: una altura sola como nota, varias a la vez como el acorde que deletrean, y ambas se deletrean según esté <strong>Alteraciones</strong>, así que una lectura de aquí coincide con el mástil en vez de contradecirlo.</p>
+      <p><strong>En el mástil</strong>, lo que Detección en vivo oye se marca con anillos y no con relleno. Los anillos son a propósito una marca distinta del resalte que lleva una nota reproducida, porque las dos responden preguntas distintas: <em>esto es lo que estás tocando</em> frente a <em>esto es lo que Fretling está tocando</em>, y pueden estar en pantalla al mismo tiempo.</p>
+      <p><strong>Plegada a una tira</strong>, Detección en vivo conserva su lectura: la tira es una pantalla en vivo de lo que está oyendo, así que puedes dejarla funcionando en el borde de la pantalla y echarle un vistazo mientras tocas.</p>
+      <p>En el modo <a href="learning-modes.html#identify">identificar</a> gana un botón <strong>Enviar al diapasón</strong>, que toma las notas que acaba de oír y las coloca en el mástil como una consulta de identificación: toca un acorde que no sepas nombrar, mándalo y lee las respuestas clasificadas. Ese botón existe solo en identificar; en los modos de aprendizaje el panel informa, y el mástil es del sujeto que estás aprendiendo.</p>
+      <p><strong>Sin Pro</strong>, el panel igual se abre. Dice qué es: <em>Detección en vivo es parte de Fretling Pro.</em> y <em>Toca al micrófono: las notas y acordes que Fretling oye se encienden en el diapasón.</em> y lleva un botón de desbloqueo. El micrófono nunca se abre mientras está bloqueado.</p>
           <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="../screenshots/es-419/30-live-detect-light.webp"
              width="1700" height="1388" loading="lazy" decoding="async"
@@ -371,14 +406,14 @@
 
     <section class="section-card" id="microphone">
       <h2>Acceso al micrófono</h2>
-      <p>El afinador, Detección en vivo y el amplificador necesitan entrada de audio, así que la primera vez que abres uno (o enciendes el micrófono desde la barra superior) tu dispositivo pide permiso. El audio se analiza en vivo y nunca se graba, se guarda ni se transmite. La captura se detiene cuando cierras las herramientas, y apagar la entrada desde la <a href="#input">barra superior</a> libera el micrófono en todas partes a la vez. El detalle completo está en la <a href="privacy.html">política de privacidad</a>.</p>
+      <p>El afinador, Detección en vivo y el amp necesitan entrada de audio, así que la primera vez que abres uno —o enciendes el micrófono desde la barra superior— tu dispositivo pide permiso. El aviso que muestra son las propias palabras de Fretling, y nombra qué lo está pidiendo: <em>«Fretling necesita acceso al micrófono o a la interfaz de audio para monitorear tu guitarra con Neural Amp Modeler y para el afinador cromático mientras practicas.»</em> El audio se analiza en vivo y nunca se graba, se guarda ni se transmite. La captura se detiene cuando cierras las herramientas, y apagar la entrada desde la <a href="#input">barra superior</a> libera el micrófono en todas partes a la vez. El detalle completo está en la <a href="privacy.html">política de privacidad</a>.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.1.</p>
-      <p><a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio de la guía</a></p>
+      <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.3.</p>
+      <p><a href="guide.html">Inicio de la guía</a> &middot; <a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio</a></p>
     </div>
   </footer>
 

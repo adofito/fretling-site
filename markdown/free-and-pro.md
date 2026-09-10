@@ -43,15 +43,43 @@ Detect — wear a lock badge on their icon and still *open* when tapped: the pan
 the tool does and offers an **Unlock Fretling Pro** button, so you meet the feature before
 you meet the price. Nothing counts down, nags, or interrupts on its own.
 
+## The 14-day trial
+
+You can try everything in Pro free for two weeks. The button is on the unlock sheet and reads
+**Try Pro free for 14 days**; nothing starts on its own, and nothing starts on first launch.
+
+- **Why it exists.** Most of Pro is a deeper version of something the free tier already shows
+  you. The two things that have no free version to sample are the
+  [amp](practice-tools.md#guitar-amp) and the [looper](practice-tools.md#looper), and those
+  are what the trial is really for: put a guitar through it for two weeks and find out.
+- **What it costs.** Nothing. It is a free purchase, so it goes through the App Store, but no
+  money moves and nothing renews.
+- **What you get.** All of Pro, on every Mac and iPad signed into your Apple Account, for the
+  same fourteen days whichever device you started it on.
+- **What it says before it starts.** How long it lasts, what stops working when it ends, and
+  what the full unlock costs — all on the sheet, before you press anything.
+- **While it runs**, the **Fretling Pro** row in the settings sidebar counts the days down,
+  and the unlock button stays where it is so you can buy without waiting for the trial to run
+  out.
+- **How it ends.** Silently. There is no modal and no interruption mid-practice: Fretling
+  simply returns to the free tier, and every setting you chose stays exactly where it is.
+  Turn Pro on later and all of it is still there.
+- **Once per Apple Account.** The trial is not Family-Shareable — a shared trial would be a
+  shared clock, and a household would burn one set of fourteen days between them. Reinstalling
+  or moving to a new Mac does not hand out a second one either: the clock runs from the App
+  Store purchase date, not from a stamp on your disk. Pro itself keeps Family Sharing.
+
 ## How unlocking works
 
 - **One purchase, once.** Fretling Pro is a single one-time App Store purchase — no
   subscription, nothing recurring.
-- **Every device.** The same purchase unlocks Fretling on Mac, iPad, and iPhone signed
-  into your Apple Account, and it supports Family Sharing.
-- **Your settings survive the lock.** If a Pro setting is stored — say the tuner was on
-  Precision — the app quietly uses the free equivalent until you unlock, then your stored
-  choice comes straight back. Nothing is reset.
+- **Every device.** The same purchase unlocks Fretling on every **Mac and iPad** signed
+  into your Apple Account, and it supports Family Sharing. (iPhone is not a supported
+  device — the layout is built around a wide neck.)
+- **Your settings survive the lock.** If a Pro setting is stored, the app quietly uses the
+  free equivalent until you unlock, then your stored choice comes straight back. A Pro
+  scale reads as Major, Precision reads as Fast, the Trace, Strobe and Disc displays read
+  as Needle, and the Drums pack plays Classic. Nothing is reset and nothing is rewritten.
 - **Restore anytime.** The paywall's *Restore Purchases* re-checks your Apple Account on
   a new device or after a reinstall. The entry point lives at the bottom of the settings
   sidebar, under *Fretling Pro*.

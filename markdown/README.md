@@ -1,20 +1,27 @@
 # Fretling – Scale Tones and Chords
 
-Fretling is a guitar learning app for Mac and iPad. You say what you want to learn in plain
+Fretling is a guitar workstation for Mac and iPad. You say what you want to learn in plain
 language — *"I want to learn scales in E Major"* — and the fretboard shows it. Tap any note
 to hear it. Practice tools (tuner, metronome, amp, looper) live one tap away, over the same
 neck.
 
+This is the Markdown mirror of the user guide. On the web the site root
+([www.fretling.app](https://www.fretling.app/)) is the product page, and the guide starts at
+[guide.html](https://www.fretling.app/guide.html).
+
 ## What it does
 
-- **Learn** scales, diatonic chords, and triads in any key, with CAGED shapes, position boxes, and
-  three-notes-per-string patterns laid over the neck.
+- **Learn** scales, diatonic chords, and triads in any key, with CAGED shapes, position boxes,
+  and three-notes-per-string patterns laid over the neck — and browse every chord in the
+  [Chord Atlas](learning-modes.md#the-chord-atlas), which names borrowed harmony and secondary
+  dominants on sight.
 - **Identify** a chord by tapping notes onto the neck, or by playing it into the mic —
   Fretling ranks the readings.
-- **Hear** anything you see: tap-to-play notes, one-tap scale and chord playback, six
-  instrument voices.
-- **Practice** with a chromatic tuner, a metronome with a step-sequenced drum machine, a Neural
-  Amp Modeler amp, and a looper.
+- **Hear** anything you see: tap-to-play notes, one-tap scale and chord playback, and sampled
+  instruments — a grand piano, nylon, steel, jazz and clean electric guitars, or a sine wave;
+  chords through up to three layered voices.
+- **Practice** with a chromatic tuner and its Precision mode, a metronome with a 61-beat drum
+  library and a step sequencer, a Neural Amp Modeler amp, and a looper.
 
 ## Documentation
 
@@ -24,6 +31,7 @@ neck.
 | [Fretboard](fretboard.md) | Markers, the display bar, timeline, overlays, chord shapes, fret range, tap-to-play |
 | [Practice Tools](practice-tools.md) | Tuner, metronome and drums, guitar amp, looper, mixer, Live Detect |
 | [Settings](settings.md) | Every option in the sidebar: Fretboard, Audio, and Icon tabs |
+| [Free & Pro](free-and-pro.md) | What is free for good, the 14-day trial, and what the one-time Pro unlock adds |
 
 ## Anatomy of the screen
 
@@ -37,8 +45,9 @@ Everything sits around one stable fretboard:
 - **Above the neck** — the learning sentence, the scale timeline, and the marker display bar
   (Labels / Shapes / Colors / Accidentals).
 - **The neck** — six strings, 12 to 22 frets (15 by default) plus open position, tap any note to hear it.
-- **Below the neck** — the Visual Groupings bar (CAGED / Box Shapes / Chord Shapes / 3NPS /
-  Strings).
+- **Below the neck** — the Visual Groupings bar (Chord Shapes / CAGED / Box Shapes / 3NPS /
+  Strings). Chord Shapes comes first in the modes that have it, because there the chord is
+  what the neck is drawing.
 
 ## Quick start
 

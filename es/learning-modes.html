@@ -15,6 +15,10 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.fretling.app/es/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/es/learning-modes.html">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/learning-modes.html">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/es/learning-modes.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/learning-modes.html">
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
@@ -34,9 +38,6 @@
       } catch (e) { /* private mode */ }
     })();
   </script>
-  <link rel="alternate" hreflang="en" href="https://www.fretling.app/learning-modes.html">
-  <link rel="alternate" hreflang="es" href="https://www.fretling.app/es/learning-modes.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/learning-modes.html">
 </head>
 <body data-page="modes">
   <a href="#main" class="skip-link">Ir al contenido</a>
@@ -59,20 +60,21 @@
       </a>
       <nav class="chip-nav" aria-label="Secciones de la guía">
         <ul>
-          <li><a href="index.html" data-mark="guide">Guía</a></li>
+          <li><a href="guide.html" data-mark="guide">Guía</a></li>
           <li><a href="learning-modes.html" data-mark="modes" aria-current="page">Modos de aprendizaje</a></li>
           <li><a href="fretboard.html" data-mark="fretboard">Diapasón</a></li>
           <li><a href="practice-tools.html" data-mark="tools">Herramientas de práctica</a></li>
-          <li><a href="settings.html" data-mark="settings">Configuración</a></li><li><a href="free-and-pro.html" data-mark="pro">Gratis y Pro</a></li>
+          <li><a href="settings.html" data-mark="settings">Configuración</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Gratis y Pro</a></li>
         </ul>
       </nav>
       <div class="header-controls">
-      <div class="theme-control" role="group" aria-label="Apariencia">
-        <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
-        <button type="button" data-theme="light" aria-pressed="false">Claro</button>
-        <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
-      </div>
-      <a class="lang-switch" href="../learning-modes.html" hreflang="en" lang="en" aria-label="English version">English</a>
+        <div class="theme-control" role="group" aria-label="Apariencia">
+          <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
+          <button type="button" data-theme="light" aria-pressed="false">Claro</button>
+          <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
+        </div>
+        <a class="lang-switch" href="../learning-modes.html" hreflang="en" lang="en" aria-label="English version">English</a>
       </div>
     </div>
   </header>
@@ -105,7 +107,7 @@
             <tr><td><strong>aprender / identificar</strong></td><td>El verbo decide para qué sirve la app en este momento: mostrarte algo (<a href="#scales">aprender</a>) o nombrar algo que tocas (<a href="#identify">identificar</a>). Cambiar a identificar deja intacta tu configuración de aprender, así que al volver se restaura exactamente.</td></tr>
             <tr><td><strong>Modo</strong></td><td>Escalas, Acordes, Tríadas.</td></tr>
             <tr><td><strong>Nota raíz</strong></td><td>Las doce notas. Los nombres siguen la elección ♯/♭ de la barra de visualización de marcadores.</td></tr>
-            <tr><td><strong>Tipo de escala</strong></td><td>Mayor, Menor y Pentatónica mayor están arriba; <em>Más escalas</em> abre el resto: Pentatónica menor, Blues, Dórico, Mixolidio, Frigio, Lidio, Locrio, Menor armónica y Menor melódica.</td></tr>
+            <tr><td><strong>Tipo de escala</strong></td><td>Mayor, menor, pentatónica mayor y pentatónica menor están arriba; <em>Más escalas</em> abre el resto: blues, dórico, mixolidio, frigio, lidio, locrio, menor armónica y menor melódica.</td></tr>
             <tr><td><strong>Acorde</strong></td><td>En el modo Acordes, y opcionalmente en el modo Escalas, un selector de acordes respaldado por el Atlas de acordes.</td></tr>
           </tbody>
         </table>
@@ -145,6 +147,7 @@
       <h2>Acordes</h2>
       <p><strong>Propósito:</strong> explorar los acordes de una tonalidad y ver dónde se ubica cada uno en el mástil.</p>
       <p><strong>Qué eliges:</strong> una nota raíz, un tipo de escala (que fija la tonalidad) y luego un acorde. El selector de acordes es el <strong>Atlas de acordes</strong>: enumera los acordes de la tonalidad con sus números romanos, te deja escuchar cada uno y va más allá de los siete diatónicos cuando tú quieras.</p>
+      <p><strong>En una tonalidad, o sin ninguna:</strong> la palabra <strong>en</strong> es en sí misma un menú, con las dos mismas opciones que tiene identificar. Elige <em>sin tonalidad</em> y la tonalidad desaparece: la escala sale de la oración y los colores de intervalo se reanclan en la propia fundamental del acorde, así que lo que ves es el acorde medido desde sí mismo y no desde una tonalidad a la que quizá no pertenezca. Sigue siendo un menú en los dos estados, así que la tonalidad vuelve desde el mismo lugar donde la quitaste.</p>
       <p><strong>Armonía prestada:</strong> el Atlas no se detiene en los siete acordes de la tonalidad. Elige un acorde de fuera y el Atlas nombra el préstamo en lugar de encogerse de hombros: una dominante secundaria se lee <strong>Prestado · V/V</strong>, un acorde tomado del modo paralelo se lee <strong>Prestado · iv</strong>, y ambos se ordenan junto a los acordes de la tonalidad. No hay nada que activar.</p>
       <p><strong>En el diapasón:</strong> las notas del acorde se marcan a todo color. Pon <strong>Notas fuera del acorde</strong> en <strong>Sí</strong> en la barra de chips bajo el mástil para mantener visible el resto de la escala debajo, en gris, y así ver el acorde dentro de su tonalidad. Las notas no diatónicas del acorde siempre se dibujan, haga lo que haga el filtro de la escala.</p>
       <p><strong>Formas de acorde:</strong> con los chips <strong>Formas de acorde</strong> bajo el mástil puestos en <strong>Sí</strong>, se dibujan en el mástil digitaciones reales del acorde seleccionado, opcionalmente con números de dedos y opcionalmente señaladas en la línea de tiempo. Ver <a href="fretboard.html#chord-shapes">Formas de acorde</a>.</p>
@@ -159,6 +162,25 @@
         <figcaption class="figure-caption">Modo Acordes con Notas fuera del acorde activado, de modo que el acorde se asienta dentro de su escala.</figcaption>
       </figure>
 </section>
+
+    <section class="section-card" id="chord-atlas">
+      <h2>El Atlas de acordes</h2>
+      <p>El Atlas es el catálogo de acordes de Fretling, y es gratis en todos los modos. Ábrelo desde el botón <strong>Atlas</strong> del encabezado, o desde la ranura de acorde al final de la oración de Escalas; en identificar, una lectura que te guste lleva una acción <strong>Abrir en el Atlas de acordes</strong> que lleva el acorde directo allí.</p>
+      <p><strong>Cómo está dispuesto:</strong> una tira con las doce fundamentales arriba, luego las cualidades agrupadas en familias —tríadas, séptimas, sextas, suspendidas, con nota añadida, alteradas—, después los modificadores y, al final, un bajo invertido si lo quieres. Elige una fundamental, elige una cualidad y el mástil responde de inmediato.</p>
+      <p><strong>Escucha sin decidir:</strong> tocar una cualidad la reproduce, y el Atlas se queda abierto. Ese es justo el punto: puedes comparar cuatro voicings de oído seguidos sin cerrar la hoja y reabrirla cada vez. También hay un control aparte para escuchar, así que la vista previa está al alcance sin el toque.</p>
+      <p><strong>Conoce tu tonalidad.</strong> Cada acorde lleva su número romano para la tonalidad de la oración, y los acordes de la tonalidad se ordenan primero. Un acorde de fuera de la tonalidad no se lista sin más: el Atlas nombra el préstamo. Una dominante secundaria se lee <strong>Prestado · V/V</strong>, un acorde tomado del modo paralelo se lee <strong>Prestado · iv</strong>, y el intercambio modal se etiqueta como tal. No hay que activar nada, y nada de esto está detrás del desbloqueo de Pro.</p>
+      <p><strong>Sigue a la barra de visualización de marcadores.</strong> Etiquetas, Colores y Alteraciones llegan al Atlas igual que llegan al mástil, así que un acorde deletreado con bemoles en el diapasón se deletrea con bemoles aquí. La única diferencia deliberada: con <strong>Etiquetas</strong> en <em>Ninguna</em> el Atlas conserva los nombres de los acordes, porque un catálogo sin nombres no es un catálogo.</p>
+      <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/33-chord-atlas-light.webp"
+             width="1860" height="1565" loading="lazy" decoding="async"
+             alt="El Atlas de acordes abierto sobre el diapasón en E mayor, con la tira de fundamentales arriba, las familias de cualidades debajo y cada acorde de la tonalidad con su número romano.">
+        <img class="shot-dark" src="../screenshots/es-419/33-chord-atlas-dark.webp"
+             width="1860" height="1565" loading="lazy" decoding="async"
+             alt="El Atlas de acordes abierto sobre el diapasón en E mayor, con la tira de fundamentales arriba, las familias de cualidades debajo y cada acorde de la tonalidad con su número romano.">
+        <figcaption class="figure-caption">El Atlas, abierto en E mayor: fundamentales arriba, cualidades por familia, números romanos en la tonalidad.</figcaption>
+      </figure>
+</section>
+
 
     <section class="section-card" id="triads">
       <h2>Tríadas</h2>
@@ -185,7 +207,7 @@
       <h3>Darle las notas a Fretling</h3>
       <ul>
         <li><strong>Tócalas en el mástil.</strong> Toca una posición para colocar una nota; tócala de nuevo para quitarla. Una barra de colocación te da <strong>Deshacer</strong>, <strong>Borrar</strong> y un conteo de las notas colocadas.</li>
-        <li><strong>Tócalas.</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a> Presiona <strong>Escuchar</strong> en la barra de colocación: abre <a href="practice-tools.html#live-detect">Detección en vivo</a> y lo pone a escuchar; toca el acorde y presiona <strong>Capturar lo que toqué</strong> para colocar en el mástil lo que oyó, en lugar de lo que hubieras puesto (Deshacer lo recupera). El mismo paso está en el propio panel de Detección en vivo como <strong>Enviar al diapasón</strong>.</li>
+        <li><strong>Tócalas.</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a> Presiona <strong>Escuchar</strong> en la barra de colocación: abre <a href="practice-tools.html#live-detect">Detección en vivo</a>, eleva su panel para que el control Detener quede al alcance y la pone a escuchar. Toca el acorde y luego presiona <strong>Capturar lo que toqué</strong> para colocar en el mástil lo que oyó, en lugar de lo que hubieras puesto (Deshacer lo recupera). El mismo paso está en el propio panel de Detección en vivo como <strong>Enviar al diapasón</strong>. Sin Pro, el botón muestra la hoja de desbloqueo y el micrófono nunca se abre.</li>
       </ul>
 
       <h3>Leer los resultados</h3>
@@ -209,8 +231,8 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.1.</p>
-      <p><a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio de la guía</a></p>
+      <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.3.</p>
+      <p><a href="guide.html">Inicio de la guía</a> &middot; <a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio</a></p>
     </div>
   </footer>
 

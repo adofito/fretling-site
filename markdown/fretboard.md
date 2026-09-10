@@ -18,6 +18,17 @@ a span of the neck rather than shorten it, use the [fret range
 limiter](#fret-range-limiter) — that frames a position on the board you have, while
 **Frets** changes how much board there is.
 
+**Inlays.** The board carries its own position marks at 3, 5, 7, 9, 12, 15, 17, 19 and 21,
+and the octave at fret 12 wears a pair, as a real neck does. They are drawn as low bars,
+never discs: a disc is what a note marker is, and scenery that borrows a marker's
+silhouette would be read as a note. They sit in the gaps *between* strings, which is the
+only part of the board a marker never occupies, so no inlay can hide a note and no note can
+cover an inlay. The marks taper toward the bridge with the frets they sit in.
+
+**String names.** A narrow lane on the leading edge names each string — e, B, G, D, A, E
+from the top down — with the six letters sharing one right edge, and a gutter between the
+names and the strings they name.
+
 ## Marker display bar
 
 Directly above the neck sits a row of chips that changes how markers read. These are the
@@ -35,6 +46,15 @@ sidebar.
 Every group except **Frets** is radio-style: one chip is lit, and tapping the lit chip does
 nothing. On a narrow window the bar scrolls sideways instead of wrapping.
 
+**The defaults** are Labels *Notes*, Shapes *Intervals*, Colors *Color* and Accidentals
+*Sharps*, on 15 frets. Every one of them is remembered between launches.
+
+**How the interval shapes are built:** they are a ladder, not a set of glyphs to memorize.
+The root is a circle; the 2nd is that circle broken once; from the 3rd up, the degree is the
+number of corners — three for a 3rd, four for a 4th, and so on to seven for a 7th. A
+flattened or sharpened degree keeps its shape and leans, one way for lowered and the other
+for raised, so there are two rules to learn rather than twelve symbols.
+
 ## Note markers
 
 Markers show which notes belong to the current scale, chord, or triad. Everything about how
@@ -46,6 +66,35 @@ against the other tones.
 > to the chord stay drawn even if they fall outside the scale. Altered chords, borrowed
 > chords, secondary dominants and slash-bass notes therefore show up as they really are,
 > rather than being filtered out by the key.
+
+### The interval wheel
+
+With **Colors** set to Color, a marker's fill is its distance from the key's root — the same
+twelve colors everywhere in the app, so a major third looks like a major third whatever key
+you are in. That root is the one anchor: the neck, the timeline and the Chord Atlas all
+measure from it, and it stays the key's root even while a chord is active, so a pitch keeps a
+single color across all three. Switching the root recolors the whole neck; switching the scale
+type does not.
+
+| Color | Interval | Distance |
+|-------|----------|----------|
+| Root | Unison | — |
+| ♭2 | Minor 2nd | One semitone |
+| 2 | Major 2nd | Two semitones |
+| ♭3 | Minor 3rd | Three semitones |
+| 3 | Major 3rd | Four semitones |
+| 4 | Perfect 4th | Five semitones |
+| ♭5 | Tritone | Six semitones |
+| 5 | Perfect 5th | Seven semitones |
+| ♭6 | Minor 6th | Eight semitones |
+| 6 | Major 6th | Nine semitones |
+| ♭7 | Minor 7th | Ten semitones |
+| 7 | Major 7th | Eleven semitones |
+
+The wheel is built rather than picked: hue advances a fixed step per semitone from the root's
+blue, so distance around the color wheel is distance in pitch, and three lightness bands are
+arranged so no two chromatic neighbors share one — which is what keeps the twelve apart for a
+reader who cannot separate red from green.
 
 ## Scale timeline
 
@@ -71,6 +120,10 @@ sounding fills in solid.
 A transport is mounted on a rail, so a rail is all it takes for one to appear: the Scale
 transport is there whenever a scale is on the timeline, the Chord transport whenever a chord
 is active. That includes Triads, which can now sound the triad it is showing you.
+
+On the Mac, **Shift-Space** presses whichever of the two is on screen — the chord if one is
+active, otherwise the scale. The plain space bar belongs to the
+[metronome](practice-tools.md#metronome), which is the one transport that runs in every mode.
 
 Under the row, a single tone line spells what the transport is about to sound. It follows the
 subject of the mode you are in — the chord in Chords and Triads, the scale in Scales — except
@@ -101,10 +154,32 @@ truncating: the switches you flip mid-practice — Fret Range, and Non-Chord Not
 stay pinned in place while the pattern systems scroll behind them. Where content really is
 cut off it passes under a soft fade, so a sliced chip reads as more row rather than damage.
 
+### Chord Shapes (Chords)
+
+**Off / On.** Turns the chord-shape overlays on the neck on and off — see
+[Chord shapes](#chord-shapes) below for what they draw and the settings that go with them. It
+leads the row and starts **On**: in Chords the chord is what the neck is drawing, so its own
+voicings are the first system you reach for, and CAGED and the boxes are context laid over it.
+
 ### CAGED
 
 **Off / All / C / A / G / E / D.** Overlays one of the five CAGED shapes — or all of them at
-once — on the current scale, chord, or triad. Available in every learning mode.
+once — on the current scale, chord, or triad.
+
+**The shapes follow the chord you are looking at.** Each of the five letters names a shape, and
+every shape comes in two grips: the major one you know from the open chords, and the minor one
+that flattens its third. Fretling picks the grip from whatever owns the neck in that mode — the
+scale in Scales, the chord in Chords, the chord under the playhead in Progressions, the triad in
+Triads. So an A minor chord draws the Am, Em and Dm grips at A, not A major's. The chips keep
+their five letters either way, because the letter is the shape and the neck is where the grip
+shows.
+
+**Where CAGED has nothing to say, the group is gone.** The system maps the neck with major and
+minor triad grips, so it cannot spell a chord built on anything else — a diminished or augmented
+triad, or a chord with no third at all, like sus2 and sus4. Pick one of those, or a Locrian key,
+and the CAGED group leaves the row rather than laying a shape over it that the chord does not
+contain. It comes back, with the selection you left it on, as soon as you pick something it can
+shape.
 
 How a shape is drawn is set in Settings → Fretboard → Shape Overlays → CAGED Display:
 
@@ -120,11 +195,6 @@ chose — each of the twelve scales has its own five, so a Major scale gets the 
 rather than a pentatonic stand-in. In Chords they are the key's positions, drawn under the
 chord. In Triads they come from the pentatonic that fits the triad: major pentatonic for major
 and augmented, minor pentatonic for minor and diminished.
-
-### Chord Shapes (Chords and Progressions)
-
-**Off / On.** Turns the chord-shape overlays on the neck on and off — see
-[Chord shapes](#chord-shapes) below for what they draw and the settings that go with them.
 
 ### 3 Notes Per String
 
@@ -149,7 +219,9 @@ an empty neck.
 **Full / Limited.** Every mode. **Limited** frames a
 [position window](#fret-range-limiter) on the neck so you can work a span of frets; **Full**
 gives the whole neck back. While the window is up, the group carries a third chip reading the
-span — **3–8** — which opens as a menu of named positions.
+span — **3–8** — which opens as a menu of named positions. A named position that would reach
+past the end of your neck is *dropped* from that menu rather than squeezed to fit: a 12th
+position crushed into two frets is not the 12th position.
 
 ### Triad lines
 
@@ -162,7 +234,9 @@ string set stays marked without one.
 
 In Chords mode, the **Chord Shapes** group in the Visual Groupings bar draws real, playable
 fingerings for the selected chord on the neck, taken from an open chord-fingering database.
-Set it to **On** to show them and **Off** to hide them. Three settings in Settings → Fretboard
+It is the first group in the bar, on the left, because in Chords and Progressions the chord
+is the thing the neck is drawing and everything else is laid over it. Set it to **On** to show
+the fingerings and **Off** to hide them. Three settings in Settings → Fretboard
 → Shape Overlays shape how they behave:
 
 - **Show Finger Numbers** — prints which finger plays each note.
@@ -197,7 +271,8 @@ it stays tappable.
 
 While the window is up, the **Fret Range** group carries a value chip reading the span —
 **3–8**. It is also a menu: open it to jump straight to a named position — *Open*, *3rd*,
-*5th*, *7th*, *9th* or *12th*. Scale playback follows the window too.
+*5th*, *7th*, *9th* or *12th* — the ones that fit on the neck you have. Scale playback follows
+the window too.
 
 ## Tap to play
 
@@ -206,6 +281,15 @@ Tap any visible marker to hear that note, using the instrument set in
 notes at once to sound a chord, and slide a finger along the neck to move the sounding note
 with it. Only visible markers respond, so tapping empty wood stays silent.
 
+**A press sustains; a lift stops it.** Hold a marker and the note is held for as long as you
+hold it. Let go and it stops — but never before it has rung for a second and a half, so a
+quick tap sounds like a pluck rather than a blip. Sliding off a note stops it at once, the way
+lifting a fretting finger does.
+
 Notes light up while they sound — including notes played back by the Scale and Chord chips,
 and notes recognized by [Live Detect](practice-tools.md#live-detect), so you can see what you
 just played.
+
+**On the Mac,** the pointer turns to a hand over anything that responds to a click — a marker,
+a chip, a panel header — so the neck says what is live before you press it. Hovering a chip row
+lights the chip you are about to hit.

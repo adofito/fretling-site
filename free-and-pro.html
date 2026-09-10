@@ -15,6 +15,10 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.fretling.app/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/free-and-pro.html">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/free-and-pro.html">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/es/free-and-pro.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/free-and-pro.html">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -56,7 +60,7 @@
       </a>
       <nav class="chip-nav" aria-label="Guide sections">
         <ul>
-          <li><a href="index.html" data-mark="guide">Guide</a></li>
+          <li><a href="guide.html" data-mark="guide">Guide</a></li>
           <li><a href="learning-modes.html" data-mark="modes">Learning Modes</a></li>
           <li><a href="fretboard.html" data-mark="fretboard">Fretboard</a></li>
           <li><a href="practice-tools.html" data-mark="tools">Practice Tools</a></li>
@@ -65,12 +69,12 @@
         </ul>
       </nav>
       <div class="header-controls">
-      <div class="theme-control" role="group" aria-label="Appearance">
-        <button type="button" data-theme="system" aria-pressed="true">System</button>
-        <button type="button" data-theme="light" aria-pressed="false">Light</button>
-        <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
-      </div>
-      <a class="lang-switch" href="es/free-and-pro.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
+        <div class="theme-control" role="group" aria-label="Appearance">
+          <button type="button" data-theme="system" aria-pressed="true">System</button>
+          <button type="button" data-theme="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+        </div>
+        <a class="lang-switch" href="es/free-and-pro.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
       </div>
     </div>
   </header>
@@ -127,12 +131,26 @@
       <p>Locked features stay visible where they live, dimmed with a small lock, so you always know what is there. A locked scale or setting opens one quiet paywall sheet when you tap it: what Pro holds, and the price. The three Pro practice tools — the amp, the looper and Live Detect — wear a lock badge on their icon and still <em>open</em> when tapped: the panel says what the tool does and offers an <strong>Unlock Fretling Pro</strong> button, so you meet the feature before you meet the price. Nothing counts down, nags, or interrupts on its own.</p>
     </section>
 
+    <section class="section-card" id="trial">
+      <h2>The 14-day trial</h2>
+      <p>You can try everything in Pro free for two weeks. The button is on the unlock sheet and reads <strong>Try Pro free for 14 days</strong>; nothing starts on its own, and nothing starts on first launch.</p>
+      <ul>
+        <li><strong>Why it exists.</strong> Most of Pro is a deeper version of something the free tier already shows you. The two things that have no free version to sample are the <a href="practice-tools.html#amp">amp</a> and the <a href="practice-tools.html#looper">looper</a>, and those are what the trial is really for: put a guitar through it for two weeks and find out.</li>
+        <li><strong>What it costs.</strong> Nothing. It is a free purchase, so it goes through the App Store, but no money moves and nothing renews.</li>
+        <li><strong>What you get.</strong> All of Pro, on every Mac and iPad signed into your Apple Account, for the same fourteen days whichever device you started it on.</li>
+        <li><strong>What it says before it starts.</strong> How long it lasts, what stops working when it ends, and what the full unlock costs &mdash; all on the sheet, before you press anything.</li>
+        <li><strong>While it runs</strong>, the <strong>Fretling Pro</strong> row in the settings sidebar counts the days down, and the unlock button stays where it is so you can buy without waiting for the trial to run out.</li>
+        <li><strong>How it ends.</strong> Silently. There is no modal and no interruption mid-practice: Fretling simply returns to the free tier, and every setting you chose stays exactly where it is. Turn Pro on later and all of it is still there.</li>
+        <li><strong>Once per Apple Account.</strong> The trial is not Family-Shareable &mdash; a shared trial would be a shared clock, and a household would burn one set of fourteen days between them. Reinstalling or moving to a new Mac does not hand out a second one either: the clock runs from the App Store purchase date, not from a stamp on your disk. Pro itself keeps Family Sharing.</li>
+      </ul>
+    </section>
+
     <section class="section-card" id="how-it-works">
       <h2>How unlocking works</h2>
       <ul>
         <li><strong>One purchase, once.</strong> Fretling Pro is a single one-time App Store purchase — no subscription, nothing recurring.</li>
-        <li><strong>Every device.</strong> The same purchase unlocks Fretling on Mac, iPad, and iPhone signed into your Apple Account, and it supports Family Sharing.</li>
-        <li><strong>Your settings survive the lock.</strong> If a Pro setting is stored — say the tuner was on Precision — the app quietly uses the free equivalent until you unlock, then your stored choice comes straight back. Nothing is reset.</li>
+        <li><strong>Every device.</strong> The same purchase unlocks Fretling on every <strong>Mac and iPad</strong> signed into your Apple Account, and it supports Family Sharing. (iPhone is not a supported device &mdash; the layout is built around a wide neck.)</li>
+        <li><strong>Your settings survive the lock.</strong> If a Pro setting is stored, the app quietly uses the free equivalent until you unlock, then your stored choice comes straight back. A Pro scale reads as Major, Precision reads as Fast, the Trace, Strobe and Disc displays read as Needle, and the Drums pack plays Classic. Nothing is reset and nothing is rewritten.</li>
         <li><strong>Restore anytime.</strong> The paywall's <em>Restore Purchases</em> re-checks your Apple Account on a new device or after a reinstall. The entry point lives at the bottom of the settings sidebar, under <em>Fretling Pro</em>.</li>
       </ul>
     </section>
@@ -145,8 +163,8 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Fretling — Scale Tones and Chords. User guide for version 1.1.</p>
-      <p><a href="privacy.html">Privacy</a> &middot; <a href="index.html">Guide home</a></p>
+      <p>Fretling — Scale Tones and Chords. User guide for version 1.3.</p>
+      <p><a href="guide.html">Guide home</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="index.html">Home</a></p>
     </div>
   </footer>
 

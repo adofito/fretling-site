@@ -15,6 +15,10 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.fretling.app/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/settings.html">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/settings.html">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/es/settings.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/settings.html">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -56,27 +60,28 @@
       </a>
       <nav class="chip-nav" aria-label="Guide sections">
         <ul>
-          <li><a href="index.html" data-mark="guide">Guide</a></li>
+          <li><a href="guide.html" data-mark="guide">Guide</a></li>
           <li><a href="learning-modes.html" data-mark="modes">Learning Modes</a></li>
           <li><a href="fretboard.html" data-mark="fretboard">Fretboard</a></li>
           <li><a href="practice-tools.html" data-mark="tools">Practice Tools</a></li>
-          <li><a href="settings.html" data-mark="settings" aria-current="page">Settings</a></li><li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
+          <li><a href="settings.html" data-mark="settings" aria-current="page">Settings</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
         </ul>
       </nav>
       <div class="header-controls">
-      <div class="theme-control" role="group" aria-label="Appearance">
-        <button type="button" data-theme="system" aria-pressed="true">System</button>
-        <button type="button" data-theme="light" aria-pressed="false">Light</button>
-        <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
-      </div>
-      <a class="lang-switch" href="es/settings.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
+        <div class="theme-control" role="group" aria-label="Appearance">
+          <button type="button" data-theme="system" aria-pressed="true">System</button>
+          <button type="button" data-theme="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+        </div>
+        <a class="lang-switch" href="es/settings.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
       </div>
     </div>
   </header>
 
   <main id="main" class="container">
     <h1>Settings</h1>
-    <p class="lede">The settings sidebar slides in from the left, opened with the button at the left end of the top bar. It has three tabs — <strong>Fretboard</strong>, <strong>Audio</strong>, and <strong>Icon</strong> — and a link to About at the bottom.</p>
+    <p class="lede">The settings sidebar slides in from the left, opened with the button at the left end of the top bar. It has three tabs — <strong>Fretboard</strong>, <strong>Audio</strong>, and <strong>Icon</strong> — and two rows below them: <strong>Fretling Pro</strong> and <strong>About Fretling</strong>.</p>
 
     <div class="callout">
       <p>Not everything lives in here. The settings you change constantly sit on the chip bars that bracket the neck: <a href="fretboard.html#marker-bar">marker display</a> above it, <a href="fretboard.html#overlays">Visual Groupings</a> below it. The sidebar holds the things you set once and leave alone.</p>
@@ -110,9 +115,9 @@
         <table>
           <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
           <tbody>
-            <tr><td><strong>Theme</strong></td><td>System / Light / Dark</td><td>Follow the device appearance, or pin Fretling to light or dark.</td></tr>
-            <tr><td><strong>Modules</strong></td><td>Auto / Machined / Studio</td><td>How the floating practice tools are drawn. Auto gives the light canvas the Machined panel and the dark canvas the Studio one; pin either to keep it everywhere.</td></tr>
-            <tr><td><strong>Language</strong></td><td>System / English / Español</td><td>Follow the device language, or pin Fretling to English or Spanish. A change takes effect when the app next opens: Fretling offers to relaunch right away on Mac (<em>Relaunch Now</em>) or to quit on iPad (<em>Quit Fretling</em>), or choose <em>Later</em> and it switches on its own the next time you open it.</td></tr>
+            <tr><td><strong>Theme</strong></td><td>System (default) / Light / Dark</td><td>Follow the device appearance, or pin Fretling to light or dark.</td></tr>
+            <tr><td><strong>Modules</strong></td><td>Auto (default) / Machined / Studio</td><td>How the floating practice tools are drawn. Auto gives the light canvas the Machined panel and the dark canvas the Studio one; pin either to keep it everywhere.</td></tr>
+            <tr><td><strong>Language</strong></td><td>System (default) / English / Español</td><td>Follow the device language, or pin Fretling to English or Spanish. A change takes effect when the app next opens: Fretling offers to relaunch right away on Mac (<em>Relaunch Now</em>) or to quit on iPad (<em>Quit Fretling</em>), or choose <em>Later</em> and it switches on its own the next time you open it. The caption under the row says so plainly: <em>Applies the next time Fretling opens.</em></td></tr>
           </tbody>
         </table>
       </div>
@@ -135,14 +140,14 @@
         <table>
           <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
           <tbody>
-            <tr><td><strong>CAGED Display</strong></td><td>Box / Lines / Both</td><td>How a CAGED shape is drawn: region outline, connecting lines through its notes, or both.</td></tr>
+            <tr><td><strong>CAGED Display</strong></td><td>Box (default) / Lines / Both</td><td>How a CAGED shape is drawn: region outline, connecting lines through its notes, or both.</td></tr>
             <tr><td><strong>Timeline Shape Cues</strong></td><td>Toggle</td><td>Also marks the shape's tones on the timeline. Requires chord shapes to be on.</td></tr>
             <tr><td><strong>Show Finger Numbers</strong></td><td>Toggle</td><td>Prints finger numbers on chord shapes. Requires chord shapes to be on.</td></tr>
-            <tr><td><strong>CAGED Interaction</strong></td><td>Coexist / Exclusive / Replace CAGED</td><td>Chords mode. What happens when chord shapes and CAGED are both on — draw both, let shapes take over while they are on, or have shapes replace CAGED entirely (which also removes the CAGED chips from Visual Groupings).</td></tr>
+            <tr><td><strong>CAGED Interaction</strong></td><td>Coexist (default) / Exclusive / Replace CAGED</td><td>Chords mode. What happens when chord shapes and CAGED are both on — draw both, let shapes take over while they are on, or have shapes replace CAGED entirely (which also removes the CAGED chips from Visual Groupings).</td></tr>
           </tbody>
         </table>
       </div>
-      <p>Chord shapes themselves are switched on and off in the <strong>Chord Shapes</strong> group of the <a href="fretboard.html#chord-shapes-chords-and-progressions">Visual Groupings</a> bar under the neck, not here — it is an overlay you reach for often, so it sits beside the fretboard it changes. The two rows above follow it and dim while it is off.</p>
+      <p>Chord shapes themselves are switched on and off in the <strong>Chord Shapes</strong> group of the <a href="fretboard.html#chord-shapes-chords">Visual Groupings</a> bar under the neck, not here — it is an overlay you reach for often, so it sits beside the fretboard it changes. The two rows above follow it and dim while it is off.</p>
       <p>The whole Shape Overlays group is dimmed while you are identifying a chord — there is no key to lay a shape against.</p>
     </section>
 
@@ -153,14 +158,25 @@
         <table>
           <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
           <tbody>
-            <tr><td><strong>Instrument</strong></td><td>Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel), Jazz Guitar, Clean Electric Guitar, Sine Wave</td><td>The voice used when you tap notes on the neck. Sine Wave is synthesized; the rest come from a General MIDI SoundFont.</td></tr>
+            <tr><td><strong>Instrument</strong></td><td>Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel) &mdash; the default, Jazz Guitar, Clean Electric Guitar, Sine Wave</td><td>The voice used when you tap notes on the neck. Sine Wave is synthesized; the rest are recorded samples, from two sources bundled with the app &mdash; the FreePats General MIDI set, which is public domain, and GeneralUser GS. Both are credited in About.</td></tr>
           </tbody>
         </table>
       </div>
 
       <h3>Chord Pad Layers</h3>
-      <p>Chords can be voiced by stacking up to three instruments, which is how you get a pad behind a chord rather than one flat sample. Each layer has its own instrument, volume, and mute; <strong>Add Layer</strong> adds one, up to the maximum.</p>
-      <p>Layers apply to chord playback — the Chord chip beside the timeline, Chord Atlas previews, and progression playback. Tapping single notes always uses the Instrument setting above.</p>
+      <p>Chords can be voiced by stacking up to <strong>three</strong> instruments, which is how you get a pad behind a chord rather than one flat sample. <strong>Add Layer</strong> adds one, up to that maximum.</p>
+      <p>Each layer carries four controls of its own:</p>
+      <ul>
+        <li><strong>Instrument</strong> — one of seventeen voices chosen for stacking: Pad 1 (New Age), Pad 2 (Warm), Pad 3 (Polysynth), Pad 4 (Choir), Pad 5 (Bowed), String Ensemble 1 and 2, Synth Strings 1 and 2, Choir Aahs, Voice Oohs, Church Organ, Drawbar Organ, Rock Organ, Acoustic Piano, and Electric Piano 1 and 2.</li>
+        <li><strong>Mute</strong> — silences that layer without removing it, so you can hear what it was contributing.</li>
+        <li><strong>Volume</strong> — that layer's share of the stack.</li>
+        <li><strong>Velocity</strong> — 1 to 127, default 100. This is not a second volume: a velocity picks which recorded sample the layer plays, so it changes the <em>timbre</em> of the voice as well as its level, the way hitting a piano key harder does.</li>
+      </ul>
+      <p>A fresh install starts with three layers already stacked &mdash; Pad 2 (Warm) at 1.0, String Ensemble 1 at 0.55, and Choir Aahs at 0.4. A layer you add yourself starts as Pad 2 (Warm) at 0.5. Double-click any slider to put it back to the default for that slot.</p>
+
+      <h3>Humanize</h3>
+      <p>One slider below the layers, from 0 to 24, default <strong>None</strong>. It varies each note's velocity a little so repeated chords don't sound machine-stamped. It belongs to the pad as a whole rather than to one layer, which is why it sits once underneath the list: it perturbs every note the layers play.</p>
+      <p>Layers apply to chord playback — the Chord chip beside the timeline and Chord Atlas previews. Tapping single notes always uses the Instrument setting above.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/20-settings-audio-light.webp"
              width="1936" height="1210" loading="lazy" decoding="async"
@@ -186,9 +202,20 @@
       </figure>
 </section>
 
+    <section class="section-card" id="pro-row">
+      <h2>The Fretling Pro row</h2>
+      <p>Above About, a <strong>Fretling Pro</strong> row is the only way into the unlock sheet. It reads its own state rather than always saying the same thing:</p>
+      <ul>
+        <li><strong>Unlocked &mdash; thanks for the support</strong>, once you have bought it.</li>
+        <li><strong>Trial &mdash; <em>N</em> days left</strong>, while the <a href="free-and-pro.html#trial">free trial</a> is running, counting down.</li>
+        <li><strong>The amp, the looper, precision tuning, and more</strong>, otherwise &mdash; what the row is offering, rather than a bare price.</li>
+      </ul>
+      <p><strong>Restore Purchases</strong> lives on the unlock sheet itself, not in this row, so a new Mac or iPad restores from the same place the purchase happens.</p>
+    </section>
+
     <section class="section-card" id="about">
       <h2>About and tips</h2>
-      <p>At the bottom of the sidebar, <strong>About Fretling</strong> opens a screen with the version and build number, a plain-language privacy summary, and credits for the open-source components Fretling is built on — the chord fingering database, the SoundFont used for instrument playback, the recorded drum kit behind the Drums pack, and the Neural Amp Modeler engine with its dependencies.</p>
+      <p>At the bottom of the sidebar, <strong>About Fretling</strong> opens a screen with the version and build number, a plain-language privacy summary, and seven credits for the open-source work Fretling is built on: the chord fingering database, the <strong>two</strong> sound sources behind instrument playback (the FreePats General MIDI set and GeneralUser GS), the recorded drum kit behind the Drums pack, and the Neural Amp Modeler engine with its two dependencies.</p>
       <p>The About screen also holds an optional <strong>tip jar</strong>. Tips are ordinary in-app purchases handled by Apple, in three sizes. <strong>They unlock nothing</strong> — every feature is available whether or not you ever tip.</p>
           <figure class="shot" style="--shot-max: 620px">
         <img class="shot-light" src="screenshots/22-about-sheet-light.webp"
@@ -204,8 +231,8 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Fretling — Scale Tones and Chords. User guide for version 1.1.</p>
-      <p><a href="privacy.html">Privacy</a> &middot; <a href="index.html">Guide home</a></p>
+      <p>Fretling — Scale Tones and Chords. User guide for version 1.3.</p>
+      <p><a href="guide.html">Guide home</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="index.html">Home</a></p>
     </div>
   </footer>
 

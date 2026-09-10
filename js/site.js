@@ -31,7 +31,11 @@
   // Everything the script writes into the page at runtime goes through T(), so the
   // demo neck stays in the page's language after the first interaction; the scale
   // names match Fretling's own ScaleTypes table.
-  var LANG_ES = document.documentElement.lang === 'es';
+  // Guarded, because this line runs before the `module.exports` escape hatch below:
+  // the pre-render command in README.md requires this file in node, where there is no
+  // document at all. Unguarded, it threw and the neck could not be regenerated.
+  var LANG_ES = typeof document !== 'undefined'
+    && document.documentElement.lang === 'es';
   var STRINGS_ES = {
     'More scales': 'Más escalas',
     'Play scale': 'Reproducir escala',

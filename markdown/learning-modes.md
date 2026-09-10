@@ -12,7 +12,7 @@ dropdown; changing one rewrites what the fretboard shows.
 | **learn / identify** | The verb picks what the app is for right now — showing you something (learn) or naming something you play ([identify](#identify-a-chord)). Switching to identify leaves your learn setup untouched, so switching back restores it exactly. |
 | **Mode** | Scales, Chords, Triads. |
 | **Root note** | All twelve notes. Names follow the ♯/♭ choice in the marker display bar. |
-| **Scale type** | Major, Minor and Pentatonic Major sit at the top; *More scales* opens the rest — Pentatonic Minor, Blues, Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor. |
+| **Scale type** | Major, Minor, Pentatonic Major and Pentatonic Minor sit at the top; *More scales* opens the rest — Blues, Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor. |
 | **Chord** | In Chords mode, and optionally in Scales mode, a chord picker backed by the Chord Atlas. |
 
 The header scrolls horizontally on narrow windows rather than wrapping, so the sentence
@@ -51,6 +51,12 @@ chord picker is the **Chord Atlas**: it lists the chords of the key with their R
 numerals, lets you preview each one, and reaches beyond the diatonic seven when you want it
 to.
 
+**In a key, or without one:** the word **in** is itself a dropdown, with the same two choices
+identify has. Pick *without a key* and the key is dropped: the scale leaves the sentence, and
+the interval colors re-anchor on the chord's own root, so what you see is the chord measured
+from itself rather than from a key it may not belong to. It stays a dropdown in both states, so
+the key goes back on from the same place it came off.
+
 **Borrowed harmony:** the Atlas does not stop at the seven chords of the key. Pick a chord
 from outside it and the Atlas names the borrowing rather than shrugging: a secondary
 dominant reads **Borrowed · V/V**, a chord taken from the parallel mode reads
@@ -68,6 +74,33 @@ optionally cued on the timeline. See [Chord shapes](fretboard.md#chord-shapes).
 
 **Use it to:** see how the chords of a key relate to one another, and how each one maps onto
 a CAGED shape.
+
+## The Chord Atlas
+
+The Atlas is Fretling's chord catalog, and it is free in every mode. Open it from the **Atlas**
+button in the header, or from the chord slot at the end of the Scales sentence; in identify, a
+reading you like carries an **Open in Chord Atlas** action that takes the chord straight there.
+
+**How it is laid out:** a strip of the twelve roots across the top, then the qualities grouped
+into families — triads, sevenths, sixths, suspended, added-tone, altered — then the modifiers,
+and last a slash bass if you want one. Pick a root, pick a quality, and the neck follows
+immediately.
+
+**Preview without committing:** tapping a quality plays it, and the Atlas stays open. That is
+the point of it — you can compare four voicings by ear in a row without dismissing the sheet
+and reopening it each time. There is a separate hear control as well, so the preview is
+reachable without the tap.
+
+**It knows your key.** Every chord carries its Roman numeral for the key in the sentence, and
+the chords of the key sort to the front. A chord from outside the key is not simply listed: the
+Atlas names the borrowing. A secondary dominant reads **Borrowed · V/V**, a chord taken from the
+parallel mode reads **Borrowed · iv**, and modal interchange is labeled as such. Nothing has to
+be switched on, and none of it is behind the Pro unlock.
+
+**It follows the marker display bar.** Labels, Colors and Accidentals reach the Atlas the way
+they reach the neck, so a chord spelled with flats on the fretboard is spelled with flats here.
+The one deliberate difference: with **Labels** set to *None* the Atlas keeps its chord names,
+because a catalog with no names on it is not a catalog.
 
 ## Triads
 
@@ -99,11 +132,12 @@ are named on their own terms.
 
 - **Tap them onto the neck.** Tap a position to place a note, tap it again to remove it. A
   placement toolbar gives you **Undo**, **Clear**, and a running count of placed notes.
-- **Play them.** Press **Listen** in the placement toolbar — it opens
-  [Live Detect](practice-tools.md#live-detect) and starts it listening — play the chord, and
-  press **Capture what I played** to place what it heard on the neck, in place of whatever
-  you had put there (Undo brings that back). The same move is on Live Detect's own panel as
-  **Send to fretboard**.
+- **Play them.** *(Pro)* Press **Listen** in the placement toolbar — it opens
+  [Live Detect](practice-tools.md#live-detect), raises its panel so the Stop control is
+  reachable, and starts it listening. Play the chord, then press **Capture what I played** to
+  place what it heard on the neck, in place of whatever you had put there (Undo brings that
+  back). The same move is on Live Detect's own panel as **Send to fretboard**. Without Pro the
+  button shows the unlock sheet and the microphone never opens.
 
 ### Reading the results
 

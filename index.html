@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fretling – User Guide</title>
-  <meta name="description" content="User guide for Fretling, a guitar learning app for Mac and iPad: scales, chords, triads, chord identification, and practice tools.">
+  <title>Fretling – Guitar scales, chords, amp and looper for Mac and iPad</title>
+  <meta name="description" content="Fretling is a guitar workstation for Mac and iPad: say what you want to learn in plain language and see it on an interactive fretboard, identify the chords you play, and plug in through a Neural Amp Modeler amp with a looper. Free, with a one-time Pro unlock.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fretling">
-  <meta property="og:title" content="Fretling – User Guide">
-  <meta property="og:description" content="User guide for Fretling, a guitar learning app for Mac and iPad: scales, chords, triads, chord identification, and practice tools.">
+  <meta property="og:title" content="Fretling">
+  <meta property="og:description" content="Fretling is a guitar workstation for Mac and iPad: say what you want to learn in plain language and see it on an interactive fretboard, identify the chords you play, and plug in through a Neural Amp Modeler amp with a looper. Free, with a one-time Pro unlock.">
   <meta property="og:url" content="https://www.fretling.app/">
   <meta property="og:image" content="https://www.fretling.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.fretling.app/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/es/">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -35,7 +39,7 @@
     })();
   </script>
 </head>
-<body data-page="guide">
+<body data-page="home">
   <a href="#main" class="skip-link">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
@@ -56,41 +60,43 @@
       </a>
       <nav class="chip-nav" aria-label="Guide sections">
         <ul>
-          <li><a href="index.html" data-mark="guide" aria-current="page">Guide</a></li>
+          <li><a href="guide.html" data-mark="guide">Guide</a></li>
           <li><a href="learning-modes.html" data-mark="modes">Learning Modes</a></li>
           <li><a href="fretboard.html" data-mark="fretboard">Fretboard</a></li>
           <li><a href="practice-tools.html" data-mark="tools">Practice Tools</a></li>
-          <li><a href="settings.html" data-mark="settings">Settings</a></li><li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
+          <li><a href="settings.html" data-mark="settings">Settings</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
         </ul>
       </nav>
       <div class="header-controls">
-      <div class="theme-control" role="group" aria-label="Appearance">
-        <button type="button" data-theme="system" aria-pressed="true">System</button>
-        <button type="button" data-theme="light" aria-pressed="false">Light</button>
-        <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
-      </div>
-      <a class="lang-switch" href="es/index.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
+        <div class="theme-control" role="group" aria-label="Appearance">
+          <button type="button" data-theme="system" aria-pressed="true">System</button>
+          <button type="button" data-theme="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+        </div>
+        <a class="lang-switch" href="es/index.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
       </div>
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="container">
       <div class="hero-masthead">
         <div class="hero-head">
           <h1>Say what you want to <em data-hl="intent">learn</em>. The fretboard shows it.</h1>
         </div>
         <div class="hero-aside">
-          <p class="lede">Fretling is a guitar learning app for Mac and iPad. You say what you want to learn in plain language, and the fretboard shows it. Tap any note to hear it. Practice tools &mdash; tuner, metronome, amp, looper &mdash; live one tap away, over the same neck.</p>
+          <p class="lede">Fretling is a guitar workstation for Mac and iPad. Say what you want to learn in plain language and see it on an interactive neck you can tap to hear. Play a chord and Fretling names it. Then plug in: a Neural Amp Modeler amp, a looper, a tuner and a metronome with real drums float over the same neck.</p>
           <p class="hero-meta">
             <span>Mac and iPad</span>
-            <span>No account</span>
-            <span>No analytics</span>
-            <span>Runs offline</span>
+            <span>Free, with a one-time Pro unlock</span>
+            <span>No account, no analytics</span>
+            <span>English and Spanish</span>
           </p>
-          <p class="hero-actions">
-            <a class="hero-cta" href="#the-guide">Open the guide <span class="arr" aria-hidden="true">&rarr;</span></a>
-            <a class="quiet" href="learning-modes.html">How the sentence works</a>
+          <p class="hero-actions" data-store-cta data-store-state="soon">
+            <span class="hero-cta" aria-disabled="true" data-store-when="soon">Coming soon to the App Store &mdash; Mac and iPad</span>
+            <a class="hero-cta" href="https://apps.apple.com/app/id6758277302" data-store-when="live">Get Fretling on the App Store <span class="arr" aria-hidden="true">&rarr;</span></a>
+            <a class="quiet" href="guide.html">Read the user guide</a>
           </p>
         </div>
       </div>
@@ -166,128 +172,317 @@
       </div>
       <figcaption class="figure-caption">The app&rsquo;s screen, live. Change the note or the scale, switch the chips above the neck, play the scale, or tap any marker to hear it.</figcaption>
     </figure>
+
     </div>
   </section>
 
   <main id="main" class="container">
-    <section class="section-card" id="what-it-does">
-      <h2>What it does</h2>
-      <ul>
-        <li><strong>Learn</strong> scales, diatonic chords, and triads in any key, with CAGED shapes, position boxes, and three-notes-per-string patterns laid over the neck.</li>
-        <li><strong>Identify</strong> a chord by tapping notes onto the neck, or by playing it into the mic &mdash; Fretling ranks the readings.</li>
-        <li><strong>Hear</strong> anything you see: tap-to-play notes, one-tap scale and chord playback, six instrument voices.</li>
-        <li><strong>Practice</strong> with a chromatic tuner, a metronome with a step-sequenced drum machine, a Neural Amp Modeler amp, and a looper.</li>
-      </ul>
-      <p>Most of that is free for good. The drum sequencer, the amp, the looper, Live Detect, the tuner's Precision mode and the seven advanced scales come with the one-time <a href="free-and-pro.html">Fretling Pro</a> unlock, and are marked <span class="pro-badge">Pro</span> throughout this guide.</p>
-    </section>
-
-    <h2 class="section-heading" id="the-guide">The rest of the guide</h2>
-    <nav class="guide-index" aria-label="Documentation sections">
-      <a href="learning-modes.html" data-mark="modes">
-        <span class="gi-title">Learning Modes</span>
-        <span class="gi-desc">Scales, Chords, Triads &mdash; and identifying a chord from notes you place or play.</span>
-        <span class="gi-go" aria-hidden="true">&rarr;</span>
+    <nav class="pools" id="two-pools" aria-label="What Fretling does">
+      <a href="#see-it" data-mark="see">
+        <span class="pool-title">See it</span>
+        <span class="pool-desc">Scales, diatonic chords and triads in any key, across the whole neck, with CAGED, Box Shapes and 3NPS laid over the top.</span>
+        <span class="pool-go">The fretboard &rarr;</span>
       </a>
-      <a href="fretboard.html" data-mark="fretboard">
-        <span class="gi-title">Fretboard</span>
-        <span class="gi-desc">Markers, the display bar, timeline, overlays, chord shapes, fret range, tap-to-play.</span>
-        <span class="gi-go" aria-hidden="true">&rarr;</span>
+      <a href="#hear-it" data-mark="hear">
+        <span class="pool-title">Hear it</span>
+        <span class="pool-desc">Tap any note to play it. Run a scale or sustain a chord from one button, through sampled pianos and guitars.</span>
+        <span class="pool-go">The sound &rarr;</span>
       </a>
-      <a href="practice-tools.html" data-mark="tools">
-        <span class="gi-title">Practice Tools</span>
-        <span class="gi-desc">Tuner, metronome and drums, guitar amp, looper, mixer, Live Detect.</span>
-        <span class="gi-go" aria-hidden="true">&rarr;</span>
-      </a>
-      <a href="settings.html" data-mark="settings">
-        <span class="gi-title">Settings</span>
-        <span class="gi-desc">Every option in the sidebar: Fretboard, Audio, and Icon tabs.</span>
-        <span class="gi-go" aria-hidden="true">&rarr;</span>
-      </a>
-      <a href="free-and-pro.html" data-mark="pro">
-        <span class="gi-title">Free &amp; Pro</span>
-        <span class="gi-desc">What's free for good, and what the one-time Pro unlock adds.</span>
-        <span class="gi-go" aria-hidden="true">&rarr;</span>
+      <a href="#plug-in" data-mark="play">
+        <span class="pool-title">Plug in</span>
+        <span class="pool-desc">Your guitar through a Neural Amp Modeler amp, a looper locked to the click, a tuner and a metronome with real drums.</span>
+        <span class="pool-go">The gear &rarr;</span>
       </a>
     </nav>
 
-    <section class="section-card" id="anatomy">
-      <h2>Anatomy of the screen</h2>
-      <p>Everything sits around one stable fretboard. A fixed bar of app controls runs across the top, two chip bars bracket the neck, and the practice tools open as floating panels that you can drag out of the way.</p>
-      <div class="table-scroll">
-        <table>
-          <thead>
-            <tr><th>Where</th><th>What sits there</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>The top bar</td><td>One band across the top of the canvas. The Settings button sits at the leading end and slides the <a href="settings.html">sidebar</a> in; the <a href="practice-tools.html#performance">performance readout</a> and the <a href="practice-tools.html#input">microphone lamp and meter</a> come next; the six practice tool icons — tuner, amp, looper, Live Detect, mixer, metronome — sit at the trailing end. Each opens a floating panel that can be dragged, minimized to a one-row strip, or closed. See <a href="practice-tools.html">Practice Tools</a>.</td></tr>
-            <tr><td>Above the neck</td><td>The sentence you build, an optional <a href="fretboard.html#timeline">scale timeline</a>, then the <a href="fretboard.html#marker-bar">marker display bar</a> &mdash; Frets, Labels, Shapes, Colors, Accidentals.</td></tr>
-            <tr><td>The neck</td><td>Six strings, 12 to 22 frets (fifteen by default), every scale or chord tone drawn as a marker. Tap one to hear it.</td></tr>
-            <tr><td>Below the neck</td><td><a href="fretboard.html#overlays">Visual Groupings</a>: CAGED, Box Shapes, chord shapes, three-notes-per-string, string sets in Triads, and the Non-Chord Notes and Fret Range switches.</td></tr>
-          </tbody>
-        </table>
+    <section class="feature" id="say-it" data-layout="stacked">
+      <div class="feature-body">
+        <h2>Say it in plain language</h2>
+        <p>One sentence runs across the top of the screen, and every colored word in it is a dropdown. Change a word and the neck redraws.</p>
+        <ul>
+          <li><strong>Learn</strong> or <strong>identify</strong> — the intent you are in.</li>
+          <li><strong>Scales</strong>, <strong>chords</strong> or <strong>triads</strong> — what you are looking at.</li>
+          <li><strong>Any root</strong>, and twelve scales, four triad types, or the chords of the key.</li>
+        </ul>
+        <p>There is no theory jargon at the front door. Major, Minor and both Pentatonics lead the scale menu; <em>More scales</em> holds Blues, which is free too, and seven advanced scales that need the unlock. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
       </div>
-          <figure class="shot">
-        <img class="shot-light" src="screenshots/01-app-scales-light.webp"
-             width="1936" height="1210" loading="lazy" decoding="async"
-             alt="The Fretling window in Scales mode: the sentence header across the top, the scale timeline and marker display bar above the neck, six strings of E Major markers, and the Visual Groupings chips below.">
-        <img class="shot-dark" src="screenshots/01-app-scales-dark.webp"
-             width="1936" height="1210" loading="lazy" decoding="async"
-             alt="The Fretling window in Scales mode: the sentence header across the top, the scale timeline and marker display bar above the neck, six strings of E Major markers, and the Visual Groupings chips below.">
-        <figcaption class="figure-caption">Everything sits around one stable fretboard.</figcaption>
-      </figure>
-      <figure class="shot">
-        <img class="shot-light" src="screenshots/03-tool-icon-row-light.webp"
-             width="1936" height="83" loading="lazy" decoding="async"
-             alt="The top menu bar across the window: the Settings button at the left end, and at the right the input lamp and level meter followed by the tuner, guitar amp, looper, Live Detect, mixer and metronome icons.">
-        <img class="shot-dark" src="screenshots/03-tool-icon-row-dark.webp"
-             width="1936" height="83" loading="lazy" decoding="async"
-             alt="The top menu bar across the window: the Settings button at the left end, and at the right the input lamp and level meter followed by the tuner, guitar amp, looper, Live Detect, mixer and metronome icons.">
-        <figcaption class="figure-caption">One band holds the app's controls: settings at one end, the input and the six practice tools at the other.</figcaption>
-      </figure>
-</section>
+      <div class="feature-media">
+        <figure class="shot" style="--shot-max: 810px">
+          <img class="shot-light" src="screenshots/02-header-sentence-light.webp"
+               width="1680" height="138" loading="lazy" decoding="async"
+               alt="The natural-language header reading “I want to learn scales in E Major: A”, with each changeable word drawn as a colored chip and the chord chip last.">
+          <img class="shot-dark" src="screenshots/02-header-sentence-dark.webp"
+               width="1680" height="138" loading="lazy" decoding="async"
+               alt="The natural-language header reading “I want to learn scales in E Major: A”, with each changeable word drawn as a colored chip and the chord chip last.">
+          <figcaption class="figure-caption">The sentence is the whole control surface.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-    <section class="section-card" id="quick-start">
-      <h2>Quick start</h2>
-      <ol>
-        <li>Read the sentence at the top and tap any colored word to change it: the <strong>verb</strong> (learn or identify), the <strong>mode</strong> (scales, chords, triads), the <strong>root note</strong>, and the <strong>scale type</strong>.</li>
-        <li>Tap notes on the neck to hear them. The instrument comes from <a href="settings.html#audio-tab">Settings &rarr; Audio</a>.</li>
-        <li>Use the <strong>Labels / Shapes / Colors / Accidentals</strong> chips above the neck to switch between note names and interval numbers.</li>
-        <li>Use the <strong>Visual Groupings</strong> chips below the neck to lay CAGED shapes, position boxes, chord shapes, or 3NPS patterns over what you are seeing.</li>
-        <li>Open the tools you need from the icon row at the right of the top bar &mdash; they float over the fretboard and can be dragged out of the way, or minimized to a one-row strip that keeps their main control live.</li>
-      </ol>
-          <figure class="shot" style="--shot-max: 810px">
-        <img class="shot-light" src="screenshots/02-header-sentence-light.webp"
-             width="1680" height="138" loading="lazy" decoding="async"
-             alt="The natural-language header reading “I want to learn scales in E Major: A”, with each changeable word drawn as a colored chip and the chord chip last.">
-        <img class="shot-dark" src="screenshots/02-header-sentence-dark.webp"
-             width="1680" height="138" loading="lazy" decoding="async"
-             alt="The natural-language header reading “I want to learn scales in E Major: A”, with each changeable word drawn as a colored chip and the chord chip last.">
-        <figcaption class="figure-caption">Every colored word is a dropdown. The sentence is the whole control surface.</figcaption>
-      </figure>
-</section>
+    <section class="feature" id="see-it" data-layout="stacked">
+      <div class="feature-body">
+        <h2>See the whole neck</h2>
+        <p>A scale is drawn across every string and every fret at once, not one box at a time. Chords arrive with real fingerings from a built-in database. Triads are grouped by string set, so you can walk one shape up the neck.</p>
+        <p>Below the neck sit the overlays: <strong>CAGED</strong>, <strong>Box Shapes</strong> and <strong>3NPS</strong>. Switch one on and it draws over what is already there. CAGED grips follow the chord — major grips for a major chord, minor for a minor one.</p>
+        <h3>Think in intervals</h3>
+        <p>One color per interval, everywhere in the app: the same pitch is the same color on the neck, on the timeline and in the Chord Atlas. Hue advances a fixed step per semitone, and three lightness bands keep neighbors apart for a reader who cannot separate red from green.</p>
+        <ul class="palette">
+          <li><span class="sw fb-t-0" aria-hidden="true">R</span><span class="nm"><b>Root</b>Unison</span></li>
+          <li><span class="sw fb-t-3" aria-hidden="true">♭3</span><span class="nm"><b>Minor 3rd</b>Three semitones</span></li>
+          <li><span class="sw fb-t-4" aria-hidden="true">3</span><span class="nm"><b>Major 3rd</b>Four semitones</span></li>
+          <li><span class="sw fb-t-7" aria-hidden="true">5</span><span class="nm"><b>Perfect 5th</b>Seven semitones</span></li>
+          <li><span class="sw fb-t-10" aria-hidden="true">♭7</span><span class="nm"><b>Minor 7th</b>Ten semitones</span></li>
+          <li><span class="sw fb-t-11" aria-hidden="true">7</span><span class="nm"><b>Major 7th</b>Eleven semitones</span></li>
+        </ul>
+        <p><strong>Shapes = Intervals</strong> gives every degree its own outline as well as its own color, so the neck still reads when you switch color off. <a href="fretboard.html">More about the fretboard</a></p>
+      </div>
+      <div class="feature-media" data-media="pair">
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/01-app-scales-light.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="Fretling showing E Major across the whole neck, with the sentence header above and the marker display bar and visual groupings bracketing the fretboard.">
+          <img class="shot-dark" src="screenshots/01-app-scales-dark.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="Fretling showing E Major across the whole neck, with the sentence header above and the marker display bar and visual groupings bracketing the fretboard.">
+          <figcaption class="figure-caption">A scale across the whole neck, colored by interval.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/14-caged-a-both-light.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The CAGED A shape drawn over the neck in Both display mode, its hull filled and its edges outlined around the scale markers inside it.">
+          <img class="shot-dark" src="screenshots/14-caged-a-both-dark.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The CAGED A shape drawn over the neck in Both display mode, its hull filled and its edges outlined around the scale markers inside it.">
+          <figcaption class="figure-caption">CAGED, drawn over the scale rather than instead of it.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="identify">
+      <div class="feature-body">
+        <h2>Play it, name it</h2>
+        <p>Tap the notes you are fingering onto the neck and Fretling names the chord, gives its Roman numeral in your key, says why, and lists the alternate readings underneath. The spelling strip shows every note in the chord, with the lowest badged as the bass.</p>
+        <p>Or play it, and let Fretling listen instead. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+        <p><a href="learning-modes.html#identify">How identifying works</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/07-identify-placement-light.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="Identify intent with four notes placed on the neck and the ranked chord readings listed beside them, the strongest reading first.">
+          <img class="shot-dark" src="screenshots/07-identify-placement-dark.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="Identify intent with four notes placed on the neck and the ranked chord readings listed beside them, the strongest reading first.">
+          <figcaption class="figure-caption">Notes in, readings out — ranked, with the reasoning.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="chord-atlas">
+      <div class="feature-body">
+        <h2>Every chord, in context</h2>
+        <p>The Chord Atlas opens from the header. Pick a root, pick a quality, hear it before you commit, and watch it land on the neck.</p>
+        <p>The Atlas knows the key you are in. It marks each chord with its Roman numeral, and it names borrowed harmony, secondary dominants and modal interchange on sight, rather than leaving you to work out why a chord that is not in the key still sounds right.</p>
+        <p>Free, in every mode. <a href="learning-modes.html#chord-atlas">More about the Chord Atlas</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/33-chord-atlas-light.webp"
+               width="1860" height="1565" loading="lazy" decoding="async"
+               alt="The Chord Atlas open over the fretboard in E Major, with the root strip along the top, the quality families below it, and each chord of the key carrying its Roman numeral.">
+          <img class="shot-dark" src="screenshots/33-chord-atlas-dark.webp"
+               width="1860" height="1565" loading="lazy" decoding="async"
+               alt="The Chord Atlas open over the fretboard in E Major, with the root strip along the top, the quality families below it, and each chord of the key carrying its Roman numeral.">
+          <figcaption class="figure-caption">The Atlas, open in E Major: roots across the top, qualities by family, Roman numerals in the key.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="hear-it">
+      <div class="feature-body">
+        <h2>Hear what you see</h2>
+        <p>Every marker is a button. Tap it to hear that note; press and hold to sustain it. On iPad you can hold several at once and slide along a string.</p>
+        <p>The scale timeline under the neck lays the key out left to right. Press the transport at the head of a rail to run the scale, or to sustain the chord, and the line beneath spells out what you are about to hear.</p>
+        <p>The voices are sampled instruments, not beeps: a grand piano, nylon and steel acoustic guitars, jazz and clean electric guitars, and a sine wave when you want the pitch and nothing else. Chords can stack up to three pad voices on top.</p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/12-timeline-brackets-light.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The scale timeline beneath the neck, showing the degrees of the key left to right with the transport at the head of the rail.">
+          <img class="shot-dark" src="screenshots/12-timeline-brackets-dark.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The scale timeline beneath the neck, showing the degrees of the key left to right with the transport at the head of the rail.">
+          <figcaption class="figure-caption">The timeline: the key laid out left to right, with its own transport.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="plug-in">
+      <div class="feature-body">
+        <h2>Plug in your guitar <a class="pro-badge" href="free-and-pro.html">Pro</a></h2>
+        <p>Monitor your own playing through a Neural Amp Modeler profile. Five models are built in — two clean, crunch, warm and acoustic — and you can load any <code>.nam</code> file you already own.</p>
+        <p>One input console serves the amp, the tuner and Live Detect together: interface, channel, gain, buffer size and sample rate in one place, with the round-trip latency shown in milliseconds.</p>
+        <p>The looper records what you play over the click — bars, count-in, overdubs, undo — so a progression you are working on becomes something to solo over.</p>
+        <div class="callout" data-accent="platform">
+          <p>On iPad, use a USB-C interface or headphones. Monitoring through the built-in speaker feeds straight back into the microphone, and the amp says so rather than letting it howl.</p>
+        </div>
+      </div>
+      <div class="feature-media">
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/26-amp-light.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The guitar amp panel floating over the fretboard, with its model list, tone controls, output level and peak meter.">
+          <img class="shot-dark" src="screenshots/26-amp-dark.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The guitar amp panel floating over the fretboard, with its model list, tone controls, output level and peak meter.">
+          <figcaption class="figure-caption">The amp, floating over the same neck you were reading.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/28-looper-light.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The looper panel with its bar length, count-in, record button and overdub controls, locked to the metronome's click.">
+          <img class="shot-dark" src="screenshots/28-looper-dark.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The looper panel with its bar length, count-in, record button and overdub controls, locked to the metronome's click.">
+          <figcaption class="figure-caption">The looper, locked to the click.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="practice-tools">
+      <div class="feature-body">
+        <h2>Practice tools, built like gear</h2>
+        <p>Six panels float over the neck. Each one drags where you want it, folds to a one-row strip that keeps working, and remembers where you left it.</p>
+        <ul>
+          <li><strong>Tuner</strong> — chromatic, to within 5 cents, free. Precision tuning to half a cent, with the Trace, Strobe and Disc displays, is <a class="pro-badge" href="free-and-pro.html">Pro</a></li>
+          <li><strong>Metronome</strong> — 40 to 250 BPM, eleven meters, five subdivisions, tap tempo and three click sounds, all free.</li>
+          <li><strong>Drums</strong> — a recorded acoustic kit with 61 beats in four sections and a step sequencer to edit them. <a class="pro-badge" href="free-and-pro.html">Pro</a></li>
+          <li><strong>Mixer</strong> — a fader for every voice: notes, chords, the click, the amp and the loop.</li>
+          <li><strong>Live Detect</strong> — Fretling listens and names what you are playing as you play it. <a class="pro-badge" href="free-and-pro.html">Pro</a></li>
+        </ul>
+        <p>Two finishes, <strong>Machined</strong> and <strong>Studio</strong>, or let them follow the theme. The space bar starts and stops the click and the loop together. <a href="practice-tools.html">More about the practice tools</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/34-modules-studio-light.webp"
+               width="1936" height="1408" loading="lazy" decoding="async"
+               alt="The tuner and the metronome open side by side over the neck in the Studio finish: graphite enclosures with brushed-steel faceplates, the tuner reading a flat A and the metronome set to 120 BPM with the drum kit.">
+          <img class="shot-dark" src="screenshots/34-modules-studio-dark.webp"
+               width="1936" height="1408" loading="lazy" decoding="async"
+               alt="The tuner and the metronome open side by side over the neck in the Studio finish: graphite enclosures with brushed-steel faceplates, the tuner reading a flat A and the metronome set to 120 BPM with the drum kit.">
+          <figcaption class="figure-caption">The Studio finish, pinned on the light canvas.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/31-minimized-strips-light.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="Several practice-tool panels folded to one-row strips stacked at the edge of the screen, each still showing its live readout.">
+          <img class="shot-dark" src="screenshots/31-minimized-strips-dark.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="Several practice-tool panels folded to one-row strips stacked at the edge of the screen, each still showing its live readout.">
+          <figcaption class="figure-caption">Folded to strips: out of the way, still running.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="make-it-yours">
+      <div class="feature-body">
+        <h2>Make it yours</h2>
+        <p>A bar above the neck carries the four decisions you change most often: <strong>Labels</strong> (note names, interval numbers or nothing), <strong>Shapes</strong>, <strong>Colors</strong> and <strong>Accidentals</strong>. They are chips beside the fretboard, not settings buried in a sidebar.</p>
+        <ul>
+          <li>Show 12 to 22 frets, and slide a position window along the board.</li>
+          <li>Light and dark, following the system or pinned.</li>
+          <li>14 app icons.</li>
+          <li>English and Latin American Spanish throughout, including this site.</li>
+        </ul>
+      </div>
+      <div class="feature-media">
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/21-settings-icon-light.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The Icon tab of Settings showing the alternate app icons in a grid, with the current one selected.">
+          <img class="shot-dark" src="screenshots/21-settings-icon-dark.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The Icon tab of Settings showing the alternate app icons in a grid, with the current one selected.">
+          <figcaption class="figure-caption">Fourteen icons, in the Icon tab.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img class="shot-light" src="screenshots/18-fret-range-limiter-light.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The fret window narrowed to a five-fret span, with the notes outside it dimmed and the window's tabs at each end.">
+          <img class="shot-dark" src="screenshots/18-fret-range-limiter-dark.webp"
+               width="1936" height="1210" loading="lazy" decoding="async"
+               alt="The fret window narrowed to a five-fret span, with the notes outside it dimmed and the window's tabs at each end.">
+          <figcaption class="figure-caption">The fret window, narrowed to one position.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section-card" id="free-and-pro">
+      <h2>Free for good. Pro is the deep end.</h2>
+      <div class="tiers">
+        <div>
+          <h3>What's free</h3>
+          <ul>
+            <li>Scales, Chords and Triads in every key</li>
+            <li>Major, Minor, both Pentatonics and Blues</li>
+            <li>The Chord Atlas, borrowed harmony included</li>
+            <li>Identifying a chord from notes you tap on the neck</li>
+            <li>CAGED, Box Shapes, 3NPS and chord shapes</li>
+            <li>Tap-to-play, scale and chord playback, six voices</li>
+            <li>The chromatic tuner in Fast mode</li>
+            <li>The metronome, its meters, subdivisions and click sounds</li>
+            <li>The mixer, both themes, all 14 icons, both languages</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What Pro adds</h3>
+          <ul>
+            <li>Seven advanced scales — the modes, Harmonic and Melodic Minor</li>
+            <li>Precision tuning to half a cent</li>
+            <li>The Trace, Strobe and Disc tuner displays</li>
+            <li>The drum library and its step sequencer</li>
+            <li>The Neural Amp Modeler amp</li>
+            <li>The looper</li>
+            <li>Live Detect, and identifying a chord by ear</li>
+          </ul>
+        </div>
+      </div>
+      <p class="tier-note">One purchase, once — no subscription. Try Pro free for 14 days; when the trial ends Fretling returns to the free tier and every setting you chose stays where it is. The unlock covers every Mac and iPad signed into your Apple Account, and supports Family Sharing. Nothing that is free today moves behind the unlock later, and the tip jar in About unlocks nothing at all. <a href="free-and-pro.html">The full comparison</a></p>
+      <p class="tier-actions" data-store-cta data-store-state="soon">
+        <span class="hero-cta" aria-disabled="true" data-store-when="soon">Coming soon to the App Store &mdash; Mac and iPad</span>
+        <a class="hero-cta" href="https://apps.apple.com/app/id6758277302" data-store-when="live">Get Fretling on the App Store <span class="arr" aria-hidden="true">&rarr;</span></a>
+      </p>
+    </section>
+
+    <section class="section-card" id="privacy">
+      <h2>Private by default</h2>
+      <p>Fretling runs entirely on your device. There is no account to create, no analytics, no tracking and no cloud sync — what you set up stays on the Mac or iPad you set it up on.</p>
+      <p>The microphone is used by exactly three things: the tuner, Live Detect and the amp. Audio is analyzed as it arrives and is never recorded, stored or sent anywhere, and the microphone is only open while one of those is. <a href="privacy.html">The privacy policy</a></p>
+    </section>
 
     <section class="section-card" id="requirements">
       <h2>Platforms and requirements</h2>
       <div class="table-scroll">
         <table>
           <thead>
-            <tr><th>Platform</th><th>Requirement</th><th>Notes</th></tr>
+            <tr><th>Platform</th><th>Requirement</th></tr>
           </thead>
           <tbody>
-            <tr><td>Mac</td><td>macOS 15.4 or later</td><td>Full feature set, including the guitar amp and looper. Minimum window 1000 &times; 760.</td></tr>
-            <tr><td>iPad</td><td>iPadOS 18.6 or later</td><td>Landscape, full screen. Full feature set, the amp and looper included; use an audio interface or headphones for monitoring.</td></tr>
-            <tr><td>iPhone</td><td>Not supported</td><td>The layout is built around a wide neck; an iPhone version is planned but not shipped.</td></tr>
+            <tr><td><strong>Mac</strong></td><td>macOS 15.4 or later. The window opens at a minimum of 1000 &times; 760 points.</td></tr>
+            <tr><td><strong>iPad</strong></td><td>iPadOS 18.6 or later, in landscape.</td></tr>
+            <tr><td><strong>iPhone</strong></td><td>Not supported. The fretboard needs the width.</td></tr>
+            <tr><td><strong>Audio interface</strong></td><td>For the amp and the looper: an interface (USB-C on iPad) or headphones. Everything else works through the built-in speakers.</td></tr>
           </tbody>
         </table>
       </div>
-      <p>Fretling runs entirely on your device &mdash; no account, no analytics, no cloud sync. See the <a href="privacy.html">privacy policy</a>.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>Fretling — Scale Tones and Chords. User guide for version 1.1.</p>
-      <p><a href="privacy.html">Privacy</a> &middot; <a href="index.html">Guide home</a></p>
+      <p>Fretling — Scale Tones and Chords. &copy; 2026 Carlos Maldonado.</p>
+      <p><a href="guide.html">User guide</a> &middot; <a href="free-and-pro.html">Free &amp; Pro</a> &middot; <a href="privacy.html">Privacy</a></p>
     </div>
   </footer>
 

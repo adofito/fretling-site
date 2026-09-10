@@ -1,0 +1,6 @@
+# Fretling — www.fretling.app
+# Nothing here is private and nothing is paywalled, so everything is crawlable.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.fretling.app/sitemap.xml

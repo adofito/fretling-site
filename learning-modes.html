@@ -15,6 +15,10 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.fretling.app/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/learning-modes.html">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/learning-modes.html">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/es/learning-modes.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/learning-modes.html">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -56,20 +60,21 @@
       </a>
       <nav class="chip-nav" aria-label="Guide sections">
         <ul>
-          <li><a href="index.html" data-mark="guide">Guide</a></li>
+          <li><a href="guide.html" data-mark="guide">Guide</a></li>
           <li><a href="learning-modes.html" data-mark="modes" aria-current="page">Learning Modes</a></li>
           <li><a href="fretboard.html" data-mark="fretboard">Fretboard</a></li>
           <li><a href="practice-tools.html" data-mark="tools">Practice Tools</a></li>
-          <li><a href="settings.html" data-mark="settings">Settings</a></li><li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
+          <li><a href="settings.html" data-mark="settings">Settings</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
         </ul>
       </nav>
       <div class="header-controls">
-      <div class="theme-control" role="group" aria-label="Appearance">
-        <button type="button" data-theme="system" aria-pressed="true">System</button>
-        <button type="button" data-theme="light" aria-pressed="false">Light</button>
-        <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
-      </div>
-      <a class="lang-switch" href="es/learning-modes.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
+        <div class="theme-control" role="group" aria-label="Appearance">
+          <button type="button" data-theme="system" aria-pressed="true">System</button>
+          <button type="button" data-theme="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+        </div>
+        <a class="lang-switch" href="es/learning-modes.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
       </div>
     </div>
   </header>
@@ -102,7 +107,7 @@
             <tr><td><strong>learn / identify</strong></td><td>The verb picks what the app is for right now — showing you something (<a href="#scales">learn</a>) or naming something you play (<a href="#identify">identify</a>). Switching to identify leaves your learn setup untouched, so switching back restores it exactly.</td></tr>
             <tr><td><strong>Mode</strong></td><td>Scales, Chords, Triads.</td></tr>
             <tr><td><strong>Root note</strong></td><td>All twelve notes. Names follow the ♯/♭ choice in the marker display bar.</td></tr>
-            <tr><td><strong>Scale type</strong></td><td>Major, Minor and Pentatonic Major sit at the top; <em>More scales</em> opens the rest — Pentatonic Minor, Blues, Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor.</td></tr>
+            <tr><td><strong>Scale type</strong></td><td>Major, Minor, Pentatonic Major and Pentatonic Minor sit at the top; <em>More scales</em> opens the rest — Blues, Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor.</td></tr>
             <tr><td><strong>Chord</strong></td><td>In Chords mode, and optionally in Scales mode, a chord picker backed by the Chord Atlas.</td></tr>
           </tbody>
         </table>
@@ -142,6 +147,7 @@
       <h2>Chords</h2>
       <p><strong>Purpose:</strong> explore the chords of a key and see where each one sits on the neck.</p>
       <p><strong>What you pick:</strong> a root note, a scale type — which sets the key — and then a chord. The chord picker is the <strong>Chord Atlas</strong>: it lists the chords of the key with their Roman numerals, lets you preview each one, and reaches beyond the diatonic seven when you want it to.</p>
+      <p><strong>In a key, or without one:</strong> the word <strong>in</strong> is itself a dropdown, with the same two choices identify has. Pick <em>without a key</em> and the key is dropped: the scale leaves the sentence, and the interval colors re-anchor on the chord's own root, so what you see is the chord measured from itself rather than from a key it may not belong to. It stays a dropdown in both states, so the key goes back on from the same place it came off.</p>
       <p><strong>Borrowed harmony:</strong> the Atlas does not stop at the seven chords of the key. Pick a chord from outside it and the Atlas names the borrowing rather than shrugging: a secondary dominant reads <strong>Borrowed · V/V</strong>, a chord taken from the parallel mode reads <strong>Borrowed · iv</strong>, and both sort up with the chords of the key. There is nothing to switch on.</p>
       <p><strong>On the fretboard:</strong> chord tones are marked in full color. Set <strong>Non-Chord Notes</strong> to <strong>On</strong> in the chip bar under the neck to keep the rest of the scale visible underneath in gray, so you can see the chord inside its key. Non-diatonic chord tones are always drawn, whatever the scale filter is doing.</p>
       <p><strong>Chord shapes:</strong> with the <strong>Chord Shapes</strong> chips below the neck set to <strong>On</strong>, real fingerings for the selected chord are drawn on the neck, optionally with finger numbers, and optionally cued on the timeline. See <a href="fretboard.html#chord-shapes">Chord shapes</a>.</p>
@@ -156,6 +162,25 @@
         <figcaption class="figure-caption">Chords mode with Non-Chord Notes on, so the chord sits inside its scale.</figcaption>
       </figure>
 </section>
+
+    <section class="section-card" id="chord-atlas">
+      <h2>The Chord Atlas</h2>
+      <p>The Atlas is Fretling's chord catalog, and it is free in every mode. Open it from the <strong>Atlas</strong> button in the header, or from the chord slot at the end of the Scales sentence; in identify, a reading you like carries an <strong>Open in Chord Atlas</strong> action that takes the chord straight there.</p>
+      <p><strong>How it is laid out:</strong> a strip of the twelve roots across the top, then the qualities grouped into families — triads, sevenths, sixths, suspended, added-tone, altered — then the modifiers, and last a slash bass if you want one. Pick a root, pick a quality, and the neck follows immediately.</p>
+      <p><strong>Preview without committing:</strong> tapping a quality plays it, and the Atlas stays open. That is the point of it — you can compare four voicings by ear in a row without dismissing the sheet and reopening it each time. There is a separate hear control as well, so the preview is reachable without the tap.</p>
+      <p><strong>It knows your key.</strong> Every chord carries its Roman numeral for the key in the sentence, and the chords of the key sort to the front. A chord from outside the key is not simply listed: the Atlas names the borrowing. A secondary dominant reads <strong>Borrowed &middot; V/V</strong>, a chord taken from the parallel mode reads <strong>Borrowed &middot; iv</strong>, and modal interchange is labeled as such. Nothing has to be switched on, and none of it is behind the Pro unlock.</p>
+      <p><strong>It follows the marker display bar.</strong> Labels, Colors and Accidentals reach the Atlas the way they reach the neck, so a chord spelled with flats on the fretboard is spelled with flats here. The one deliberate difference: with <strong>Labels</strong> set to <em>None</em> the Atlas keeps its chord names, because a catalog with no names on it is not a catalog.</p>
+      <figure class="shot">
+        <img class="shot-light" src="screenshots/33-chord-atlas-light.webp"
+             width="1860" height="1565" loading="lazy" decoding="async"
+             alt="The Chord Atlas open over the fretboard in E Major, with the root strip along the top, the quality families below it, and each chord of the key carrying its Roman numeral.">
+        <img class="shot-dark" src="screenshots/33-chord-atlas-dark.webp"
+             width="1860" height="1565" loading="lazy" decoding="async"
+             alt="The Chord Atlas open over the fretboard in E Major, with the root strip along the top, the quality families below it, and each chord of the key carrying its Roman numeral.">
+        <figcaption class="figure-caption">The Atlas, open in E Major: roots across the top, qualities by family, Roman numerals in the key.</figcaption>
+      </figure>
+</section>
+
 
     <section class="section-card" id="triads">
       <h2>Triads</h2>
@@ -182,7 +207,7 @@
       <h3>Giving Fretling the notes</h3>
       <ul>
         <li><strong>Tap them onto the neck.</strong> Tap a position to place a note, tap it again to remove it. A placement toolbar gives you <strong>Undo</strong>, <strong>Clear</strong>, and a running count of placed notes.</li>
-        <li><strong>Play them.</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> Press <strong>Listen</strong> in the placement toolbar — it opens <a href="practice-tools.html#live-detect">Live Detect</a> and starts it listening — play the chord, and press <strong>Capture what I played</strong> to place what it heard on the neck, in place of whatever you had put there (Undo brings that back). The same move is on Live Detect's own panel as <strong>Send to fretboard</strong>.</li>
+        <li><strong>Play them.</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> Press <strong>Listen</strong> in the placement toolbar — it opens <a href="practice-tools.html#live-detect">Live Detect</a>, raises its panel so the Stop control is reachable, and starts it listening. Play the chord, then press <strong>Capture what I played</strong> to place what it heard on the neck, in place of whatever you had put there (Undo brings that back). The same move is on Live Detect's own panel as <strong>Send to fretboard</strong>. Without Pro the button shows the unlock sheet and the microphone never opens.</li>
       </ul>
 
       <h3>Reading the results</h3>
@@ -206,8 +231,8 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Fretling — Scale Tones and Chords. User guide for version 1.1.</p>
-      <p><a href="privacy.html">Privacy</a> &middot; <a href="index.html">Guide home</a></p>
+      <p>Fretling — Scale Tones and Chords. User guide for version 1.3.</p>
+      <p><a href="guide.html">Guide home</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="index.html">Home</a></p>
     </div>
   </footer>
 

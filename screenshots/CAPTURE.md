@@ -7,7 +7,7 @@ WebP by one script:
 
 ```sh
 ./build.sh debug                    # the script captures the built app
-scripts/site/capture-guide.sh       # all 31 shots (numbered to 32), both themes, ~12 minutes
+scripts/site/capture-guide.sh       # all 33 shots (numbered to 34), both themes, ~12 minutes
 scripts/site/capture-guide.sh --language es-419   # the same set in Spanish
 ```
 
@@ -97,6 +97,8 @@ one place, so the table below cannot drift out of sync with what actually runs.
 | 23–30 | `tuner`, `metronome`, `drum-sequencer`, `amp`, `input-console`, `looper`, `mixer`, `live-detect` | `practice-tools.html`, one per section |
 | 31 | `minimized-strips` | `practice-tools.html` — three panels folded to their strips |
 | 32 | `performance-console` | `practice-tools#performance` |
+| 33 | `chord-atlas` | `learning-modes#chord-atlas` — the Atlas sheet over the neck in Chords, E Major |
+| 34 | `modules-studio` | `index.html` and `practice-tools.html` — the Studio finish pinned, tuner and metronome side by side, so the graphite panel is seen on the warm canvas |
 
 Matched pairs share a crop rect on purpose: if the frame moves between the two,
 the reader sees the framing change instead of the setting.

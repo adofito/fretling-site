@@ -1,23 +1,27 @@
 # Fretling — user guide and support site
 
-The public site for **Fretling**, a guitar learning app for Mac and iPad: scales, chords,
+The public site for **Fretling**, a guitar workstation for Mac and iPad: scales, chords,
 triads, chord identification, and practice tools on an interactive fretboard.
 
-This folder is the source for the published site. It is also where the App Store listing's
-**Support URL** and **Privacy Policy URL** point.
+This folder is the source for the published site. It carries all three of the App Store
+listing's URLs: the **Marketing URL** is the site root (`index.html`, the product page), the
+**Support URL** is `guide.html` (the user guide's home), and the **Privacy Policy URL** is
+`privacy.html`.
 
 ## Pages
 
 | File | Page |
 |------|------|
-| `index.html` | Home — what Fretling does, screen anatomy, quick start, requirements |
+| `index.html` | Home — the product page. The App Store **Marketing URL** |
+| `guide.html` | The user guide's home — what Fretling does, screen anatomy, quick start, keyboard shortcuts, requirements. The App Store **Support URL** |
 | `learning-modes.html` | Scales, Chords, Triads, and identifying a chord |
 | `fretboard.html` | Markers, chip bars, timeline, overlays, chord shapes, fret range, tap-to-play |
 | `practice-tools.html` | Tuner, metronome, drum sequencer, amp, looper, mixer, Live Detect |
 | `settings.html` | Every option in the settings sidebar |
 | `free-and-pro.html` | What is free for good, and what the one-time Pro unlock adds |
 | `privacy.html` | Privacy policy |
-| `es/*.html` | The same seven pages in Latin American Spanish — see below |
+| `es/*.html` | The same eight pages in Latin American Spanish — see below |
+| `sitemap.xml`, `robots.txt` | Sixteen URLs with `hreflang` alternates, and a crawl-everything robots file |
 
 `css/styles.css` is the whole visual system, written from the app's own design tokens —
 the interval wheel, the header accents, the warm canvas and elevated islands, the chip
@@ -26,8 +30,10 @@ is the only script: it runs the appearance control, the marker display bar on th
 page, and the fretboard it draws. There is no build step — the pages are plain HTML and
 open directly in a browser.
 
-The home page's neck is pre-rendered into `index.html` so it is correct with scripting
-turned off. If you change the renderer in `js/site.js`, regenerate it:
+The home page's interactive neck is pre-rendered into `index.html` so it is correct with
+scripting turned off. If you change the renderer in `js/site.js`, regenerate it (the command
+requires `site.js` in node, which is why the file guards its one `document` read at module
+scope):
 
 ```sh
 node -e 'const f=require("./docs/website/js/site.js"),s=require("fs");
@@ -77,7 +83,7 @@ Never edit them by hand — rebuild them from the icon set:
 
 ## Screenshots
 
-The guide ships 31 screenshots (numbered to 32; 13 was retired), each in a light and a dark version, as WebP in
+The guide ships 33 screenshots (numbered to 34; 13 was retired and 35 was never taken), each in a light and a dark version, as WebP in
 `screenshots/`, plus the same set captured in Spanish under `screenshots/es-419/` for the
 Spanish pages. They are **generated, never taken by hand**:
 

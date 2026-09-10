@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fretling – Guía del usuario</title>
+  <meta name="description" content="Guía del usuario de Fretling, una app para aprender guitarra en Mac y iPad: escalas, acordes, tríadas, identificación de acordes y herramientas de práctica.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fretling">
+  <meta property="og:title" content="Fretling – Guía del usuario">
+  <meta property="og:description" content="Guía del usuario de Fretling, una app para aprender guitarra en Mac y iPad: escalas, acordes, tríadas, identificación de acordes y herramientas de práctica.">
+  <meta property="og:url" content="https://www.fretling.app/es/guide.html">
+  <meta property="og:image" content="https://www.fretling.app/es/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.fretling.app/es/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/es/guide.html">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/guide.html">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/es/guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/guide.html">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+</head>
+<body data-page="guide">
+  <a href="#main" class="skip-link">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <line class="bm-string" x1="3" y1="5" x2="26" y2="5"/>
+          <line class="bm-string" x1="3" y1="10" x2="26" y2="10"/>
+          <line class="bm-string" x1="3" y1="15" x2="26" y2="15"/>
+          <line class="bm-fret" x1="10" y1="2.5" x2="10" y2="17.5"/>
+          <line class="bm-fret" x1="17" y1="2.5" x2="17" y2="17.5"/>
+          <line class="bm-fret" x1="24" y1="2.5" x2="24" y2="17.5"/>
+          <line class="bm-nut" x1="3" y1="2" x2="3" y2="18"/>
+          <circle class="bm-dot-a" cx="6.5" cy="10" r="2.6"/>
+          <circle class="bm-dot-b" cx="13.5" cy="5" r="2.6"/>
+          <circle class="bm-dot-c" cx="20.5" cy="15" r="2.6"/>
+        </svg>
+        Fretling
+      </a>
+      <nav class="chip-nav" aria-label="Secciones de la guía">
+        <ul>
+          <li><a href="guide.html" data-mark="guide" aria-current="page">Guía</a></li>
+          <li><a href="learning-modes.html" data-mark="modes">Modos de aprendizaje</a></li>
+          <li><a href="fretboard.html" data-mark="fretboard">Diapasón</a></li>
+          <li><a href="practice-tools.html" data-mark="tools">Herramientas de práctica</a></li>
+          <li><a href="settings.html" data-mark="settings">Configuración</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Gratis y Pro</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="theme-control" role="group" aria-label="Apariencia">
+          <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
+          <button type="button" data-theme="light" aria-pressed="false">Claro</button>
+          <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
+        </div>
+        <a class="lang-switch" href="../guide.html" hreflang="en" lang="en" aria-label="English version">English</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main" class="container">
+    <h1>Guía del usuario</h1>
+    <p class="lede">Todo lo que hay en Fretling, página por página. Empieza por la anatomía de la pantalla y el inicio rápido, o salta directo a una sección.</p>
+
+    <h2 class="section-heading" id="the-guide">Dónde encontrar cada cosa</h2>
+    <nav class="guide-index" aria-label="Secciones de la documentación">
+      <a href="learning-modes.html" data-mark="modes">
+        <span class="gi-title">Modos de aprendizaje</span>
+        <span class="gi-desc">Escalas, Acordes, Tríadas, e identificar un acorde a partir de notas que colocas o tocas.</span>
+        <span class="gi-go" aria-hidden="true">&rarr;</span>
+      </a>
+      <a href="fretboard.html" data-mark="fretboard">
+        <span class="gi-title">Diapasón</span>
+        <span class="gi-desc">Marcadores, la barra de visualización, la línea de tiempo, superposiciones, formas de acorde, rango de trastes, tocar para oír.</span>
+        <span class="gi-go" aria-hidden="true">&rarr;</span>
+      </a>
+      <a href="practice-tools.html" data-mark="tools">
+        <span class="gi-title">Herramientas de práctica</span>
+        <span class="gi-desc">Afinador, metrónomo y batería, amplificador de guitarra, looper, mezclador, Detección en vivo.</span>
+        <span class="gi-go" aria-hidden="true">&rarr;</span>
+      </a>
+      <a href="settings.html" data-mark="settings">
+        <span class="gi-title">Configuración</span>
+        <span class="gi-desc">Cada opción de la barra lateral: las pestañas Diapasón, Audio e Ícono.</span>
+        <span class="gi-go" aria-hidden="true">&rarr;</span>
+      </a>
+      <a href="free-and-pro.html" data-mark="pro">
+        <span class="gi-title">Gratis y Pro</span>
+        <span class="gi-desc">Qué es gratis para siempre y qué añade el desbloqueo único de Pro.</span>
+        <span class="gi-go" aria-hidden="true">&rarr;</span>
+      </a>
+    </nav>
+
+    <section class="section-card" id="what-it-does">
+      <h2>Qué hace</h2>
+      <ul>
+        <li><strong>Aprende</strong> escalas, acordes diatónicos y tríadas en cualquier tonalidad, con formas CAGED, cajas de posición y patrones de tres notas por cuerda superpuestos en el mástil; y explora cada acorde en el <a href="learning-modes.html#chord-atlas">Atlas de acordes</a>, que nombra la armonía prestada y las dominantes secundarias en cuanto aparecen.</li>
+        <li><strong>Identifica</strong> un acorde tocando notas en el mástil o tocándolo frente al micrófono; Fretling clasifica las lecturas.</li>
+        <li><strong>Oye</strong> todo lo que ves: notas que suenan al tocarlas, reproducción de escalas y acordes con un toque, e instrumentos sampleados: un piano de cola, guitarras de nylon, acero, jazz y eléctrica clean, o una onda senoidal; los acordes con hasta tres voces superpuestas.</li>
+        <li><strong>Practica</strong> con un afinador cromático y su modo Precisión, un metrónomo con una biblioteca de 61 ritmos de batería y un secuenciador por pasos, un amp Neural Amp Modeler y un looper.</li>
+      </ul>
+      <p>Casi todo eso es gratis para siempre. La biblioteca de ritmos, el amp, el looper, Detección en vivo, el modo Precisión del afinador y las siete escalas avanzadas vienen con el desbloqueo único de <a href="free-and-pro.html">Fretling Pro</a>, y están marcados <span class="pro-badge">Pro</span> en toda esta guía, y con una <a href="free-and-pro.html#trial">prueba gratis de 14 días</a> si quieres probarlas antes.</p>
+    </section>
+
+    <section class="section-card" id="anatomy">
+      <h2>Anatomía de la pantalla</h2>
+      <p>Todo se organiza alrededor de un diapasón estable. Una barra fija de controles recorre la parte superior, dos barras de chips enmarcan el mástil y las herramientas de práctica se abren como paneles flotantes que puedes arrastrar fuera del camino.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Dónde</th><th>Qué hay ahí</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>La barra superior</td><td>Una banda a lo largo del borde superior del lienzo. El botón de Configuración está en el extremo inicial y desliza la <a href="settings.html">barra lateral</a> hacia adentro; el <a href="practice-tools.html#performance">indicador de rendimiento</a> y la <a href="practice-tools.html#input">lámpara y el medidor del micrófono</a> vienen después; los seis íconos de herramientas de práctica (afinador, amp, looper, Detección en vivo, mezclador, metrónomo) están en el extremo final. Cada uno abre un panel flotante que se puede arrastrar, minimizar a una tira de una fila o cerrar. Ver <a href="practice-tools.html">Herramientas de práctica</a>.</td></tr>
+            <tr><td>Sobre el mástil</td><td>La oración que construyes, una <a href="fretboard.html#timeline">línea de tiempo de la escala</a>opcional y luego la <a href="fretboard.html#marker-bar">barra de visualización de marcadores</a>: Trastes, Etiquetas, Formas, Colores, Alteraciones.</td></tr>
+            <tr><td>El mástil</td><td>Seis cuerdas, de 12 a 22 trastes (quince por defecto), cada nota de la escala o del acorde dibujada como un marcador. Toca uno para oírlo.</td></tr>
+            <tr><td>Debajo del mástil</td><td><a href="fretboard.html#overlays">Agrupaciones visuales</a>: CAGED, Formas de caja, formas de acorde, tres notas por cuerda, conjuntos de cuerdas en Tríadas, y los interruptores Notas fuera del acorde y Rango de trastes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+          <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/01-app-scales-light.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La ventana de Fretling en modo Escalas: el encabezado con la oración arriba, la línea de tiempo de la escala y la barra de visualización de marcadores sobre el mástil, seis cuerdas con marcadores de E Mayor y los chips de Agrupaciones visuales debajo.">
+        <img class="shot-dark" src="../screenshots/es-419/01-app-scales-dark.webp"
+             width="1936" height="1210" loading="lazy" decoding="async"
+             alt="La ventana de Fretling en modo Escalas: el encabezado con la oración arriba, la línea de tiempo de la escala y la barra de visualización de marcadores sobre el mástil, seis cuerdas con marcadores de E Mayor y los chips de Agrupaciones visuales debajo.">
+        <figcaption class="figure-caption">Todo se organiza alrededor de un diapasón estable.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img class="shot-light" src="../screenshots/es-419/03-tool-icon-row-light.webp"
+             width="1936" height="83" loading="lazy" decoding="async"
+             alt="La barra superior a lo ancho de la ventana: el botón de Configuración en el extremo izquierdo y, a la derecha, la lámpara de entrada y el medidor de nivel seguidos de los íconos de afinador, amplificador de guitarra, looper, Detección en vivo, mezclador y metrónomo.">
+        <img class="shot-dark" src="../screenshots/es-419/03-tool-icon-row-dark.webp"
+             width="1936" height="83" loading="lazy" decoding="async"
+             alt="La barra superior a lo ancho de la ventana: el botón de Configuración en el extremo izquierdo y, a la derecha, la lámpara de entrada y el medidor de nivel seguidos de los íconos de afinador, amplificador de guitarra, looper, Detección en vivo, mezclador y metrónomo.">
+        <figcaption class="figure-caption">Una sola banda contiene los controles de la app: la configuración en un extremo, la entrada y las seis herramientas de práctica en el otro.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="quick-start">
+      <h2>Inicio rápido</h2>
+      <ol>
+        <li>Lee la oración de arriba y toca cualquier palabra coloreada para cambiarla: el <strong>verbo</strong> (aprender o identificar), el <strong>modo</strong> (escalas, acordes, tríadas), la <strong>nota raíz</strong>y el <strong>tipo de escala</strong>.</li>
+        <li>Toca notas en el mástil para oírlas. El instrumento viene de <a href="settings.html#audio-tab">Configuración → Audio</a>.</li>
+        <li>Usa los chips <strong>Etiquetas / Formas / Colores / Alteraciones</strong> sobre el mástil para alternar entre nombres de notas y números de intervalo.</li>
+        <li>Usa los chips <strong>Agrupaciones visuales</strong> debajo del mástil para superponer formas CAGED, cajas de posición, formas de acorde o patrones 3NPS sobre lo que estás viendo.</li>
+        <li>Abre las herramientas que necesites desde la fila de íconos a la derecha de la barra superior: flotan sobre el diapasón y se pueden arrastrar a un lado, o minimizar a una tira de una fila que mantiene activo su control principal.</li>
+      </ol>
+      <p><strong>En el primer arranque</strong> un solo aviso aparece sobre el mástil y dice qué hacer: <em>Toca cualquier nota del mástil para oírla.</em> en el lienzo, y <em>Toca el mástil para colocar notas; toca de nuevo para quitarlas.</em> en cuanto cambias a identificar. Cada uno se descarta con <strong>Entendido</strong> y no vuelve a aparecer.</p>
+          <figure class="shot" style="--shot-max: 810px">
+        <img class="shot-light" src="../screenshots/es-419/02-header-sentence-light.webp"
+             width="1680" height="138" loading="lazy" decoding="async"
+             alt="El encabezado en lenguaje natural que dice “Quiero aprender escalas en E Mayor: A”, con cada palabra cambiable dibujada como un chip de color y el chip del acorde al final.">
+        <img class="shot-dark" src="../screenshots/es-419/02-header-sentence-dark.webp"
+             width="1680" height="138" loading="lazy" decoding="async"
+             alt="El encabezado en lenguaje natural que dice “Quiero aprender escalas en E Mayor: A”, con cada palabra cambiable dibujada como un chip de color y el chip del acorde al final.">
+        <figcaption class="figure-caption">Cada palabra coloreada es un menú desplegable. La oración es toda la superficie de control.</figcaption>
+      </figure>
+</section>
+
+    <section class="section-card" id="shortcuts">
+      <h2>Atajos de teclado y gestos</h2>
+      <p>Las teclas son de macOS salvo que la fila diga otra cosa. Los gestos funcionan en las dos plataformas: un doble clic en la Mac es un doble toque en iPad.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Tecla o gesto</th><th>Qué hace</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Barra espaciadora</strong></td><td>Un solo transporte. Si algo está sonando, lo detiene: el clic, el loop o ambos. Si nada suena, arranca el clic, y un loop cargado y detenido arranca con él, así que una sola pulsación te da el pulso y tu base en el mismo primer tiempo. Dentro de la hoja del secuenciador de batería es solo el clic, porque el looper no está en pantalla.</td></tr>
+            <tr><td><strong>Mayús-Espacio</strong></td><td>El transporte de la línea de tiempo: el acorde si hay uno activo, si no la escala.</td></tr>
+            <tr><td><strong>⌘⇧M</strong></td><td>Enciende o apaga el micrófono. También está en el menú <strong>Entrada</strong>, y en iPad con la lámpara de micrófono de la barra superior.</td></tr>
+            <tr><td><strong>Doble clic en el encabezado de un panel</strong></td><td>Pliega el panel a su tira de una fila, o lo despliega de nuevo.</td></tr>
+            <tr><td><strong>Doble clic en un deslizador</strong></td><td>Lo devuelve a su valor predeterminado.</td></tr>
+            <tr><td><strong>Arrastra el encabezado de un panel</strong></td><td>Mueve el panel. Cada uno recuerda dónde lo dejaste; todo encabezado lleva además una acción <em>Restablecer posición</em> para VoiceOver.</td></tr>
+            <tr><td><strong>Clic derecho en una celda del secuenciador</strong></td><td>Fija el nivel de ese golpe: Completo, 75 %, 50 %, 25 % o Apagado.</td></tr>
+            <tr><td><strong>Clic derecho o mantener presionado el nombre de una pista</strong></td><td>Llenar fila, Acentuar tiempos o Vaciar fila para esa pista de batería.</td></tr>
+            <tr><td><strong>Arrastra la ventana de trastes</strong></td><td>Arrastra cualquiera de las pestañas, o los números entre ellas, para deslizar la ventana por el mástil. Doble toque en una pestaña para abrir la ventana hasta ese extremo del diapasón.</td></tr>
+            <tr><td><strong>Mantén presionada una nota</strong></td><td>La sostiene hasta que sueltas; un toque rápido igual suena al menos un segundo y medio. Deslizarte fuera de una nota la detiene al instante, como al levantar el dedo del traste. En iPad puedes mantener varias notas a la vez y deslizarte por una cuerda.</td></tr>
+            <tr><td><strong>Puntero (Mac)</strong></td><td>El puntero se vuelve una mano sobre cualquier control activo, y al pasar por una fila de chips se ilumina el que estás por presionar.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card" id="requirements">
+      <h2>Plataformas y requisitos</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Plataforma</th><th>Requisito</th><th>Notas</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mac</td><td>macOS 15.4 o posterior</td><td>Todas las funciones, incluidos el amplificador de guitarra y el looper. Ventana mínima de 1000 × 760.</td></tr>
+            <tr><td>iPad</td><td>iPadOS 18.6 o posterior</td><td>Horizontal, pantalla completa. Todas las funciones, amp y looper incluidos; usa una interfaz de audio o audífonos para monitorear.</td></tr>
+            <tr><td>iPhone</td><td>No compatible</td><td>El diseño gira en torno a un mástil ancho; hay una versión para iPhone planeada, pero aún no publicada.</td></tr>
+            <tr><td>Interfaz de audio</td><td>Para el amp y el looper</td><td>Una interfaz de audio (USB-C en iPad) o audífonos. La afinación de precisión no está disponible por una entrada Bluetooth, porque Bluetooth remuestrea con su propio reloj y las lecturas por debajo del cent serían ficción: el afinador te lo dice y se queda en Rápido.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Fretling funciona por completo en tu dispositivo: sin cuenta, sin analíticas, sin sincronización en la nube. Consulta la <a href="privacy.html">política de privacidad</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.3.</p>
+      <p><a href="guide.html">Inicio de la guía</a> &middot; <a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>
