@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-419">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,10 +69,12 @@
         </ul>
       </nav>
       <div class="header-controls">
-        <div class="theme-control" role="group" aria-label="Apariencia">
-          <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
-          <button type="button" data-theme="light" aria-pressed="false">Claro</button>
-          <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
+        <div class="theme-control" data-menu="theme">
+          <button type="button" class="theme-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Apariencia">
+            <span data-theme-label>Sistema</span>
+            <svg class="chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="chip-menu chip-menu--end" role="listbox" aria-label="Apariencia" hidden></div>
         </div>
         <a class="lang-switch" href="../settings.html" hreflang="en" lang="en" aria-label="English version">English</a>
       </div>
@@ -133,7 +135,7 @@
           </tbody>
         </table>
       </div>
-      <p><strong>Notas fuera del acorde</strong> y <strong>Rango de trastes</strong> estaban aquí. Ahora son chips de la barra <a href="fretboard.html#overlays">Agrupaciones visuales</a> bajo el mástil: ambos se cambian en plena práctica y ambos cambian lo que muestra el mástil, así que van junto a él.</p>
+      <p><strong>Notas fuera del acorde</strong> y <strong>Rango de trastes</strong> no están en la barra lateral. Son chips de la barra <a href="fretboard.html#overlays">Agrupaciones visuales</a> bajo el mástil: los dos se cambian en mitad de la práctica y los dos alteran lo que muestra el mástil, así que su lugar es junto a él.</p>
 
       <h3>Superposiciones de formas</h3>
       <div class="table-scroll">
@@ -232,7 +234,7 @@
   <footer class="site-footer">
     <div class="container">
       <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.3.</p>
-      <p><a href="guide.html">Inicio de la guía</a> &middot; <a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio</a></p>
+      <p><a href="guide.html">Inicio de la guía</a> &middot; <a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio</a> &middot; <a href="mailto:adofito@gmail.com?subject=Fretling%20support">Contacto</a></p>
     </div>
   </footer>
 

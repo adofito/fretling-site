@@ -126,7 +126,10 @@
   --t-control: 13px;   /* AppFont.settingsControl */
   --t-caption: 12px;   /* caption2 — chip labels */
 
-  --measure: 68ch;
+  /* 57ch, not 68. `ch` is the width of "0", and SF's zero is 10.28px at 17px body —
+     so 68ch resolved to 728px and ran 92 characters to the line, well past the 65–75
+     a reader tracks comfortably. 57ch lands at 610px and ~77 characters. */
+  --measure: 57ch;
   --page-max: 1160px;
 
   /* Section rail: the h2 hangs in its own column beside the prose, the way a
@@ -246,6 +249,16 @@
 }
 :root[data-theme="dark"] body { line-height: 1.65; letter-spacing: 0.006em; }
 
+/*
+  On the light canvas the hero's black band is its own edge. On the dark canvas the
+  band and the page are both #1a1a1a, so without this the masthead has no bottom and
+  only the amber bloom says where it ends.
+*/
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero { border-bottom: 1px solid rgba(255, 255, 255, 0.10); }
+}
+:root[data-theme="dark"] .hero { border-bottom: 1px solid rgba(255, 255, 255, 0.10); }
+
 /* ============================================================
    3. Base + typography
    ============================================================ */
@@ -294,6 +307,16 @@ h1 {
   letter-spacing: -0.015em;
 }
 
+/*
+  Only the product page gets the full display size. On a reference page an 82px title
+  over a 22px section heading is a 3.7× step borrowed from marketing — it makes the
+  page's own structure look like a footnote to its name. 60px still speaks in the serif
+  voice and leaves the lede its weight.
+*/
+body:not([data-page="home"]) h1 {
+  font-size: clamp(28px, calc(3.4vw + 12px), 60px);
+}
+
 h2 {
   font-size: var(--t-h2);
   font-weight: 600;
@@ -338,6 +361,11 @@ code {
   border-radius: var(--r-chip);
 }
 
+/* Two halves of one sentence: the page states what it can actually do right now. */
+.js-only { display: none; }
+:root.js .js-only { display: inline; }
+:root.js .no-js-only { display: none; }
+
 .visually-hidden {
   position: absolute;
   width: 1px; height: 1px;
@@ -354,7 +382,11 @@ code {
   z-index: 100;
   padding: var(--s-3) var(--s-4);
   border-radius: 0 0 var(--r-control) var(--r-control);
-  background: var(--f-accent-note);
+  /* A fixed pair, not a token: this pill lands on the light canvas and the dark one,
+     and `--f-accent-note` is lifted for dark, where white-on-#6699e6 falls to 2.9:1.
+     #2f5fa8 is the app's deepBlue one step down and measures 6.3:1 against white in
+     both themes. */
+  background: #2f5fa8;
   color: #ffffff;
   font-size: var(--t-label);
   font-weight: 600;
@@ -384,14 +416,54 @@ code {
 
 body[data-page="guide"] .site-header { border-bottom-color: transparent; }
 
+/*
+  Written by site.js when the header's children do not share one line — a longer
+  translation, a browser minimum font size, a future nav item. Pinning a two-row
+  header holds an eighth of a laptop screen forever, so the rule the comment below
+  states ("sticky only while it is one compact row") is enforced rather than assumed.
+*/
+.site-header.is-wrapped { position: static; }
+.site-header.is-wrapped .chip-nav { margin-inline-start: 0; width: 100%; order: 3; }
+.site-header.is-wrapped .header-controls { margin-inline-start: auto; }
+
+/*
+  The same answer without scripting, for the one language that needs it.
+
+  The guard above is JavaScript, and the stylesheet's own stacked layout starts at
+  1000px — which is below where English stops fitting (977px) and well below where
+  Spanish does (about 1140px). So a Spanish reader with scripting off, on a 1024 or
+  1152px laptop, got a pinned two-row header and no fallback. Scoped to the language
+  rather than applied to everyone, because English genuinely fits here and should keep
+  its single pinned row.
+*/
+@media (max-width: 1160px) {
+  html[lang^="es"] .site-header { position: static; }
+  html[lang^="es"] .chip-nav { margin-inline-start: 0; width: 100%; order: 3; }
+  html[lang^="es"] .header-controls { margin-inline-start: auto; }
+}
+
 .header-inner {
   display: flex;
   align-items: center;
-  gap: var(--s-5);
+  gap: var(--s-4);
   min-height: 60px;
   padding-block: var(--s-2);
   flex-wrap: wrap;
 }
+
+/*
+  The header is a single row, and that is a measured claim rather than a hope.
+
+  It used to overflow its own container at every desktop width: brand 108 + nav 704 +
+  controls 270 + gaps 40 = 1,122px against 1,112px of inner container, so `flex-wrap`
+  dropped the appearance and language controls onto a second row — under the wordmark,
+  at the far left, while the nav stayed right-aligned above them. 117px of chrome,
+  pinned, on all sixteen pages. Three changes buy the row back: the nav's chips take the
+  4px inset and the 6px mark gap the app's own ToggleChip uses (the old 8/8 was a web
+  invention), the row's gaps come in one step, and the three appearance buttons fold
+  into the one menu below. Spanish is the binding case — its six labels are 80px longer
+  than the English ones — and `.is-wrapped` catches whatever still does not fit.
+*/
 
 /* Wordmark — the app's serif voice, at label scale */
 .brand {
@@ -425,7 +497,7 @@ body[data-page="guide"] .site-header { border-bottom-color: transparent; }
 .chip-nav ul {
   display: flex;
   align-items: center;
-  gap: var(--s-3);
+  gap: var(--s-2);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -435,9 +507,9 @@ body[data-page="guide"] .site-header { border-bottom-color: transparent; }
 .chip-nav a {
   display: inline-flex;
   align-items: center;
-  gap: var(--s-2);
+  gap: 6px;
   min-height: 44px;
-  padding-inline: var(--s-2);
+  padding-inline: var(--s-1);
   border-radius: var(--r-chip);
   color: var(--f-ink-2);
   font-size: var(--t-label);
@@ -447,18 +519,21 @@ body[data-page="guide"] .site-header { border-bottom-color: transparent; }
   transition: color 0.15s ease-out;
 }
 
+/* The mark is the page's own accent, and at 0.35 every one of them read as the same
+   gray dot — the hue was there and invisible. 0.6 is still clearly the resting state
+   against the current page's solid mark, and the colors now tell each other apart. */
 .chip-nav a::before {
   content: "";
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--chip-mark, var(--f-ink-3));
-  opacity: 0.35;
+  opacity: 0.6;
   transition: opacity 0.15s ease-out, transform 0.15s ease-out;
 }
 
 .chip-nav a:hover { color: var(--f-ink); }
-.chip-nav a:hover::before { opacity: 0.7; }
+.chip-nav a:hover::before { opacity: 0.85; }
 
 .chip-nav a[aria-current="page"] {
   color: var(--f-ink);
@@ -476,38 +551,53 @@ body[data-page="guide"] .site-header { border-bottom-color: transparent; }
 .chip-nav a[data-mark="privacy"]  { --chip-mark: var(--f-ink-3); }
 .chip-nav a[data-mark="pro"]      { --chip-mark: var(--f-accent-mode); }
 
-/* Segmented theme control — the app's Appearance picker (System / Light / Dark) */
+/*
+  Appearance — the app's System / Light / Dark picker, as one menu.
+
+  It was three segmented buttons, 190px of a header that had 10px to spare. The app
+  itself keeps Appearance inside the settings sidebar rather than always on screen, so
+  a control that names the current choice and opens the other two is the closer reading
+  of the product as well as the one that fits. It borrows the sentence chips' menu
+  wholesale — same panel, same 44px rows, same Escape-returns-focus — so the site has
+  one dropdown, not two.
+*/
 .theme-control { display: none; }
 :root.js .theme-control {
+  position: relative;
   display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  padding: 3px;
-  border-radius: var(--r-control);
-  background: color-mix(in srgb, var(--f-ink) 7%, transparent);
+  --chip-accent: var(--f-accent-app);
 }
 
-.theme-control button {
+.theme-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
   appearance: none;
   border: 0;
   min-height: 30px;
   padding: 0 var(--s-3);
   border-radius: 7px;
-  background: transparent;
+  background: color-mix(in srgb, var(--f-ink) 7%, transparent);
   color: var(--f-ink-2);
   font-family: inherit;
   font-size: var(--t-control);
   font-weight: 500;
+  white-space: nowrap;
   cursor: pointer;
   transition: background 0.15s ease-out, color 0.15s ease-out;
 }
-.theme-control button:hover { color: var(--f-ink); }
-.theme-control button[aria-pressed="true"] {
-  background: var(--f-surface);
+.theme-button:hover {
   color: var(--f-ink);
-  font-weight: 600;
-  box-shadow: var(--f-shadow-chip);
+  background: color-mix(in srgb, var(--f-ink) 11%, transparent);
 }
+.theme-button .chev {
+  flex: none;
+  width: 11px; height: 11px;
+  opacity: 0.5;
+  transition: transform 0.15s ease-out;
+}
+.theme-control.is-open .theme-button { color: var(--f-ink); background: color-mix(in srgb, var(--f-ink) 11%, transparent); }
+.theme-control.is-open .chev { transform: rotate(180deg); }
 
 /* The theme control and the language switch travel together: one flex unit, so when the
    header wraps they wrap as a pair instead of stranding the switch under the brand. */
@@ -557,7 +647,8 @@ body[data-page="guide"] .site-header { border-bottom-color: transparent; }
    5. Islands and reading blocks
    ============================================================ */
 
-main.container {
+main.container,
+.main-body {
   padding-top: var(--s-12);
   padding-bottom: var(--s-16);
 }
@@ -785,6 +876,24 @@ main > h1 { margin-bottom: var(--s-5); }
 }
 .hero-cta[aria-disabled="true"]:hover { transform: none; background: transparent; color: var(--f-ink-2); }
 
+/*
+  The waiting line under the button.
+
+  A page whose primary action cannot be pressed has to give the reader something else to
+  do, or it is a dead end dressed as a pitch. The row now carries a live "tell me when it
+  ships" beside the inert pill, and this line says what the product's state actually is.
+  It sits inside [data-store-cta], so launch day still flips the whole block with one
+  attribute and no script. No date is claimed here: the site does not know one.
+*/
+.store-note {
+  flex-basis: 100%;
+  max-width: 56ch;
+  margin: calc(var(--s-1) * -1) 0 0;
+  color: var(--f-ink-3);
+  font-size: var(--t-control);
+  line-height: 1.5;
+}
+
 /* The waiting state carries the same amber lamp the app puts on a live control,
    so "soon" reads as a state of the product rather than a broken button. */
 .hero-cta[aria-disabled="true"]::before {
@@ -953,18 +1062,22 @@ main > h1 { margin-bottom: var(--s-5); }
   text-decoration: none;
   transition: background 0.18s ease-out;
 }
+/* The nut grows on the compositor: a 96px bar scaled back to its 40px resting length,
+   rather than an animated `width`, which relays out the row on every frame. */
 .guide-index a::before {
   content: "";
   position: absolute;
   top: -1px;
   left: 0;
-  width: 40px;
+  width: 96px;
   height: 3px;
   background: var(--chip-mark, var(--f-ink-3));
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scaleX(0.4167);
+  transform-origin: left center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .guide-index a:hover::before,
-.guide-index a:focus-visible::before { width: 96px; }
+.guide-index a:focus-visible::before { transform: scaleX(1); }
 .guide-index a:hover { background: color-mix(in srgb, var(--f-ink) 3%, transparent); }
 
 /* The row's nut is the ::before bar on the wire; the title takes the rail. */
@@ -1027,13 +1140,15 @@ main > h1 { margin-bottom: var(--s-5); }
   position: absolute;
   top: -1px;
   left: 0;
-  width: 40px;
+  width: 96px;
   height: 3px;
   background: var(--chip-mark, var(--f-ink-3));
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scaleX(0.4167);
+  transform-origin: left center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .pools a:hover::before,
-.pools a:focus-visible::before { width: 96px; }
+.pools a:focus-visible::before { transform: scaleX(1); }
 .pools a[data-mark="see"]  { --chip-mark: var(--f-accent-note); }
 .pools a[data-mark="hear"] { --chip-mark: var(--f-accent-chord); }
 .pools a[data-mark="play"] { --chip-mark: var(--f-accent-mode); }
@@ -1074,7 +1189,21 @@ main > h1 { margin-bottom: var(--s-5); }
   column-gap: var(--s-16);
   margin: var(--s-20) 0;
 }
-.feature:nth-of-type(even) .feature-body { order: 2; }
+/*
+  Alternating sides, with the app always in the wide column.
+
+  `order: 2` on the body moved it to the second *cell* but left the track sizes where
+  they were, so every even row put the screenshot in the 0.85fr column: 587px of app on
+  odd rows against 429px on even ones, which is where the amp, the looper and the Atlas
+  all landed. Swapping the tracks and placing both children by column keeps the media
+  at 1.15fr whichever side it is on, and leaves the DOM order alone so the stacked
+  layout still reads prose first.
+*/
+.feature-body { grid-column: 1; grid-row: 1; }
+.feature-media { grid-column: 2; grid-row: 1; }
+.feature:nth-of-type(even) { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); }
+.feature:nth-of-type(even) .feature-body { grid-column: 2; }
+.feature:nth-of-type(even) .feature-media { grid-column: 1; }
 .feature-body > :first-child { margin-top: 0; }
 .feature-body p { max-width: 46ch; }
 .feature-body h2 {
@@ -1257,10 +1386,40 @@ body[data-page="pro"]       { --page-accent: var(--f-accent-mode); }
   transition: background 0.15s ease-out;
 }
 
+/*
+  `learn` is the intent, and the demo has only one: there is no chord-identification
+  engine on a marketing page. So it is drawn as an emphasized word rather than as a
+  chip — no shadow, no hover, no chevron — because the alternative is a control that
+  looks live and is not. Everything else in this sentence opens.
+*/
+.chip--static {
+  background: color-mix(in srgb, var(--chip-accent) 6%, transparent);
+  box-shadow: none;
+}
+
+/* The chord slot: only Chords mode has a chord, and the colon belongs to the chip it
+   introduces, so the two travel as one unit and the flex gap does not strand it. */
+.chord-slot {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+.chord-slot[hidden] { display: none; }
+.sentence-colon {
+  margin-left: calc(var(--s-2) * -1);
+  color: var(--f-ink-2);
+}
+
 a.chip { text-decoration: none; }
 a.chip:hover { background: color-mix(in srgb, var(--chip-accent) 15%, transparent); }
 
 button.chip { cursor: pointer; }
+/* Shipped disabled, enabled by site.js on load. Without scripting the chip keeps its
+   place in the sentence and stops claiming to open anything. */
+button.chip:disabled { cursor: default; }
+button.chip:disabled .chev { display: none; }
+.toggle-chip:disabled .tc-mark,
+.toggle-chip:disabled .tc-glyph { opacity: 0.35; }
 button.chip:hover { background: color-mix(in srgb, var(--chip-accent) 15%, transparent); }
 button.chip:active { transform: translateY(1px); }
 
@@ -1318,6 +1477,36 @@ button.chip:hover .chev { transform: translateY(1px); }
 @keyframes menu-in {
   from { opacity: 0; transform: translateX(-50%) translateY(-6px) scale(0.98); }
 }
+
+/* The header's Appearance menu hangs from the right edge instead of a chip's center,
+   so it cannot push past the viewport on a narrow window. */
+.chip-menu--end {
+  left: auto;
+  right: 0;
+  transform: none;
+  transform-origin: top right;
+  min-width: 150px;
+  animation-name: menu-in-end;
+}
+
+@keyframes menu-in-end {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+}
+
+/* A chord names itself twice: the symbol, and where it sits in the key. */
+.chip-menu-item--split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+.chip-menu-detail {
+  color: var(--f-ink-2);
+  font-size: var(--t-caption);
+  font-variant-numeric: tabular-nums;
+}
+.chip-menu-item[aria-selected="true"] .chip-menu-detail,
+.chip-menu-item:hover .chip-menu-detail { color: inherit; }
 
 .chip-menu-item {
   display: block;
@@ -1454,10 +1643,17 @@ button.chip:hover .chev { transform: translateY(1px); }
 
    It is also the one badge that links. A reader who meets "Pro" against a
    feature wants the promise and the price, and both are one page away. */
+/* 24px is the floor (WCAG 2.5.8); the badge used to inherit its host's line-height and
+   came out at 20px inside an h2 and 25px in prose — the same control, two sizes. Its own
+   line-height and a min-height make it one size everywhere. A 44px hit area is the app's
+   rule for a control on a panel; this is a word set into a sentence, where an overlay
+   that large would swallow the lines above and below it. */
 .pro-badge {
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
+  min-height: 24px;
+  line-height: 1;
   margin-left: var(--s-3);
   padding: 3px 9px;
   border-radius: var(--r-pill);
@@ -1538,7 +1734,8 @@ th:last-child, td:last-child { padding-right: 0; }
   margin-top: var(--s-4);
   color: var(--f-ink-2);
   font-size: var(--t-control);
-  max-width: 78ch;
+  /* 13px, so its own `ch` is narrower than the body's: 78ch ran to 106 characters. */
+  max-width: 58ch;
 }
 
 /* The app screen, rebuilt: sentence, marker bar, neck, groupings. */
@@ -1561,7 +1758,27 @@ th:last-child, td:last-child { padding-right: 0; }
   min-height: 44px;
 }
 .chip-bar--trailing { justify-content: flex-end; }
-.chip-bar--leading { justify-content: flex-start; }
+
+/*
+  What the app puts below the neck, said in a sentence.
+
+  This was three chip groups wearing the marker bar's exact uniform — 8px mark, caption
+  label, the hover state and all — that were links into the guide. A visitor who had
+  just switched Labels with the identical control above the neck clicked one and left
+  the page. CAGED hulls and position boxes are real musical objects; a demo that draws
+  them wrongly would be worse than a demo that does not draw them, so this row says
+  what is there and points at the page that shows it.
+*/
+.stage-note {
+  /* 13px chrome, so its own `ch` is narrow: this is the caption measure, not the
+     stage's full width, which ran the line to 140 characters. */
+  max-width: 58ch;
+  margin: var(--s-4) var(--s-2) 0;
+  color: var(--f-ink-2);
+  font-size: var(--t-control);
+  line-height: 1.5;
+}
+.stage-note a { color: var(--f-ink); text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); }
 
 .chip-group {
   display: flex;
@@ -1575,7 +1792,17 @@ th:last-child, td:last-child { padding-right: 0; }
   font-weight: 600;
 }
 
-/* ToggleChip: 8px mark, 6px gap, caption2 label, 1.0 / 0.35 on-off */
+/*
+  ToggleChip: 8px mark, 6px gap, caption2 label.
+
+  The off state used to be `opacity: 0.35` on the whole chip, which put a 12px label at
+  3.0:1 on the stage and 3.2:1 on the hero — under the 4.5:1 the app's own marker ink is
+  measured against, and these are the options the caption tells the reader to switch. A
+  choice you cannot read is not a choice. So the state moved onto the mark, which is
+  where the app's grammar keeps it: the dot goes to 0.35, the label goes one ink step
+  from `--f-ink-2` (≈7:1 on the stage) to `--f-ink`. Two channels still separate on from
+  off, and neither of them is legibility.
+*/
 .toggle-chip {
   display: inline-flex;
   align-items: center;
@@ -1584,19 +1811,27 @@ th:last-child, td:last-child { padding-right: 0; }
   padding: 0;
   border: 0;
   background: none;
-  color: var(--f-ink);
+  color: var(--f-ink-2);
   font-family: inherit;
   font-size: var(--t-caption);
   line-height: 1;
   cursor: pointer;
-  opacity: 0.35;
-  transition: opacity 0.15s ease-out;
+  transition: color 0.15s ease-out;
   text-decoration: none;
 }
+.toggle-chip .tc-mark,
+.toggle-chip .tc-glyph {
+  opacity: 0.35;
+  transition: opacity 0.15s ease-out;
+}
 .toggle-chip[aria-checked="true"],
-.toggle-chip.is-on { opacity: 1; }
-.toggle-chip:hover { opacity: 0.75; }
-.toggle-chip[aria-checked="true"]:hover { opacity: 1; }
+.toggle-chip.is-on { color: var(--f-ink); }
+.toggle-chip[aria-checked="true"] .tc-mark,
+.toggle-chip[aria-checked="true"] .tc-glyph,
+.toggle-chip.is-on .tc-mark { opacity: 1; }
+.toggle-chip:hover { color: var(--f-ink); }
+.toggle-chip:hover .tc-mark { opacity: 0.7; }
+.toggle-chip[aria-checked="true"]:hover .tc-mark { opacity: 1; }
 .toggle-chip:disabled { cursor: default; }
 
 .toggle-chip .tc-mark {
@@ -1627,23 +1862,31 @@ th:last-child, td:last-child { padding-right: 0; }
 .toggle-chip[data-value="notes"] .tc-mark     { background: var(--f-accent-note); }
 .toggle-chip[data-value="intervals"] .tc-mark { background: var(--f-accent-scale); }
 .toggle-chip[data-value="gray"] .tc-mark      { background: var(--f-gray-fill); }
-.chip-bar--leading .toggle-chip .tc-mark      { background: var(--f-accent-app); }
 
 /* Shapes: the silhouette is the whole message, so these marks stay neutral and
    leave hue to the Colors group — the app fills them with `.primary` too. Must
    follow the [data-value="intervals"] rule above to win on equal specificity. */
 .chip-group[data-setting="shapes"] .tc-mark { background: var(--f-ink); }
-.chip-group[data-setting="shapes"] .tc-mark--diamond {
+/* The chip previews the 3rd, not the tritone: at an 8px mark the ladder's upper forms
+   all read as circles, so the mark has to come from the bottom of the ladder. */
+.chip-group[data-setting="shapes"] .tc-mark--triangle {
   border-radius: 0;
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
 
-.chip-group[data-state="disabled"] { opacity: 0.4; }
+/*
+  Accidentals with Labels set to anything but Notes: the group has nothing to do, and
+  the guide promises it "dims — but stays visible". A 0.4 opacity on top of the chip's
+  own dimming measured 1.56:1, which is not visible, it is gone. One ink step down for
+  everything in the group says the same thing at 6.6:1, and nothing inside it reads as
+  switched on.
+*/
+.chip-group[data-state="disabled"] .chip-group-label,
+.chip-group[data-state="disabled"] .toggle-chip,
+.chip-group[data-state="disabled"] .toggle-chip[aria-checked="true"] { color: var(--f-ink-3); }
+.chip-group[data-state="disabled"] .tc-glyph { opacity: 0.6; }
 .chip-group[data-state="disabled"] .toggle-chip { cursor: default; }
-
-/* Links styled as chips (the groupings row points into the guide) */
-a.toggle-chip { opacity: 0.75; }
-a.toggle-chip:hover { opacity: 1; text-decoration: none; }
+.chip-group[data-state="disabled"] .toggle-chip:hover { color: var(--f-ink-3); }
 
 .fretboard {
   margin: var(--s-3) 0;
@@ -1658,6 +1901,16 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   width: 100%;
   min-width: 620px;
   height: auto;
+}
+
+/*
+  On a phone the neck scrolls sideways, and at 620px it rendered at 64% — putting the
+  markers at about 18px, under the 24px target floor, on the one control the caption
+  tells the reader to tap. 830px is the width at which a 28px marker stays 24px. It costs
+  some panning; a target too small to hit costs the whole interaction.
+*/
+@media (max-width: 700px) {
+  .fretboard svg { min-width: 830px; }
 }
 
 .fb-nut { stroke: var(--f-nut); stroke-width: 5; stroke-linecap: round; }
@@ -1688,14 +1941,25 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   place that same pitch sits echoes softly behind it (NoteStrike). SVG needs
   `transform-box: fill-box`, or `center` resolves against the whole viewBox
   and the marker scales from the middle of the neck.
+
+  Every rule here reads `> :first-child` — the marker's shape, whatever it is — and not
+  `circle`. Shapes defaults to Intervals, which draws the root, fourth and fifth as
+  hexagons and the minor degrees as squares, so a circle-only rule left 25 of the 54
+  markers in the default view with no hover, no ring and no bloom: pressing Play lit the
+  2nd, 3rd, 6th and 7th and skipped the root. The one silhouette a learner watches was
+  the one that never moved.
 */
 .fb-marker { cursor: pointer; transform-box: fill-box; transform-origin: center; }
-.fb-marker circle {
+/* The invisible target sits on top; the label underneath it must not swallow the press,
+   and the shape's own animation must not carry the rect along with it. */
+.fb-hit { pointer-events: all; }
+.fb-marker text { pointer-events: none; }
+.fb-marker > :first-child {
   transform-box: fill-box;
   transform-origin: center;
   transition: filter 0.12s ease-out;
 }
-.fb-marker:hover circle { filter: brightness(1.08); }
+.fb-marker:hover > :first-child { filter: brightness(1.08); }
 .fb-marker text {
   font-family: var(--font-ui);
   font-size: 13px;
@@ -1703,10 +1967,23 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   font-variant-numeric: tabular-nums;
   pointer-events: none;
 }
-.fb-marker--root circle { stroke: #ffffff; stroke-width: 2.5; }
+/*
+  The root's ring is a dark contour in both themes, which is what the app settled on
+  (`NoteColorPolicyTests.testRootRingIsADarkContour`, measured at 3.055:1 against the
+  dark wheel's deep band). Two earlier versions were wrong in opposite directions: a
+  fixed white halo, invisible on the light canvas where the board is white too, and then
+  the page's own ink, which is white again inside the hero. The ring is read against the
+  marker's own fill rather than against the board — on the dark board the surface is
+  nearly the ink, so the fill is all it has — which is why the stroke straddles the edge
+  here instead of sitting outside it.
+*/
+.fb-marker--root > :first-child {
+  stroke: #141414;
+  stroke-width: 2.5;
+}
 
-.fb-marker.is-ringing circle { animation: fb-strike 460ms cubic-bezier(0.16, 1, 0.3, 1); }
-.fb-marker.is-echoing circle { animation: fb-echo 620ms ease-out; }
+.fb-marker.is-ringing > :first-child { animation: fb-strike 460ms cubic-bezier(0.16, 1, 0.3, 1); }
+.fb-marker.is-echoing > :first-child { animation: fb-echo 620ms ease-out; }
 
 @keyframes fb-strike {
   0%   { transform: scale(1);    filter: brightness(1); }
@@ -1817,15 +2094,33 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
 
 /* A figure, not prose — it takes the card's full width, not the measure.
    Selector matches `.section-card ul` so it actually wins. */
+/*
+  Twelve swatches on a fixed four-column grid: three clean rows of four, so the wheel's
+  order is legible as an order. `auto-fit` gave whatever the container allowed — 5 + 5 + 2
+  at 1280px — which is the one arrangement that makes a 30-degree-per-semitone ladder
+  look arbitrary. The home page's six-swatch selection takes three columns and reads as
+  two rows of three.
+*/
 .section-card .palette,
 .palette {
   max-width: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(164px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--s-3);
   margin: var(--s-5) 0 var(--s-2);
   padding: 0;
   list-style: none;
+}
+.palette:has(> :nth-child(6):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+@media (max-width: 900px) {
+  .section-card .palette,
+  .palette { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .section-card .palette,
+  .palette,
+  .palette:has(> :nth-child(6):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .palette li {
   display: flex;
@@ -1910,7 +2205,8 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
 @media (pointer: coarse) {
   .brand { min-height: 44px; }
   .chip-nav a { min-height: 44px; }
-  .theme-control button { min-height: 44px; }
+  .theme-button { min-height: 44px; }
+  .lang-switch { min-height: 44px; }
   .stage-play { min-height: 44px; }
   a.chip, button.chip { min-height: 44px; }
   .hero-actions .quiet { display: inline-flex; align-items: center; min-height: 44px; }
@@ -1921,7 +2217,8 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
 @media (max-width: 760px) {
   .brand { min-height: 44px; }
   .chip-nav a { min-height: 44px; }
-  .theme-control button { min-height: 44px; }
+  .theme-button { min-height: 44px; }
+  .lang-switch { min-height: 44px; }
   .stage-play { min-height: 44px; }
   a.chip, button.chip { min-height: 44px; }
   .hero-actions .quiet { display: inline-flex; align-items: center; min-height: 44px; }
@@ -1959,7 +2256,7 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   .hero .lede { max-width: var(--measure); }
 
   .chip-nav { margin-inline-start: 0; width: 100%; order: 3; }
-  .theme-control { margin-inline-start: auto; }
+  .header-controls { margin-inline-start: auto; }
 
   /*
     One rule for both: the header is pinned only while it is a single
@@ -1971,9 +2268,9 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   */
   .site-header { position: static; }
 
-  /* The alternating feature blocks stack: prose first, always, whichever side
-     the figure was on — `order` on the body would put a picture above the
-     sentence that explains it. */
+  /* The alternating feature blocks stack: prose first, always, whichever side the
+     figure was on. `display: block` drops the grid, so the column placement above
+     stops applying and the DOM order — body, then media — is what reads. */
   .feature {
     display: block;
     margin: var(--s-16) 0;
@@ -2018,7 +2315,7 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   }
   .chip-nav ul::-webkit-scrollbar { display: none; }
   .chip-nav a { min-height: 44px; }
-  .theme-control { margin-inline-start: auto; }
+  .header-controls { margin-inline-start: auto; }
   .lede { margin-bottom: var(--s-8); }
   .chip-menu { max-height: min(50vh, 320px); }
   .guide-index a { padding-block: var(--s-5); column-gap: var(--s-3); }
@@ -2043,11 +2340,49 @@ a.toggle-chip:hover { opacity: 1; text-decoration: none; }
   }
   /* The app keeps the chips' short opacity fade under Reduce Motion. */
   .toggle-chip { transition-duration: 0.15s !important; }
+
+  /*
+    The strike is not decoration here, it is the readout: it is the only thing that says
+    which note is sounding. Killing every animation left a reader who pressed Play with
+    audio and a completely static neck. The classes are still applied and removed on the
+    same schedule, so holding a brightness step and a contour for their duration says the
+    same thing without moving anything.
+  */
+  .fb-marker.is-ringing > :first-child {
+    filter: brightness(1.35);
+    stroke: var(--f-ink);
+    stroke-width: 3;
+    paint-order: stroke;
+  }
+  .fb-marker.is-echoing > :first-child { filter: brightness(1.18); }
 }
 
 @media print {
   .site-header, .theme-control, .skip-link, .toc { display: none; }
   body { background: #fff; color: #000; }
+
+  /*
+    The hero re-declares the dark theme's tokens on itself, and browsers do not print
+    background colors — so the masthead printed white ink on white paper and a printed
+    product page came out with no headline, no lede and no call to action. Put the ink
+    back rather than the band.
+  */
+  .hero {
+    background: #fff !important;
+    border-bottom: 1px solid #ddd;
+    --f-ink: #000;
+    --f-ink-body: #000;
+    --f-ink-2: #333;
+    --f-ink-3: #555;
+    --f-canvas: #fff;
+    --f-surface: #fff;
+    --f-surface-2: #fff;
+    --f-board: #fff;
+    --f-hairline: #ddd;
+  }
+  .hero::before { display: none; }
+  .hero h1 em { color: #000; }
+  .stage { box-shadow: none; border: 1px solid #ddd; }
   .section-card, .stage, .guide-index { box-shadow: none; border: 1px solid #ddd; }
   /* Paper is always light: print the light shot whatever the screen was showing. */
   .shot { box-shadow: none; border: 1px solid #ddd; background: none; }

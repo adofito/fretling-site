@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-419">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,10 +69,12 @@
         </ul>
       </nav>
       <div class="header-controls">
-        <div class="theme-control" role="group" aria-label="Apariencia">
-          <button type="button" data-theme="system" aria-pressed="true">Sistema</button>
-          <button type="button" data-theme="light" aria-pressed="false">Claro</button>
-          <button type="button" data-theme="dark" aria-pressed="false">Oscuro</button>
+        <div class="theme-control" data-menu="theme">
+          <button type="button" class="theme-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Apariencia">
+            <span data-theme-label>Sistema</span>
+            <svg class="chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="chip-menu chip-menu--end" role="listbox" aria-label="Apariencia" hidden></div>
         </div>
         <a class="lang-switch" href="../fretboard.html" hreflang="en" lang="en" aria-label="English version">English</a>
       </div>
@@ -137,7 +139,7 @@
             <tr>
               <td><strong>Formas</strong></td>
               <td>Círculos / Intervalos</td>
-              <td><em>Círculos</em> dibuja todos los marcadores iguales. <em>Intervalos</em> da a cada grado su propio contorno (cuadrado, rombo, hexágono) para que la fundamental se lea distinto de una tercera incluso en Gris.</td>
+              <td><em>Círculos</em> dibuja todos los marcadores iguales. <em>Intervalos</em> da a cada grado su propio contorno, contando esquinas: un círculo para la fundamental, tres para una 3ª, hasta siete para una 7ª, así la fundamental se lee distinta de una tercera incluso en Gris.</td>
             </tr>
             <tr>
               <td><strong>Colores</strong></td>
@@ -147,13 +149,13 @@
             <tr>
               <td><strong>Alteraciones</strong></td>
               <td>♯ Sostenidos / ♭ Bemoles</td>
-              <td>Si las notas de tecla negra se leen como F♯ o G♭. Solo tiene sentido cuando las etiquetas muestran nombres de notas, así que este grupo se atenúa (pero sigue visible) cuando Etiquetas está en Intervalos o Ninguna.</td>
+              <td>Si las notas de tecla negra se leen como F♯ o G♭. Sigue la tonalidad en la que estás hasta que tú la definas: F Mayor escribe B♭ y no A♯, y C Mixolidio sigue a F Mayor, cuyas notas usa. Toca cualquiera de los dos chips, incluso el que ya está encendido, y esa escritura queda tuya de ahí en adelante, en todas las tonalidades. Solo tiene sentido cuando las etiquetas muestran nombres de notas, así que este grupo se atenúa — pero sigue visible — cuando Etiquetas está en Intervalos o Ninguna.</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p>Todos los grupos excepto <strong>Trastes</strong> son de tipo radio: un chip está encendido y tocar el chip encendido no hace nada. En una ventana angosta la barra se desplaza de lado en vez de partirse.</p>
-      <p><strong>Los valores predeterminados</strong> son Etiquetas en <em>Notas</em>, Formas en <em>Intervalos</em>, Colores en <em>Color</em> y Alteraciones en <em>Sostenidos</em>, con 15 trastes. Todos se recuerdan entre sesiones.</p>
+      <p><strong>Los valores predeterminados</strong> son Etiquetas en <em>Notas</em>, Formas en <em>Intervalos</em> y Colores <em>Color</em>, en 15 trastes, con Alteraciones siguiendo la tonalidad. Todos se recuerdan entre sesiones.</p>
       <p><strong>Cómo se construyen las formas de intervalo:</strong> son una escalera, no un conjunto de símbolos que memorizar. La fundamental es un círculo; la 2ª es ese círculo roto una vez; de la 3ª en adelante, el grado es el número de esquinas: tres para una 3ª, cuatro para una 4ª, y así hasta siete para una 7ª. Un grado bemolizado o sostenido conserva su forma y se inclina, hacia un lado si baja y hacia el otro si sube, así que hay dos reglas que aprender en vez de doce símbolos.</p>
       <p>Tres de los cuatro grupos de marcadores llegan más allá del mástil. <strong>Etiquetas</strong>, <strong>Colores</strong> y <strong>Alteraciones</strong> también definen cómo se leen la <a href="#timeline">línea de tiempo de la escala</a> y el Atlas de acordes, así que una nota se nombra, se deletrea y se colorea igual dondequiera que la encuentres. (El Atlas conserva los nombres de las notas cuando Etiquetas está en Ninguna: un selector cuyas opciones no llevan etiqueta no tiene con qué elegir.) <strong>Formas</strong> es solo del mástil: la línea de tiempo y el Atlas dibujan marcadores redondos.</p>
           <figure class="shot">
@@ -163,7 +165,7 @@
         <img class="shot-dark" src="../screenshots/es-419/08-marker-bar-notes-dark.webp"
              width="1936" height="280" loading="lazy" decoding="async"
              alt="La barra de visualización de marcadores con Etiquetas en Notas, de modo que cada marcador del mástil imprime un nombre de nota.">
-        <figcaption class="figure-caption">Etiquetas = Notas. Alteraciones sigue activo, porque los nombres de las notas pueden ser sostenidos o bemoles.</figcaption>
+        <figcaption class="figure-caption">Etiquetas = Notas. Alteraciones sigue activo, porque los nombres de notas pueden ser sostenidos o bemoles, y sigue la tonalidad hasta que tú elijas.</figcaption>
       </figure>
       <figure class="shot">
         <img class="shot-light" src="../screenshots/es-419/09-marker-bar-intervals-light.webp"
@@ -245,7 +247,7 @@
         <li><strong>Escala</strong>: reproduce la escala como una corrida, siguiendo el patrón y el rango de trastes que tengas en pantalla.</li>
         <li><strong>Acorde</strong>: sostiene el acorde.</li>
       </ul>
-      <p>Un transporte va montado en un riel, así que basta un riel para que aparezca uno: el transporte Escala está ahí siempre que hay una escala en la línea de tiempo; el transporte Acorde, siempre que hay un acorde activo. Eso incluye Tríadas, que ahora puede hacer sonar la tríada que te está mostrando.</p>
+      <p>Un transporte va montado sobre un riel, así que basta un riel para que aparezca uno: el transporte de Escala está siempre que haya una escala en la línea de tiempo, y el de Acorde siempre que haya un acorde activo. Eso incluye Tríadas, donde el transporte suena la tríada en pantalla.</p>
       <p>En Mac, <strong>Mayús-Espacio</strong> presiona el que esté en pantalla de los dos: el acorde si hay uno activo, si no la escala. La barra espaciadora sola es el transporte de la app: detiene lo que esté sonando y, cuando nada suena, arranca el clic junto con un loop cargado y detenido. Consulta <a href="guide.html#shortcuts">atajos de teclado y gestos</a>.</p>
       <p>Bajo la fila, una sola línea de notas deletrea lo que el transporte está a punto de hacer sonar. Sigue al sujeto del modo en que estás (el acorde en Acordes y Tríadas, la escala en Escalas), salvo mientras algo suena, cuando sigue al sonido. Cuando los dos transportes están arriba antepone <strong>Escala</strong> o <strong>Acorde</strong>, para que sepas cuál está describiendo.</p>
       <p>La línea de la escala se deletrea a partir de las notas que <em>realmente sonarán</em>, así que reducir el rango de trastes o activar una caja reduce la línea igual que reduce la corrida. Si el rango visible no contiene notas tocables, la línea dice <em>No hay notas en este rango de trastes</em> en lugar de dejarte presionar un botón muerto.</p>
@@ -262,7 +264,7 @@
 
       <h3>CAGED</h3>
       <p><strong>No / Todas / C / A / G / E / D.</strong> Superpone una de las cinco formas CAGED (o todas a la vez) sobre la escala, el acorde o la tríada actual. Disponible en todos los modos de aprendizaje.</p>
-      <p><strong>Los agarres siguen al sujeto.</strong> Un sujeto mayor recibe agarres mayores y uno menor recibe agarres menores, así que una escala menor ya no lleva cajas mayores. Donde el sujeto no tiene una tríada mayor ni menor que agarrar —un acorde disminuido o aumentado, un acorde suspendido, una tonalidad locria— todo el grupo CAGED <em>desaparece</em> de la fila en vez de quedarse ahí sin dibujar nada. Cambia a un sujeto que sí la tenga y el grupo vuelve con tu selección intacta.</p>
+      <p><strong>Los agarres siguen al sujeto.</strong> Un sujeto mayor recibe posiciones mayores y uno menor las recibe menores, así que una escala menor nunca lleva cajas mayores. Cuando el sujeto no tiene tríada mayor ni menor que agarrar — un acorde disminuido o aumentado, un acorde suspendido, una tonalidad locria — todo el grupo CAGED <em>desaparece</em> de la fila en vez de quedarse ahí sin dibujar nada. Cambia a un sujeto que sí la tenga y el grupo vuelve con tu selección intacta.</p>
       <p>Cómo se dibuja una forma se define en <a href="settings.html#fretboard-tab">Configuración → Diapasón → Superposiciones de formas → Vista CAGED</a>:</p>
       <ul>
         <li><strong>Recuadro</strong>: el contorno de la región de la forma.</li>
@@ -378,7 +380,7 @@
   <footer class="site-footer">
     <div class="container">
       <p>Fretling — Scale Tones and Chords. Guía del usuario de la versión 1.3.</p>
-      <p><a href="guide.html">Inicio de la guía</a> &middot; <a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio</a></p>
+      <p><a href="guide.html">Inicio de la guía</a> &middot; <a href="privacy.html">Privacidad</a> &middot; <a href="index.html">Inicio</a> &middot; <a href="mailto:adofito@gmail.com?subject=Fretling%20support">Contacto</a></p>
     </div>
   </footer>
 
