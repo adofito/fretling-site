@@ -1229,7 +1229,6 @@ main > h1 { margin-bottom: var(--s-5); }
 .feature-body li > strong:first-child { color: var(--f-ink); }
 .feature-media { display: grid; gap: var(--s-5); }
 .feature-media .shot { margin: 0; }
-.feature-media .figure-caption { margin-top: calc(var(--s-3) * -1); }
 
 /* The interval swatches keep their own grid: `.feature-body ul` is the more
    specific selector and would hand them a list indent and a prose measure. */

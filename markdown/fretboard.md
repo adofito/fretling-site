@@ -18,12 +18,12 @@ a span of the neck rather than shorten it, use the [fret range
 limiter](#fret-range-limiter) — that frames a position on the board you have, while
 **Frets** changes how much board there is.
 
-**Inlays.** The board carries its own position marks at 3, 5, 7, 9, 12, 15, 17, 19 and 21,
-and the octave at fret 12 wears a pair, as a real neck does. They are drawn as low bars,
-never discs: a disc is what a note marker is, and scenery that borrows a marker's
-silhouette would be read as a note. They sit in the gaps *between* strings, which is the
-only part of the board a marker never occupies, so no inlay can hide a note and no note can
-cover an inlay. The marks taper toward the bridge with the frets they sit in.
+**Side marks.** Like the side dots on a real neck, short marks run along the bass edge of the
+board, just below the low E string, at 3, 5, 7, 9, 12, 15, 17, 19 and 21 — and the octave at
+fret 12 wears a pair. They sit outside the strings, so a mark can never touch or hide a note,
+and they wear the same brown and jade as the fret numbers above the neck, so the two always
+agree on where you are. They are short flat dashes rather than dots, because a dot is what a
+note marker is.
 
 **String names.** A narrow lane on the leading edge names each string — e, B, G, D, A, E
 from the top down — with the six letters sharing one right edge, and a gutter between the
@@ -265,7 +265,7 @@ alike.
 - **Double-tap an edge tab** — opens the window out to that end of the neck.
 
 The boundary frets name themselves as blue chips in the number row, on the same disc the
-inlay numbers wear. The frame is never filled in: it claims the span with its edge alone, so
+landmark numbers wear. The frame is never filled in: it claims the span with its edge alone, so
 the markers it is drawn around stay exactly as legible as they were — and every note inside
 it stays tappable.
 
