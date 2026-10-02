@@ -2,7 +2,7 @@
 
 The settings sidebar slides in from the left, opened with the button at the left end of the
 top bar. It has three tabs — **Fretboard**, **Audio**, and **Icon** — and two rows below them:
-**Fretling Pro** and **About Fretling**.
+**Fretling Pro** and **About Fretling**. It reopens on the tab you left it on.
 
 > Not everything lives in here. The settings you change constantly sit on the chip bars that
 > bracket the neck: [marker display](fretboard.md#marker-display-bar) above it,
@@ -43,7 +43,7 @@ both are flipped mid-practice and both change what the neck shows, so they belon
 | **CAGED Display** | Box (default) / Lines / Both | How a CAGED shape is drawn: region outline, connecting lines through its notes, or both. |
 | **Timeline Shape Cues** | Toggle | Also marks the shape's tones on the timeline. Requires chord shapes to be on. |
 | **Show Finger Numbers** | Toggle | Prints finger numbers on chord shapes. Requires chord shapes to be on. |
-| **CAGED Interaction** | Coexist (default) / Exclusive / Replace CAGED | Chords mode. What happens when chord shapes and CAGED are both on — draw both, let shapes take over while they are on, or have shapes replace CAGED entirely (which also removes the CAGED chips from Visual Groupings). |
+| **CAGED Interaction** | Coexist (default) / Exclusive / Replace CAGED | Chords mode. What happens when chord shapes and CAGED are both on — draw both, let shapes take over while they are on, or have shapes replace CAGED entirely (which also removes the CAGED chips from Visual Groupings). A line under the menu says what the current choice does. |
 
 Chord shapes themselves are switched on and off in the **Chord Shapes** group of the
 [Visual Groupings](fretboard.md#chord-shapes-chords) bar under the neck, not here — it is an overlay
@@ -59,18 +59,20 @@ to lay a shape against.
 
 | Setting | Options | Description |
 |---------|---------|-------------|
-| **Instrument** | Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel) — the default, Jazz Guitar, Clean Electric Guitar, Sine Wave | The voice used when you tap notes on the neck. Sine Wave is synthesized; the rest are recorded samples, from two sources bundled with the app — the FreePats General MIDI set, which is public domain, and GeneralUser GS. Both are credited in About. |
+| **Instrument** | Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel) — the default, Jazz Guitar, Clean Electric Guitar, Sine Wave | The voice used when you tap notes on the neck. The four guitars are modeled — each note is a string computed as it plays — and Sine Wave is synthesized. The piano is recorded samples, from two sources bundled with the app — the FreePats General MIDI set, which is public domain, and GeneralUser GS. Both are credited in About. |
 
 ### Chord Pad Layers
 
 Chords can be voiced by stacking up to **three** instruments, which is how you get a pad behind
-a chord rather than one flat sample. **Add Layer** adds one, up to that maximum.
+a chord rather than one flat sample. **Add Layer** adds one, up to that maximum; it dims at
+three, and a layer's remove button dims while it is the only one left.
 
 Each layer carries four controls of its own:
 
-- **Instrument** — one of seventeen voices chosen for stacking: Pad 1 (New Age), Pad 2 (Warm),
-  Pad 3 (Polysynth), Pad 4 (Choir), Pad 5 (Bowed), String Ensemble 1 and 2, Synth Strings 1
-  and 2, Choir Aahs, Voice Oohs, Church Organ, Drawbar Organ, Rock Organ, Acoustic Piano, and
+- **Instrument** — one of seventeen voices chosen for stacking, in five sections of the menu:
+  **Pads** — Pad 1 (New Age), Pad 2 (Warm), Pad 3 (Polysynth), Pad 4 (Choir), Pad 5 (Bowed);
+  **Strings** — String Ensemble 1 and 2, Synth Strings 1 and 2; **Voices** — Choir Aahs, Voice
+  Oohs; **Organs** — Church Organ, Drawbar Organ, Rock Organ; **Pianos** — Acoustic Piano, and
   Electric Piano 1 and 2.
 - **Mute** — silences that layer without removing it, so you can hear what it was contributing.
 - **Volume** — that layer's share of the stack.
@@ -84,10 +86,10 @@ Ensemble 1 at 0.55, and Choir Aahs at 0.4. A layer you add yourself starts as Pa
 
 ### Humanize
 
-One slider below the layers, from 0 to 24, default **None**. It varies each note's velocity a
-little so repeated chords don't sound machine-stamped. It belongs to the pad as a whole rather
-than to one layer, which is why it sits once underneath the list: it perturbs every note the
-layers play.
+One slider in a group of its own below the layers, from **None** to ±24, default ±8. It varies
+each note's velocity a little so repeated chords don't sound machine-stamped. It belongs to the
+pad as a whole rather than to one layer, which is why it sits once underneath the list: it
+perturbs every note the layers play.
 
 Layers apply to chord playback — the Chord chip beside the timeline and Chord Atlas previews.
 Tapping single notes always uses the Instrument setting above.

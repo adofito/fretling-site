@@ -17,8 +17,8 @@ This is the Markdown mirror of the user guide. On the web the site root
   dominants on sight.
 - **Identify** a chord by tapping notes onto the neck, or by playing it into the mic —
   Fretling ranks the readings.
-- **Hear** anything you see: tap-to-play notes, one-tap scale and chord playback, and sampled
-  instruments — a grand piano, nylon, steel, jazz and clean electric guitars, or a sine wave;
+- **Hear** anything you see: tap-to-play notes, one-tap scale and chord playback, and real
+  instruments — a sampled grand piano, modeled nylon, steel, jazz and clean electric guitars, or a sine wave;
   chords through up to three layered voices.
 - **Practice** with a chromatic tuner and its Precision mode, a metronome with a 61-beat drum
   library and a step sequencer, a Neural Amp Modeler amp, and a looper.

@@ -83,7 +83,7 @@
 
   <main id="main" class="container">
     <h1>Configuración</h1>
-    <p class="lede">La barra lateral de configuración se desliza desde la izquierda y se abre con el botón del extremo izquierdo de la barra superior. Tiene tres pestañas: <strong>Diapasón</strong>, <strong>Audio</strong> e <strong>Ícono</strong> y dos filas debajo de ellas: <strong>Fretling Pro</strong> y <strong>Acerca de Fretling</strong>.</p>
+    <p class="lede">La barra lateral de configuración se desliza desde la izquierda y se abre con el botón del extremo izquierdo de la barra superior. Tiene tres pestañas: <strong>Diapasón</strong>, <strong>Audio</strong> e <strong>Ícono</strong> y dos filas debajo de ellas: <strong>Fretling Pro</strong> y <strong>Acerca de Fretling</strong>. Se vuelve a abrir en la pestaña en la que la dejaste.</p>
 
     <div class="callout">
       <p>No todo vive aquí. Los ajustes que cambias constantemente están en las barras de chips que enmarcan el mástil: <a href="fretboard.html#marker-bar">visualización de marcadores</a> encima, <a href="fretboard.html#overlays">Agrupaciones visuales</a> debajo. La barra lateral guarda lo que ajustas una vez y dejas en paz.</p>
@@ -145,7 +145,7 @@
             <tr><td><strong>Vista CAGED</strong></td><td>Recuadro (predeterminado) / Líneas / Ambos</td><td>Cómo se dibuja una forma CAGED: contorno de la región, líneas que conectan sus notas, o ambos.</td></tr>
             <tr><td><strong>Pistas de forma en la línea de tiempo</strong></td><td>Interruptor</td><td>También marca las notas de la forma en la línea de tiempo. Requiere que las formas de acorde estén activadas.</td></tr>
             <tr><td><strong>Mostrar números de dedos</strong></td><td>Interruptor</td><td>Imprime los números de dedos en las formas de acorde. Requiere que las formas de acorde estén activadas.</td></tr>
-            <tr><td><strong>Interacción CAGED</strong></td><td>Coexistir (predeterminado) / Exclusivo / Reemplazar CAGED</td><td>Modo Acordes. Qué pasa cuando las formas de acorde y CAGED están activados a la vez: dibujar ambos, dejar que las formas tomen el control mientras están activas, o que las formas reemplacen a CAGED por completo (lo que también quita los chips CAGED de Agrupaciones visuales).</td></tr>
+            <tr><td><strong>Interacción CAGED</strong></td><td>Coexistir (predeterminado) / Exclusivo / Reemplazar CAGED</td><td>Modo Acordes. Qué pasa cuando las formas de acorde y CAGED están activados a la vez: dibujar ambos, dejar que las formas tomen el control mientras están activas, o que las formas reemplacen a CAGED por completo (lo que también quita los chips CAGED de Agrupaciones visuales). Una línea bajo el menú dice qué hace la opción actual.</td></tr>
           </tbody>
         </table>
       </div>
@@ -160,16 +160,16 @@
         <table>
           <thead><tr><th>Ajuste</th><th>Opciones</th><th>Descripción</th></tr></thead>
           <tbody>
-            <tr><td><strong>Instrumento</strong></td><td>Piano acústico, Guitarra acústica (nylon), Guitarra acústica (acero) —el predeterminado—, Guitarra jazz, Guitarra eléctrica clean, Onda senoidal</td><td>La voz que se usa cuando tocas notas en el mástil. La onda senoidal es sintetizada; el resto son samples grabados, de dos fuentes incluidas con la app: el conjunto FreePats General MIDI, que es de dominio público, y GeneralUser GS. Ambas están acreditadas en Acerca de.</td></tr>
+            <tr><td><strong>Instrumento</strong></td><td>Piano acústico, Guitarra acústica (nylon), Guitarra acústica (acero) —el predeterminado—, Guitarra jazz, Guitarra eléctrica clean, Onda senoidal</td><td>La voz que se usa cuando tocas notas en el mástil. Las cuatro guitarras son modeladas (cada nota es una cuerda calculada mientras suena) y la onda senoidal es sintetizada. El piano son samples grabados, de dos fuentes incluidas con la app: el conjunto FreePats General MIDI, que es de dominio público, y GeneralUser GS. Ambas están acreditadas en Acerca de.</td></tr>
           </tbody>
         </table>
       </div>
 
       <h3>Capas del pad de acordes</h3>
-      <p>Los acordes se pueden voicear apilando hasta <strong>tres</strong> instrumentos, que es como consigues un pad detrás de un acorde en vez de un solo sample plano. <strong>Añadir capa</strong> agrega una, hasta ese máximo.</p>
+      <p>Los acordes se pueden voicear apilando hasta <strong>tres</strong> instrumentos, que es como consigues un pad detrás de un acorde en vez de un solo sample plano. <strong>Añadir capa</strong> agrega una, hasta ese máximo; se atenúa al llegar a tres, y el botón para quitar una capa se atenúa mientras es la única que queda.</p>
       <p>Cada capa lleva cuatro controles propios:</p>
       <ul>
-        <li><strong>Instrumento</strong>: una de diecisiete voces elegidas para apilar: Pad 1 (New Age), Pad 2 (Warm), Pad 3 (Polysynth), Pad 4 (Choir), Pad 5 (Bowed), String Ensemble 1 y 2, Synth Strings 1 y 2, Choir Aahs, Voice Oohs, Church Organ, Drawbar Organ, Rock Organ, Acoustic Piano y Electric Piano 1 y 2.</li>
+        <li><strong>Instrumento</strong>: una de diecisiete voces elegidas para apilar, en cinco secciones del menú: <strong>Pads</strong> — Pad 1 (New Age), Pad 2 (Warm), Pad 3 (Polysynth), Pad 4 (Choir), Pad 5 (Bowed); <strong>Cuerdas</strong> — String Ensemble 1 y 2, Synth Strings 1 y 2; <strong>Voces</strong> — Choir Aahs, Voice Oohs; <strong>Órganos</strong> — Church Organ, Drawbar Organ, Rock Organ; <strong>Pianos</strong> — Acoustic Piano y Electric Piano 1 y 2.</li>
         <li><strong>Silenciar</strong>: silencia esa capa sin quitarla, para que oigas qué estaba aportando.</li>
         <li><strong>Volumen</strong>: la parte de esa capa dentro de la mezcla.</li>
         <li><strong>Velocidad</strong>: de 1 a 127, predeterminado 100. No es un segundo volumen: una velocidad elige qué sample grabado reproduce la capa, así que cambia el <em>timbre</em> de la voz además de su nivel, igual que pulsar más fuerte una tecla de piano.</li>
@@ -177,7 +177,7 @@
       <p>Una instalación nueva arranca con tres capas ya apiladas: Pad 2 (Warm) en 1.0, String Ensemble 1 en 0.55 y Choir Aahs en 0.4. Una capa que agregues tú arranca como Pad 2 (Warm) en 0.5. Doble clic en cualquier deslizador para devolverlo al valor predeterminado de esa ranura.</p>
 
       <h3>Humanizar</h3>
-      <p>Un deslizador debajo de las capas, de 0 a 24, predeterminado <strong>Ninguna</strong>. Varía un poco la velocidad de cada nota para que los acordes repetidos no suenen troquelados a máquina. Pertenece al pad completo y no a una capa, y por eso está una sola vez debajo de la lista: altera cada nota que tocan las capas.</p>
+      <p>Un deslizador en un grupo propio debajo de las capas, de <strong>Ninguna</strong> a ±24, predeterminado ±8. Varía un poco la velocidad de cada nota para que los acordes repetidos no suenen troquelados a máquina. Pertenece al pad completo y no a una capa, y por eso está una sola vez debajo de la lista: altera cada nota que tocan las capas.</p>
       <p>Las capas se aplican a la reproducción de acordes: el chip Acorde junto a la línea de tiempo y las vistas previas del Atlas de acordes. Tocar notas sueltas siempre usa el ajuste Instrumento de arriba.</p>
           <figure class="shot">
         <img class="shot-light" src="../screenshots/es-419/20-settings-audio-light.webp"

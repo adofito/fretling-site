@@ -194,7 +194,7 @@
       </a>
       <a href="#hear-it" data-mark="hear">
         <span class="pool-title">Hear it</span>
-        <span class="pool-desc">Tap any note to play it. Run a scale or sustain a chord from one button, through sampled pianos and guitars.</span>
+        <span class="pool-desc">Tap any note to play it. Run a scale or sustain a chord from one button, through a sampled grand piano and modeled guitars.</span>
         <span class="pool-go">The sound &rarr;</span>
       </a>
       <a href="#plug-in" data-mark="play">
@@ -208,13 +208,16 @@
       <h2>On this page</h2>
       <ul>
         <li><a href="#say-it">Plain language</a></li>
+        <li><a href="#map">The map</a></li>
         <li><a href="#see-it">The neck</a></li>
         <li><a href="#identify">Naming a chord</a></li>
         <li><a href="#chord-atlas">Chord Atlas</a></li>
         <li><a href="#hear-it">Sound</a></li>
         <li><a href="#plug-in">Amp and looper</a></li>
         <li><a href="#practice-tools">Practice tools</a></li>
+        <li><a href="#guitar-model">Under the hood</a></li>
         <li><a href="#make-it-yours">Settings</a></li>
+        <li><a href="#coming-next">Coming next</a></li>
         <li><a href="#requirements">Requirements</a></li>
         <li><a href="#free-and-pro">Free &amp; Pro</a></li>
       </ul>
@@ -241,6 +244,46 @@
                alt="The natural-language header reading “I want to learn scales in E Major: A”, with each changeable word drawn as a colored chip and the chord chip last.">
           <figcaption class="figure-caption">The sentence is the whole control surface.</figcaption>
         </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="map" data-layout="stacked">
+      <div class="feature-body">
+        <h2>Every intent, every mode</h2>
+        <p>The sentence opens with what you want to do, then what you want to do it with. This is the whole tree, including the branches still in testing.</p>
+      </div>
+      <div class="feature-media">
+        <ul class="mindmap" aria-label="Fretling's intents and modes">
+          <li><span class="mm-node mm-root">I want to</span>
+            <ul>
+              <li><span class="mm-node" data-accent="intent">learn</span>
+                <ul>
+                  <li><span class="mm-node" data-accent="mode">scales</span><span class="mm-leaf">twelve scales, with CAGED, Box Shapes and 3NPS over the top</span></li>
+                  <li><span class="mm-node" data-accent="mode">chords</span><span class="mm-leaf">the chords of a key, real fingerings and the Chord Atlas</span></li>
+                  <li><span class="mm-node" data-accent="mode">triads</span><span class="mm-leaf">four types, one string set at a time</span></li>
+                  <li><span class="mm-node mm-soon" data-accent="mode">progressions<span class="visually-hidden"> (in testing)</span></span><span class="mm-leaf">build a progression and play it in time</span></li>
+                  <li><span class="mm-node mm-soon" data-accent="mode">arpeggios<span class="visually-hidden"> (in testing)</span></span><span class="mm-leaf">chord arpeggios and broken intervals, graded as you play</span></li>
+                </ul>
+              </li>
+              <li><span class="mm-node" data-accent="intent">identify</span>
+                <ul>
+                  <li><span class="mm-node" data-accent="mode">a chord</span><span class="mm-leaf">from notes you tap or play, in a key or without one</span></li>
+                </ul>
+              </li>
+              <li><span class="mm-node mm-soon" data-accent="intent">pivot<span class="visually-hidden"> (in testing)</span></span>
+                <ul>
+                  <li><span class="mm-node mm-soon" data-accent="mode">on a note</span><span class="mm-leaf">every chord that holds it, and the note's role in each</span></li>
+                </ul>
+              </li>
+              <li><span class="mm-node mm-soon" data-accent="intent">improvise<span class="visually-hidden"> (in testing)</span></span>
+                <ul>
+                  <li><span class="mm-node mm-soon" data-accent="mode">over a progression</span><span class="mm-leaf">the scale to solo with, then chord tones, guide tones and the changes</span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="mm-legend"><span class="mm-key" aria-hidden="true"></span>Dashed: built, and in testing now. <a href="#coming-next">What is coming next</a></p>
       </div>
     </section>
 
@@ -328,7 +371,7 @@
         <h2>Hear what you see</h2>
         <p>Every marker is a button. Tap it to hear that note; press and hold to sustain it. On iPad you can hold several at once and slide along a string.</p>
         <p>The scale timeline under the neck lays the key out left to right. Press the transport at the head of a rail to run the scale, or to sustain the chord, and the line beneath spells out what you are about to hear.</p>
-        <p>The voices are sampled instruments, not beeps: a grand piano, nylon and steel acoustic guitars, jazz and clean electric guitars, and a sine wave when you want the pitch and nothing else. Chords can stack up to three pad voices on top.</p>
+        <p>The voices are instruments, not beeps: a sampled grand piano, four guitars modeled string by string &mdash; nylon, steel, jazz and clean electric &mdash; and a sine wave when you want the pitch and nothing else. Chords can stack up to three pad voices on top. <a href="#guitar-model">How the guitars work</a></p>
       </div>
       <div class="feature-media">
         <figure class="shot">
@@ -410,6 +453,76 @@
       </div>
     </section>
 
+    <section class="feature" id="guitar-model">
+      <div class="feature-body">
+        <h2>Guitars played, not played back</h2>
+        <p>Nylon, Steel, Jazz and Clean Electric are not recordings. Every note is a string computed while you hear it: a digital waveguide that loses its high partials faster than its fundamental, the way a real string does, with a little stiffness so its overtones sit slightly sharp.</p>
+        <p>Six strings share one bridge, so the open strings ring along with the one you pluck. Where you pluck changes the tone, and how hard darkens or brightens it. Nylon and Steel pluck through a body taken from recordings of real guitars; the Clean Electric has a neck pickup instead.</p>
+        <p>With the amp listening, the Clean Electric plays through it, into the same Neural Amp Modeler profile as your own guitar. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <ul class="spec">
+          <li><b>6</b>strings, coupled at one bridge</li>
+          <li><b>4</b>guitars: nylon, steel, jazz and clean electric</li>
+          <li><b>0.35&cent;</b>worst pitch error the tests measure</li>
+          <li><b>27 MB</b>smaller than the samples it replaced</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="feature" id="piano-body">
+      <div class="feature-body">
+        <h2>A piano that rings in sympathy <a class="soon-badge" href="#coming-next">In testing</a></h2>
+        <p>A sampled grand still plays every piano note. What a sample cannot carry is the rest of the instrument answering, so the piano body adds it underneath: the top strings, which have no dampers, ring in sympathy with whatever you play, and so does every key you hold down. Let a key go and its felt lands with a soft thump.</p>
+        <p>There is no table of overtones behind it. Each note you strike drives modeled strings, and they resonate wherever their harmonics line up with it, so the bloom follows the harmony rather than a recipe.</p>
+        <p>It sits well under the grand, felt more than heard, and only under the grand: the electric pianos stay dry.</p>
+      </div>
+      <div class="feature-media">
+        <ul class="spec">
+          <li><b>16</b>held keys that ring along</li>
+          <li><b>F6&ndash;C8</b>strings with no dampers, always free</li>
+          <li><b>18 dB</b>under the piano, to color it without covering it</li>
+          <li><b>3</b>places it plays: notes, chords and progressions</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="feature" id="harmonic-bed">
+      <div class="feature-body">
+        <h2>A harmonic bed that moves <a class="soon-badge" href="#coming-next">In testing</a></h2>
+        <p>Sustain a chord or play a progression and the layers under it stop being a fixed mix. Fretling reads where you are in the bar, where you are in the phrase, and what the harmony is doing &mdash; at home, moving away or pulling back &mdash; and folds the three into one energy.</p>
+        <p>As the energy rises, pads recede and darken, strings come forward, and a choir comes in once a phrase has opened. When a dominant resolves home, the energy dips with it. A piano or organ layer holds still.</p>
+        <p>Under the layers sits a synth pad: detuned saws through a filter that opens with the energy, each note drifting slowly against the others so a held chord never quite sits still. Warm, Glass or Dark.</p>
+        <p><strong>Movement</strong> is a setting &mdash; Off, Subtle or Full &mdash; and it starts Off.</p>
+      </div>
+      <div class="feature-media">
+        <ul class="spec">
+          <li><b>3</b>things it follows: the bar, the phrase, the harmony</li>
+          <li><b>20&times;</b>a second, the mix is redrawn</li>
+          <li><b>2&frac12;</b>octaves the pad's filter opens, at most</li>
+          <li><b>3</b>pads: Warm, Glass and Dark</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="feature" id="tuner-tech">
+      <div class="feature-body">
+        <h2>A tuner with a strobe inside</h2>
+        <p>Tuning happens in two stages. A pitch tracker names the note from 85 milliseconds of sound. Then a phase vernier &mdash; the digital form of a mechanical strobe &mdash; watches the waveform's phase drift against the target and measures the difference to hundredths of a cent.</p>
+        <p>Fast mode reads to the whole cent about 24 times a second, and it is free. Precision mode listens to a held note for about a second and reads to a tenth of a cent, in tune within half a cent. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+        <p>Even the clock is checked. A tenth of a cent is 58 parts per million, and an interface's clock can be off by that much, so after 30 seconds the tuner measures yours against the system clock and corrects for it.</p>
+        <p>Live Detect hears chords with the same care: a filter on every pitch from E2 to E6, with each note's harmonics peeled away, so the overtones of a low E never turn E minor into E major. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <ul class="spec">
+          <li><b>0.1&cent;</b>readout, in Precision</li>
+          <li><b>&plusmn;0.5&cent;</b>counts as in tune, in Precision</li>
+          <li><b>85 ms</b>of sound to name the note</li>
+          <li><b>30 s</b>until the clock is calibrated</li>
+        </ul>
+      </div>
+    </section>
+
     <section class="feature" id="make-it-yours">
       <div class="feature-body">
         <h2>Make it yours</h2>
@@ -441,6 +554,22 @@
           <figcaption class="figure-caption">The fret window, narrowed to one position.</figcaption>
         </figure>
       </div>
+    </section>
+
+    <section class="section-card" id="coming-next">
+      <h2>Coming next</h2>
+      <p>Built, and in testing on TestFlight now. None of it is in the App Store build yet: each piece ships when it is ready, and this list changes as it does.</p>
+      <ul>
+        <li><strong>Progressions</strong> &mdash; build a progression, play it in time with rhythms and arpeggio patterns, and watch each chord land on the neck.</li>
+        <li><strong>Arpeggios</strong> &mdash; a sixth learning mode: triad and seventh-chord arpeggios, and the scale in broken 3rds through 10ths, in groups and in cells, graded by Live Detect as you play.</li>
+        <li><strong>Pivot</strong> &mdash; &ldquo;I want to pivot on E&rdquo;: every chord that holds one note, from triads up to thirteenths, with the note's role in each.</li>
+        <li><strong>Improvise</strong> &mdash; &ldquo;I want to improvise over a progression&rdquo;: the scale to solo with, then a ladder from one scale to playing the changes, with the next chord shown a beat early.</li>
+        <li><strong>The piano body and the harmonic bed</strong> &mdash; <a href="#piano-body">sympathetic strings</a> under the grand, and <a href="#harmonic-bed">chord layers that move</a> with the music.</li>
+        <li><strong>Mixer effects</strong> &mdash; an EQ that shows the signal, a compressor drawn as its curve, a reverb send on every channel, and speaker cabinets for the amp.</li>
+        <li><strong>Saved loops</strong> &mdash; keep a take as a named phrase and bring it back at its own tempo and meter, or export it.</li>
+        <li><strong>An iCloud library</strong> &mdash; the amp models and cabinets you import, kept in a Fretling folder in iCloud Drive.</li>
+        <li><strong>iPhone</strong> &mdash; planned, and not in testing yet.</li>
+      </ul>
     </section>
 
     <section class="section-card" id="requirements">

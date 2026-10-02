@@ -1206,6 +1206,8 @@ main > h1 { margin-bottom: var(--s-5); }
 .feature:nth-of-type(even) .feature-media { grid-column: 1; }
 .feature-body > :first-child { margin-top: 0; }
 .feature-body p { max-width: 46ch; }
+.feature-body p + p,
+.feature-body ul + p { margin-top: var(--s-4); }
 .feature-body h2 {
   margin: 0 0 var(--s-4);
   padding-top: var(--s-4);
@@ -1249,6 +1251,157 @@ main > h1 { margin-bottom: var(--s-5); }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
   gap: var(--s-6);
+}
+
+/*
+  A spec strip: the numbers a technology section stands on, where a screenshot would
+  otherwise go. Hairline-ruled rather than raised — elevation stays reserved for pieces
+  of the app.
+*/
+.spec {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--f-hairline-strong);
+}
+.spec li {
+  display: grid;
+  align-content: start;
+  gap: var(--s-2);
+  padding: var(--s-6) var(--s-5) var(--s-6) 0;
+  border-bottom: 1px solid var(--f-hairline);
+  color: var(--f-ink-2);
+  font-size: var(--t-label);
+  line-height: 1.45;
+}
+.spec li:nth-child(even) { padding-left: var(--s-5); border-left: 1px solid var(--f-hairline); }
+.spec b {
+  color: var(--f-ink);
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* "In testing": the Pro badge's shape, dashed like the map's unreleased nodes, so the two
+   marks for "not in the App Store build yet" agree. */
+.soon-badge {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 1;
+  margin-left: var(--s-3);
+  padding: 3px 9px;
+  border: 1px dashed currentColor;
+  border-radius: var(--r-pill);
+  color: var(--f-ink-2);
+  font-size: var(--t-caption);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  text-decoration: none;
+}
+a.soon-badge:hover { color: var(--f-ink); }
+
+/*
+  The map of intents and modes. A nested list, so it reads as an outline to a screen
+  reader and to the Spanish build alike; the branches are drawn on the list items, and the
+  nodes take the header's colors — magenta for the intent, amber for what it works on.
+  Wide, it grows left to right like a mind map; narrow, it folds into an indented outline.
+*/
+.mindmap, .mindmap ul { list-style: none; margin: 0; padding: 0; }
+.mm-node {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  padding: 5px 12px;
+  border: 1px solid transparent;
+  border-radius: var(--r-chip);
+  background: color-mix(in srgb, var(--chip-accent) 9%, transparent);
+  color: var(--chip-accent);
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.mm-root {
+  padding-inline: 0;
+  background: none;
+  color: var(--f-ink);
+  font-size: 22px;
+  font-weight: 300;
+}
+.mm-soon {
+  background: none;
+  border-style: dashed;
+  border-color: color-mix(in srgb, var(--chip-accent) 70%, transparent);
+}
+.mm-leaf { color: var(--f-ink-2); font-size: var(--t-label); line-height: 1.4; }
+.mm-legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  max-width: none;
+  margin-top: var(--s-6);
+  color: var(--f-ink-2);
+  font-size: var(--t-label);
+}
+.mm-key { flex: none; width: 22px; height: 14px; border: 1px dashed var(--f-ink-3); border-radius: 4px; }
+
+@media (min-width: 761px) {
+  .mindmap { --mm-gap: 40px; --mm-line: var(--f-hairline-strong); }
+  .mindmap li { display: flex; align-items: center; position: relative; }
+  .mindmap ul { display: flex; flex-direction: column; position: relative; margin-left: var(--mm-gap); }
+  /* The intents share one column edge, so their branches start level. */
+  .mindmap > li > ul > li > .mm-node { min-width: 7.2em; justify-content: center; }
+  /* The stem from a node out to its children's spine… */
+  .mindmap ul::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(var(--mm-gap) * -1);
+    width: calc(var(--mm-gap) / 2);
+    border-top: 1px solid var(--mm-line);
+  }
+  /* …and each child's branch off that spine, rounded where the spine turns. */
+  .mindmap ul > li { padding-block: 5px; }
+  .mindmap ul > li::before,
+  .mindmap ul > li::after {
+    content: "";
+    position: absolute;
+    left: calc(var(--mm-gap) / -2);
+    width: calc(var(--mm-gap) / 2);
+  }
+  .mindmap ul > li::before { top: 50%; border-top: 1px solid var(--mm-line); }
+  .mindmap ul > li::after { top: 0; bottom: 0; border-left: 1px solid var(--mm-line); }
+  .mindmap ul > li:first-child::after { top: 50%; border-top: 1px solid var(--mm-line); border-top-left-radius: 12px; }
+  .mindmap ul > li:last-child::after { bottom: 50%; border-bottom: 1px solid var(--mm-line); border-bottom-left-radius: 12px; }
+  .mindmap ul > li:first-child::before,
+  .mindmap ul > li:last-child::before { display: none; }
+  .mindmap ul > li:only-child::before { display: block; }
+  .mindmap ul > li:only-child::after { display: none; }
+  .mm-leaf { max-width: 34ch; margin-left: var(--s-4); }
+}
+
+@media (max-width: 760px) {
+  .mindmap ul { margin: 5px 0 0 10px; padding-left: var(--s-5); border-left: 1px solid var(--f-hairline-strong); }
+  .mindmap ul > li { position: relative; padding-block: 5px; }
+  .mindmap ul > li::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: calc(var(--s-5) * -1);
+    width: 14px;
+    border-top: 1px solid var(--f-hairline-strong);
+  }
+  .mm-node { font-size: 17px; }
+  .mm-leaf { display: block; margin-top: var(--s-1); }
 }
 
 /*

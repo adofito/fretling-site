@@ -83,7 +83,7 @@
 
   <main id="main" class="container">
     <h1>Settings</h1>
-    <p class="lede">The settings sidebar slides in from the left, opened with the button at the left end of the top bar. It has three tabs — <strong>Fretboard</strong>, <strong>Audio</strong>, and <strong>Icon</strong> — and two rows below them: <strong>Fretling Pro</strong> and <strong>About Fretling</strong>.</p>
+    <p class="lede">The settings sidebar slides in from the left, opened with the button at the left end of the top bar. It has three tabs — <strong>Fretboard</strong>, <strong>Audio</strong>, and <strong>Icon</strong> — and two rows below them: <strong>Fretling Pro</strong> and <strong>About Fretling</strong>. It reopens on the tab you left it on.</p>
 
     <div class="callout">
       <p>Not everything lives in here. The settings you change constantly sit on the chip bars that bracket the neck: <a href="fretboard.html#marker-bar">marker display</a> above it, <a href="fretboard.html#overlays">Visual Groupings</a> below it. The sidebar holds the things you set once and leave alone.</p>
@@ -145,7 +145,7 @@
             <tr><td><strong>CAGED Display</strong></td><td>Box (default) / Lines / Both</td><td>How a CAGED shape is drawn: region outline, connecting lines through its notes, or both.</td></tr>
             <tr><td><strong>Timeline Shape Cues</strong></td><td>Toggle</td><td>Also marks the shape's tones on the timeline. Requires chord shapes to be on.</td></tr>
             <tr><td><strong>Show Finger Numbers</strong></td><td>Toggle</td><td>Prints finger numbers on chord shapes. Requires chord shapes to be on.</td></tr>
-            <tr><td><strong>CAGED Interaction</strong></td><td>Coexist (default) / Exclusive / Replace CAGED</td><td>Chords mode. What happens when chord shapes and CAGED are both on — draw both, let shapes take over while they are on, or have shapes replace CAGED entirely (which also removes the CAGED chips from Visual Groupings).</td></tr>
+            <tr><td><strong>CAGED Interaction</strong></td><td>Coexist (default) / Exclusive / Replace CAGED</td><td>Chords mode. What happens when chord shapes and CAGED are both on — draw both, let shapes take over while they are on, or have shapes replace CAGED entirely (which also removes the CAGED chips from Visual Groupings). A line under the menu says what the current choice does.</td></tr>
           </tbody>
         </table>
       </div>
@@ -160,16 +160,16 @@
         <table>
           <thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
           <tbody>
-            <tr><td><strong>Instrument</strong></td><td>Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel) &mdash; the default, Jazz Guitar, Clean Electric Guitar, Sine Wave</td><td>The voice used when you tap notes on the neck. Sine Wave is synthesized; the rest are recorded samples, from two sources bundled with the app &mdash; the FreePats General MIDI set, which is public domain, and GeneralUser GS. Both are credited in About.</td></tr>
+            <tr><td><strong>Instrument</strong></td><td>Acoustic Piano, Acoustic Guitar (Nylon), Acoustic Guitar (Steel) &mdash; the default, Jazz Guitar, Clean Electric Guitar, Sine Wave</td><td>The voice used when you tap notes on the neck. The four guitars are modeled &mdash; each note is a string computed as it plays &mdash; and Sine Wave is synthesized. The piano is recorded samples, from two sources bundled with the app &mdash; the FreePats General MIDI set, which is public domain, and GeneralUser GS. Both are credited in About.</td></tr>
           </tbody>
         </table>
       </div>
 
       <h3>Chord Pad Layers</h3>
-      <p>Chords can be voiced by stacking up to <strong>three</strong> instruments, which is how you get a pad behind a chord rather than one flat sample. <strong>Add Layer</strong> adds one, up to that maximum.</p>
+      <p>Chords can be voiced by stacking up to <strong>three</strong> instruments, which is how you get a pad behind a chord rather than one flat sample. <strong>Add Layer</strong> adds one, up to that maximum; it dims at three, and a layer's remove button dims while it is the only one left.</p>
       <p>Each layer carries four controls of its own:</p>
       <ul>
-        <li><strong>Instrument</strong> — one of seventeen voices chosen for stacking: Pad 1 (New Age), Pad 2 (Warm), Pad 3 (Polysynth), Pad 4 (Choir), Pad 5 (Bowed), String Ensemble 1 and 2, Synth Strings 1 and 2, Choir Aahs, Voice Oohs, Church Organ, Drawbar Organ, Rock Organ, Acoustic Piano, and Electric Piano 1 and 2.</li>
+        <li><strong>Instrument</strong> — one of seventeen voices chosen for stacking, in five sections of the menu: <strong>Pads</strong> — Pad 1 (New Age), Pad 2 (Warm), Pad 3 (Polysynth), Pad 4 (Choir), Pad 5 (Bowed); <strong>Strings</strong> — String Ensemble 1 and 2, Synth Strings 1 and 2; <strong>Voices</strong> — Choir Aahs, Voice Oohs; <strong>Organs</strong> — Church Organ, Drawbar Organ, Rock Organ; <strong>Pianos</strong> — Acoustic Piano, and Electric Piano 1 and 2.</li>
         <li><strong>Mute</strong> — silences that layer without removing it, so you can hear what it was contributing.</li>
         <li><strong>Volume</strong> — that layer's share of the stack.</li>
         <li><strong>Velocity</strong> — 1 to 127, default 100. This is not a second volume: a velocity picks which recorded sample the layer plays, so it changes the <em>timbre</em> of the voice as well as its level, the way hitting a piano key harder does.</li>
@@ -177,7 +177,7 @@
       <p>A fresh install starts with three layers already stacked &mdash; Pad 2 (Warm) at 1.0, String Ensemble 1 at 0.55, and Choir Aahs at 0.4. A layer you add yourself starts as Pad 2 (Warm) at 0.5. Double-click any slider to put it back to the default for that slot.</p>
 
       <h3>Humanize</h3>
-      <p>One slider below the layers, from 0 to 24, default <strong>None</strong>. It varies each note's velocity a little so repeated chords don't sound machine-stamped. It belongs to the pad as a whole rather than to one layer, which is why it sits once underneath the list: it perturbs every note the layers play.</p>
+      <p>One slider in a group of its own below the layers, from <strong>None</strong> to ±24, default ±8. It varies each note's velocity a little so repeated chords don't sound machine-stamped. It belongs to the pad as a whole rather than to one layer, which is why it sits once underneath the list: it perturbs every note the layers play.</p>
       <p>Layers apply to chord playback — the Chord chip beside the timeline and Chord Atlas previews. Tapping single notes always uses the Instrument setting above.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/20-settings-audio-light.webp"
