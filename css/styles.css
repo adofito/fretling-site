@@ -658,7 +658,7 @@ main > h1 { margin-bottom: var(--s-5); }
 /*
   Page header on the section grid: the title hangs at the rail's left edge,
   where every h2 below it sits, and the lede, contents and any opening callout
-  indent to the content column. The whole page then reads off two vertical
+  or figure indent to the content column. The whole page then reads off two vertical
   lines instead of drifting.
 */
 @media (min-width: 1001px) {
@@ -666,7 +666,8 @@ main > h1 { margin-bottom: var(--s-5); }
   main > .page-meta,
   main > .page-intro,
   main > .toc,
-  main > .callout {
+  main > .callout,
+  main > .shot {
     margin-left: calc(var(--rail) + var(--s-10));
   }
   main > .lede { max-width: var(--measure); }
@@ -943,6 +944,7 @@ main > h1 { margin-bottom: var(--s-5); }
   layout; a bare <p> under <main> used to fall back to the rail's edge.
 */
 .page-intro { max-width: var(--measure); }
+.page-intro + .page-intro { margin-top: var(--s-4); }
 
 .lede {
   max-width: 60ch;
