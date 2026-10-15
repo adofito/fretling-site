@@ -50,7 +50,7 @@ visible on the page rather than broken.
   `scripts/appstore/capture-macos.sh` documents this in full — it is the same
   mechanism, and the rules must not fork.
 - **Everything the app cannot reach from persisted settings** goes through the
-  DEBUG-only flags in `Fretling/Utilities/ScreenshotStaging.swift`:
+  DEBUG-only flags in `Fretling/Core/Utilities/ScreenshotStaging.swift`:
   `-FretlingScreenshotMode` (also hides the DEBUG Utilities settings tab, so
   captures match Release), `-FretlingOpenSettings` / `-FretlingSettingsTab`,
   `-FretlingOpenChordAtlas`, `-FretlingOpenAbout`, `-FretlingOpenDrumSequencer`,

@@ -29,7 +29,7 @@ later.**
 
 | Pro feature | What it is |
 |-------------|------------|
-| **The rest of music theory** | Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor under *More scales*. |
+| **The rest of music theory** | Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor, listed under *More scales* after the free Blues. |
 | **Precision tuning** | The tuner's ±0.5¢ bench mode, plus the Trace, Strobe, and Disc displays. |
 | **Drum grooves** | The step sequencer and pattern library behind the metronome's Drums sound. |
 | **The guitar amp** | Monitoring through Neural Amp Modeler profiles — the starter set or any .nam file you load. |

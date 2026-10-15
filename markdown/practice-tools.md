@@ -3,7 +3,8 @@
 Six tools open from the icon row at the right of the top bar. Each is a floating panel over
 the fretboard — drag it where you want it, and close it when you are done. When panels overlap,
 pressing one brings it to the front, and the arrangement is kept between launches. The neck
-stays visible and usable underneath.
+stays visible and usable underneath. In a narrow or short iPad window a tool opens as a sheet
+instead, one at a time, closed with Done; whatever it was running keeps running.
 
 Every panel also **minimizes** to a one-row strip that keeps its main control and readout
 live — the metronome's play button, tempo and beat lamp; the tuner's Listen button, note and
@@ -333,8 +334,9 @@ hearing, so you can leave it running along the edge of the screen and glance at 
 play.
 
 In [identify](learning-modes.md#identify-a-chord) mode it gains a **Send to fretboard**
-button, which takes the notes it just heard and places them on the neck as an identification
-query — play a chord you cannot name, send it over, and read the ranked answers. That button
+button, which places the chord it just named on the neck as an identification query — play a
+chord you cannot name, send it over, and read the ranked answers. What lands is that chord
+voiced Fretling's way, not your fingering. That button
 exists only in identify; in the learn modes the panel reads out, and the neck is the learn
 subject's.
 

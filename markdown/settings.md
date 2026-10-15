@@ -11,8 +11,9 @@ top bar. It has three tabs — **Fretboard**, **Audio**, and **Icon** — and tw
 
 ## Fretboard tab
 
-Three groups, some of which appear only in the modes they apply to. Options that do not apply
-right now are dimmed rather than hidden, so the sidebar does not rearrange itself under you.
+Three groups. A row appears only in the modes it applies to — in Scales, Practice Focus holds
+no switch and Shape Overlays is CAGED Display alone. A row that applies but waits on something
+else, like the chord-shape rows while Chord Shapes is off, dims rather than hides.
 
 ### Appearance
 
@@ -30,7 +31,7 @@ visible while you play.
 
 | Setting | Options | Description |
 |---------|---------|-------------|
-| **Show Triad Lines** | Toggle | Triads mode only. Joins each triad voicing with a line. |
+| **Show Triad Lines** | Toggle | Triads mode only. Joins each triad voicing on the string set picked under the neck with a line; with Strings on All it draws nothing. |
 
 **Non-Chord Notes** and **Fret Range** used to sit here. They are chips in the
 [Visual Groupings](fretboard.md#visual-groupings-overlays-and-boxes) bar under the neck now —
@@ -41,8 +42,8 @@ both are flipped mid-practice and both change what the neck shows, so they belon
 | Setting | Options | Description |
 |---------|---------|-------------|
 | **CAGED Display** | Box (default) / Lines / Both | How a CAGED shape is drawn: region outline, connecting lines through its notes, or both. |
-| **Timeline Shape Cues** | Toggle | Also marks the shape's tones on the timeline. Requires chord shapes to be on. |
-| **Show Finger Numbers** | Toggle | Prints finger numbers on chord shapes. Requires chord shapes to be on. |
+| **Timeline Shape Cues** | Toggle | Chords mode. Its cues belong to a screen this version of Fretling does not include, so in Chords it changes nothing. |
+| **Show Finger Numbers** | Toggle | Chords mode. Prints finger numbers on chord shapes. Requires chord shapes to be on. |
 | **CAGED Interaction** | Coexist (default) / Exclusive / Replace CAGED | Chords mode. What happens when chord shapes and CAGED are both on — draw both, let shapes take over while they are on, or have shapes replace CAGED entirely (which also removes the CAGED chips from Visual Groupings). A line under the menu says what the current choice does. |
 
 Chord shapes themselves are switched on and off in the **Chord Shapes** group of the
@@ -91,8 +92,9 @@ each note's velocity a little so repeated chords don't sound machine-stamped. It
 pad as a whole rather than to one layer, which is why it sits once underneath the list: it
 perturbs every note the layers play.
 
-Layers apply to chord playback — the Chord chip beside the timeline and Chord Atlas previews.
-Tapping single notes always uses the Instrument setting above.
+Layers apply to chord playback — the round Chord transport on the timeline and the chords the Chord Atlas plays as you pick.
+Tapping single notes, and **Hear it** on a chord you identify, always use the Instrument
+setting above.
 
 ## Icon tab
 

@@ -103,7 +103,7 @@
       <h2>Layout</h2>
       <p>Six strings, low E at the bottom to high e at the top, and <strong>15 frets</strong> plus the open position to start with. Fret numbers run along the neck, with the usual inlay frets — 3, 5, 7, 9, 12, 15, 17, 19, 21 — called out so you can find your place at a glance.</p>
       <p>Set the neck to your own guitar with <strong>Frets</strong> at the left of the <a href="#marker-bar">marker display bar</a>: anywhere from 12 to 22.</p>
-      <p>The neck always fills the width it is given and never scrolls sideways, so a longer neck draws narrower frets and slightly smaller markers rather than running off the edge. To work a span of the neck rather than shorten it, use the <a href="#fret-range">fret range limiter</a> &mdash; that frames a position on the board you have, while <strong>Frets</strong> changes how much board there is.</p>
+      <p>The neck always fills the width it is given and never scrolls sideways, so a longer neck draws narrower frets and slightly smaller markers rather than running off the edge &mdash; though never markers too small to read and tap. A window too narrow for every fret you chose draws fewer instead, counted from the nut: as many as it can draw at that size. The <strong>Frets</strong> stepper stops there, and your choice is kept, so widening the window brings the rest back. The Mac, and an iPad full screen in landscape, always have room for all 22. To work a span of the neck rather than shorten it, use the <a href="#fret-range">fret range limiter</a> &mdash; that frames a position on the board you have, while <strong>Frets</strong> changes how much board there is.</p>
       <p><strong>Side marks.</strong> Like the side dots on a real neck, short marks run along the bass edge of the board, just below the low E string, at 3, 5, 7, 9, 12, 15, 17, 19 and 21 &mdash; and the octave at fret 12 wears a pair. They sit outside the strings, so a mark can never touch or hide a note, and they wear the same brown and jade as the fret numbers above the neck, so the two always agree on where you are. They are short flat dashes rather than dots, because a dot is what a note marker is.</p>
       <p><strong>String names.</strong> A narrow lane on the leading edge names each string &mdash; e, B, G, D, A, E from the top down &mdash; with the six letters sharing one right edge, and a gutter between the names and the strings they name.</p>
           <figure class="shot">
@@ -134,12 +134,12 @@
             <tr>
               <td><strong>Labels</strong></td>
               <td>Notes / Intervals / None</td>
-              <td><em>Notes</em> prints note names (G, A♯). <em>Intervals</em> prints scale degrees (1, 2, ♭3). <em>None</em> leaves bare dots — useful for testing yourself.</td>
+              <td><em>Notes</em> prints note names (G, A♯). <em>Intervals</em> prints each note's interval from the root — R, m2, M2, m3, M3, P4, T for the tritone, P5, m6, M6, m7, M7. <em>None</em> leaves bare dots — useful for testing yourself.</td>
             </tr>
             <tr>
               <td><strong>Shapes</strong></td>
               <td>Circles / Intervals</td>
-              <td><em>Circles</em> draws every marker the same. <em>Intervals</em> gives each degree its own outline, counting corners &mdash; a circle for the root, three for a 3rd, up to seven for a 7th &mdash; so the root reads differently from a third even in Gray. The <strong>?</strong> after the two chips opens a key to every mark the neck draws in the mode you are in.</td>
+              <td><em>Circles</em> draws every marker the same. <em>Intervals</em> gives each degree its own outline, counting corners &mdash; a circle for the root, three for a 3rd, up to seven for a 7th &mdash; so the root reads differently from a third even in Gray. The <strong>?</strong> after the two chips opens <em>What the markers mean</em>: a key to every mark the neck draws in the learn mode you are in — <em>Scale note</em> and <em>Key root</em> in Scales — and, with Shapes on Intervals, the ladder of outlines.</td>
             </tr>
             <tr>
               <td><strong>Colors</strong></td>
@@ -154,7 +154,8 @@
           </tbody>
         </table>
       </div>
-      <p>Every group except <strong>Frets</strong> is radio-style: one chip is lit, and tapping the lit chip does nothing. On a narrow window the bar scrolls sideways instead of wrapping.</p>
+      <p>Every group except <strong>Frets</strong> is radio-style: one chip is lit, and tapping the lit chip does nothing — except in Accidentals, where it makes the key's spelling yours. On a narrow window the bar scrolls sideways instead of wrapping, fading out at whichever end has more chips past it. In an iPad window too short for two rows of chips, the bar and the <a href="#overlays">Visual Groupings</a> share one row and scroll sideways together.</p>
+      <p><strong>Short windows.</strong> In an iPad window too short to hold everything, the neck keeps its room, and what normally sits above it &mdash; the <a href="#timeline">scale timeline</a>, or the card for Identify &mdash; moves into a panel that pulls up over the neck. The panel starts closed. A chip at the end of the row above the neck opens it, named for what it holds, such as <strong>Timeline</strong> or <strong>Identify</strong>; tap the chip again, or drag the panel's handle down, to close it. The chip stays put while the rest of the row scrolls. When the card plays something, such as a progression, a Play button sits beside the chip, so you can start and stop it without opening the panel. Closing the panel never stops anything that is playing.</p>
       <p><strong>The defaults</strong> are Labels <em>Notes</em>, Shapes <em>Intervals</em> and Colors <em>Color</em>, on 15 frets, with Accidentals following the key. Every one of them is remembered between launches.</p>
       <p><strong>How the interval shapes are built:</strong> they are a ladder, not a set of glyphs to memorize. The root is a circle; the 2nd is that circle broken once; from the 3rd up, the degree is the number of corners &mdash; three for a 3rd, four for a 4th, and so on to seven for a 7th. A flattened or sharpened degree keeps its shape and leans, one way for lowered and the other for raised, so there are two rules to learn rather than twelve symbols.</p>
       <p>Three of the four marker groups reach past the neck. <strong>Labels</strong>, <strong>Colors</strong> and <strong>Accidentals</strong> also set how the <a href="#timeline">scale timeline</a> and the Chord Atlas read, so a pitch is named, spelled and colored the same way wherever you meet it. (The Atlas keeps note names when Labels is None &mdash; a picker whose options carry no label has nothing to pick by.) <strong>Shapes</strong> is the neck&rsquo;s alone: the timeline and the Atlas draw round markers.</p>
@@ -170,10 +171,10 @@
       <figure class="shot">
         <img class="shot-light" src="screenshots/09-marker-bar-intervals-light.webp"
              width="1936" height="280" loading="lazy" decoding="async"
-             alt="The marker display bar with Labels set to Intervals, so markers print scale degrees and the Accidentals group is dimmed.">
+             alt="The marker display bar with Labels set to Intervals, so markers print intervals and the Accidentals group is dimmed.">
         <img class="shot-dark" src="screenshots/09-marker-bar-intervals-dark.webp"
              width="1936" height="280" loading="lazy" decoding="async"
-             alt="The marker display bar with Labels set to Intervals, so markers print scale degrees and the Accidentals group is dimmed.">
+             alt="The marker display bar with Labels set to Intervals, so markers print intervals and the Accidentals group is dimmed.">
         <figcaption class="figure-caption">Labels = Intervals. Accidentals dims — it no longer applies — but stays visible.</figcaption>
       </figure>
 </section>
@@ -228,15 +229,17 @@
       </figure>
 
       <div class="callout" data-accent="tip">
-        <p><strong>Chord tones are never hidden.</strong> When a chord is active alongside a key, notes belonging to the chord stay drawn even if they fall outside the scale. Altered chords, borrowed chords, secondary dominants and slash-bass notes therefore show up as they really are, rather than being filtered out by the key.</p>
+        <p><strong>Chord tones are never hidden.</strong> When Chords mode shows a chord against a key, notes belonging to the chord stay drawn even if they fall outside the scale. Altered chords, borrowed chords, secondary dominants and slash-bass notes therefore show up as they really are, rather than being filtered out by the key. (A chord added in Scales mode is context only: it never reaches the neck, which stays the scale.)</p>
       </div>
     </section>
 
     <section class="section-card" id="timeline">
       <h2>Scale timeline</h2>
       <p>Above the neck, the timeline lays out all twelve semitones in a row. Notes that belong to the current scale are filled in; the rest sit faded. When a chord is active, its tones are marked too, so you can read the chord against its key in one line.</p>
-      <p>The row starts at whatever you are learning, so it never splits in two. In Scales the leftmost key is the key you picked, and the scale climbs from there — set Labels to Intervals and you can read the degrees straight across, R first. In Chords the chord takes the front of the row instead, and the key's scale shifts around it.</p>
+      <p>The row starts at whatever you are learning, so it never splits in two. In Scales the leftmost key is the key you picked, and the scale climbs from there — set Labels to Intervals and you can read the intervals straight across, R first. In Chords the chord takes the front of the row instead, and the key's scale shifts around it.</p>
       <p>Horizontal rails bracket the row to show the structure: the chord's tones are tied together above it, the scale's below. Small Chord and Scale captions name each rail, and triangles mark each root.</p>
+      <p>In Triads there is no scale to map: the row starts at the triad's root, its three tones are filled and the rest stay empty, and only the Chord rail appears, with its transport.</p>
+      <p><strong>Tap a key</strong> to hear that pitch. Every marker of that note on the neck lights up, and stays lit until you tap another key.</p>
       <figure class="shot" style="--shot-max: 900px">
         <img class="shot-light" src="screenshots/12-timeline-brackets-light.webp"
              width="1720" height="390" loading="lazy" decoding="async"
@@ -250,14 +253,14 @@
       <h3 id="transports">Timeline transports</h3>
       <p>At the leading edge of the timeline stand up to two round transports, each on the rail it plays — the Chord transport beside the chord rail above the row, the Scale transport beside the scale rail below it. Press one to make sound, press it again to stop; a transport that is sounding fills in solid.</p>
       <ul>
-        <li><strong>Scale</strong> — plays the scale as a run, following whatever pattern and fret range you have on screen.</li>
-        <li><strong>Chord</strong> — sustains the chord.</li>
+        <li><strong>Scale</strong> — plays one octave of the scale, root to root, up and back down, once: one note per beat at the metronome's tempo, each lit on the neck as it sounds. It starts on the lowest root inside what the neck shows — the fret range and any pattern you have on. With several patterns on it plays one: the 3NPS pattern if there is one, otherwise the CAGED shape, otherwise the box. A box drawn more than once on a long neck plays its lowest copy.</li>
+        <li><strong>Chord</strong> — holds the chord on the chord pad until you press it again.</li>
       </ul>
       <p>A transport is mounted on a rail, so a rail is all it takes for one to appear: the Scale transport is there whenever a scale is on the timeline, the Chord transport whenever a chord is active. That includes Triads, where the transport sounds the triad on screen.</p>
       <p>On the Mac, <strong>Shift-Space</strong> presses whichever of the two is on screen — the chord if one is active, otherwise the scale. The plain space bar is the app's own transport: it stops whatever is rolling, and when nothing is, it starts the click together with a loop that is loaded and stopped. See <a href="guide.html#shortcuts">keyboard shortcuts and gestures</a>.</p>
       <p>Under the row, a single tone line spells what the transport is about to sound. It follows the subject of the mode you are in — the chord in Chords and Triads, the scale in Scales — except while something is playing, when it follows the sound instead. When both transports are up it puts <strong>Scale</strong> or <strong>Chord</strong> in front, so you can tell which one it is describing.</p>
       <p>The scale's line is spelled from the notes that will <em>actually be struck</em>, so narrowing the fret range or switching on a box narrows the line the same way it narrows the run. If the visible range holds no playable notes, the line says <em>No notes in this fret range</em> rather than leaving you to press a dead button.</p>
-      <p>The spelling follows the rest of the app: <strong>Labels</strong> decides whether you read note names or interval degrees, and <strong>Accidentals</strong> whether they are sharp or flat. It answers a different question from the timeline above it — the timeline maps the key, the tone line says what this one transport will sound.</p>
+      <p>The spelling follows the rest of the app: <strong>Labels</strong> decides whether you read note names or intervals, and <strong>Accidentals</strong> whether they are sharp or flat. It answers a different question from the timeline above it — the timeline maps the key, the tone line says what this one transport will sound.</p>
     </section>
 
     <section class="section-card" id="overlays">
@@ -269,7 +272,7 @@
       <p><strong>Off / On.</strong> Turns the chord-shape overlays on the neck on and off — see <a href="#chord-shapes">Chord shapes</a> below for what they draw and the settings that go with them. It leads the row and starts <strong>On</strong>: in Chords the chord is what the neck is drawing, so its own voicings are the first system you reach for, and CAGED and the boxes are context laid over it.</p>
 
       <h3>CAGED</h3>
-      <p><strong>Off / All / C / A / G / E / D.</strong> Overlays one of the five CAGED shapes — or all of them at once — on the current scale, chord, or triad. Available in every learning mode.</p>
+      <p><strong>Off / All / C / A / G / E / D.</strong> Overlays one of the five CAGED shapes — or all of them at once — on the current scale, chord, or triad. Available in every learning mode, as one selection: the shape you pick in one mode is the shape every mode shows.</p>
       <p><strong>The grips follow the subject.</strong> A major subject gets major grips and a minor subject gets minor ones, so a minor scale never wears major boxes. Where the subject has no major or minor triad to grip — a diminished or augmented chord, a suspended chord, a Locrian key — the whole CAGED group <em>disappears</em> from the row rather than sitting there drawing nothing. Change to a subject that has one and the group returns with your selection intact.</p>
       <p>How a shape is drawn is set in <a href="settings.html#fretboard-tab">Settings → Fretboard → Shape Overlays → CAGED Display</a>:</p>
       <ul>
@@ -312,27 +315,25 @@
       </figure>
 
       <h3>Strings</h3>
-      <p><strong>Off / 123 / 234 / 345 / 456.</strong> Triads mode only. Narrows the neck to one set of three adjacent strings so you can work a triad shape without the rest of the neck competing for attention.</p>
+      <p><strong>All / 123 / 234 / 345 / 456.</strong> Triads mode only. Narrows the neck to one set of three adjacent strings so you can work a triad shape without the rest of the neck competing for attention. Strings are numbered from the thinnest: <strong>123</strong> is G, B and high e, <strong>234</strong> is D, G and B, <strong>345</strong> is A, D and G, and <strong>456</strong> is low E, A and D. <strong>All</strong>, the default, shows every string.</p>
+      <p><strong>Triad lines</strong> go with a string set. They are not a chip: switch them on with <strong>Show Triad Lines</strong> in <a href="settings.html#fretboard-tab">Settings → Fretboard</a>, and on the chosen string set a line runs through each triad voicing, the same connect-the-dots grammar the CAGED overlay uses. Only voicings one hand can hold get a line, so a tone that belongs to no shape stays marked without one. With Strings on <strong>All</strong> there is no string set to draw on, so no lines appear.</p>
 
       <h3 id="non-chord-notes">Non-Chord Notes</h3>
-      <p><strong>Off / On.</strong> Chords mode only. <strong>Off</strong> shows the chord's tones alone; <strong>On</strong> keeps the rest of the notes visible underneath in gray, so the chord reads inside its key rather than floating on an empty neck.</p>
+      <p><strong>Off / On.</strong> Chords mode only. <strong>Off</strong>, the default, shows the chord's tones, plus the key's root in gray, ringed, when there is a key. <strong>On</strong> keeps the rest of the key's scale visible underneath in gray, so the chord reads inside its key rather than floating on an empty neck; without a key there is no scale to show, so <strong>On</strong> fills every other fret in gray. While chord shapes are drawn, the gray notes wait until you tap <strong>All</strong> in the <a href="#chord-shapes">shape legend</a>.</p>
 
       <h3 id="fret-range-group">Fret Range</h3>
       <p><strong>Full / Limited.</strong> Every mode. <strong>Limited</strong> frames a <a href="#fret-range">position window</a> on the neck so you can work a span of frets; <strong>Full</strong> gives the whole neck back. While the window is up, the group carries a third chip reading the span — <strong>3–8</strong> — which opens as a menu of named positions. A named position that would reach past the end of your neck is <em>dropped</em> from that menu rather than squeezed to fit: a 12th position crushed into two frets is not the 12th position.</p>
 
       <h3>Underlines</h3>
-      <p>A group that is actually drawing something on the neck carries a slim rule under its name. It is the row's answer to a question that is otherwise hard to ask &mdash; with three pattern systems available, which of them am I currently looking at?</p>
+      <p>A group that is actually drawing something on the neck carries a slim rule under its name. It is the row's answer to a question that is otherwise hard to ask &mdash; with three pattern systems available, which of them am I currently looking at? A group left at <strong>Off</strong> — or Strings at <strong>All</strong>, Fret Range at <strong>Full</strong> — draws nothing and carries no rule. <strong>All</strong> in CAGED and Box Shapes draws every shape, so it carries the rule.</p>
 
-      <h3>Triad lines</h3>
-      <p>Triads mode, switched on with <strong>Show Triad Lines</strong> in Settings: draws a line through each triad voicing on the neck, the same connect-the-dots grammar the CAGED overlay uses. Only voicings one hand can hold get a line, so a tone that belongs to no shape on the chosen string set stays marked without one.</p>
     </section>
 
     <section class="section-card" id="chord-shapes">
       <h2>Chord shapes</h2>
-      <p>In Chords mode, the <strong>Chord Shapes</strong> group in the Visual Groupings bar draws real, playable fingerings for the selected chord on the neck, taken from an open chord-fingering database. Set it to <strong>On</strong> to show them and <strong>Off</strong> to hide them. Three settings in <a href="settings.html#fretboard-tab">Settings → Fretboard → Shape Overlays</a> shape how they behave:</p>
+      <p>In Chords mode, the <strong>Chord Shapes</strong> group in the Visual Groupings bar draws real, playable fingerings for the selected chord on the neck, each in its own color, taken from an open chord-fingering database. It starts <strong>On</strong>; set it to <strong>Off</strong> to hide them. Two settings in <a href="settings.html#fretboard-tab">Settings → Fretboard → Shape Overlays</a> shape how they behave:</p>
       <ul>
         <li><strong>Show Finger Numbers</strong> — prints which finger plays each note.</li>
-        <li><strong>Timeline Shape Cues</strong> — marks the shape's tones on the scale timeline as well as the neck.</li>
         <li><strong>CAGED Interaction</strong> — decides what happens when chord shapes and CAGED overlays are both switched on:
           <ul>
             <li><strong>Coexist</strong> — draw both.</li>
@@ -341,7 +342,8 @@
           </ul>
         </li>
       </ul>
-      <p>A legend below the neck names the shapes currently drawn. It carries the same <strong>Chord Shapes</strong> caption as the switch, because it lists the same system: turn the switch off and the legend goes with it.</p>
+      <p><strong>The legend.</strong> A row between the neck and the chip bar lists the shapes drawn, by position — <em>open</em>, <em>fret 5</em> — each with a dot in its color, after an <strong>All</strong> chip. Tap a shape to hide or show it. While <strong>All</strong> is off, as it starts, the neck shows only the notes of the lit shapes: the chord's other tones, the key's root and the gray notes of <strong>Non-Chord Notes</strong> wait until you tap <strong>All</strong>, which brings every chord tone back. A new chord resets the legend. It carries the same <strong>Chord Shapes</strong> caption as the switch, because it lists the same system: turn the switch off and the legend goes with it.</p>
+      <p>Eleven chord types have no fingerings in the database; the Chord Atlas leaves them out while Chord Shapes is on &mdash; see <a href="learning-modes.html#chord-atlas">the Chord Atlas</a>.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/17-chord-shapes-legend-light.webp"
              width="1936" height="1210" loading="lazy" decoding="async"
@@ -355,21 +357,21 @@
 
     <section class="section-card" id="fret-range">
       <h2>Fret range limiter</h2>
-      <p>Set <strong>Fret Range</strong> to <strong>Limited</strong> in the Visual Groupings bar and a position window is drawn on the neck itself — a framed span with a slim grab tab on each edge. The frets outside it are quieted rather than emptied, because <em>set aside</em> and <em>not in the scale</em> must not look alike.</p>
+      <p>Set <strong>Fret Range</strong> to <strong>Limited</strong> in the Visual Groupings bar and a position window is drawn on the neck itself — a framed span with a slim grab tab on each edge. The frets outside it are dimmed and draw no markers: only the window holds notes. The wood is dimmed rather than left bare because <em>set aside</em> and <em>not in the scale</em> must not look alike.</p>
       <ul>
         <li><strong>Drag an edge tab</strong> — moves that boundary, snapping to the nearest fret line.</li>
         <li><strong>Drag the fret numbers inside the frame</strong> — slides the whole window along the neck without changing its width.</li>
         <li><strong>Double-tap an edge tab</strong> — opens the window out to that end of the neck.</li>
       </ul>
       <p>The boundary frets name themselves as blue chips in the number row, on the same disc the landmark numbers wear. The frame is never filled in: it claims the span with its edge alone, so the markers it is drawn around stay exactly as legible as they were — and every note inside it stays tappable.</p>
-      <p>While the window is up, the <strong>Fret Range</strong> group carries a value chip reading the span — <strong>3–8</strong>. It is also a menu: open it to jump straight to a named position — <em>Open</em>, <em>3rd</em>, <em>5th</em>, <em>7th</em>, <em>9th</em> or <em>12th</em>. Scale playback follows the window too.</p>
+      <p>While the window is up, the <strong>Fret Range</strong> group carries a value chip reading the span — <strong>3–8</strong>. It is also a menu: open it to jump straight to a named position — <em>Open</em>, <em>3rd</em>, <em>5th</em>, <em>7th</em>, <em>9th</em> or <em>12th</em> — the ones that fit on the neck you have. Scale playback follows the window too.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/18-fret-range-limiter-light.webp"
              width="1936" height="638" loading="lazy" decoding="async"
-             alt="The neck with a framed position window over frets five through nine, its boundary frets marked as blue chips in the number row and the frets outside it quieted.">
+             alt="The neck with a framed position window over frets five through nine, its boundary frets marked as blue chips in the number row and the frets outside it dimmed and empty.">
         <img class="shot-dark" src="screenshots/18-fret-range-limiter-dark.webp"
              width="1936" height="638" loading="lazy" decoding="async"
-             alt="The neck with a framed position window over frets five through nine, its boundary frets marked as blue chips in the number row and the frets outside it quieted.">
+             alt="The neck with a framed position window over frets five through nine, its boundary frets marked as blue chips in the number row and the frets outside it dimmed and empty.">
         <figcaption class="figure-caption">Fret Range set to Limited: the window framed on the neck, its boundaries named 5 and 9.</figcaption>
       </figure>
 </section>
@@ -378,15 +380,15 @@
       <h2>Tap to play</h2>
       <p>Tap any visible marker to hear that note, using the instrument set in <a href="settings.html#audio-tab">Settings → Audio</a>. On iPad the neck is fully multitouch: hold several notes at once to sound a chord, and slide a finger along the neck to move the sounding note with it. Only visible markers respond, so tapping empty wood stays silent.</p>
       <p><strong>A press sustains; a lift stops it.</strong> Hold a marker and the note is held for as long as you hold it. Let go and it stops — but never before it has rung for a second and a half, so a quick tap sounds like a pluck rather than a blip. Sliding off a note stops it at once, the way lifting a fretting finger does.</p>
-      <p>Notes light up while they sound — including notes played back by the Scale and Chord chips, and notes recognized by <a href="practice-tools.html#live-detect">Live Detect</a>, so you can see what you just played.</p>
+      <p>Notes light up while they sound — a marker you are holding, each note of a Scale transport run, and a note picked on the timeline — and notes recognized by <a href="practice-tools.html#live-detect">Live Detect</a> are ringed, so you can see what you just played. The Chord transport lights nothing.</p>
       <p><strong>On the Mac,</strong> the pointer turns to a hand over anything that responds to a click — a marker, a chip, a panel header — so the neck says what is live before you press it. Hovering a chip row lights the chip you are about to hit.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>Fretling — Scale Tones and Chords. User guide for version 1.3.</p>
-      <p><a href="guide.html">Guide home</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="index.html">Home</a> &middot; <a href="mailto:adofito@gmail.com?subject=Fretling%20support">Contact</a></p>
+      <p>Fretling — Scale Tones and Chords. User guide for version 1.5.</p>
+      <p><a href="guide.html">Guide home</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="index.html">Home</a> &middot; <a href="mailto:fretlingapp@gmail.com?subject=Fretling%20support">Contact</a></p>
     </div>
   </footer>
 

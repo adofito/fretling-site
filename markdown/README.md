@@ -17,6 +17,10 @@ This is the Markdown mirror of the user guide. On the web the site root
   dominants on sight.
 - **Identify** a chord by tapping notes onto the neck, or by playing it into the mic —
   Fretling ranks the readings.
+- **Play through** a progression four ways: hear the changes, follow one voice, improvise over
+  it, or see how it moves. Bring a song you know: paste a chord chart or open a ChordPro file,
+  and it becomes a new progression in your library. *In testing* — see
+  [Coming next](https://www.fretling.app/#coming-next).
 - **Hear** anything you see: tap-to-play notes, one-tap scale and chord playback, and real
   instruments — a sampled grand piano, modeled nylon, steel, jazz and clean electric guitars, or a sine wave;
   chords through up to three layered voices.
@@ -67,7 +71,7 @@ Everything sits around one stable fretboard:
 | Platform | Requirement | Notes |
 |----------|-------------|-------|
 | Mac | macOS 15.4 or later | Full feature set, including the guitar amp and looper. Minimum window 1000 × 760. |
-| iPad | iPadOS 18.6 or later | Landscape, full screen. Full feature set, the amp and looper included; use an audio interface or headphones for monitoring. |
+| iPad | iPadOS 18.6 or later | Any orientation, full screen or in a resized window; the layout follows the window. Full feature set, the amp and looper included; use an audio interface or headphones for monitoring. |
 | iPhone | Not supported | The layout is built around a wide neck; an iPhone version is planned but not shipped. |
 
 Fretling runs entirely on your device — no account, no analytics, no cloud sync. See the
