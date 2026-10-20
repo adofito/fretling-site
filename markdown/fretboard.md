@@ -320,8 +320,8 @@ the window too.
 ## Tap to play
 
 Tap any visible marker to hear that note, using the instrument set in
-[Settings → Audio](settings.md#audio-tab). On iPad the neck is fully multitouch: hold several
-notes at once to sound a chord, and slide a finger along the neck to move the sounding note
+[Settings → Audio](settings.md#audio-tab). On iPad and iPhone the neck is fully multitouch: hold
+several notes at once to sound a chord, and slide a finger along the neck to move the sounding note
 with it. Only visible markers respond, so tapping empty wood stays silent.
 
 **A press sustains; a lift stops it.** Hold a marker and the note is held for as long as you
@@ -337,3 +337,6 @@ The Chord transport lights nothing.
 **On the Mac,** the pointer turns to a hand over anything that responds to a click — a marker,
 a chip, a panel header — so the neck says what is live before you press it. Hovering a chip row
 lights the chip you are about to hit.
+
+**With VoiceOver,** each string is one control. Swipe up or down to move along it, and
+double-tap to play the note — or, in Identify, to place or remove it.

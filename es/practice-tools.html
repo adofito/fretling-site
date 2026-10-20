@@ -93,7 +93,6 @@
         <li><a href="#drums">Secuenciador de batería</a></li>
         <li><a href="#amp">Amplificador de guitarra</a></li>
         <li><a href="#input">Entrada</a></li>
-        <li><a href="#performance">Rendimiento</a></li>
         <li><a href="#looper">Looper</a></li>
         <li><a href="#mixer">Mezclador</a></li>
         <li><a href="#live-detect">Detección en vivo</a></li>
@@ -113,7 +112,7 @@
     </figure>
 
     <div class="callout" data-accent="platform">
-      <p><strong>Todo lo de esta página funciona en Mac y iPad</strong>, incluidos el amp y el looper. Conecta una interfaz de audio USB-C o usa audífonos: monitorear por la bocina integrada realimenta el micrófono integrado, y el amp te lo advierte.</p>
+      <p><strong>Todo lo de esta página funciona en Mac, iPad y iPhone</strong>, incluidos el amp y el looper. Conecta una interfaz de audio USB-C o usa audífonos: monitorear por la bocina integrada realimenta el micrófono integrado, y el amp te lo advierte.</p>
     </div>
 
     <div class="callout" data-accent="pro">
@@ -305,26 +304,6 @@
       </figure>
 </section>
 
-    <section class="section-card" id="performance">
-      <h2>Rendimiento</h2>
-      <p>Fretling hace muchas cosas a la vez (un modelo de amp, un looper, el afinador y Detección en vivo escuchando, el clic), así que la barra superior muestra cuánto está trabajando, en un pequeño indicador a la izquierda de la lámpara del micrófono. Dos filas:</p>
-      <ul>
-        <li><strong>Audio</strong>: cuánto del tiempo de cada ciclo de audio están usando los motores de audio. Es el número que anticipa problemas: al acercarse al 100% el motor se queda sin tiempo para llenar el siguiente búfer y se oyen clics o cortes. La barra se pone ámbar por encima del 70% y roja por encima del 90%.</li>
-        <li><strong>CPU</strong>: la parte de toda tu Mac o iPad que usa Fretling, el número detrás de los ventiladores y la batería.</li>
-      </ul>
-      <p>Presiona el indicador para abrir la consola de Rendimiento. Muestra los dos motores de audio por separado: <strong>Reproducción</strong> lleva las notas, los acordes y el clic; <strong>Amp</strong> lleva el modelo de amp y el looper, y marca <em>Apagado</em> mientras el amp está apagado; cada uno con el búfer contra el que se mide (muestras, frecuencia de muestreo y los milisegundos que tiene un ciclo) y un conteo de sobrecargas: ciclos que se pasaron de su plazo desde que arrancó ese motor. Bajo una línea, la parte de CPU y un aviso cuando la propia máquina se está calentando y puede estar frenando las cosas.</p>
-      <p>Si Audio se pone alto, sube el tamaño del búfer en <a href="#input">Configuración de entrada</a> o elige un modelo de amp más pequeño. Un búfer más grande da más tiempo a cada ciclo; un modelo más pequeño necesita menos.</p>
-      <figure class="shot" style="--shot-max: 850px">
-        <img class="shot-light" src="../screenshots/es-419/32-performance-console-light.webp"
-             width="1520" height="1300" loading="lazy" decoding="async"
-             alt="La consola de rendimiento abierta bajo el indicador de la barra superior, mostrando el motor de Reproducción en la zona ámbar con su presupuesto de ciclo, el motor del Amp apagado, la línea de consejo y la parte de CPU.">
-        <img class="shot-dark" src="../screenshots/es-419/32-performance-console-dark.webp"
-             width="1520" height="1300" loading="lazy" decoding="async"
-             alt="La consola de rendimiento abierta bajo el indicador de la barra superior, mostrando el motor de Reproducción en la zona ámbar con su presupuesto de ciclo, el motor del Amp apagado, la línea de consejo y la parte de CPU.">
-        <figcaption class="figure-caption">La consola de rendimiento: cada motor de audio frente a su propio plazo, y luego la máquina.</figcaption>
-      </figure>
-    </section>
-
     <section class="section-card" id="looper">
       <h2>Looper <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requiere Fretling Pro">Pro</a></h2>
       <p>Graba una frase y toca encima. El looper está en la cadena de monitoreo del amplificador, así que <strong>enciende primero Monitor en el amplificador</strong>; el looper te lo dice si no lo has hecho. Una vez que existe un loop, sigue sonando solo: apagar Monitor libera el micrófono pero deja el loop corriendo, y Reproducir lo trae de vuelta incluso con el amplificador apagado.</p>
@@ -368,7 +347,6 @@
           <tbody>
             <tr><td><strong>Notas</strong></td><td>Las notas que tocas en el mástil y la reproducción de escalas.</td></tr>
             <tr><td><strong>Acorde</strong></td><td>Los acordes reproducidos desde la línea de tiempo y el Atlas de acordes.</td></tr>
-            <tr><td><strong>Prog</strong></td><td>Reservada para la reproducción de progresiones, que no forma parte de esta versión. La tira está ahí y todavía no tiene nada que controlar.</td></tr>
             <tr><td><strong>Clic</strong></td><td>Metrónomo y batería.</td></tr>
             <tr><td><strong>Amp</strong></td><td>Tu guitarra monitoreada.</td></tr>
             <tr><td><strong>Loop</strong></td><td>La reproducción del looper.</td></tr>

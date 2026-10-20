@@ -1,6 +1,6 @@
 # Fretling – Scale Tones and Chords
 
-Fretling is a guitar workstation for Mac and iPad. You say what you want to learn in plain
+Fretling is a guitar workstation for Mac, iPad and iPhone. You say what you want to learn in plain
 language — *"I want to learn scales in E Major"* — and the fretboard shows it. Tap any note
 to hear it. Practice tools (tuner, metronome, amp, looper) live one tap away, over the same
 neck.
@@ -42,8 +42,7 @@ This is the Markdown mirror of the user guide. On the web the site root
 Everything sits around one stable fretboard:
 
 - **The top bar** — one band across the top of the canvas: the settings button at the
-  leading end, which slides the sidebar in; the performance readout and the microphone
-  lamp and meter; and the six practice tool icons at the trailing end — tuner, amp, looper,
+  leading end, which slides the sidebar in; the microphone lamp and meter; and the six practice tool icons at the trailing end — tuner, amp, looper,
   Live Detect, mixer, metronome. Each opens a floating panel that can be dragged,
   minimized to a one-row strip, or closed.
 - **Above the neck** — the learning sentence, the scale timeline, and the marker display bar
@@ -72,7 +71,7 @@ Everything sits around one stable fretboard:
 |----------|-------------|-------|
 | Mac | macOS 15.4 or later | Full feature set, including the guitar amp and looper. Minimum window 1000 × 760. |
 | iPad | iPadOS 18.6 or later | Any orientation, full screen or in a resized window; the layout follows the window. Full feature set, the amp and looper included; use an audio interface or headphones for monitoring. |
-| iPhone | Not supported | The layout is built around a wide neck; an iPhone version is planned but not shipped. |
+| iPhone | iOS 18.6 or later | Landscape, with the layout folded for the smaller screen. Full feature set, the amp and looper included; use an audio interface or headphones for monitoring. |
 
 Fretling runs entirely on your device — no account, no analytics, no cloud sync. See the
 [privacy policy](../privacy.html).

@@ -93,7 +93,6 @@
         <li><a href="#drums">Drum sequencer</a></li>
         <li><a href="#amp">Guitar amp</a></li>
         <li><a href="#input">Input</a></li>
-        <li><a href="#performance">Performance</a></li>
         <li><a href="#looper">Looper</a></li>
         <li><a href="#mixer">Mixer</a></li>
         <li><a href="#live-detect">Live Detect</a></li>
@@ -113,7 +112,7 @@
     </figure>
 
     <div class="callout" data-accent="platform">
-      <p><strong>Everything on this page works on Mac and iPad</strong>, the amp and the looper included. Plug in a USB-C audio interface, or use headphones: monitoring through the built-in speaker feeds back into the built-in mic, and the amp will tell you so.</p>
+      <p><strong>Everything on this page works on Mac, iPad and iPhone</strong>, the amp and the looper included. Plug in a USB-C audio interface, or use headphones: monitoring through the built-in speaker feeds back into the built-in mic, and the amp will tell you so.</p>
     </div>
 
     <div class="callout" data-accent="pro">
@@ -305,26 +304,6 @@
       </figure>
 </section>
 
-    <section class="section-card" id="performance">
-      <h2>Performance</h2>
-      <p>Fretling does a lot at once — an amp model, a looper, the tuner and Live Detect listening, the click — so the top bar shows how hard it is working, in a small readout to the left of the microphone lamp. Two rows:</p>
-      <ul>
-        <li><strong>Audio</strong> — how much of each audio cycle's time the audio engines are using. This is the number that predicts trouble: as it nears 100% the engine runs out of time to fill the next buffer, and you hear clicks or dropouts. The bar turns amber above 70% and red above 90%.</li>
-        <li><strong>CPU</strong> — Fretling's share of your whole Mac or iPad, the number behind fans and battery.</li>
-      </ul>
-      <p>Press the readout to open the Performance console. It shows the two audio engines separately — <strong>Playback</strong> carries notes, chords and the click; <strong>Amp</strong> carries the amp model and the looper, and reads <em>Not running</em> while the amp is down — each with the buffer it is measured against (frames, sample rate, and the milliseconds a cycle has) and a count of overloads: cycles that ran past their deadline since that engine started. Below a seam, the CPU share, and a warning when the machine itself is running hot and may be slowing things down.</p>
-      <p>If Audio runs hot, raise the buffer size in <a href="#input">Input settings</a> or choose a smaller amp model. A bigger buffer gives every cycle more time; a smaller model needs less of it.</p>
-      <figure class="shot" style="--shot-max: 850px">
-        <img class="shot-light" src="screenshots/32-performance-console-light.webp"
-             width="1520" height="1300" loading="lazy" decoding="async"
-             alt="The performance console open below the top bar's readout, showing the Playback engine in the amber hot zone with its cycle budget, the Amp engine not running, the coaching line, and the CPU share.">
-        <img class="shot-dark" src="screenshots/32-performance-console-dark.webp"
-             width="1520" height="1300" loading="lazy" decoding="async"
-             alt="The performance console open below the top bar's readout, showing the Playback engine in the amber hot zone with its cycle budget, the Amp engine not running, the coaching line, and the CPU share.">
-        <figcaption class="figure-caption">The performance console: each audio engine against its own deadline, then the machine.</figcaption>
-      </figure>
-    </section>
-
     <section class="section-card" id="looper">
       <h2>Looper <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a></h2>
       <p>Record a phrase and play over it. The looper sits on the amp's monitoring path, so <strong>turn Monitor on in the amp first</strong> — the looper says as much if you have not. Once a loop exists it keeps playing on its own: turning Monitor off releases the microphone but leaves the loop running, and Play brings it back even with the amp down.</p>
@@ -368,7 +347,6 @@
           <tbody>
             <tr><td><strong>Notes</strong></td><td>Notes you tap on the neck, and scale playback.</td></tr>
             <tr><td><strong>Chord</strong></td><td>Chords played from the timeline and the Chord Atlas.</td></tr>
-            <tr><td><strong>Prog</strong></td><td>Reserved for progression playback, which is not part of this release. The strip is there, and it has nothing to control yet.</td></tr>
             <tr><td><strong>Click</strong></td><td>Metronome and drums.</td></tr>
             <tr><td><strong>Amp</strong></td><td>Your monitored guitar.</td></tr>
             <tr><td><strong>Loop</strong></td><td>Looper playback.</td></tr>

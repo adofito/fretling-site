@@ -54,7 +54,7 @@ You can try everything in Pro free for two weeks. The button is on the unlock sh
   are what the trial is really for: put a guitar through it for two weeks and find out.
 - **What it costs.** Nothing. It is a free purchase, so it goes through the App Store, but no
   money moves and nothing renews.
-- **What you get.** All of Pro, on every Mac and iPad signed into your Apple Account, for the
+- **What you get.** All of Pro, on every Mac, iPad and iPhone signed into your Apple Account, for the
   same fourteen days whichever device you started it on.
 - **What it says before it starts.** How long it lasts, what stops working when it ends, and
   what the full unlock costs — all on the sheet, before you press anything.
@@ -73,9 +73,8 @@ You can try everything in Pro free for two weeks. The button is on the unlock sh
 
 - **One purchase, once.** Fretling Pro is a single one-time App Store purchase — no
   subscription, nothing recurring.
-- **Every device.** The same purchase unlocks Fretling on every **Mac and iPad** signed
-  into your Apple Account, and it supports Family Sharing. (iPhone is not a supported
-  device — the layout is built around a wide neck.)
+- **Every device.** The same purchase unlocks Fretling on every **Mac, iPad and iPhone** signed
+  into your Apple Account, and it supports Family Sharing.
 - **Your settings survive the lock.** If a Pro setting is stored, the app quietly uses the
   free equivalent until you unlock, then your stored choice comes straight back. A Pro
   scale reads as Major, Precision reads as Fast, the Trace, Strobe and Disc displays read

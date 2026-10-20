@@ -13,7 +13,7 @@ Live Detect's Listen and detected chord. Click the chevron beside the panel's cl
 double-click its header (double-tap on iPad); the same chevron expands it again. Which panels
 are minimized is remembered between launches, along with where they sit.
 
-> **Everything on this page works on Mac and iPad.** The amp and the looper used to be
+> **Everything on this page works on Mac, iPad and iPhone.** The amp and the looper used to be
 > Mac-only; they now run on iPad too. Plug in a USB-C audio interface, or use headphones —
 > monitoring through the built-in speaker feeds back into the built-in mic, and the amp
 > will tell you so.
@@ -221,29 +221,6 @@ Under **Setup**:
 
 Every slider has tick marks, a dB readout, and a double-click reset back to its default.
 
-## Performance
-
-Fretling does a lot at once — an amp model, a looper, the tuner and Live Detect listening,
-the click — so the top bar shows how hard it is working, in a small readout to the left of
-the microphone lamp. Two rows:
-
-- **Audio** — how much of each audio cycle's time the audio engines are using. This is the
-  number that predicts trouble: as it nears 100% the engine runs out of time to fill the
-  next buffer, and you hear clicks or dropouts. The bar turns amber above 70% and red above
-  90%.
-- **CPU** — Fretling's share of your whole Mac or iPad, the number behind fans and battery.
-
-Press the readout to open the Performance console. It shows the two audio engines
-separately — **Playback** carries notes, chords and the click; **Amp** carries the amp model
-and the looper, and reads *Not running* while the amp is down — each with the buffer it is
-measured against (frames, sample rate, and the milliseconds a cycle has) and a count of
-overloads: cycles that ran past their deadline since that engine started. Below a seam, the
-CPU share, and a warning when the machine itself is running hot and may be slowing things
-down.
-
-If Audio runs hot, raise the buffer size in [Input settings](#input) or choose a smaller amp
-model. A bigger buffer gives every cycle more time; a smaller model needs less of it.
-
 ## Looper
 
 Record a phrase and play over it. The looper sits on the amp's monitoring path, so **turn
@@ -297,7 +274,6 @@ level that is too loud.
 |-------|----------|
 | **Notes** | Notes you tap on the neck, and scale playback. |
 | **Chord** | Chords played from the timeline and the Chord Atlas. |
-| **Prog** | Reserved for progression playback, which is not part of this release. The strip is there, and it has nothing to control yet. |
 | **Click** | Metronome and drums. |
 | **Amp** | Your monitored guitar. |
 | **Loop** | Looper playback. |

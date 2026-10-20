@@ -115,7 +115,7 @@ state rather than always saying the same thing:
 - **The amp, the looper, precision tuning, and more**, otherwise — what the row is offering,
   rather than a bare price.
 
-**Restore Purchases** lives on the unlock sheet itself, not in this row, so a new Mac or iPad
+**Restore Purchases** lives on the unlock sheet itself, not in this row, so a new Mac, iPad or iPhone
 restores from the same place the purchase happens.
 
 ## About and tips
