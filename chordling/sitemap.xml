@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- By hand, beside Scripts/publish-site.sh PUBLIC_FILES: four pages, each in English and Spanish. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.fretling.app/chordling/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fretling.app/chordling/"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://www.fretling.app/chordling/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.fretling.app/chordling/"/>
+  </url>
+  <url>
+    <loc>https://www.fretling.app/chordling/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fretling.app/chordling/"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://www.fretling.app/chordling/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.fretling.app/chordling/"/>
+  </url>
+  <url>
+    <loc>https://www.fretling.app/chordling/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fretling.app/chordling/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://www.fretling.app/chordling/es/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.fretling.app/chordling/guide.html"/>
+  </url>
+  <url>
+    <loc>https://www.fretling.app/chordling/es/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fretling.app/chordling/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://www.fretling.app/chordling/es/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.fretling.app/chordling/guide.html"/>
+  </url>
+  <url>
+    <loc>https://www.fretling.app/chordling/free-and-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fretling.app/chordling/free-and-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://www.fretling.app/chordling/es/free-and-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.fretling.app/chordling/free-and-pro.html"/>
+  </url>
+  <url>
+    <loc>https://www.fretling.app/chordling/es/free-and-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fretling.app/chordling/free-and-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://www.fretling.app/chordling/es/free-and-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.fretling.app/chordling/free-and-pro.html"/>
+  </url>
+  <url>
+    <loc>https://www.fretling.app/chordling/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fretling.app/chordling/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://www.fretling.app/chordling/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.fretling.app/chordling/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://www.fretling.app/chordling/es/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fretling.app/chordling/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://www.fretling.app/chordling/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.fretling.app/chordling/privacy.html"/>
+  </url>
+</urlset>
