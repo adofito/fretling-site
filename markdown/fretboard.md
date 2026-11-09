@@ -45,10 +45,11 @@ sidebar.
 | **Labels** | Notes / Intervals / None | *Notes* prints note names (G, A♯). *Intervals* prints each note's interval from the root — R, m2, M2, m3, M3, P4, T for the tritone, P5, m6, M6, m7, M7. *None* leaves bare dots — useful for testing yourself. |
 | **Shapes** | Circles / Intervals | *Circles* draws every marker the same. *Intervals* gives each degree its own outline, counting corners — a circle for the root, three for a 3rd, up to seven for a 7th — so the root reads differently from a third even in Gray. The **?** after the two chips opens *What the markers mean*: a key to every mark the neck draws in the learn mode you are in — *Scale note* and *Key root* in Scales — and, with Shapes on Intervals, the ladder of outlines. |
 | **Colors** | Color / Gray | *Color* gives each interval its own color, so a degree is recognizable before you read it. *Gray* makes every marker the same, which keeps shapes and geometry in focus. |
-| **Accidentals** | ♯ Sharps / ♭ Flats | Whether black-key notes read as F♯ or G♭. It follows the key you are in until you set it yourself: F Major spells B♭ rather than A♯, and C Mixolydian follows F Major, whose notes it uses. Tap either chip, including the one already lit, and that spelling is yours from then on, in every key. Only meaningful when labels show note names, so this group dims — but stays visible — when Labels is set to Intervals or None. |
 
 Every group except **Frets** is radio-style: one chip is lit, and tapping the lit chip does
-nothing — except in Accidentals, where it makes the key's spelling yours. On a narrow window
+nothing. Sharps and flats are not a chip: every note is spelled the way the key you are in
+writes it, so F Major spells B♭ rather than A♯, and C Mixolydian follows F Major, whose notes
+it uses. On a narrow window
 the bar scrolls sideways instead of wrapping, fading out at whichever end has more chips past
 it. In an iPad window too short for two rows of chips, the bar and the [Visual
 Groupings](#visual-groupings-overlays-and-boxes) share one row and scroll sideways together.
@@ -62,8 +63,8 @@ put while the rest of the row scrolls. When the card plays something, such as a 
 a Play button sits beside the chip, so you can start and stop it without opening the panel.
 Closing the panel never stops anything that is playing.
 
-**The defaults** are Labels *Notes*, Shapes *Intervals* and Colors *Color*, on 15 frets, with
-Accidentals following the key. Every one of them is remembered between launches.
+**The defaults** are Labels *Notes*, Shapes *Intervals* and Colors *Color*, on 15 frets. Every
+one of them is remembered between launches.
 
 **How the interval shapes are built:** they are a ladder, not a set of glyphs to memorize.
 The root is a circle; the 2nd is that circle broken once; from the 3rd up, the degree is the
@@ -74,8 +75,9 @@ for raised, so there are two rules to learn rather than twelve symbols.
 ## Note markers
 
 Markers show which notes belong to the current scale, chord, or triad. Everything about how
-they read — their labels, shapes, colors and accidentals — is set on the
-[marker display bar](#marker-display-bar) above the neck. The root note is always emphasized
+they read — their labels, shapes and colors — is set on the
+[marker display bar](#marker-display-bar) above the neck, and their sharps and flats come from
+the key. The root note is always emphasized
 against the other tones.
 
 > **Chord tones are never hidden.** When Chords mode shows a chord against a key, notes
@@ -115,31 +117,32 @@ reader who cannot separate red from green.
 
 ## Scale timeline
 
-Above the neck, the timeline lays out all twelve semitones in a row. Notes that belong to the
-current scale are filled in; the rest sit faded. When a chord is active, its tones are marked
-too, so you can read the chord against its key in one line.
+Above the neck, the timeline lays out all twelve semitones in one sunken track. The notes of the
+current scale stand up out of it on raised keys; the rest stay flat, just their names. When a
+chord is active, its tones wear a larger disc, so you can read the chord against its key in one
+line.
 
 The row starts at whatever you are learning, so it never splits in two. In Scales the leftmost
 key is the key you picked, and the scale climbs from there — set Labels to Intervals and you can
 read the intervals straight across, R first. In Chords the chord takes the front of the row
 instead, and the key's scale shifts around it.
 
-Horizontal rails bracket the row to show the structure: the chord's tones are tied together
-above it, the scale's below. Small Chord and Scale captions name each rail, and triangles
-mark each root.
+Arcs above the row join the chord's tones and nothing else, under a small Chord caption. A chord
+tone the scale does not hold keeps an empty, dashed key with “outside” under it. Rings mark the
+roots: heavy for the key's, light for the chord's.
 
 In Triads there is no scale to map: the row starts at the triad's root, its three tones are
-filled and the rest stay empty, and only the Chord rail appears, with its transport.
+raised and joined by arcs, and only the Chord transport appears.
 
 **Tap a key** to hear that pitch. Every marker of that note on the neck lights up, and stays lit
 until you tap another key.
 
 ### Timeline transports
 
-At the leading edge of the timeline stand up to two round transports, each on the rail it
-plays — the Chord transport beside the chord rail above the row, the Scale transport beside
-the scale rail below it. Press one to make sound, press it again to stop; a transport that is
-sounding fills in solid.
+At the leading edge of the timeline stand up to two round transports, each beside what it plays
+— the Chord transport level with the Chord caption above the row, the Scale transport level with
+the row itself. Press one to make sound, press it again to stop; a transport that is sounding
+fills in solid.
 
 - **Scale** — plays one octave of the scale, root to root, up and back down, once: one note per
   beat at the metronome's tempo, each lit on the neck as it sounds. It starts on the lowest root
@@ -148,9 +151,9 @@ sounding fills in solid.
   otherwise the box. A box drawn more than once on a long neck plays its lowest copy.
 - **Chord** — holds the chord on the chord pad until you press it again.
 
-A transport is mounted on a rail, so a rail is all it takes for one to appear: the Scale
-transport is there whenever a scale is on the timeline, the Chord transport whenever a chord
-is active. That includes Triads, where the transport sounds the triad on screen.
+A transport appears whenever there is something for it to play: the Scale transport whenever a
+scale is on the timeline, the Chord transport whenever a chord is active. That includes Triads,
+where the transport sounds the triad on screen.
 
 On the Mac, **Shift-Space** presses whichever of the two is on screen — the chord if one is
 active, otherwise the scale. The plain space bar is the app's own transport: it stops whatever
@@ -168,7 +171,7 @@ visible range holds no playable notes, the line says *No notes in this fret rang
 leaving you to press a dead button.
 
 The spelling follows the rest of the app: **Labels** decides whether you read note names or
-intervals, and **Accidentals** whether they are sharp or flat. It answers a different
+intervals, and the key whether they are sharp or flat. It answers a different
 question from the timeline above it — the timeline maps the key, the tone line says what this
 one transport will sound.
 

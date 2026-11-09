@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harmonling – A playable map of chords for Mac, iPad and iPhone</title>
+  <meta name="description" content="Harmonling is Fretling&#x27;s sister app for harmony: a playable map of the chords in a key. Tap a chord to hear it and see where it usually goes, write a path, borrow chords from outside the key, and learn it all in lessons and by ear. Free, with a one-time Pro unlock.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Harmonling">
+  <meta property="og:title" content="Harmonling – A playable map of chords for Mac, iPad and iPhone">
+  <meta property="og:description" content="Harmonling is Fretling&#x27;s sister app for harmony: a playable map of the chords in a key. Tap a chord to hear it and see where it usually goes, write a path, borrow chords from outside the key, and learn it all in lessons and by ear. Free, with a one-time Pro unlock.">
+  <meta property="og:url" content="https://www.fretling.app/harmonling/">
+  <meta property="og:image" content="https://www.fretling.app/harmonling/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.fretling.app/harmonling/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/harmonling/">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/harmonling/">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/harmonling/es/">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/harmonling/">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+</head>
+<body data-page="home" data-app="harmonling">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <circle class="wm-ring" cx="13" cy="10" r="8.6"/>
+          <polygon class="wm-tri" points="13,2.6 6.6,14.2 19.4,14.2"/>
+          <polygon class="wm-a" points="13,0 15.2,1.3 15.2,3.9 13,5.2 10.8,3.9 10.8,1.3"/>
+          <polygon class="wm-b" points="6.6,11.6 8.8,12.9 8.8,15.5 6.6,16.8 4.4,15.5 4.4,12.9"/>
+          <polygon class="wm-c" points="19.4,11.6 21.6,12.9 21.6,15.5 19.4,16.8 17.2,15.5 17.2,12.9"/>
+        </svg>
+        Harmonling
+      </a>
+      <nav class="chip-nav" aria-label="Guide sections">
+        <ul>
+          <li><a href="guide.html" data-mark="guide">Guide</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
+          <li><a href="privacy.html" data-mark="privacy">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="theme-control" data-menu="theme">
+          <button type="button" class="theme-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Appearance">
+            <span data-theme-label>System</span>
+            <svg class="chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="chip-menu chip-menu--end" role="listbox" aria-label="Appearance" hidden></div>
+        </div>
+        <a class="lang-switch" href="es/index.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-masthead">
+        <div class="hero-head">
+          <h1>Hear where a chord <em data-hl="intent">wants to go</em>.</h1>
+        </div>
+        <div class="hero-aside">
+          <p class="lede">Fretling's sister app, for harmony, on Mac, iPad and iPhone. A playable map of the chords in a key: tap one to hear it and see where it usually goes, write a path through the changes, and borrow chords from outside the key.</p>
+          <p class="hero-meta">
+            <span>Mac, iPad and iPhone</span>
+            <span>Free, with a one-time Pro unlock</span>
+            <span>Ten lessons and ear training</span>
+            <span>No account, no analytics</span>
+          </p>
+          <p class="hero-actions" data-store-cta data-store-state="soon">
+            <span class="hero-cta" aria-disabled="true" data-store-when="soon">Coming soon to the App Store: Mac, iPad and iPhone</span>
+            <a class="quiet" href="guide.html">Read the guide</a>
+          </p>
+        </div>
+      </div>
+
+      <figure class="figure keys-figure">
+        <div class="stage">
+          <img src="screenshots/01-where-a-chord-goes.webp" width="1600" height="986" alt="Explore in C major on the Fifths layout: G, the V chord, picked, its arrows to C, F and A minor drawn, and the panel beside the map listing where it usually goes.">
+        </div>
+        <figcaption class="figure-caption">The map. Home sits in the middle; every other chord is placed by where it usually goes.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="pools" id="three-doors" aria-label="What Harmonling does">
+      <a href="#map" data-mark="see">
+        <span class="pool-title">Explore it</span>
+        <span class="pool-desc">The chords of any key on one map, the moves they usually make drawn as arrows, and a path you write and hear.</span>
+        <span class="pool-go">The map &rarr;</span>
+      </a>
+      <a href="#learn" data-mark="hear">
+        <span class="pool-title">Learn it</span>
+        <span class="pool-desc">Ten short lessons, each one a page that asks you to play the chord it names, on the map itself.</span>
+        <span class="pool-go">The lessons &rarr;</span>
+      </a>
+      <a href="#train" data-mark="play">
+        <span class="pool-title">Hear it</span>
+        <span class="pool-desc">Train names chords by ear: a progression plays in your key, and you say what you heard.</span>
+        <span class="pool-go">Train &rarr;</span>
+      </a>
+    </nav>
+
+    <section class="feature" id="map">
+      <div class="feature-body">
+        <h2>Where a chord goes</h2>
+        <p>Tap a chord to hear it. Arrows show where it usually goes, dashes the chords it shares two notes with. The <strong>Function</strong> layout groups the key as Home, Away and Tension; <strong>Fifths</strong> lays it around the circle.</p>
+        <p>Major and natural minor, the triads and the secondary dominants are free.</p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/04-home-away-tension.webp" width="1600" height="986" alt="C major on the Function layout: C in the middle as home, and the other chords grouped around it as Away and Tension."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="path">
+      <div class="feature-body">
+        <h2>Write a path, hear it</h2>
+        <p>Tap <strong>Write</strong>, then tap chords in order: each one joins the path. <strong>Play</strong> it back, and <strong>Voices</strong> shows how each note moves from chord to chord.</p>
+        <p><strong>Save Path</strong> keeps it in your Library, on every device signed into your Apple Account. Three saved paths are free; Pro keeps up to 500. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/02-write-a-path.webp" width="1600" height="986" alt="A path written with Write, C, A minor, F and G, playing on the map, with Voices under it showing how each note moves from chord to chord."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="home">
+      <div class="feature-body">
+        <h2>Any chord can be home</h2>
+        <p>Pick a chord and <strong>Make This Home</strong>: the map redraws around it, so you can hear where the same chords lead from a new center.</p>
+        <p>The modes, Dorian to Locrian, and harmonic and melodic minor are Pro. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/03-any-chord-home.webp" width="1600" height="986" alt="Make This Home on A minor: the map redrawn around A natural minor, with A minor in the middle and its usual moves drawn."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="borrowed">
+      <div class="feature-body">
+        <h2>Chords from outside the key</h2>
+        <p>Under <strong>Show</strong>, the satellites join the map: secondary dominants (free), and with Pro the ii of each chord, tritone substitutes, borrowed chords with <strong>Borrow from</strong>, vii°7 of, the Neapolitan and the mediants. <strong>Sevenths</strong> turns every chord into its seventh. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/05-borrowed.webp" width="1600" height="986" alt="Borrowed chords from C natural minor on the map: A-flat, the borrowed flat VI, picked, with its moves to B-flat, F minor and G drawn."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="learn">
+      <div class="feature-body">
+        <h2>Ten lessons, played</h2>
+        <p>Each lesson is a page that asks you to play the chord it names, on the map. The course fills in as you go, from home and its neighbors to modes.</p>
+        <p>The first two lessons are free. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/06-lessons.webp" width="1600" height="986" alt="Lesson 2 of 10 in Learn, “Where chords go”, asking you to tap G, then C, on the map beside it."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="train">
+      <div class="feature-body">
+        <h2>Name it by ear</h2>
+        <p>A progression plays in Explore’s key. Name each chord you hear, and the levels climb from home and its fifth to the whole key.</p>
+        <p>Levels 1 to 4 are free. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/07-by-ear.webp" width="1600" height="986" alt="Train at level 1 in C major: a progression of four chords, the first named C, the second waiting for you to pick what you heard."></figure>
+      </div>
+    </section>
+
+    <section class="section-card" id="free-and-pro">
+      <h2>Free for good. Pro is the deep end.</h2>
+      <div class="tiers">
+        <div>
+          <h3>What's free</h3>
+          <ul>
+            <li>The map, both layouts and every play control</li>
+            <li>Major and natural minor, in every key</li>
+            <li>Triads, and the secondary dominants (V7 of)</li>
+            <li>Write, Voices and three saved paths</li>
+            <li>The first two lessons</li>
+            <li>Train's levels 1 to 4</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What Pro adds</h3>
+          <ul>
+            <li>The modes, and harmonic and melodic minor</li>
+            <li>Sevenths</li>
+            <li>ii of, tritone substitutes, borrowed chords, vii°7 of, the Neapolitan</li>
+            <li>The mediants</li>
+            <li>Every lesson and every Train level</li>
+            <li>Up to 500 saved paths</li>
+          </ul>
+        </div>
+      </div>
+      <p class="tier-note">One purchase, once: no subscription. Try Pro free for 14 days. The unlock covers every Mac, iPad and iPhone signed into your Apple Account, and supports Family Sharing. Nothing that is free today moves behind the unlock later. <a href="free-and-pro.html">The full comparison</a></p>
+    </section>
+
+    <section class="section-card" id="privacy">
+      <h2>Private by default</h2>
+      <p>Harmonling runs on your device. There is no account, no analytics and no tracking, and it asks for no permissions: no microphone, no Bluetooth, no location. Your saved paths travel in your own iCloud storage, which only your devices read. <a href="privacy.html">The privacy policy</a></p>
+    </section>
+  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Harmonling, Fretling's sister app for harmony. &copy; 2026 Carlos Maldonado.</p>
+      <p><a href="guide.html">User guide</a> &middot; <a href="free-and-pro.html">Free &amp; Pro</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="mailto:fretlingapp@gmail.com?subject=Harmonling%20support">Contact</a></p>
+      <p class="family"><a class="app-fretling" href="../index.html">Fretling, for the guitar <span class="arr" aria-hidden="true">&rarr;</span></a><span class="sep" aria-hidden="true">&middot;</span><a class="app-pianoling" href="../pianoling/index.html">Pianoling, for the piano <span class="arr" aria-hidden="true">&rarr;</span></a></p>
+    </div>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

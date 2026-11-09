@@ -1572,8 +1572,7 @@ button.chip { cursor: pointer; }
    place in the sentence and stops claiming to open anything. */
 button.chip:disabled { cursor: default; }
 button.chip:disabled .chev { display: none; }
-.toggle-chip:disabled .tc-mark,
-.toggle-chip:disabled .tc-glyph { opacity: 0.35; }
+.toggle-chip:disabled .tc-mark { opacity: 0.35; }
 button.chip:hover { background: color-mix(in srgb, var(--chip-accent) 15%, transparent); }
 button.chip:active { transform: translateY(1px); }
 
@@ -1973,15 +1972,13 @@ th:last-child, td:last-child { padding-right: 0; }
   transition: color 0.15s ease-out;
   text-decoration: none;
 }
-.toggle-chip .tc-mark,
-.toggle-chip .tc-glyph {
+.toggle-chip .tc-mark {
   opacity: 0.35;
   transition: opacity 0.15s ease-out;
 }
 .toggle-chip[aria-checked="true"],
 .toggle-chip.is-on { color: var(--f-ink); }
 .toggle-chip[aria-checked="true"] .tc-mark,
-.toggle-chip[aria-checked="true"] .tc-glyph,
 .toggle-chip.is-on .tc-mark { opacity: 1; }
 .toggle-chip:hover { color: var(--f-ink); }
 .toggle-chip:hover .tc-mark { opacity: 0.7; }
@@ -2003,14 +2000,6 @@ th:last-child, td:last-child { padding-right: 0; }
   background:
     conic-gradient(var(--f-int-0) 0 33.33%, var(--f-int-4) 0 66.66%, var(--f-int-7) 0 100%);
 }
-.toggle-chip .tc-glyph {
-  flex: none;
-  width: 8px;
-  color: var(--f-ink-2);
-  font-size: 13px;
-  line-height: 1;
-  text-align: center;
-}
 
 /* Marks carry meaning — the marker display bar's own vocabulary. */
 .toggle-chip[data-value="notes"] .tc-mark     { background: var(--f-accent-note); }
@@ -2027,20 +2016,6 @@ th:last-child, td:last-child { padding-right: 0; }
   border-radius: 0;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
-
-/*
-  Accidentals with Labels set to anything but Notes: the group has nothing to do, and
-  the guide promises it "dims — but stays visible". A 0.4 opacity on top of the chip's
-  own dimming measured 1.56:1, which is not visible, it is gone. One ink step down for
-  everything in the group says the same thing at 6.6:1, and nothing inside it reads as
-  switched on.
-*/
-.chip-group[data-state="disabled"] .chip-group-label,
-.chip-group[data-state="disabled"] .toggle-chip,
-.chip-group[data-state="disabled"] .toggle-chip[aria-checked="true"] { color: var(--f-ink-3); }
-.chip-group[data-state="disabled"] .tc-glyph { opacity: 0.6; }
-.chip-group[data-state="disabled"] .toggle-chip { cursor: default; }
-.chip-group[data-state="disabled"] .toggle-chip:hover { color: var(--f-ink-3); }
 
 .fretboard {
   margin: var(--s-3) 0;
@@ -2379,6 +2354,81 @@ th:last-child, td:last-child { padding-right: 0; }
   .toc a { min-height: 44px; }
   .guide-index a { padding-block: var(--s-5); }
 }
+
+/* ============================================================
+   10b. Pianoling section (pianoling/, Phase 8 S4)
+   The sister app's pages are rooms in this house: everything above applies to them, and
+   only what follows differs. Drawn and approved in docs/design-review/pianoling-launch/.
+   ============================================================ */
+
+:root {
+  /* The icon's field, #425079 (Pianoling/Assets.xcassets/AppIcon, sampled). 7.4:1 on the canvas. */
+  --p-accent: #425079;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --p-accent: #9aa8d6; }
+}
+/* The same hue lifted for the dark canvas: 7.5:1 on #1a1a1a. */
+:root[data-theme="dark"] { --p-accent: #9aa8d6; }
+
+/* The home page takes Pianoling's accent; the guide, Free & Pro and Privacy keep the
+   family's per-page accents, so a page type reads the same in both apps. */
+body[data-app="pianoling"][data-page="home"] { --page-accent: var(--p-accent); }
+
+/* The key mark: Fretling's mark is three strings with C, E and G on them; Pianoling's is five
+   keys with the same three notes, in the same three wheel colors. */
+.brand .brand-mark .km-white { fill: var(--f-surface); stroke: var(--f-ink-2); stroke-width: 1; }
+.brand .brand-mark .km-black { fill: var(--f-ink-body); }
+.brand .brand-mark .km-dot-a { fill: var(--f-int-0); }
+.brand .brand-mark .km-dot-b { fill: var(--f-int-4); }
+.brand .brand-mark .km-dot-c { fill: var(--f-int-7); }
+
+/* The hero's figure is the app's own capture, not a live keyboard: the stage frame
+   Fretling's live neck sits in, holding a picture instead. */
+.keys-figure .stage { padding: 0; overflow: hidden; }
+.keys-figure img { display: block; width: 100%; height: auto; }
+
+/* ============================================================
+   10c. Harmonling section (harmonling/, launch plan S3)
+   A third room in the same house, drawn and approved in
+   docs/design-review/harmonling-launch/: the mark, the home page's accent, the hero capture.
+   ============================================================ */
+
+:root {
+  /* The icon's violet chord hexagon, #9c91e6 (Explorer/Assets.xcassets/AppIcon, sampled),
+     deepened on its own hue to 8.1:1 on the canvas. The icon's navy field sits too close to
+     Pianoling's indigo and to the ink to tell the two sections apart. */
+  --h-accent: #4535b6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --h-accent: #aaa0ee; }
+}
+/* The same hue lifted for the dark canvas: 7.4:1 on #1a1a1a. */
+:root[data-theme="dark"] { --h-accent: #aaa0ee; }
+
+body[data-app="harmonling"][data-page="home"] { --page-accent: var(--h-accent); }
+
+/* The wheel mark: a ring of keys with three chords on it, C at the top, E and G below, in the
+   wheel's root, 3rd and 5th colors, joined by the faint triangle the map draws between chords
+   that share notes. (The hero's capture reuses Pianoling's .keys-figure rules above.) */
+.brand .brand-mark .wm-ring { fill: none; stroke: var(--f-ink-2); stroke-width: 1.1; opacity: .7; }
+.brand .brand-mark .wm-tri  { fill: var(--h-accent); opacity: .16; }
+.brand .brand-mark .wm-a { fill: var(--f-int-0); }
+.brand .brand-mark .wm-b { fill: var(--f-int-4); }
+.brand .brand-mark .wm-c { fill: var(--f-int-7); }
+
+/* ============================================================
+   10d. The family line
+   Every app's footer links to the other two, after the page links, each name in its own
+   app's accent.
+   ============================================================ */
+.site-footer .family a { font-weight: 600; text-decoration: none; }
+.site-footer .family a .arr { display: inline-block; transition: transform .2s cubic-bezier(.16,1,.3,1); }
+.site-footer .family a:hover .arr { transform: translateX(3px); }
+.site-footer .family a.app-fretling   { color: var(--f-accent-app); }
+.site-footer .family a.app-pianoling  { color: var(--p-accent); }
+.site-footer .family a.app-harmonling { color: var(--h-accent); }
+.site-footer .family .sep { color: var(--f-ink-2); margin: 0 .5em; }
 
 /* ============================================================
    11. Responsive + motion

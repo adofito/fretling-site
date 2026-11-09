@@ -120,12 +120,15 @@ Open the pattern editor from the metronome to build your own:
 - **Rows at once** — right-click (or long-press) a lane's name for *Fill Row*, *Accent
   Beats*, or *Clear Row*. Accent Beats keeps the row's hits and re-levels them the way the
   defaults are built: full on the beat, lighter in between.
+- **Undo and Redo** — the editor's toolbar takes back an edit to the grid, or puts it back;
+  ⌘Z and ⇧⌘Z do the same on a keyboard.
 - **Library** — every meter and subdivision ships with beats you can load, **61** in all, in
   four sections (below). A beat appears only at the subdivisions that can hold it: a
   sixteenth-note funk beat lives at Sixteenth, a shuffle at Triplet. Genre and classic rows
   show a typical tempo; loading a classic sets the metronome to it, loading a genre leaves
   your tempo alone. There is a *Your Patterns* section too, for the ones you save. Save under
-  a name, mark one as active, duplicate one as a starting point, rename, or delete; the sheet
+  a name, mark one as active, duplicate one as a starting point, rename, or delete — after a
+  delete, an **Undo** stays on screen for a few seconds to bring the pattern back. The sheet
   also carries *New*, *Save as…* and *Reset*. Edited-but-unsaved patterns are badged *Edited*,
   and closing with unsaved work asks before discarding it. The space bar runs the click from
   inside the sheet, so you can hear the tempo while you edit.
@@ -298,7 +301,7 @@ that what you are fingering is what you think it is.
 while it is running. Above it, a status line says what is happening before you have played
 anything — *Tap Listen to detect what you play*. Once notes arrive, the readout names them: a
 single pitch as a note, several at once as the chord they spell, and both are spelled the way
-**Accidentals** is set, so a reading here matches the neck rather than arguing with it.
+the key on screen writes them, so a reading here matches the neck rather than arguing with it.
 
 **On the neck**, what Live Detect hears is ringed rather than filled. The rings are
 deliberately a different mark from the highlight a played-back note wears, because the two

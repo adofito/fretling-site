@@ -21,6 +21,8 @@ This is the Markdown mirror of the user guide. On the web the site root
   it, or see how it moves. Bring a song you know: paste a chord chart or open a ChordPro file,
   and it becomes a new progression in your library. *In testing* — see
   [Coming next](https://www.fretling.app/#coming-next).
+- **Train** your timing and your ear for chords in short rounds, with levels you earn — the
+  first three in each area are free.
 - **Hear** anything you see: tap-to-play notes, one-tap scale and chord playback, and real
   instruments — a sampled grand piano, modeled nylon, steel, jazz and clean electric guitars, or a sine wave;
   chords through up to three layered voices.
@@ -46,7 +48,7 @@ Everything sits around one stable fretboard:
   Live Detect, mixer, metronome. Each opens a floating panel that can be dragged,
   minimized to a one-row strip, or closed.
 - **Above the neck** — the learning sentence, the scale timeline, and the marker display bar
-  (Labels / Shapes / Colors / Accidentals).
+  (Labels / Shapes / Colors).
 - **The neck** — six strings, 12 to 22 frets (15 by default) plus open position, tap any note to hear it.
 - **Below the neck** — the Visual Groupings bar (Chord Shapes / CAGED / Box Shapes / 3NPS /
   Strings). Chord Shapes comes first in the modes that have it, because there the chord is
@@ -54,11 +56,11 @@ Everything sits around one stable fretboard:
 
 ## Quick start
 
-1. Read the sentence at the top and tap any colored word to change it: the **verb** (learn
-   or identify), the **mode** (scales, chords, triads), the **root note**, and the
+1. Read the sentence at the top and tap any colored word to change it: the **verb** (learn,
+   identify or train), the **mode** (scales, chords, triads), the **root note**, and the
    **scale type**.
 2. Tap notes on the neck to hear them. The instrument comes from Settings → Audio.
-3. Use the **Labels / Shapes / Colors / Accidentals** chips above the neck to switch between
+3. Use the **Labels / Shapes / Colors** chips above the neck to switch between
    note names and interval numbers.
 4. Use the **Visual Groupings** chips below the neck to lay CAGED shapes, position boxes,
    chord shapes, or 3NPS patterns over what you are seeing.

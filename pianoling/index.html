@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pianoling – Piano scales, chords and arpeggios for Mac, iPad and iPhone</title>
+  <meta name="description" content="Pianoling is Fretling's sister app for the piano: say what you want to learn in plain language and see it on the keys, fingered for each hand. Play a chord on a MIDI keyboard and Pianoling names it. Free, with a one-time Pro unlock.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pianoling">
+  <meta property="og:title" content="Pianoling – Piano scales, chords and arpeggios for Mac, iPad and iPhone">
+  <meta property="og:description" content="Pianoling is Fretling's sister app for the piano: say what you want to learn in plain language and see it on the keys, fingered for each hand. Play a chord on a MIDI keyboard and Pianoling names it. Free, with a one-time Pro unlock.">
+  <meta property="og:url" content="https://www.fretling.app/pianoling/">
+  <meta property="og:image" content="https://www.fretling.app/pianoling/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.fretling.app/pianoling/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/pianoling/">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/pianoling/">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/pianoling/es/">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/pianoling/">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+</head>
+<body data-page="home" data-app="pianoling">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <rect class="km-white" x="0.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="5.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="10.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="15.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="20.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-black" x="3.8" y="0.5" width="3.4" height="11" rx="0.8"/>
+          <rect class="km-black" x="8.8" y="0.5" width="3.4" height="11" rx="0.8"/>
+          <rect class="km-black" x="18.8" y="0.5" width="3.4" height="11" rx="0.8"/>
+          <circle class="km-dot-a" cx="3" cy="16" r="2.1"/>
+          <circle class="km-dot-b" cx="13" cy="16" r="2.1"/>
+          <circle class="km-dot-c" cx="23" cy="16" r="2.1"/>
+        </svg>
+        Pianoling
+      </a>
+      <nav class="chip-nav" aria-label="Guide sections">
+        <ul>
+          <li><a href="guide.html" data-mark="guide">Guide</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
+          <li><a href="privacy.html" data-mark="privacy">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="theme-control" data-menu="theme">
+          <button type="button" class="theme-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Appearance">
+            <span data-theme-label>System</span>
+            <svg class="chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="chip-menu chip-menu--end" role="listbox" aria-label="Appearance" hidden></div>
+        </div>
+        <a class="lang-switch" href="es/index.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-masthead">
+        <div class="hero-head">
+          <h1>Say what you want to <em data-hl="intent">learn</em>. The keys show it.</h1>
+        </div>
+        <div class="hero-aside">
+          <p class="lede">Fretling's sister app, for the piano, on Mac, iPad and iPhone. Say what you want to learn in plain language and see it on the keys, fingered for each hand. Play a chord on a MIDI keyboard and Pianoling names it.</p>
+          <p class="hero-meta">
+            <span>Mac, iPad and iPhone</span>
+            <span>Free, with a one-time Pro unlock</span>
+            <span>MIDI keyboards, free</span>
+            <span>No account, no analytics</span>
+          </p>
+          <p class="hero-actions" data-store-cta data-store-state="soon">
+            <span class="hero-cta" aria-disabled="true" data-store-when="soon">Coming soon to the App Store: Mac, iPad and iPhone</span>
+            <a class="hero-cta" href="https://apps.apple.com/app/id6820804209" data-store-when="live" rel="nofollow">Get Pianoling on the App Store <span class="arr" aria-hidden="true">&rarr;</span></a>
+            <a class="quiet" href="guide.html">Read the guide</a>
+          </p>
+        </div>
+      </div>
+
+      <figure class="figure keys-figure">
+        <div class="stage">
+          <img src="screenshots/01-scales.webp" width="1600" height="986"
+               alt="Pianoling's window: the sentence “I want to learn scales in C Major”, the scale's notes in a row, and three octaves of keys with every note of C major marked and fingered for both hands.">
+        </div>
+        <figcaption class="figure-caption">The app's screen. The number over each key is the finger that plays it: the left hand in the lower octave, the right hand in the upper.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="pools" id="three-doors" aria-label="What Pianoling does">
+      <a href="#fingering" data-mark="see">
+        <span class="pool-title">See it</span>
+        <span class="pool-desc">Scales, chords, triads and arpeggios in every key, with the fingering and the inversions on the keys.</span>
+        <span class="pool-go">The keys &rarr;</span>
+      </a>
+      <a href="#sound" data-mark="hear">
+        <span class="pool-title">Hear it</span>
+        <span class="pool-desc">Tap any key to hear it, or play a whole scale back, on a grand piano that rings with its own strings.</span>
+        <span class="pool-go">The sound &rarr;</span>
+      </a>
+      <a href="#name-it" data-mark="play">
+        <span class="pool-title">Plug in</span>
+        <span class="pool-desc">A MIDI keyboard over USB or Bluetooth: the keys you play light up, and Pianoling names the chord.</span>
+        <span class="pool-go">MIDI &rarr;</span>
+      </a>
+    </nav>
+
+    <section class="feature" id="fingering">
+      <div class="feature-body">
+        <h2>Fingered, for both hands</h2>
+        <p>Every scale and arpeggio carries its finger numbers. Pick the right hand, the left or both, and each key shows the finger that plays it.</p>
+        <p>Major, Minor, both Pentatonics, Blues, and Harmonic and Melodic Minor are free. The modes, Dorian onward, are Pro. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/01-scales.webp" width="1600" height="986" alt=""></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="chords">
+      <div class="feature-body">
+        <h2>Every chord, every inversion</h2>
+        <p>The chords of your key, in root position or any inversion, close or open, over the bass you pick. The Chord Atlas brings every quality without leaving the key.</p>
+        <p>The jazz voicings, shell, rootless and two-hand, are Pro. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/02-chords.webp" width="1600" height="986" alt="C over G on the keys: G in the bass, then C and E, each with its finger, and the Voicing, Hands and Fingering rows under the keys."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="name-it">
+      <div class="feature-body">
+        <h2>Play it, name it</h2>
+        <p>Play a chord on a MIDI keyboard, or tap it on the keys on screen, and Pianoling names it, gives its numeral in your key, and lists the other readings. Both are free.</p>
+        <p>Or play it on an acoustic piano and let Pianoling listen through the microphone. Best on simple chords, and on single notes in the middle of the keyboard. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/03-identify.webp" width="1600" height="986" alt="Identify naming Cmaj7, I in C Major, from four keys held on a MIDI keyboard, with its other reading, Em over C."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="arpeggios">
+      <div class="feature-body">
+        <h2>Arpeggios, step by step</h2>
+        <p>Five steps for every arpeggio. <strong>Hear it</strong> and <strong>Find it</strong> are free. <strong>Play it</strong>, <strong>In time</strong> and <strong>Blind</strong> grade what you play, over MIDI or by the microphone, in one key or around the cycle. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/06-arpeggios.webp" width="1600" height="986" alt="A C major triad arpeggio on step 2, Find it: the click plays and you play each key that lights, fingered for the right hand."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="chords-with">
+      <div class="feature-body">
+        <h2>The chords that hold a note</h2>
+        <p>“I want to identify chords with E in C Major.” Every chord in your key that holds the note, from triads up to thirteenths, with the note's role in each.</p>
+        <p>Practice them with <strong>Hear it</strong>, <strong>Find it</strong> and <strong>Name it</strong>, free. <strong>Play it</strong> grades you. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/08-chords-with-a-note.webp" width="1600" height="986" alt="Identify listing the triads in C Major that hold E, with E as the root of Em, and E, G and B marked on the keys."></figure>
+      </div>
+    </section>
+
+    <section class="section-card" id="sound">
+      <h2>Sound and practice</h2>
+      <ul>
+        <li><strong>The grand piano</strong>: an acoustic grand that rings with the resonance of its own strings.</li>
+        <li><strong>The mixer</strong>: balance the notes, the chords and the metronome.</li>
+        <li><strong>The metronome</strong>, complete: tempo, meter, subdivisions, tap and its sounds.</li>
+        <li><strong>The drums</strong>: the step sequencer and its pattern library. <a class="pro-badge" href="free-and-pro.html">Pro</a></li>
+        <li><strong>Undo and Redo</strong> for your edits, with &#8984;Z and &#8679;&#8984;Z on a keyboard.</li>
+      </ul>
+    </section>
+
+    <section class="section-card" id="free-and-pro">
+      <h2>Free for good. Pro is the deep end.</h2>
+      <div class="tiers">
+        <div>
+          <h3>What's free</h3>
+          <ul>
+            <li>Scales, Chords, Triads and Arpeggios in every key</li>
+            <li>Major, Minor, Pentatonics, Blues, Harmonic and Melodic Minor</li>
+            <li>Fingering for each hand, inversions, close and open voicings</li>
+            <li>Naming a chord tapped on screen or played on a MIDI keyboard</li>
+            <li>The chords that hold a note, and the Chord Atlas</li>
+            <li>Hear it and Find it on every arpeggio</li>
+            <li>The grand piano, the mixer and the metronome</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What Pro adds</h3>
+          <ul>
+            <li>The modes, Dorian to Locrian</li>
+            <li>Shell, rootless and two-hand voicings</li>
+            <li>Graded practice: Play it, In time and Blind on every arpeggio, and Play it on the chords that hold a note</li>
+            <li>Live Detect: naming what you play on an acoustic piano</li>
+            <li>The drums and their sequencer</li>
+          </ul>
+        </div>
+      </div>
+      <p class="tier-note">One purchase, once: no subscription. Try Pro free for 14 days. The unlock covers every Mac, iPad and iPhone signed into your Apple Account, and supports Family Sharing. Nothing that is free today moves behind the unlock later. <a href="free-and-pro.html">The full comparison</a></p>
+    </section>
+
+    <section class="section-card" id="privacy">
+      <h2>Private by default</h2>
+      <p>Pianoling runs entirely on your device. There is no account, no analytics and no tracking. What you play on a MIDI keyboard stays on your device, and Bluetooth is used only to connect the keyboard you pair.</p>
+      <p>The microphone is used only by Live Detect, which graded practice listens through when no MIDI keyboard is connected. Audio is analyzed as it arrives and is never recorded, stored or sent. <a href="privacy.html">The privacy policy</a></p>
+    </section>
+  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Pianoling, Fretling's sister app for the piano. &copy; 2026 Carlos Maldonado.</p>
+      <p><a href="guide.html">User guide</a> &middot; <a href="free-and-pro.html">Free &amp; Pro</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="mailto:fretlingapp@gmail.com?subject=Pianoling%20support">Contact</a></p>
+      <p class="family"><a class="app-fretling" href="../index.html">Fretling, for the guitar <span class="arr" aria-hidden="true">&rarr;</span></a><span class="sep" aria-hidden="true">&middot;</span><a class="app-harmonling" href="../harmonling/index.html">Harmonling, for harmony <span class="arr" aria-hidden="true">&rarr;</span></a></p>
+    </div>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

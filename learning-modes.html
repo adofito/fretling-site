@@ -93,6 +93,9 @@
         <li><a href="#chords">Chords</a></li>
         <li><a href="#triads">Triads</a></li>
         <li><a href="#identify">Identify a chord</a></li>
+        <li><a href="#train-timing">Train · Timing</a></li>
+        <li><a href="#train-harmony">Train · Harmony</a></li>
+        <li><a href="#train-fingers">Train · Fingers</a></li>
       </ul>
     </nav>
 
@@ -106,9 +109,9 @@
             <tr><th>Word</th><th>Choices</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>learn / identify</strong></td><td>The verb picks what the app is for right now — showing you something (<a href="#scales">learn</a>) or naming something you play (<a href="#identify">identify</a>). Switching to identify keeps your learn mode and its chord where they were, so switching back returns you there. The key is shared: change it in identify and learn follows.</td></tr>
+            <tr><td><strong>learn / identify / train</strong></td><td>The verb picks what the app is for right now — showing you something (<a href="#scales">learn</a>), naming something you play (<a href="#identify">identify</a>), or practicing in rounds with levels you earn (train: <a href="#train-timing">timing</a>, <a href="#train-harmony">harmony</a>). Switching to identify keeps your learn mode and its chord where they were, so switching back returns you there. The key is shared: change it in identify and learn follows.</td></tr>
             <tr><td><strong>Mode</strong></td><td>Scales, Chords, Triads.</td></tr>
-            <tr><td><strong>Root note</strong></td><td>All twelve notes, spelled the way the key is written — F Major reads B♭, not A♯ — until you pick Sharps or Flats on the marker display bar, which then wins in every key.</td></tr>
+            <tr><td><strong>Root note</strong></td><td>All twelve notes, spelled the way the key is written — F Major reads B♭, not A♯.</td></tr>
             <tr><td><strong>Scale type</strong></td><td>Major, Minor, Pentatonic Major and Pentatonic Minor lead the list; the rest follow under a <em>More scales</em> heading — Blues, which is free, then Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor, which need Pro and show a lock. In identify it is one flat list, with no heading.</td></tr>
             <tr><td><strong>Chord</strong></td><td>In Chords mode, and optionally in Scales mode, a chord picker backed by the Chord Atlas.</td></tr>
             <tr><td><strong>Triad type</strong></td><td>In Triads mode, in place of the scale: Major, Minor, Augmented, Diminished. It names one triad on the root, not a key.</td></tr>
@@ -119,10 +122,10 @@
           <figure class="shot" style="--shot-max: 810px">
         <img class="shot-light" src="screenshots/02-header-sentence-light.webp"
              width="1680" height="138" loading="lazy" decoding="async"
-             alt="The natural-language header reading “I want to learn scales in E Major: A”, with each changeable word drawn as a colored chip and the chord chip last.">
+             alt="The natural-language header reading “I want to learn scales in E Major over A”, with each changeable word drawn as a colored chip and the chord chip last.">
         <img class="shot-dark" src="screenshots/02-header-sentence-dark.webp"
              width="1680" height="138" loading="lazy" decoding="async"
-             alt="The natural-language header reading “I want to learn scales in E Major: A”, with each changeable word drawn as a colored chip and the chord chip last.">
+             alt="The natural-language header reading “I want to learn scales in E Major over A”, with each changeable word drawn as a colored chip and the chord chip last.">
         <figcaption class="figure-caption">Every colored word is a dropdown. The sentence is the whole control surface.</figcaption>
       </figure>
 </section>
@@ -133,7 +136,7 @@
       <p><strong>What you pick:</strong> a root note and a scale type — twelve scales in total, covering the major and minor scales, both pentatonics, the blues scale, five modes, and harmonic and melodic minor.</p>
       <p><strong>Free or Pro:</strong> Major, Minor, both pentatonics and Blues are free. The five modes, harmonic minor and melodic minor are <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a>.</p>
       <p><strong>On the fretboard:</strong> every note of the scale is marked. The <a href="fretboard.html#timeline">scale timeline</a> above the neck lays the twelve semitones out in a row so you can see the shape of the key itself. Below the neck, <a href="fretboard.html#overlays">Visual Groupings</a> let you overlay CAGED shapes, the scale&rsquo;s five position boxes and three-notes-per-string patterns — one at a time, or all together.</p>
-      <p><strong>Adding a chord:</strong> Scales mode has an optional chord slot at the end of the sentence, reading <em>a chord</em> until you fill it: <em>&ldquo;I want to learn scales in E Major: a chord.&rdquo;</em> Tap it to pick a chord from the Chord Atlas and it becomes the key's context — the scale timeline gains a chord rail and a Chord transport, and the Atlas follows it. It deliberately leaves the fretboard alone: in Scales mode the scale is the subject, and a chord tone drawn louder than its neighbors answers a question you did not ask. Clear it with the <strong>✕</strong> beside the chord, or <strong>Clear chord</strong> in the Atlas, to go back to the scale on its own. Changing the key root or the scale removes it too, and it is not kept when you quit. To see a chord's tones marked on the neck, switch to Chords mode.</p>
+      <p><strong>Adding a chord:</strong> Scales mode has an optional chord slot at the end of the sentence: a chord to practice the scale over. It reads <em>a chord</em> until you fill it: <em>&ldquo;I want to learn scales in E Major over a chord.&rdquo;</em> Tap it to pick a chord from the Chord Atlas — <em>&ldquo;… in E Major over Am.&rdquo;</em> — and the chord starts sounding, held under the scale while you play it. The scale timeline gains a chord rail and a Chord transport: press the transport to stop the chord, and again to bring it back. The fretboard stays the scale's: in Scales mode the scale is the subject, and a chord tone drawn louder than its neighbors answers a question you did not ask. Clear the chord with the <strong>✕</strong> beside it, or <strong>Clear chord</strong> in the Atlas, to stop it and go back to the scale on its own. Changing the key root or the scale removes it too, and it is not kept when you quit. To see a chord's tones marked on the neck, switch to Chords mode.</p>
       <p><strong>Use it to:</strong> learn one key thoroughly, then switch on Box Shapes or CAGED to see how the patterns you already know line up inside it.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/04-scales-with-chord-light.webp"
@@ -172,9 +175,9 @@
       <p><strong>How it is laid out:</strong> across the top, the chord's name and two key caps — <em>in C Major</em> and <em>without a key</em> — which flip the same choice as the sentence's <strong>in</strong>. Below them, the twelve roots, laid out like a keyboard. Then the chord types in eight families — <strong>Triads</strong>, <strong>Sixth/Add</strong>, <strong>Sevenths</strong>, <strong>Suspended</strong>, <strong>Extended</strong>, <strong>Altered</strong>, <strong>Symmetric</strong> and <strong>Other</strong> — each card showing the chord's name, its type and its formula (<em>1 ♭3 5 ♭7</em>). At the bottom sits a tray that starts folded: the chord, <strong>Hear</strong>, and where the chord sits in the key (<em>In key · vi</em>). Unfold it with the arrow by the name for <strong>Add</strong>, <strong>Alter</strong> and <strong>Omit</strong> (<em>add9</em>, <em>♭5</em>, <em>no3</em> — a chip that would not change the chord is dimmed) and <strong>Slash</strong>, a bass note under the chord (<em>C/E</em>).</p>
       <p><strong>Every pick is live:</strong> a tap commits at once — the neck and the sentence follow, the chord sounds, and the Atlas stays open, so you can walk through chords by ear without dismissing the sheet and reopening it each time. Root, card, modifier and bass picks all play. A family tap opens the family without a sound, and picks its first type if your chord is not in it. <strong>Hear</strong> plays the current chord again.</p>
       <p><strong>It knows your key.</strong> With a key, each root carries the Roman numeral of its chord in the key on a rail under it — the key's roots solid, borrowed ones lighter, the rest dashed outlines — and chords the key owns or borrows sort to the front of each family. A card says so when it differs from its root: <strong>Outside key</strong>, <strong>Borrowed &middot; V/V</strong>. In a Major or Minor key a secondary dominant seventh reads <strong>Borrowed &middot; V/V</strong> and a chord taken from the parallel key reads <strong>Borrowed &middot; iv</strong>; in the other scales a chord is in the key or outside it. Nothing has to be switched on, and none of it is behind the Pro unlock.</p>
-      <p><strong>Chords without shapes.</strong> Eleven types have no fingerings in the chord library — 7sus2, maj7sus4, 9sus2, 9sus4, m13, 7♭13, whole-tone, diminished-scale, quartal, quintal and dimMaj7. While <strong>Chord Shapes</strong> is on, the Atlas leaves them out; turn it off and all 57 types are listed, those eleven marked <strong>No shapes</strong>.</p>
+      <p><strong>Chords the library lacks.</strong> Eleven types have no fingerings in the chord library — 7sus2, maj7sus4, 9sus2, 9sus4, m13, 7♭13, whole-tone, diminished-scale, quartal, quintal and dimMaj7 — and neither do slash chords beyond plain major and minor ones, such as Fadd2/G or C7/E. For those, <strong>Chord Shapes</strong> draws grips worked out from the chord's notes: the bass on the lowest string, the rest within four frets, and no finger numbers. Identify draws the same grips, and the Atlas lists all 57 types.</p>
       <p><strong>From the keyboard:</strong> ← and → move along a row, ↑ and ↓ jump between the roots, the families, the cards and the tray, <strong>Return</strong> picks, and <strong>Esc</strong> closes.</p>
-      <p><strong>It follows the marker display bar.</strong> Labels, Colors and Accidentals reach the Atlas the way they reach the neck, so a chord spelled with flats on the fretboard is spelled with flats here. The one deliberate difference: with <strong>Labels</strong> set to <em>None</em> the Atlas keeps its chord names, because a catalog with no names on it is not a catalog.</p>
+      <p><strong>It follows the marker display bar.</strong> Labels and Colors reach the Atlas the way they reach the neck, and its sharps and flats come from the same key, so a chord spelled with flats on the fretboard is spelled with flats here. The one deliberate difference: with <strong>Labels</strong> set to <em>None</em> the Atlas keeps its chord names, because a catalog with no names on it is not a catalog.</p>
       <figure class="shot">
         <img class="shot-light" src="screenshots/33-chord-atlas-light.webp"
              width="1860" height="1565" loading="lazy" decoding="async"
@@ -210,22 +213,22 @@
     <section class="section-card" id="identify">
       <h2>Identify a chord</h2>
       <p><strong>Purpose:</strong> the reverse lookup — you have a shape under your fingers and want to know what it is called.</p>
-      <p>Pick <em>identify</em> as the verb in the header and the sentence becomes <em>&ldquo;I want to identify a chord in C Major&rdquo;</em>. The word <strong>in</strong> is a dropdown: pick <em>without a key</em> and it reads <em>&ldquo;… a chord without a key&rdquo;</em>. Fretling remembers the choice. The key is the one learn uses, so changing it here changes it there. With a key, the card adds one line saying what the chord is in that key — <em>vi in C Major</em>, <em>iv in C Major (borrowed)</em>, <em>Outside C Major</em>. The key changes nothing else: not which names Fretling suggests, not their order, and not the neck.</p>
+      <p>Pick <em>identify</em> as the verb in the header and the sentence becomes <em>&ldquo;I want to identify a chord in C Major&rdquo;</em>. The word <strong>in</strong> is a dropdown: pick <em>without a key</em> and it reads <em>&ldquo;… a chord without a key&rdquo;</em>. Fretling remembers the choice. The key is the one learn uses, so changing it here changes it there. With a key, the card adds one line saying what the chord is in that key — <em>vi in C Major</em>, <em>iv in C Major (borrowed)</em>, <em>Outside C Major</em>. When two readings fit your notes equally well, the one that belongs to the key comes first: A, E and G over an A read <em>Am7no3</em> in C Major and <em>A7no3</em> in D Major. The key never puts a worse fit ahead of a better one, and it changes nothing on the neck.</p>
 
       <h3>Giving Fretling the notes</h3>
       <ul>
-        <li><strong>Tap them onto the neck.</strong> The neck starts empty; the first time, a tip above it says <em>Tap the neck to place notes; tap again to remove.</em> Tap a fret to place a note — Fretling plays it once — and tap it again to remove it. Each string holds one note, as a fretting hand does, so tapping another fret on the same string moves the note there. Two different notes are enough for an answer. A placement toolbar under the neck gives you <strong>Undo</strong>, which steps back one change at a time, <strong>Clear</strong>, and a running count of placed notes.</li>
-        <li><strong>Play them.</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> Press <strong>Listen</strong> in the placement toolbar — it opens <a href="practice-tools.html#live-detect">Live Detect</a>, raises its panel so the Stop control is reachable, and starts it listening. Play the chord. Once Live Detect has named it, the button becomes <strong>Capture what I played</strong>: press it and that chord is placed on the neck, in place of whatever you had put there (Undo brings that back). What lands is the chord Live Detect <em>named</em>, voiced Fretling's way from the bass up — not your fingering, so move notes afterward if your shape was different. Live Detect names triads, power chords, sus2 and sus4, sixths, and the common sevenths; a 9th or an add9 comes out as the nearest of those or not at all, so tap richer chords in. The same move is on Live Detect's own panel as <strong>Send to fretboard</strong>. Without Pro the button shows the unlock sheet and the microphone never opens.</li>
+        <li><strong>Tap them onto the neck.</strong> The neck starts empty; the first time, a tip above it says <em>Tap the neck to place notes; tap again to remove.</em> Tap a fret to place a note — Fretling plays it once — and tap it again to remove it. Each string holds one note, as a fretting hand does, so tapping another fret on the same string moves the note there. Two different notes are enough for an answer. A placement toolbar under the neck gives you <strong>Undo</strong>, which steps back one change at a time, <strong>Redo</strong>, which puts it back (&#8984;Z and &#8679;&#8984;Z on a keyboard), <strong>Clear</strong>, and a running count of placed notes.</li>
+        <li><strong>Play them.</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> Press <strong>Hear me play</strong> in the placement toolbar — it opens <a href="practice-tools.html#live-detect">Live Detect</a>, raises its panel so the Stop control is reachable, and starts it listening. Play the chord. Once Live Detect has named it, the button becomes <strong>Capture what I played</strong>: press it and that chord is placed on the neck, in place of whatever you had put there (Undo brings that back). What lands is the chord Live Detect <em>named</em>, voiced Fretling's way from the bass up — not your fingering, so move notes afterward if your shape was different. Live Detect names triads, power chords, sus2 and sus4, sixths, and the common sevenths; a 9th or an add9 comes out as the nearest of those or not at all, so tap richer chords in. The same move is on Live Detect's own panel as <strong>Send to fretboard</strong>. Without Pro the button shows the unlock sheet and the microphone never opens.</li>
       </ul>
 
       <h3>Reading the results</h3>
-      <p>The card above the neck answers as soon as two different notes are placed. It gives one name, large — <em>C</em>, <em>C/E</em>, <em>Am7</em>, <em>Cmaj7no5</em> — and beside it, when there is something to explain, why: <em>1st inversion — E in the bass.</em>, <em>5th (G) omitted — add G to complete Cmaj7.</em>, <em>C with an added F♯.</em> Under it, your notes from low to high, each with its interval from the chord's root, the lowest marked <strong>bass</strong>. On the neck the lowest note is ringed, because the bass often decides the name.</p>
+      <p>The card above the neck answers as soon as two different notes are placed. It gives one name, large — <em>C</em>, <em>C/E</em>, <em>Am7</em>, <em>Cmaj7no5</em> — and under it, when there is something to explain, why: <em>1st inversion — E in the bass.</em>, <em>5th (G) omitted — add G to complete Cmaj7.</em>, <em>C with an added F♯.</em> Below that, your notes from low to high, each with its interval from the chord's root, the lowest marked <strong>bass</strong>. On the neck the lowest note is ringed, because the bass often decides the name.</p>
       <p>The same notes are often more than one chord. When they are, a <strong>Readings</strong> row lists the other names, up to five in all, best first. After a complete match it lists only other complete names: A, C, E and G over an A read <em>Am7</em>, then <em>C6/A</em>. When the best answer is itself a near miss, or only two notes are placed, near misses join the list — <em>Ano3</em>, <em>Asus2</em>. Tap a reading and the card and the neck's colors follow it, with a line saying why it ranks lower: <em>Same notes as Am7 — A in the bass favors Am7.</em></p>
       <p>From a reading you can:</p>
       <ul>
-        <li><strong>Hear it</strong> — play that chord on your Playback instrument: Fretling's own voicing of the name, not the notes you placed.</li>
-        <li><strong>Show voicings</strong> — draw up to three playable fingerings for that name on the neck.</li>
-        <li><strong>Open in Chord Atlas</strong> — leave identify for learn's Chords mode, with this reading as the chord. The Atlas itself stays closed; tap the chord in the sentence to open it.</li>
+        <li><strong>Hear</strong> — play that chord on your Playback instrument: Fretling's own voicing of the name, not the notes you placed.</li>
+        <li><strong>Voicings</strong> — draw up to three playable fingerings for that name on the neck; press it again to hide them.</li>
+        <li><strong>Chord Atlas</strong> — leave identify for learn's Chords mode, with this reading as the chord. The Atlas itself stays closed; tap the chord in the sentence to open it.</li>
       </ul>
       <p>Your placed notes stay put when you switch to learn and back, and clear when you quit.</p>
           <figure class="shot">
@@ -237,6 +240,153 @@
              alt="Identify mode with four notes placed on the neck and a results card naming the chord, listing its intervals and offering alternate readings.">
         <figcaption class="figure-caption">Place the notes you are fingering and Fretling names the chord.</figcaption>
       </figure>
+</section>
+
+    <section class="section-card" id="train-timing">
+      <h2>Train · Timing</h2>
+      <p><strong>Purpose:</strong> play rhythms in time, and see exactly where each hit lands against the beat.</p>
+      <p>Pick <em>train</em> as the verb and <em>my timing</em> after it, and the sentence reads <em>&ldquo;I want to train my timing with funk, level 3.&rdquo;</em> The style picks the groove the drums play under you: rock, funk, Motown, shuffle, swing, bossa nova, one drop, ska, tresillo, second line, boom bap or 6/8. The level picks the rhythm.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Level</th><th>What it asks</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>1 · Quarter notes</strong></td><td>Play on every beat.</td></tr>
+            <tr><td><strong>2 · Eighth notes</strong></td><td>Two even notes on every beat.</td></tr>
+            <tr><td><strong>3 · Offbeats</strong></td><td>The &ldquo;and&rdquo;, between the beats.</td></tr>
+            <tr><td><strong>4 · Sixteenths</strong></td><td>Four even notes on every beat.</td></tr>
+            <tr><td><strong>5 · Syncopation</strong></td><td>A pattern with notes between the beats.</td></tr>
+            <tr><td><strong>6 · Rests and pushes</strong></td><td>Leave the rests empty; the pushes come before the beat.</td></tr>
+            <tr><td><strong>7 · Swing</strong></td><td>Swung eighths: long, short.</td></tr>
+            <tr><td><strong>8 · Displacement</strong></td><td>A pattern shifted off its usual place.</td></tr>
+            <tr><td><strong>9 · Click on 2 and 4</strong></td><td>The click sounds only on 2 and 4: you feel the 1.</td></tr>
+            <tr><td><strong>10 · Keep the time</strong></td><td>The band stops for two bars; you keep going.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Levels 1 to 3 are free. <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> Levels 4 to 10 need Pro. A level opens once you pass the one before it: four of your last five rounds at 80% or more.</p>
+
+      <h3>A round</h3>
+      <p>Press <strong>Start</strong>. A bar of count-in, then <strong>Listen</strong>: Fretling plays the rhythm once over the groove. Another bar of count-in, then <strong>Your turn</strong>: play the same rhythm on your guitar. Fretling listens through the microphone or your input, and only when each note starts counts, not which note it is. Your hits appear on the chart as they land.</p>
+
+      <h3>Reading the pocket report</h3>
+      <p>At <strong>Result</strong> the chart shows the round's bars at true time. Each hit you were asked for is a ring on the beat line; each hit you played is a dot, raised when you were early and lowered when you were late, with a stem back to its ring. The dashed line is your average, and the band around it your spread. A missed hit is a dashed red ring, and an extra one a red cross.</p>
+      <ul>
+        <li><strong>Ahead of the beat, On the beat, Behind the beat</strong> — where your average sits. Within 10 ms either way is on the beat.</li>
+        <li><strong>Tight, Steady, Loose</strong> — how far your hits scatter around that average: tight at 12 ms or less, steady at 25 ms or less.</li>
+        <li><strong>Missed and extra</strong> — hits you left out, and hits that matched nothing.</li>
+      </ul>
+      <p>The score is a percentage: a hit within 20 ms earns full credit, less the further off it lands, a miss earns nothing, and each extra costs half a hit.</p>
+      <p>Beside the score, Result says whether the round counts toward the level: <strong>Counts: 80% or more</strong>, or <strong>Needs 80%</strong> and the one thing that cost the most, such as <strong>most hits 38 ms late</strong>. The line under it counts your last five rounds, says how many a pass needs, and gives your best.</p>
+
+      <h3>Calibrating your setup</h3>
+      <p>Every setup takes a little time to carry a note from the speaker or string to Fretling, and uncalibrated that delay reads as playing late. Beside the level line before a round, and beside the buttons at Result, the card says <strong>Not calibrated · Calibrate…</strong> until a setup is calibrated, and then its delay, such as <strong>Calibrated · 23 ms · Recalibrate…</strong>. Calibrating is once per setup: the microphone or input together with the speakers or headphones. A MIDI keyboard needs none.</p>
+      <ul>
+        <li><strong>Speakers.</strong> Fretling plays 8 clicks and listens for them, and saves the delay it measured: built-in speakers, external speakers and monitors alike. Keep the room quiet and the volume up. If the clicks come back too uneven to trust, it says so: turn the volume up, move closer and try again.</li>
+        <li><strong>Headphones, or clicks the microphone can't hear.</strong> Fretling uses the delay the device reports. On headphones it plays nothing; anywhere else it tries the clicks first.</li>
+        <li><strong>Set by Ear…</strong> When neither works, play a note or press a key (tap the screen on iPhone and iPad) with each of the 8 clicks. It is good enough to practice with, though it folds your own lean into the figure, so the card then says <strong>Set by ear</strong>.</li>
+      </ul>
+</section>
+
+    <section class="section-card" id="train-harmony">
+      <h2>Train · Harmony</h2>
+      <p><strong>Purpose:</strong> hear a progression and name each chord by ear.</p>
+      <p>Pick <em>train</em> as the verb and <em>my ear for chords</em> after it, and the sentence reads <em>&ldquo;I want to train my ear for chords in C Major, level 3.&rdquo;</em> The key is the header's: a minor key plays its rounds in minor, and a mode such as Dorian plays as its major or minor, which the card names (<strong>Played in D Minor</strong>). The level picks the chords.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Level</th><th>The chords</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>1 · Home and tension</strong></td><td>I and V.</td></tr>
+            <tr><td><strong>2 · Home, away and tension</strong></td><td>I, IV and V.</td></tr>
+            <tr><td><strong>3 · The four chords</strong></td><td>I, IV, V and vi.</td></tr>
+            <tr><td><strong>4 · The rest of the key</strong></td><td>Every chord of the key but the diminished one.</td></tr>
+            <tr><td><strong>5 · Sevenths</strong></td><td>Level 4's chords, each as a triad or its seventh.</td></tr>
+            <tr><td><strong>6 · Inversions</strong></td><td>Level 4's chords, with the 3rd or the 5th in the bass.</td></tr>
+            <tr><td><strong>7 · Secondary dominants</strong></td><td>Level 4's chords, and a V7 of another chord, then that chord.</td></tr>
+            <tr><td><strong>8 · Borrowed chords</strong></td><td>Level 4's chords, and one borrowed from the parallel key.</td></tr>
+            <tr><td><strong>9 · Named progressions</strong></td><td>A progression with a name, such as ii–V–I or the Andalusian cadence.</td></tr>
+            <tr><td><strong>10 · Any key</strong></td><td>Level 4's chords, in a key drawn at random each round.</td></tr>
+            <tr><td><strong>11 · Longer progressions</strong></td><td>Eight chords in a key drawn at random, with sevenths, secondary dominants and borrowed chords.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Levels 1 to 3 are free. <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> Levels 4 to 11 need Pro. A level opens once you pass the one before it: four of your last five rounds at 80% or more.</p>
+
+      <h3>A round</h3>
+      <p>Press <strong>Start</strong>. After a bar of count-in, <strong>Listen</strong> plays the key's cadence to set the key in your ear, then the round's progression once, on the band's keys and bass. The first chord is home, filled in for you, except at Named progressions. Each chord has a slot; pick from the palette under them as the progression plays, or after. Both the numeral and the chord's name show, and the marker bar's Labels setting picks which leads: Intervals the numeral, Notes the name.</p>
+      <p>At <strong>Your turn</strong>, <strong>Again</strong> plays the progression again without the cadence. Once every slot holds a chord, <strong>Hear mine</strong> plays your answer and <strong>Check</strong> ends the round.</p>
+
+      <h3>Reading the result</h3>
+      <p>At <strong>Result</strong> each slot takes a mark:</p>
+      <ul>
+        <li><strong>Right</strong> — the chord that played.</li>
+        <li><strong>Close</strong> — another form of the right chord: V for V7, or C for C/E. The slot reads <strong>Almost:</strong> and names the right one. A close pick earns half.</li>
+        <li><strong>Wrong</strong> — any other chord. The slot reads <strong>It was</strong> and names the right one.</li>
+      </ul>
+      <p>Under the slots, the cadence the progression ends on, and over them the name of the progression, when each has one. At Any key and Longer progressions the line opens with the round's key. <strong>Hear the answer</strong> plays the progression again, and <strong>Hear yours</strong> plays the chords you picked, so you can hear where they part. The score is the share of slots you named, a close pick counting half.</p>
+</section>
+
+    <section class="section-card" id="train-fingers">
+      <h2>Train · Fingers <a class="soon-badge" href="index.html#coming-next">In testing</a></h2>
+      <p><strong>Purpose:</strong> build speed and finger independence with dexterity drills on the neck, a finger number on every note.</p>
+      <p>Pick <em>train</em> as the verb and <em>my fingers</em> after it, and the sentence reads <em>&ldquo;I want to train my fingers on the spider, level 3.&rdquo;</em> The drill picks what your hand plays, and the level picks how fast. A drill always sits on the frets it names, whatever the scale, chord shapes, string sets or fret window would otherwise show.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Drill</th><th>What your hand plays</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>The chromatic run</strong></td><td>Frets 5 to 8, one finger per fret: 1-2-3-4 on each string, from the low E to the high E.</td></tr>
+            <tr><td><strong>Permutations</strong></td><td>The same four frets with the fingers in another order, such as 1-3-2-4. Each round deals one of the 23 orders.</td></tr>
+            <tr><td><strong>The spider</strong></td><td>Two strings at a time: fingers 1 and 3 on one, 2 and 4 on the next, the pair climbing a string at a time.</td></tr>
+            <tr><td><strong>String skipping</strong></td><td>The chromatic run, skipping a string and coming back one: low E, D, A, G, D, B, G, high E.</td></tr>
+            <tr><td><strong>Position shifts</strong></td><td>One string, 1-2-3-4 from fret 1, then from fret 2, and on up to fret 5. Each round picks the string.</td></tr>
+            <tr><td><strong>Legato</strong></td><td>Two fingers on each string. Going up, pick the lower note, hammer on the upper, pull off, hammer on again; coming back down, pick the upper note, pull off, hammer on, pull off. Each round deals one of six finger pairs.</td></tr>
+            <tr><td><strong>Stretches</strong></td><td>Four fingers over five frets from fret 7, a fret higher on the B and high E strings. Each round picks where the gap falls: between fingers 1 and 2, 2 and 3, or 3 and 4.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Every drill climbs and comes back down: across the strings, or up the frets for Position shifts.</p>
+
+      <h3>Finger numbers</h3>
+      <p>While a drill is on the neck, each marker shows the finger that plays it in place of the note name: 1 is your index finger, 2 your middle finger, 3 your ring finger and 4 your little finger. The note you play next lights before you reach it, and at a shift it shows the finger it is about to take.</p>
+
+      <h3>The tempo ladder</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Level</th><th>Notes a second</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>1 · Eighths at 60</strong></td><td>2</td></tr>
+            <tr><td><strong>2 · Eighths at 80</strong></td><td>2.7</td></tr>
+            <tr><td><strong>3 · Eighths at 100</strong></td><td>3.3</td></tr>
+            <tr><td><strong>4 · Sixteenths at 60</strong></td><td>4</td></tr>
+            <tr><td><strong>5 · Sixteenths at 70</strong></td><td>4.7</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The level sets the metronome's tempo when the round starts, and the tempo stays there afterward. Every drill shares one ladder, so a level open on one drill is open on all of them, with either method. One clean round opens the next level, and you can always go back to a slower one.</p>
+      <p>Levels 1 to 3 are free, on every drill. <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> Levels 4 and 5 need Pro.</p>
+
+      <h3>Find it and In time</h3>
+      <p>The card's Practice menu picks how a round runs.</p>
+      <ul>
+        <li><strong>Find it</strong> — needs no microphone. Press <strong>Start</strong>, and <strong>Listen</strong> plays one pass of the drill, the neck lighting each finger in turn. At <strong>Your turn</strong> the pass loops silently on the click, the neck still stepping, until you answer <strong>Clean</strong> or <strong>Not yet</strong>. Clean opens the next level; after Not yet, retry it or pick a slower level.</li>
+        <li><strong>In time</strong> — listens through the microphone or your input. Listen plays the pass as in Find it; at Your turn you play one pass on the click, and Fretling grades it.</li>
+      </ul>
+      <p><strong>Retry</strong> plays the same drill again, with the same order, pair, gap or string. On a drill that has them, <strong>Next</strong> deals a different one.</p>
+
+      <h3>Reading In time's result</h3>
+      <p>At <strong>Result</strong> the report reads, for example, <strong>46 of 47 notes · Spacing Fair · 9%</strong>.</p>
+      <ul>
+        <li><strong>Notes</strong> — a note is right when its pitch is heard on its step. Hammered-on and pulled-off notes count too, matched by their order, since they have no pick attack of their own.</li>
+        <li><strong>Spacing</strong> — how evenly your picked notes fall: <strong>Even</strong> at 6% or under, <strong>Fair</strong> at 12% or under, <strong>Uneven</strong> above. Hammered and pulled notes don't count toward it. With too few right picked notes to measure, Result shows the notes alone.</li>
+      </ul>
+      <p>The score is the share of notes you got right, reduced once the spacing spreads past 6% and down to nothing at 20%. A score of 90% or more is clean, and opens the next level.</p>
 </section>
   </main>
 

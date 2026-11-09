@@ -23,7 +23,7 @@ else, like the chord-shape rows while Chord Shapes is off, dims rather than hide
 | **Modules** | Auto (default) / Machined / Studio | How the floating practice tools are drawn. Auto gives the light canvas the Machined panel and the dark canvas the Studio one; pin either to keep it everywhere. |
 | **Language** | System (default) / English / Español | Follow the device language, or pin Fretling to English or Spanish. A change takes effect when the app next opens: Fretling offers to relaunch right away on Mac (*Relaunch Now*) or to quit on iPad (*Quit Fretling*), or choose *Later* and it switches on its own the next time you open it. |
 
-Marker settings are not here — labels, shapes, colors and accidentals all live on the
+Marker settings are not here — labels, shapes and colors all live on the
 [marker display bar](fretboard.md#marker-display-bar) above the neck, where they stay
 visible while you play.
 
@@ -93,16 +93,15 @@ pad as a whole rather than to one layer, which is why it sits once underneath th
 perturbs every note the layers play.
 
 Layers apply to chord playback — the round Chord transport on the timeline and the chords the Chord Atlas plays as you pick.
-Tapping single notes, and **Hear it** on a chord you identify, always use the Instrument
+Tapping single notes, and **Hear** on a chord you identify, always use the Instrument
 setting above.
 
 ## Icon tab
 
-Fretling ships fourteen app icons; pick one and the home screen or Dock icon changes. The
+Fretling ships twelve app icons; pick one and the home screen or Dock icon changes. The
 choices are **Warm hex**, **Classic**, **Rich wood**, **Fret window**, **Blush sky**,
-**Soft aurora**, **Watercolor**, **Champagne**, **Interval halo**, **Fret monogram**,
-**Constellation**, **Ember**, **Ultraviolet**, and **Daylight**. Each is shown as a preview
-tile before you commit.
+**Soft aurora**, **Watercolor**, **Champagne**, **Fret monogram**, **Ember**, **Ultraviolet**,
+and **Daylight**. Each is shown as a preview tile before you commit.
 
 ## The Fretling Pro row
 

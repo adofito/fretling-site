@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Pianoling guide – Pianoling</title>
+  <meta name="description" content="How to use Pianoling: the sentence, the keys, fingering for each hand, chords and voicings, identifying a chord, a MIDI keyboard, the arpeggio drills, and the sound.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pianoling">
+  <meta property="og:title" content="The Pianoling guide – Pianoling">
+  <meta property="og:description" content="How to use Pianoling: the sentence, the keys, fingering for each hand, chords and voicings, identifying a chord, a MIDI keyboard, the arpeggio drills, and the sound.">
+  <meta property="og:url" content="https://www.fretling.app/pianoling/guide.html">
+  <meta property="og:image" content="https://www.fretling.app/pianoling/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.fretling.app/pianoling/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/pianoling/guide.html">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/pianoling/guide.html">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/pianoling/es/guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/pianoling/guide.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+</head>
+<body data-page="guide" data-app="pianoling">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <rect class="km-white" x="0.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="5.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="10.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="15.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="20.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-black" x="3.8" y="0.5" width="3.4" height="11" rx="0.8"/>
+          <rect class="km-black" x="8.8" y="0.5" width="3.4" height="11" rx="0.8"/>
+          <rect class="km-black" x="18.8" y="0.5" width="3.4" height="11" rx="0.8"/>
+          <circle class="km-dot-a" cx="3" cy="16" r="2.1"/>
+          <circle class="km-dot-b" cx="13" cy="16" r="2.1"/>
+          <circle class="km-dot-c" cx="23" cy="16" r="2.1"/>
+        </svg>
+        Pianoling
+      </a>
+      <nav class="chip-nav" aria-label="Guide sections">
+        <ul>
+          <li><a href="guide.html" aria-current="page" data-mark="guide">Guide</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
+          <li><a href="privacy.html" data-mark="privacy">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="theme-control" data-menu="theme">
+          <button type="button" class="theme-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Appearance">
+            <span data-theme-label>System</span>
+            <svg class="chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="chip-menu chip-menu--end" role="listbox" aria-label="Appearance" hidden></div>
+        </div>
+        <a class="lang-switch" href="es/guide.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>The Pianoling guide</h1>
+    <p class="lede">Everything Pianoling does, in the order you will meet it: the sentence, the keys, the hands, identifying, the arpeggios and the sound.</p>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#sentence">The sentence</a></li>
+        <li><a href="#keys">The keys</a></li>
+        <li><a href="#hands">Hands and fingering</a></li>
+        <li><a href="#chords">Chords and voicings</a></li>
+        <li><a href="#identify">Identify</a></li>
+        <li><a href="#midi">A MIDI keyboard</a></li>
+        <li><a href="#arpeggios">Arpeggios</a></li>
+        <li><a href="#sound">Sound and practice</a></li>
+      </ul>
+    </nav>
+
+    <section class="section-card" id="sentence">
+      <h2>The sentence</h2>
+      <p>One sentence runs across the top of the screen: <em>I want to learn scales in C Major.</em> Every colored word is a menu. Change a word and the keys redraw.</p>
+      <ul>
+        <li><strong>Learn</strong>: Scales, Chords, Triads and Arpeggios.</li>
+        <li><strong>Identify</strong>: a chord, or the chords that hold a note.</li>
+      </ul>
+    </section>
+
+    <section class="section-card" id="keys">
+      <h2>The keys</h2>
+      <p>Tap any key to hear it, slide across them, or hold several at once for a chord. The strip above the keys shows the octaves in view: drag it, or its ends, to move or widen the view. The bar above the strip sets the octaves, the labels, the shapes and the colors on every key.</p>
+      <p>A scale plays back from the play button beside its row of notes.</p>
+    </section>
+
+    <section class="section-card" id="hands">
+      <h2>Hands and fingering</h2>
+      <p>Under the keys, <strong>Hands</strong> picks the right hand, the left or both, and <strong>Fingering</strong> puts the finger that plays each key over it. With both hands, the left hand plays the octave below the right; on the key they share, the left hand's number sits on the left.</p>
+    </section>
+
+    <section class="section-card" id="chords">
+      <h2>Chords and voicings</h2>
+      <p>Pick a chord of your key in the sentence, then an inversion, or any bass of your own. Close and open voicings are free. Shell, rootless and two-hand voicings are Pro. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      <p>The Chord Atlas, from the sentence, holds every root and quality: hear a chord, see it land on the keys, and read its Roman numeral in your key.</p>
+    </section>
+
+    <section class="section-card" id="identify">
+      <h2>Identify</h2>
+      <p>Tap a chord onto the keys, or play it on a MIDI keyboard, and Pianoling names it in your key and lists the other readings. Undo, Redo and Clear sit under the keys while you build it.</p>
+      <p><em>Chords with</em> a note lists every chord in your key that holds it, with the note's role in each. Practice them with <strong>Hear it</strong>, <strong>Find it</strong> and <strong>Name it</strong>. <strong>Play it</strong> grades you. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      <p>Live Detect listens through the microphone instead. Best on simple chords, and on single notes in the middle of the keyboard. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+    </section>
+
+    <section class="section-card" id="midi">
+      <h2>A MIDI keyboard</h2>
+      <p>Plug in a USB keyboard, or pair a Bluetooth one from the MIDI lamp at the top of the window. The keys you play light up on screen, and Identify names what you hold. MIDI input is free.</p>
+    </section>
+
+    <section class="section-card" id="arpeggios">
+      <h2>Arpeggios</h2>
+      <ul>
+        <li><strong>Hear it</strong> and <strong>Find it</strong>: free.</li>
+        <li><strong>Play it</strong>, <strong>In time</strong> and <strong>Blind</strong>: graded, over MIDI or by the microphone, in one key or around the cycle. <a class="pro-badge" href="free-and-pro.html">Pro</a></li>
+      </ul>
+    </section>
+
+    <section class="section-card" id="sound">
+      <h2>Sound and practice</h2>
+      <p>A grand piano that rings with the resonance of its own strings, a mixer, and the metronome with every meter and subdivision. The drums and their sequencer are Pro. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      <p>Undo and Redo step back through your edits, with &#8984;Z and &#8679;&#8984;Z on a keyboard.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Pianoling, Fretling's sister app for the piano. User guide for version 1.0.</p>
+      <p><a href="guide.html">User guide</a> &middot; <a href="free-and-pro.html">Free &amp; Pro</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="mailto:fretlingapp@gmail.com?subject=Pianoling%20support">Contact</a></p>
+      <p class="family"><a class="app-fretling" href="../index.html">Fretling, for the guitar <span class="arr" aria-hidden="true">&rarr;</span></a><span class="sep" aria-hidden="true">&middot;</span><a class="app-harmonling" href="../harmonling/index.html">Harmonling, for harmony <span class="arr" aria-hidden="true">&rarr;</span></a></p>
+    </div>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

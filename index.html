@@ -167,11 +167,6 @@
             <button type="button" class="toggle-chip" role="radio" data-needs-js disabled aria-checked="true" tabindex="0" data-value="color"><span class="tc-mark tc-mark--swatch"></span>Color</button>
             <button type="button" class="toggle-chip" role="radio" data-needs-js disabled aria-checked="false" tabindex="-1" data-value="gray"><span class="tc-mark"></span>Gray</button>
           </div>
-          <div class="chip-group" role="radiogroup" aria-label="Accidentals" data-setting="flats" data-state="enabled">
-            <span class="chip-group-label" aria-hidden="true">Accidentals</span>
-            <button type="button" class="toggle-chip" role="radio" data-needs-js disabled aria-checked="true" tabindex="0" data-value="sharps"><span class="tc-glyph" aria-hidden="true">&#9839;</span>Sharps</button>
-            <button type="button" class="toggle-chip" role="radio" data-needs-js disabled aria-checked="false" tabindex="-1" data-value="flats"><span class="tc-glyph" aria-hidden="true">&#9837;</span>Flats</button>
-          </div>
         </div>
 
         <p class="visually-hidden" data-stage-status role="status" aria-live="polite"></p>
@@ -228,7 +223,7 @@
         <h2>Say it in plain language</h2>
         <p>One sentence runs across the top of the screen, and every colored word in it is a dropdown. Change a word and the neck redraws.</p>
         <ul>
-          <li><strong>Learn</strong> or <strong>identify</strong> — the intent you are in. A third, <strong>play through</strong>, is <a href="#coming-next">in testing</a>.</li>
+          <li><strong>Learn</strong>, <strong>identify</strong> or <strong>train</strong> — the intent you are in. A fourth, <strong>play through</strong>, is <a href="#coming-next">in testing</a>.</li>
           <li><strong>Scales</strong>, <strong>chords</strong> or <strong>triads</strong> — what you are looking at.</li>
           <li><strong>Any root</strong>, and twelve scales, four triad types, or the chords of the key.</li>
         </ul>
@@ -238,10 +233,10 @@
         <figure class="shot" style="--shot-max: 810px">
           <img class="shot-light" src="screenshots/02-header-sentence-light.webp"
                width="1680" height="138" loading="lazy" decoding="async"
-               alt="The natural-language header reading “I want to learn scales in E Major: A”, with each changeable word drawn as a colored chip and the chord chip last.">
+               alt="The natural-language header reading “I want to learn scales in E Major over A”, with each changeable word drawn as a colored chip and the chord chip last.">
           <img class="shot-dark" src="screenshots/02-header-sentence-dark.webp"
                width="1680" height="138" loading="lazy" decoding="async"
-               alt="The natural-language header reading “I want to learn scales in E Major: A”, with each changeable word drawn as a colored chip and the chord chip last.">
+               alt="The natural-language header reading “I want to learn scales in E Major over A”, with each changeable word drawn as a colored chip and the chord chip last.">
           <figcaption class="figure-caption">The sentence is the whole control surface.</figcaption>
         </figure>
       </div>
@@ -276,6 +271,14 @@
                   <li><span class="mm-node mm-soon" data-accent="mode">following a voice</span><span class="mm-leaf">one voice of the chords, the 3rd or the bass, brought out by ear</span></li>
                   <li><span class="mm-node mm-soon" data-accent="mode">improvising</span><span class="mm-leaf">the scale to solo with, then chord tones, guide tones and the changes</span></li>
                   <li><span class="mm-node mm-soon" data-accent="mode">seeing how it moves</span><span class="mm-leaf">the whole progression at once, as a map and on the wheel</span></li>
+                </ul>
+              </li>
+              <li><span class="mm-node" data-accent="intent">train</span>
+                <ul>
+                  <li><span class="mm-node" data-accent="mode">my timing</span><span class="mm-leaf">rhythms over a groove, each hit placed against the beat</span></li>
+                  <li><span class="mm-node" data-accent="mode">my ear for chords</span><span class="mm-leaf">hear a progression, then name each chord</span></li>
+                  <li><span class="mm-node mm-soon" data-accent="mode">my ear for melody<span class="visually-hidden"> (in testing)</span></span><span class="mm-leaf">hear a short melody, then play it back</span></li>
+                  <li><span class="mm-node mm-soon" data-accent="mode">my fingers<span class="visually-hidden"> (in testing)</span></span><span class="mm-leaf">dexterity drills, a finger number on every note</span></li>
                 </ul>
               </li>
             </ul>
@@ -524,7 +527,7 @@
     <section class="feature" id="make-it-yours">
       <div class="feature-body">
         <h2>Make it yours</h2>
-        <p>A bar above the neck carries the four decisions you change most often: <strong>Labels</strong> (note names, interval numbers or nothing), <strong>Shapes</strong>, <strong>Colors</strong> and <strong>Accidentals</strong>. They are chips beside the fretboard, not settings buried in a sidebar.</p>
+        <p>A bar above the neck carries the three decisions you change most often: <strong>Labels</strong> (note names, interval numbers or nothing), <strong>Shapes</strong> and <strong>Colors</strong>. They are chips beside the fretboard, not settings buried in a sidebar.</p>
         <ul>
           <li>Show 12 to 22 frets, and slide a position window along the board.</li>
           <li>Light and dark, following the system or pinned.</li>
@@ -560,11 +563,11 @@
       <ul>
         <li><strong>Play through a progression</strong> &mdash; &ldquo;I want to play through Autumn in C Major&rdquo;: build a progression, play it in time with rhythms and arpeggio patterns, and choose how to work with it. Hear the changes land on the neck, follow one voice through them, improvise over them with a ladder from one scale to playing the changes, or see how the whole progression moves. Bring a song you know: paste a chord chart or open a ChordPro or text file, and it becomes a new progression in your library, each section played as many times as the chart says.</li>
         <li><strong>Arpeggios</strong> &mdash; a sixth learning mode: triad and seventh-chord arpeggios, and the scale in broken intervals, in groups and in cells, graded by Live Detect as you play.</li>
+        <li><strong>Two more areas to train</strong> &mdash; your ear for melody, where Fretling plays a short tune and you play it back, and your fingers, with dexterity drills that put a finger number on every note.</li>
         <li><strong>Chords with a note</strong> &mdash; &ldquo;I want to identify chords with E&rdquo;: every chord that holds one note, from triads up to thirteenths, with the note's role in each.</li>
         <li><strong>The piano body and the harmonic bed</strong> &mdash; <a href="#piano-body">sympathetic strings</a> under the grand, and <a href="#harmonic-bed">chord layers that move</a> with the music.</li>
         <li><strong>Mixer effects</strong> &mdash; an EQ that shows the signal, a compressor drawn as its curve, a reverb send on every channel, and speaker cabinets for the amp.</li>
         <li><strong>Saved loops</strong> &mdash; keep a take as a named phrase and bring it back at its own tempo and meter, or export it.</li>
-        <li><strong>Undo and Redo</strong> &mdash; take back an edit, or put it back, where you made it: in the progression editor, in Identify's toolbar and in the drum pattern editor, with &#8984;Z and &#8679;&#8984;Z on a keyboard. Delete a saved progression or a drum pattern and an Undo stays on screen for a few seconds.</li>
         <li><strong>An iCloud library</strong> &mdash; the amp models and cabinets you import, kept in a Fretling folder in iCloud Drive.</li>
       </ul>
     </section>
@@ -636,6 +639,7 @@
     <div class="container">
       <p>Fretling — Scale Tones and Chords. &copy; 2026 Carlos Maldonado.</p>
       <p><a href="guide.html">User guide</a> &middot; <a href="free-and-pro.html">Free &amp; Pro</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="mailto:fretlingapp@gmail.com?subject=Fretling%20support">Contact</a></p>
+      <p class="family">The sister apps: <a class="app-pianoling" href="pianoling/index.html">Pianoling, for the piano <span class="arr" aria-hidden="true">&rarr;</span></a><span class="sep" aria-hidden="true">&middot;</span><a class="app-harmonling" href="harmonling/index.html">Harmonling, for harmony <span class="arr" aria-hidden="true">&rarr;</span></a></p>
     </div>
   </footer>
 

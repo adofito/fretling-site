@@ -8,13 +8,14 @@
        the scale or triad type, ordered the way StyledDropdown orders them.
     3. The chord picker that appears in Chords mode — the chords of the key, derived
        by stacking thirds inside the scale, with their Roman numerals.
-    4. The marker display bar — the app's Labels / Shapes / Colors / Accidentals radio
-       groups — driving the neck below it.
+    4. The marker display bar — the app's Labels / Shapes / Colors radio groups —
+       driving the neck below it. Sharps and flats are not a group: the neck spells
+       every note the way the key on screen writes it, as the app does.
     5. Drawing that neck, sounding a note when one is tapped, and playing the scale,
        chord or triad the way the app's transport does.
 
   Every chip in the stage does what its shape promises. The three sentence chips and
-  the four radio groups are live; nothing in the stage is a link wearing a control's
+  the three radio groups are live; nothing in the stage is a link wearing a control's
   uniform, because a visitor testing "say it, see it" should never be thrown out of
   the demo by a word that looked like a dropdown.
 
@@ -450,7 +451,7 @@ GEO.nutX = GEO.padL + GEO.openW;
      The corner count is the degree number: a circle for the root, the circle broken
      once for the 2nd, then three corners for the 3rd up to seven for the 7th. A lowered
      degree leans one way and a raised one the other, so a player learns two rules
-     instead of twelve glyphs. The tritone follows the Accidentals chip, because the
+     instead of twelve glyphs. The tritone follows the key's spelling, because the
      silhouette has to agree with the label sitting on it — ♭5 is a lowered fifth with
      five corners, ♯4 a raised fourth with four.
 
@@ -752,28 +753,16 @@ GEO.nutX = GEO.padL + GEO.openW;
     var running = false;
     var entranceDone = false;
     var announced = false;     // the live region stays quiet until the reader acts
-    var flatsPinned = false;   // set the moment the reader picks a spelling themselves
 
     function names() { return state.flats ? FLAT_NAMES : SHARP_NAMES; }
 
-    /* The key's own spelling, until the reader overrides it. Runs before every draw so
-       the sentence, the neck, the chord menu and the tritone's silhouette all agree. */
+    /* The key's own spelling — there is no override, as in the app. Runs before every
+       draw so the sentence, the neck, the chord menu and the tritone's silhouette all
+       agree. */
     function followKeySignature() {
-      if (flatsPinned) return;
-      var wanted = state.mode === 'triads'
+      state.flats = state.mode === 'triads'
         ? triadPrefersFlats(state.root, state.triad)
         : keyPrefersFlats(state.root, scaleById(state.scale).steps);
-      if (wanted === state.flats) return;
-      state.flats = wanted;
-
-      var group = stage.querySelector('[data-setting="flats"]');
-      if (!group) return;
-      var chips = group.querySelectorAll('[role="radio"]');
-      for (var i = 0; i < chips.length; i++) {
-        var on = (chips[i].dataset.value === 'flats') === state.flats;
-        chips[i].setAttribute('aria-checked', String(on));
-        chips[i].tabIndex = on ? 0 : -1;
-      }
     }
 
     function draw(animate) {
@@ -931,7 +920,7 @@ GEO.nutX = GEO.padL + GEO.openW;
       });
     }
 
-    /* -- Marker display bar: four radio groups ------------------------------ */
+    /* -- Marker display bar: three radio groups ----------------------------- */
 
     var groups = stage.querySelectorAll('[role="radiogroup"]');
     for (var i = 0; i < groups.length; i++) { wireGroup(groups[i]); }
@@ -940,21 +929,12 @@ GEO.nutX = GEO.padL + GEO.openW;
       var chips = Array.prototype.slice.call(group.querySelectorAll('[role="radio"]'));
 
       function select(chip) {
-        if (group.dataset.state === 'disabled') return;
         chips.forEach(function (other) {
           var on = other === chip;
           other.setAttribute('aria-checked', String(on));
           other.tabIndex = on ? 0 : -1;
         });
-        var key = group.dataset.setting;
-        var value = chip.dataset.value;
-        if (key === 'flats') {
-          state.flats = value === 'flats';
-          flatsPinned = true;    // an explicit choice outranks the key signature
-        } else {
-          state[key] = value;
-        }
-        if (key === 'labels') syncAccidentals();
+        state[group.dataset.setting] = chip.dataset.value;
         draw(true);
       }
 
@@ -974,19 +954,6 @@ GEO.nutX = GEO.padL + GEO.openW;
         next.focus();
         select(next);
       });
-    }
-
-    // Accidentals are disabled and dimmed — never hidden — when Labels ≠ Notes.
-    function syncAccidentals() {
-      var group = stage.querySelector('[data-setting="flats"]');
-      if (!group) return;
-      var active = state.labels === 'notes';
-      group.dataset.state = active ? 'enabled' : 'disabled';
-      var chips = group.querySelectorAll('[role="radio"]');
-      for (var i = 0; i < chips.length; i++) {
-        chips[i].disabled = !active;
-        chips[i].setAttribute('aria-disabled', String(!active));
-      }
     }
 
     /* -- Tap a marker to hear it -------------------------------------------- */
@@ -1082,8 +1049,12 @@ GEO.nutX = GEO.padL + GEO.openW;
     });
 
     wireMenu(stage.querySelector('[data-menu="root"]'), function () {
-      return names().map(function (name, pc) {
-        return { value: String(pc), label: name, selected: pc === state.root };
+      // Each root as its own key writes it, as the app's key menu does: E Major's offers A♭.
+      return SHARP_NAMES.map(function (_, pc) {
+        var flats = state.mode === 'triads'
+          ? triadPrefersFlats(pc, state.triad)
+          : keyPrefersFlats(pc, scaleById(state.scale).steps);
+        return { value: String(pc), label: (flats ? FLAT_NAMES : SHARP_NAMES)[pc], selected: pc === state.root };
       });
     }, function (value) {
       state.root = Number(value);
@@ -1140,7 +1111,6 @@ GEO.nutX = GEO.padL + GEO.openW;
       observer.observe(board);
     }
 
-    syncAccidentals();
     // The baked SVG ships inert (see renderFretboard); this is the upgrade to the
     // interactive one, and it is also what puts the roving tabindex in place.
     draw(false);

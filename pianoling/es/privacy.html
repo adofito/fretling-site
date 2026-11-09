@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de privacidad – Pianoling</title>
+  <meta name="description" content="La política de privacidad de Pianoling. Pianoling funciona por completo en tu dispositivo: sin cuenta, sin analítica, y nada de lo que oye o lee sale del dispositivo.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pianoling">
+  <meta property="og:title" content="Política de privacidad – Pianoling">
+  <meta property="og:description" content="La política de privacidad de Pianoling. Pianoling funciona por completo en tu dispositivo: sin cuenta, sin analítica, y nada de lo que oye o lee sale del dispositivo.">
+  <meta property="og:url" content="https://www.fretling.app/pianoling/es/privacy.html">
+  <meta property="og:image" content="https://www.fretling.app/pianoling/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.fretling.app/pianoling/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/pianoling/es/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/pianoling/privacy.html">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/pianoling/es/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/pianoling/privacy.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+</head>
+<body data-page="privacy" data-app="pianoling">
+  <a href="#main" class="skip-link">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <rect class="km-white" x="0.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="5.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="10.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="15.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-white" x="20.5" y="0.5" width="5" height="19" rx="1"/>
+          <rect class="km-black" x="3.8" y="0.5" width="3.4" height="11" rx="0.8"/>
+          <rect class="km-black" x="8.8" y="0.5" width="3.4" height="11" rx="0.8"/>
+          <rect class="km-black" x="18.8" y="0.5" width="3.4" height="11" rx="0.8"/>
+          <circle class="km-dot-a" cx="3" cy="16" r="2.1"/>
+          <circle class="km-dot-b" cx="13" cy="16" r="2.1"/>
+          <circle class="km-dot-c" cx="23" cy="16" r="2.1"/>
+        </svg>
+        Pianoling
+      </a>
+      <nav class="chip-nav" aria-label="Secciones de la guía">
+        <ul>
+          <li><a href="guide.html" data-mark="guide">Guía</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Gratis y Pro</a></li>
+          <li><a href="privacy.html" aria-current="page" data-mark="privacy">Privacidad</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="theme-control" data-menu="theme">
+          <button type="button" class="theme-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Apariencia">
+            <span data-theme-label>Sistema</span>
+            <svg class="chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="chip-menu chip-menu--end" role="listbox" aria-label="Apariencia" hidden></div>
+        </div>
+        <a class="lang-switch" href="../privacy.html" hreflang="en" lang="en" aria-label="English version">English</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Política de privacidad</h1>
+    <p class="page-meta"><strong>Vigente:</strong> desde el lanzamiento de Pianoling 1.0 · <strong>Aplica a:</strong> Pianoling para Mac, iPad y iPhone</p>
+    <p class="lede">Pianoling no recopila nada. Funciona por completo en tu dispositivo: lo que tocas, en la pantalla, en un teclado MIDI o al micrófono, se queda ahí. Esta página dice qué usa la app y para qué.</p>
+
+    <section class="section-card" id="collect">
+      <h2>Qué recopila Pianoling</h2>
+      <p>Nada. No hay cuenta, ni analítica, ni publicidad, ni rastreo, y Pianoling no hace solicitudes de red propias. No existe un servidor nuestro al que enviar nada.</p>
+      <p>Tu configuración y tus preferencias de práctica se guardan en el almacenamiento estándar de preferencias del sistema, dentro del contenedor de la app en tu dispositivo. Nunca salen de él y se borran cuando eliminas la app.</p>
+    </section>
+
+    <section class="section-card" id="midi">
+      <h2>MIDI y Bluetooth</h2>
+      <p>Cuando conectas un teclado MIDI, por USB o Bluetooth, Pianoling lee las notas que tocas para encender las teclas, nombrar acordes y revisar un paso calificado. Se usan en vivo, en tu dispositivo, y nunca se graban, se guardan ni se envían.</p>
+      <p>Pianoling pide Bluetooth solo cuando eliges <strong>MIDI por Bluetooth…</strong> para vincular un teclado, y solo lo usa para conectar ese teclado. Un teclado USB no necesita permiso.</p>
+    </section>
+
+    <section class="section-card" id="microphone">
+      <h2>El micrófono</h2>
+      <p>Pianoling pide el micrófono para <strong>Detección en vivo</strong> (Pianoling Pro), que escucha un piano acústico y nombra las notas y los acordes que tocas. Los pasos de práctica calificada escuchan a través de Detección en vivo cuando no hay un teclado MIDI conectado.</p>
+      <p>El audio se analiza en vivo, en tu dispositivo, solo mientras Detección en vivo escucha. Nunca se graba, se guarda ni se envía. Apaga Detección en vivo y la captura se detiene; en iPhone y iPad también se detiene mientras Pianoling está en segundo plano.</p>
+    </section>
+
+    <section class="section-card" id="purchases">
+      <h2>Compras</h2>
+      <p>Pianoling Pro y su prueba gratis de 14 días son compras dentro de la app que Apple maneja por completo en el App Store. Nunca vemos tus datos de pago, tu nombre ni tu dirección. Pianoling solo sabe si Pro está desbloqueado en tu cuenta de Apple.</p>
+    </section>
+
+    <section class="section-card" id="does-not">
+      <h2>Lo que Pianoling no hace</h2>
+      <ul>
+        <li>Sin cuentas, inicio de sesión ni perfiles.</li>
+        <li>Sin analítica, telemetría, informes de fallos ni seguimiento de uso.</li>
+        <li>Sin publicidad y sin código de terceros que recopile datos.</li>
+        <li>Sin rastreo entre apps o sitios web, y nada que vender ni compartir.</li>
+      </ul>
+      <p>Pianoling no recopila información personal de nadie, incluidos los menores de 13 años. Sus instrumentos y sonidos de batería son material de código abierto que funciona en tu dispositivo y no envía nada; sus créditos están en la pantalla Acerca de de la app.</p>
+    </section>
+
+    <section class="section-card" id="contact">
+      <h2>Contacto</h2>
+      <p>Preguntas sobre la privacidad en Pianoling: <a href="mailto:fretlingapp@gmail.com?subject=Pianoling%20support">fretlingapp@gmail.com</a>. Si el manejo de datos de Pianoling cambia alguna vez, esta política cambia antes que la app.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Pianoling, la app hermana de Fretling para el piano. Guía del usuario de la versión 1.0.</p>
+      <p><a href="guide.html">Guía del usuario</a> &middot; <a href="free-and-pro.html">Gratis y Pro</a> &middot; <a href="privacy.html">Privacidad</a> &middot; <a href="mailto:fretlingapp@gmail.com?subject=Pianoling%20support">Contacto</a></p>
+      <p class="family"><a class="app-fretling" href="../../es/index.html">Fretling, para la guitarra <span class="arr" aria-hidden="true">&rarr;</span></a><span class="sep" aria-hidden="true">&middot;</span><a class="app-harmonling" href="../../harmonling/es/index.html">Harmonling, para la armonía <span class="arr" aria-hidden="true">&rarr;</span></a></p>
+    </div>
+  </footer>
+
+  <script src="../../js/site.js" defer></script>
+</body>
+</html>
