@@ -98,10 +98,11 @@ setting above.
 
 ## Icon tab
 
-Fretling ships twelve app icons; pick one and the home screen or Dock icon changes. The
+Fretling ships fourteen app icons; pick one and the home screen or Dock icon changes. The
 choices are **Warm hex**, **Classic**, **Rich wood**, **Fret window**, **Blush sky**,
-**Soft aurora**, **Watercolor**, **Champagne**, **Fret monogram**, **Ember**, **Ultraviolet**,
-and **Daylight**. Each is shown as a preview tile before you commit.
+**Soft aurora**, **Watercolor**, **Champagne**, **Interval halo**, **Fret monogram**,
+**Constellation**, **Ember**, **Ultraviolet**, and **Daylight**. Each is shown as a preview
+tile before you commit.
 
 ## The Fretling Pro row
 

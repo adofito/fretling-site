@@ -9,7 +9,7 @@ dropdown; changing one rewrites what the fretboard shows.
 
 | Word | Choices |
 |------|---------|
-| **learn / identify / train** | The verb picks what the app is for right now — showing you something (learn), naming something you play ([identify](#identify-a-chord)), or practicing in rounds with levels you earn (train: [timing](#train-timing), [harmony](#train-harmony)). Switching to identify keeps your learn mode and its chord where they were, so switching back returns you there. The key is shared: change it in identify and learn follows. |
+| **learn / identify** | The verb picks what the app is for right now — showing you something (learn) or naming something you play ([identify](#identify-a-chord)). Switching to identify keeps your learn mode and its chord where they were, so switching back returns you there. The key is shared: change it in identify and learn follows. |
 | **Mode** | Scales, Chords, Triads. |
 | **Root note** | All twelve notes, spelled the way the key is written — F Major reads B♭, not A♯. |
 | **Scale type** | Major, Minor, Pentatonic Major and Pentatonic Minor lead the list; the rest follow under a *More scales* heading — Blues, which is free, then Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor, which need Pro and show a lock. In identify it is one flat list, with no heading. |
@@ -117,12 +117,10 @@ dominant seventh reads **Borrowed · V/V** and a chord taken from the parallel k
 **Borrowed · iv**; in the other scales a chord is in the key or outside it. Nothing has to be
 switched on, and none of it is behind the Pro unlock.
 
-**Chords the library lacks.** Eleven types have no fingerings in the chord library — 7sus2,
-maj7sus4, 9sus2, 9sus4, m13, 7♭13, whole-tone, diminished-scale, quartal, quintal and dimMaj7 —
-and neither do slash chords beyond plain major and minor ones, such as Fadd2/G or C7/E. For
-those, **Chord Shapes** draws grips worked out from the chord's notes: the bass on the lowest
-string, the rest within four frets, and no finger numbers. Identify draws the same grips, and
-the Atlas lists all 57 types.
+**Chords without shapes.** Eleven types have no fingerings in the chord library — 7sus2,
+maj7sus4, 9sus2, 9sus4, m13, 7♭13, whole-tone, diminished-scale, quartal, quintal and dimMaj7.
+While **Chord Shapes** is on, the Atlas leaves them out; turn it off and all 57 types are
+listed, those eleven marked **No shapes**.
 
 **From the keyboard:** ← and → move along a row, ↑ and ↓ jump between the roots, the families,
 the cards and the tray, **Return** picks, and **Esc** closes.
@@ -231,200 +229,3 @@ From a reading you can:
   chord. The Atlas itself stays closed; tap the chord in the sentence to open it.
 
 Your placed notes stay put when you switch to learn and back, and clear when you quit.
-
-## Train · Timing
-
-**Purpose:** play rhythms in time, and see exactly where each hit lands against the beat.
-
-Pick *train* as the verb and *my timing* after it, and the sentence reads *"I want to train my
-timing with funk, level 3."* The style picks the groove the drums play under you: rock, funk,
-Motown, shuffle, swing, bossa nova, one drop, ska, tresillo, second line, boom bap or 6/8. The
-level picks the rhythm.
-
-| Level | What it asks |
-|---|---|
-| **1 · Quarter notes** | Play on every beat. |
-| **2 · Eighth notes** | Two even notes on every beat. |
-| **3 · Offbeats** | The "and", between the beats. |
-| **4 · Sixteenths** | Four even notes on every beat. |
-| **5 · Syncopation** | A pattern with notes between the beats. |
-| **6 · Rests and pushes** | Leave the rests empty; the pushes come before the beat. |
-| **7 · Swing** | Swung eighths: long, short. |
-| **8 · Displacement** | A pattern shifted off its usual place. |
-| **9 · Click on 2 and 4** | The click sounds only on 2 and 4: you feel the 1. |
-| **10 · Keep the time** | The band stops for two bars; you keep going. |
-
-Levels 1 to 3 are free. Levels 4 to 10 need **Pro**. A level opens once you pass the one before
-it: four of your last five rounds at 80% or more.
-
-### A round
-
-Press **Start**. A bar of count-in, then **Listen**: Fretling plays the rhythm once over the
-groove. Another bar of count-in, then **Your turn**: play the same rhythm on your guitar.
-Fretling listens through the microphone or your input, and only when each note starts counts,
-not which note it is. Your hits appear on the chart as they land.
-
-### Reading the pocket report
-
-At **Result** the chart shows the round's bars at true time. Each hit you were asked for is a
-ring on the beat line; each hit you played is a dot, raised when you were early and lowered
-when you were late, with a stem back to its ring. The dashed line is your average, and the band
-around it your spread. A missed hit is a dashed red ring, and an extra one a red cross.
-
-- **Ahead of the beat, On the beat, Behind the beat** — where your average sits. Within 10 ms
-  either way is on the beat.
-- **Tight, Steady, Loose** — how far your hits scatter around that average: tight at 12 ms or
-  less, steady at 25 ms or less.
-- **Missed and extra** — hits you left out, and hits that matched nothing.
-
-The score is a percentage: a hit within 20 ms earns full credit, less the further off it lands,
-a miss earns nothing, and each extra costs half a hit.
-
-Beside the score, Result says whether the round counts toward the level: **Counts: 80% or
-more**, or **Needs 80%** and the one thing that cost the most, such as **most hits 38 ms
-late**. The line under it counts your last five rounds, says how many a pass needs, and gives
-your best.
-
-### Calibrating your setup
-
-Every setup takes a little time to carry a note from the speaker or string to Fretling, and
-uncalibrated that delay reads as playing late. Beside the level line before a round, and beside
-the buttons at Result, the card says **Not calibrated · Calibrate…** until a setup is
-calibrated, and then its delay, such as **Calibrated · 23 ms · Recalibrate…**. Calibrating is
-once per setup: the microphone or input together with the speakers or headphones. A MIDI
-keyboard needs none.
-
-- **Speakers.** Fretling plays 8 clicks and listens for them, and saves the delay it measured:
-  built-in speakers, external speakers and monitors alike. Keep the room quiet and the volume
-  up. If the clicks come back too uneven to trust, it says so: turn the volume up, move closer
-  and try again.
-- **Headphones, or clicks the microphone can't hear.** Fretling uses the delay the device
-  reports. On headphones it plays nothing; anywhere else it tries the clicks first.
-- **Set by Ear…** When neither works, play a note or press a key (tap the screen on iPhone and
-  iPad) with each of the 8 clicks. It is good enough to practice with, though it folds your own
-  lean into the figure, so the card then says **Set by ear**.
-
-## Train · Harmony
-
-**Purpose:** hear a progression and name each chord by ear.
-
-Pick *train* as the verb and *my ear for chords* after it, and the sentence reads *"I want to
-train my ear for chords in C Major, level 3."* The key is the header's: a minor key plays its
-rounds in minor, and a mode such as Dorian plays as its major or minor, which the card names
-(**Played in D Minor**). The level picks the chords.
-
-| Level | The chords |
-|---|---|
-| **1 · Home and tension** | I and V. |
-| **2 · Home, away and tension** | I, IV and V. |
-| **3 · The four chords** | I, IV, V and vi. |
-| **4 · The rest of the key** | Every chord of the key but the diminished one. |
-| **5 · Sevenths** | Level 4's chords, each as a triad or its seventh. |
-| **6 · Inversions** | Level 4's chords, with the 3rd or the 5th in the bass. |
-| **7 · Secondary dominants** | Level 4's chords, and a V7 of another chord, then that chord. |
-| **8 · Borrowed chords** | Level 4's chords, and one borrowed from the parallel key. |
-| **9 · Named progressions** | A progression with a name, such as ii–V–I or the Andalusian cadence. |
-| **10 · Any key** | Level 4's chords, in a key drawn at random each round. |
-| **11 · Longer progressions** | Eight chords in a key drawn at random, with sevenths, secondary dominants and borrowed chords. |
-
-Levels 1 to 3 are free. Levels 4 to 11 need **Pro**. A level opens once you pass the one before
-it: four of your last five rounds at 80% or more.
-
-### A round
-
-Press **Start**. After a bar of count-in, **Listen** plays the key's cadence to set the key in
-your ear, then the round's progression once, on the band's keys and bass. The first
-chord is home, filled in for you, except at Named progressions. Each chord has a slot; pick from the palette under them as the
-progression plays, or after. Both the numeral and the chord's name show, and the marker bar's
-Labels setting picks which leads: Intervals the numeral, Notes the name.
-
-At **Your turn**, **Again** plays the progression again without the cadence. Once every slot
-holds a chord, **Hear mine** plays your answer and **Check** ends the round.
-
-### Reading the result
-
-At **Result** each slot takes a mark:
-
-- **Right** — the chord that played.
-- **Close** — another form of the right chord: V for V7, or C for C/E. The slot reads
-  **Almost:** and names the right one. A close pick earns half.
-- **Wrong** — any other chord. The slot reads **It was** and names the right one.
-
-Under the slots, the cadence the progression ends on, and over them the name of the progression,
-when each has one. At Any key and Longer progressions the line opens with the round's key.
-**Hear the answer** plays the progression again, and **Hear yours** plays the chords you picked,
-so you can hear where they part. The score is the share of slots you named, a close pick counting half.
-
-## Train · Fingers
-
-*In testing* — see [Coming next](https://www.fretling.app/#coming-next).
-
-**Purpose:** build speed and finger independence with dexterity drills on the neck, a finger
-number on every note.
-
-Pick *train* as the verb and *my fingers* after it, and the sentence reads *"I want to train my
-fingers on the spider, level 3."* The drill picks what your hand plays, and the level picks how
-fast. A drill always sits on the frets it names, whatever the scale, chord shapes, string sets
-or fret window would otherwise show.
-
-| Drill | What your hand plays |
-|---|---|
-| **The chromatic run** | Frets 5 to 8, one finger per fret: 1-2-3-4 on each string, from the low E to the high E. |
-| **Permutations** | The same four frets with the fingers in another order, such as 1-3-2-4. Each round deals one of the 23 orders. |
-| **The spider** | Two strings at a time: fingers 1 and 3 on one, 2 and 4 on the next, the pair climbing a string at a time. |
-| **String skipping** | The chromatic run, skipping a string and coming back one: low E, D, A, G, D, B, G, high E. |
-| **Position shifts** | One string, 1-2-3-4 from fret 1, then from fret 2, and on up to fret 5. Each round picks the string. |
-| **Legato** | Two fingers on each string. Going up, pick the lower note, hammer on the upper, pull off, hammer on again; coming back down, pick the upper note, pull off, hammer on, pull off. Each round deals one of six finger pairs. |
-| **Stretches** | Four fingers over five frets from fret 7, a fret higher on the B and high E strings. Each round picks where the gap falls: between fingers 1 and 2, 2 and 3, or 3 and 4. |
-
-Every drill climbs and comes back down: across the strings, or up the frets for Position shifts.
-
-### Finger numbers
-
-While a drill is on the neck, each marker shows the finger that plays it in place of the note
-name: 1 is your index finger, 2 your middle finger, 3 your ring finger and 4 your little finger.
-The note you play next lights before you reach it, and at a shift it shows the finger it is
-about to take.
-
-### The tempo ladder
-
-| Level | Notes a second |
-|---|---|
-| **1 · Eighths at 60** | 2 |
-| **2 · Eighths at 80** | 2.7 |
-| **3 · Eighths at 100** | 3.3 |
-| **4 · Sixteenths at 60** | 4 |
-| **5 · Sixteenths at 70** | 4.7 |
-
-The level sets the metronome's tempo when the round starts, and the tempo stays there afterward.
-Every drill shares one ladder, so a level open on one drill is open on all of them, with either
-method. One clean round opens the next level, and you can always go back to a slower one.
-
-Levels 1 to 3 are free, on every drill. Levels 4 and 5 need **Pro**.
-
-### Find it and In time
-
-The card's Practice menu picks how a round runs.
-
-- **Find it** — needs no microphone. Press **Start**, and **Listen** plays one pass of the
-  drill, the neck lighting each finger in turn. At **Your turn** the pass loops silently on the
-  click, the neck still stepping, until you answer **Clean** or **Not yet**. Clean opens the next
-  level; after Not yet, retry it or pick a slower level.
-- **In time** — listens through the microphone or your input. Listen plays the pass as in Find
-  it; at Your turn you play one pass on the click, and Fretling grades it.
-
-**Retry** plays the same drill again, with the same order, pair, gap or string. On a drill that
-has them, **Next** deals a different one.
-
-### Reading In time's result
-
-At **Result** the report reads, for example, **46 of 47 notes · Spacing Fair · 9%**.
-
-- **Notes** — a note is right when its pitch is heard on its step. Hammered-on and pulled-off
-  notes count too, matched by their order, since they have no pick attack of their own.
-- **Spacing** — how evenly your picked notes fall: **Even** at 6% or under, **Fair** at 12% or
-  under, **Uneven** above. Hammered and pulled notes don't count toward it. With too few right
-  picked notes to measure, Result shows the notes alone.
-
-The score is the share of notes you got right, reduced once the spacing spreads past 6% and down
-to nothing at 20%. A score of 90% or more is clean, and opens the next level.

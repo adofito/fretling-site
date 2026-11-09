@@ -13,7 +13,6 @@ most of the intermediate one:
 - The Chord Atlas with the chords of the key, Roman numerals, borrowed-harmony labels,
   and previews.
 - Identifying a chord by tapping notes onto the neck.
-- The first three levels of every area you train.
 - Every overlay: CAGED, pentatonic positions, 3NPS, string sets, triad lines — and chord
   shapes with finger numbers.
 - The marker display bar, tap to play, the scale timeline, the timeline transports, and the fret range
@@ -21,7 +20,7 @@ most of the intermediate one:
 - The tuner's Fast mode with the Needle and Bar displays.
 - The complete metronome — full tempo range, every meter and subdivision, tap tempo, three
   click sounds. No caps.
-- The mixer, all six playback instruments, chord pad layers, and all twelve app icons.
+- The mixer, all six playback instruments, chord pad layers, and all fourteen app icons.
 
 A promise worth stating plainly: **nothing that is free today moves behind the unlock
 later.**
@@ -36,7 +35,6 @@ later.**
 | **The guitar amp** | Monitoring through Neural Amp Modeler profiles — the starter set or any .nam file you load. |
 | **The looper** | Record a phrase and play over it, locked to the click. |
 | **Live Detect** | Hearing what you play, named on the neck — including sending it into identify. |
-| **Every training level** | Every level past the free ones, in timing and harmony. |
 
 Locked features stay visible where they live, dimmed with a small lock, so you always know
 what is there. A locked scale or setting opens one quiet paywall sheet when you tap it: what

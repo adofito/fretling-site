@@ -21,8 +21,6 @@ This is the Markdown mirror of the user guide. On the web the site root
   it, or see how it moves. Bring a song you know: paste a chord chart or open a ChordPro file,
   and it becomes a new progression in your library. *In testing* — see
   [Coming next](https://www.fretling.app/#coming-next).
-- **Train** your timing and your ear for chords in short rounds, with levels you earn — the
-  first three in each area are free.
 - **Hear** anything you see: tap-to-play notes, one-tap scale and chord playback, and real
   instruments — a sampled grand piano, modeled nylon, steel, jazz and clean electric guitars, or a sine wave;
   chords through up to three layered voices.
@@ -56,8 +54,8 @@ Everything sits around one stable fretboard:
 
 ## Quick start
 
-1. Read the sentence at the top and tap any colored word to change it: the **verb** (learn,
-   identify or train), the **mode** (scales, chords, triads), the **root note**, and the
+1. Read the sentence at the top and tap any colored word to change it: the **verb** (learn
+   or identify), the **mode** (scales, chords, triads), the **root note**, and the
    **scale type**.
 2. Tap notes on the neck to hear them. The instrument comes from Settings → Audio.
 3. Use the **Labels / Shapes / Colors** chips above the neck to switch between
