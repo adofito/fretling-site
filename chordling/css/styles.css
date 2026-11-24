@@ -116,7 +116,7 @@ kbd {
 [data-store-cta][data-store-state="soon"] [data-store-when="live"],
 [data-store-cta][data-store-state="live"] [data-store-when="soon"] { display: none; }
 
-/* The stage: the app's own picture of a song, the chord lane over the melody in ink. */
+/* The stage: the app's own picture of a song in Duet's order, the melody in ink over the chord labels. */
 .song-figure {
   margin: 0; background: var(--surface); border: 1px solid var(--hairline);
   border-radius: 12px; padding: 20px; box-shadow: 0 14px 36px -20px rgb(0 0 0 / 0.4);
@@ -126,8 +126,7 @@ kbd {
 .song-figure .grid { stroke: var(--hairline); }
 .song-figure .ink { fill: var(--ink); }
 .song-figure .band rect { fill-opacity: 0.08; }
-.song-figure .block { fill-opacity: 0.2; }
-.song-figure .chord-name text { fill: var(--ink); font: 600 30px -apple-system, system-ui, sans-serif; }
+.song-figure .chord-name text { fill: #fff; text-anchor: middle; font: 800 30px -apple-system, system-ui, sans-serif; font-stretch: condensed; }
 
 .ways { display: grid; gap: 32px; margin-top: 72px; }
 @media (min-width: 760px) { .ways { grid-template-columns: repeat(3, 1fr); } }
@@ -146,4 +145,7 @@ kbd {
 .tier.pro { border-color: color-mix(in srgb, var(--accent) 45%, var(--hairline)); }
 .tier ul { padding-left: 20px; }
 .price { font-size: 1.125rem; font-weight: 600; }
-.song-figure .chord-label text { fill: var(--ink); font: 600 15px -apple-system, system-ui, sans-serif; }
+.song-figure .chord-label text { fill: #fff; text-anchor: middle; font: 600 15px -apple-system, system-ui, sans-serif; }
+.song-figure .chord-credit text { fill: #fff; text-anchor: middle; font: 700 10px -apple-system, system-ui, sans-serif; letter-spacing: 0.08em; }
+/* The labels' print is fixed, white or near-black by measured contrast (HitsvillePalette.labelInk): the label colours don't change with the scheme. */
+.song-figure text.dark { fill: #111216; }
