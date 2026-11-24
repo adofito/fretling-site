@@ -13,14 +13,15 @@ most of the intermediate one:
 - The Chord Atlas with the chords of the key, Roman numerals, borrowed-harmony labels,
   and previews.
 - Identifying a chord by tapping notes onto the neck.
+- The first three levels of every area you train.
 - Every overlay: CAGED, pentatonic positions, 3NPS, string sets, triad lines — and chord
   shapes with finger numbers.
 - The marker display bar, tap to play, the scale timeline, the timeline transports, and the fret range
   limiter.
-- The tuner's Fast mode with the Needle and Bar displays.
+- The tuner, with the Needle and Bar displays.
 - The complete metronome — full tempo range, every meter and subdivision, tap tempo, three
   click sounds. No caps.
-- The mixer, all six playback instruments, chord pad layers, and all fourteen app icons.
+- The mixer, all six playback instruments, chord pad layers, and all twelve app icons.
 
 A promise worth stating plainly: **nothing that is free today moves behind the unlock
 later.**
@@ -30,11 +31,12 @@ later.**
 | Pro feature | What it is |
 |-------------|------------|
 | **The rest of music theory** | Dorian, Mixolydian, Phrygian, Lydian, Locrian, Harmonic Minor, and Melodic Minor, listed under *More scales* after the free Blues. |
-| **Precision tuning** | The tuner's ±0.5¢ bench mode, plus the Trace, Strobe, and Disc displays. |
+| **Strobe tuning** | The tuner's Trace, Strobe and Disc displays. |
 | **Drum grooves** | The step sequencer and pattern library behind the metronome's Drums sound. |
 | **The guitar amp** | Monitoring through Neural Amp Modeler profiles — the starter set or any .nam file you load. |
 | **The looper** | Record a phrase and play over it, locked to the click. |
 | **Live Detect** | Hearing what you play, named on the neck — including sending it into identify. |
+| **Every training level** | Every level past the free ones, in timing and harmony. |
 
 Locked features stay visible where they live, dimmed with a small lock, so you always know
 what is there. A locked scale or setting opens one quiet paywall sheet when you tap it: what
@@ -77,8 +79,8 @@ You can try everything in Pro free for two weeks. The button is on the unlock sh
   into your Apple Account, and it supports Family Sharing.
 - **Your settings survive the lock.** If a Pro setting is stored, the app quietly uses the
   free equivalent until you unlock, then your stored choice comes straight back. A Pro
-  scale reads as Major, Precision reads as Fast, the Trace, Strobe and Disc displays read
-  as Needle, and the Drums pack plays Classic. Nothing is reset and nothing is rewritten.
+  scale reads as Major, the Trace, Strobe and Disc displays read as Needle, and the Drums
+  pack plays Classic. Nothing is reset and nothing is rewritten.
 - **Restore anytime.** The paywall's *Restore Purchases* re-checks your Apple Account on
   a new device or after a reinstall. The entry point lives at the bottom of the settings
   sidebar, under *Fretling Pro*.

@@ -103,10 +103,10 @@
     <p class="page-intro">Every panel also <strong>minimizes</strong> to a one-row strip that keeps its main control and readout live — the metronome's play button, tempo and beat lamp; the tuner's Listen button, note and cents; the looper's Record and Play; the mixer's Main fader; the amp's Monitor and output gain; Live Detect's Listen and detected chord. Click the chevron beside the panel's close button, or double-click its header (double-tap on iPad); the same chevron expands it again. Which panels are minimized is remembered between launches, along with where they sit.</p>
     <figure class="shot" style="--shot-max: 850px">
       <img class="shot-light" src="screenshots/31-minimized-strips-light.webp"
-           width="1700" height="1388" loading="lazy" decoding="async"
+           width="1700" height="1262" loading="lazy" decoding="async"
            alt="The metronome, tuner and looper each folded to a one-row strip and piled over the neck.">
       <img class="shot-dark" src="screenshots/31-minimized-strips-dark.webp"
-           width="1700" height="1388" loading="lazy" decoding="async"
+           width="1700" height="1262" loading="lazy" decoding="async"
            alt="The metronome, tuner and looper each folded to a one-row strip and piled over the neck.">
       <figcaption class="figure-caption">Three panels minimized: the click, the tuner and the looper still working, in a fraction of the room.</figcaption>
     </figure>
@@ -116,7 +116,7 @@
     </div>
 
     <div class="callout" data-accent="pro">
-      <p><strong>Four of these tools are part of Fretling Pro</strong> — the drum sequencer, the amp, the looper, and Live Detect — along with the tuner's Precision mode and its Trace, Strobe and Disc indicators. Anything marked <span class="pro-badge">Pro</span> below needs that one-time unlock; the rest of the page is free. <a href="free-and-pro.html#whats-pro">What Pro adds</a> has the full list.</p>
+      <p><strong>Four of these tools are part of Fretling Pro</strong> — the drum sequencer, the amp, the looper, and Live Detect — along with the tuner's Trace, Strobe and Disc indicators. Anything marked <span class="pro-badge">Pro</span> below needs that one-time unlock; the rest of the page is free. <a href="free-and-pro.html#whats-pro">What Pro adds</a> has the full list.</p>
     </div>
 
     <p class="page-intro">Every panel is built to look like the hardware it stands in for — a machined faceplate, recessed displays, indicator lamps, knurled fader caps. Two finishes ship: <strong>Machined</strong>, a light panel, and <strong>Studio</strong>, a graphite one. <em>Settings &rsaquo; Fretboard &rsaquo; Appearance &rsaquo; Modules</em> picks between them, and the default follows your theme — light panels on the light canvas, graphite on the dark one.</p>
@@ -125,10 +125,10 @@
 
     <figure class="shot">
       <img class="shot-light" src="screenshots/34-modules-studio-light.webp"
-           width="1936" height="1408" loading="lazy" decoding="async"
+           width="1936" height="1356" loading="lazy" decoding="async"
            alt="The tuner and the metronome open side by side over the neck in the Studio finish: graphite enclosures with brushed-steel faceplates, the tuner reading a flat A and the metronome set to 120 BPM with the drum kit.">
       <img class="shot-dark" src="screenshots/34-modules-studio-dark.webp"
-           width="1936" height="1408" loading="lazy" decoding="async"
+           width="1936" height="1356" loading="lazy" decoding="async"
            alt="The tuner and the metronome open side by side over the neck in the Studio finish: graphite enclosures with brushed-steel faceplates, the tuner reading a flat A and the metronome set to 120 BPM with the drum kit.">
       <figcaption class="figure-caption">Studio pinned on the light canvas, where <em>Auto</em> would have chosen Machined. Both panels are the same finish, whichever theme you are in.</figcaption>
     </figure>
@@ -139,12 +139,12 @@
       <p>A chromatic tuner that listens through your microphone or audio interface. It names the note you are playing and shows how far off you are in cents.</p>
       <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="screenshots/23-tuner-light.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
+             width="1700" height="1262" loading="lazy" decoding="async"
              alt="The tuner panel reading A2 flat, with the bar indicator sitting left of center.">
         <img class="shot-dark" src="screenshots/23-tuner-dark.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
+             width="1700" height="1262" loading="lazy" decoding="async"
              alt="The tuner panel reading A2 flat, with the bar indicator sitting left of center.">
-        <figcaption class="figure-caption">The tuner in Fast mode, showing a note that is flat.</figcaption>
+        <figcaption class="figure-caption">The tuner showing a note that is flat.</figcaption>
       </figure>
 
       <h3>Indicator styles</h3>
@@ -157,23 +157,11 @@
         <li><strong>Disc</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a> — a rotating disc, seen through a half-moon window, that stops turning at true pitch.</li>
       </ul>
 
-      <h3>Fast or Precision</h3>
-      <p>These are two different instruments, not a quality slider:</p>
-      <div class="table-scroll">
-        <table>
-          <thead>
-            <tr><th>Mode</th><th>Reads</th><th>In tune within</th><th>Use it when</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Fast</strong></td><td>Responds immediately, whole cents</td><td>±5 cents</td><td>Retuning a string mid-song, checking quickly between takes.</td></tr>
-            <tr><td><strong>Precision</strong> <a class="pro-badge" href="free-and-pro.html#whats-pro" aria-label="Requires Fretling Pro">Pro</a></td><td>Hold a note about a second, tenths of a cent</td><td>±0.5 cents</td><td>Setting the guitar up properly with it on the bench.</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>Precision measures phase over a settled baseline, which is why it needs a held note — a sub-cent reading is only as good as the stretch of signal it was fitted over.</p>
+      <h3>Reading a note</h3>
+      <p>The tuner reads a note the moment you play it, then settles to a steady reading while you hold it. It finds the string's fundamental, so stiff wound strings don't read sharp. The reading is in whole cents, and the figure holds still instead of flickering when a note sits near a half cent. Anything within 3 cents counts as in tune. It works over a Bluetooth input too.</p>
 
       <h3>Reference and calibration</h3>
-      <p>At the bottom of the panel, a <strong>Reference</strong> disclosure holds the Fast / Precision switch and two settings you set once and leave alone:</p>
+      <p>At the bottom of the panel, a <strong>Reference</strong> disclosure holds two settings you set once and leave alone:</p>
       <ul>
         <li><strong>A4</strong> — the reference pitch, from 430 to 450 Hz in whole hertz, 440 by default. Turn it for an orchestra that tunes to 442, or a recording at 432.</li>
         <li><strong>Offset</strong> — a manual correction of up to ±5 cents, in tenths, for an instrument or an interface that reads consistently sharp or flat. Under it, after the tuner has listened for a while, a line reports how far your audio input's clock runs from its nominal rate, in parts per million and in cents. That part is measured and corrected automatically, so the slider only ever carries your own preference.</li>
@@ -201,10 +189,10 @@
       <p>On iPad, the click, a playing progression, the looper and the amp keep going when you switch apps or lock the screen; the tuner and Live Detect pause until you come back.</p>
           <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="screenshots/24-metronome-light.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
+             width="1700" height="1262" loading="lazy" decoding="async"
              alt="The metronome panel at 120 BPM in 4/4 with quarter-note subdivision and the drum kit sound pack selected.">
         <img class="shot-dark" src="screenshots/24-metronome-dark.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
+             width="1700" height="1262" loading="lazy" decoding="async"
              alt="The metronome panel at 120 BPM in 4/4 with quarter-note subdivision and the drum kit sound pack selected.">
         <figcaption class="figure-caption">The metronome, stopped: tempo, meter, subdivision, sound and accent.</figcaption>
       </figure>
@@ -263,10 +251,10 @@
       </ul>
       <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="screenshots/26-amp-light.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
+             width="1700" height="1262" loading="lazy" decoding="async"
              alt="The guitar amp panel with a Neural Amp Modeler profile loaded, the model level trims below it, and Monitor idle.">
         <img class="shot-dark" src="screenshots/26-amp-dark.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
+             width="1700" height="1262" loading="lazy" decoding="async"
              alt="The guitar amp panel with a Neural Amp Modeler profile loaded, the model level trims below it, and Monitor idle.">
         <figcaption class="figure-caption">The amp with a starter model loaded, before Monitor is turned on.</figcaption>
       </figure>
@@ -325,14 +313,22 @@
         <li><strong>Layer fade</strong> — how much earlier layers fade back as you stack new ones on top. The top of the ruler reads <strong>Never</strong> rather than a number, because what it means there is that nothing fades at all.</li>
       </ul>
       <p>The record button doubles as the beat readout: the count-in counts down to the punch, then the beat counts up the bar, and a status line under the controls names the state — recording, playing, overdubbing — with the bar and the time. Changing the sample rate clears the loop — the recording no longer matches the engine — and the looper tells you when that has happened.</p>
-      <p>Loops live in memory for the session only. Nothing is written to disk, and quitting the app discards them.</p>
+      <p><strong>Loops</strong>, at the end of the transport row, opens the loop library, where a loop you want to keep gets a name:</p>
+      <ul>
+        <li><strong>Save Current Loop…</strong> — keeps the loop in the looper under a name, with its tempo, meter and length in bars.</li>
+        <li><strong>Tap a saved loop</strong> to load it. It replaces the loop in the looper and plays with the amp off, too. A loop saved with a tempo and meter sets the metronome to them and plays from the next bar line.</li>
+        <li><strong>Export…</strong> — writes a saved loop as a WAV file. A loop with a tempo and meter carries them in the file, for a DAW that reads them.</li>
+        <li><strong>Import Audio…</strong> — brings in a WAV, AIFF, M4A or MP3, keeping its first 60 seconds. A file that carries a tempo and meter matching its length, as Fretling's own exports do, comes in on that grid; any other file is a free-length loop, shown as <em>Free</em>, and leaves the metronome alone.</li>
+        <li><strong>Rename…</strong> and <strong>Delete Loop</strong> — with Export…, in a saved loop's menu: right-click the loop, or touch and hold it.</li>
+      </ul>
+      <p>A loop you have not saved lives in memory and goes when you quit. Saved loops are files in Fretling's own storage on this device: they stay until you delete them, and are not synced to your other devices.</p>
           <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="screenshots/28-looper-light.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
-             alt="The looper panel armed and empty, showing the record button, the bars setting and the loop controls.">
+             width="1700" height="1262" loading="lazy" decoding="async"
+             alt="The looper panel before a take: the Record button, the Loops button beside Play, Undo and Clear, and the count-in and bars settings.">
         <img class="shot-dark" src="screenshots/28-looper-dark.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
-             alt="The looper panel armed and empty, showing the record button, the bars setting and the loop controls.">
+             width="1700" height="1262" loading="lazy" decoding="async"
+             alt="The looper panel before a take: the Record button, the Loops button beside Play, Undo and Clear, and the count-in and bars settings.">
         <figcaption class="figure-caption">The looper before anything is recorded.</figcaption>
       </figure>
 </section>
@@ -359,10 +355,10 @@
       <p>Most strips run from 0 to 1 and start at full. <strong>Amp</strong> runs to 2 and starts at 0.8, matching the amp panel&rsquo;s own Output slider; <strong>Loop</strong> runs to 1.5 and starts at 0.9, matching the looper&rsquo;s Loop volume; <strong>Click</strong> starts at 0.8. Levels persist between sessions. A solo does not: relaunching into a soloed, mostly silent app would be a puzzle rather than a setting.</p>
           <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="screenshots/29-mixer-light.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
+             width="1700" height="1262" loading="lazy" decoding="async"
              alt="The mixer panel with a strip for each voice, one of them muted so its badge is lit.">
         <img class="shot-dark" src="screenshots/29-mixer-dark.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
+             width="1700" height="1262" loading="lazy" decoding="async"
              alt="The mixer panel with a strip for each voice, one of them muted so its badge is lit.">
         <figcaption class="figure-caption">The mixer, with the click muted — the badge reminds you why it is silent.</figcaption>
       </figure>
@@ -378,10 +374,10 @@
       <p><strong>Without Pro</strong>, the panel still opens. It says what it is &mdash; <em>Live Detect is part of Fretling Pro.</em> and <em>Play into the mic &mdash; the notes and chords Fretling hears light up on the fretboard.</em> &mdash; and carries an unlock button. The microphone never opens while it is locked.</p>
           <figure class="shot" style="--shot-max: 850px">
         <img class="shot-light" src="screenshots/30-live-detect-light.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
+             width="1700" height="1262" loading="lazy" decoding="async"
              alt="The Live Detect panel waiting to listen, reading “Tap Listen to detect what you play”.">
         <img class="shot-dark" src="screenshots/30-live-detect-dark.webp"
-             width="1700" height="1388" loading="lazy" decoding="async"
+             width="1700" height="1262" loading="lazy" decoding="async"
              alt="The Live Detect panel waiting to listen, reading “Tap Listen to detect what you play”.">
         <figcaption class="figure-caption">Live Detect before you start: press Listen and play.</figcaption>
       </figure>

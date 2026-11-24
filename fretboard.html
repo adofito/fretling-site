@@ -156,19 +156,19 @@
       <p>Two of the three marker groups reach past the neck. <strong>Labels</strong> and <strong>Colors</strong> also set how the <a href="#timeline">scale timeline</a> and the Chord Atlas read &mdash; and they take their sharps and flats from the key, as the neck does &mdash; so a pitch is named, spelled and colored the same way wherever you meet it. (The Atlas keeps note names when Labels is None &mdash; a picker whose options carry no label has nothing to pick by.) <strong>Shapes</strong> is the neck&rsquo;s alone: the timeline and the Atlas draw round markers.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/08-marker-bar-notes-light.webp"
-             width="1936" height="280" loading="lazy" decoding="async"
+             width="1936" height="283" loading="lazy" decoding="async"
              alt="The marker display bar with Labels set to Notes, so every marker on the neck below prints a note name.">
         <img class="shot-dark" src="screenshots/08-marker-bar-notes-dark.webp"
-             width="1936" height="280" loading="lazy" decoding="async"
+             width="1936" height="283" loading="lazy" decoding="async"
              alt="The marker display bar with Labels set to Notes, so every marker on the neck below prints a note name.">
         <figcaption class="figure-caption">Labels = Notes. Every note name is spelled the way the key writes it.</figcaption>
       </figure>
       <figure class="shot">
         <img class="shot-light" src="screenshots/09-marker-bar-intervals-light.webp"
-             width="1936" height="280" loading="lazy" decoding="async"
+             width="1936" height="283" loading="lazy" decoding="async"
              alt="The marker display bar with Labels set to Intervals, so markers print intervals.">
         <img class="shot-dark" src="screenshots/09-marker-bar-intervals-dark.webp"
-             width="1936" height="280" loading="lazy" decoding="async"
+             width="1936" height="283" loading="lazy" decoding="async"
              alt="The marker display bar with Labels set to Intervals, so markers print intervals.">
         <figcaption class="figure-caption">Labels = Intervals. Each marker prints its interval from the root.</figcaption>
       </figure>
@@ -230,28 +230,28 @@
 
     <section class="section-card" id="timeline">
       <h2>Scale timeline</h2>
-      <p>Above the neck, the timeline lays out all twelve semitones in a row. Notes that belong to the current scale are filled in; the rest sit faded. When a chord is active, its tones are marked too, so you can read the chord against its key in one line.</p>
+      <p>Above the neck, the timeline lays out all twelve semitones in one sunken track. The notes of the current scale stand up out of it on raised keys; the rest stay flat, just their names. When a chord is active, its tones wear a larger disc, so you can read the chord against its key in one line.</p>
       <p>The row starts at whatever you are learning, so it never splits in two. In Scales the leftmost key is the key you picked, and the scale climbs from there — set Labels to Intervals and you can read the intervals straight across, R first. In Chords the chord takes the front of the row instead, and the key's scale shifts around it.</p>
-      <p>Horizontal rails bracket the row to show the structure: the chord's tones are tied together above it, the scale's below. Small Chord and Scale captions name each rail, and triangles mark each root.</p>
-      <p>In Triads there is no scale to map: the row starts at the triad's root, its three tones are filled and the rest stay empty, and only the Chord rail appears, with its transport.</p>
+      <p>Arcs above the row join the chord's tones and nothing else, under a small Chord caption. A chord tone the scale does not hold keeps an empty, dashed key with “outside” under it. Rings mark the roots: heavy for the key's, light for the chord's.</p>
+      <p>In Triads there is no scale to map: the row starts at the triad's root, its three tones are raised and joined by arcs, and only the Chord transport appears.</p>
       <p><strong>Tap a key</strong> to hear that pitch. Every marker of that note on the neck lights up, and stays lit until you tap another key.</p>
       <figure class="shot" style="--shot-max: 900px">
         <img class="shot-light" src="screenshots/12-timeline-brackets-light.webp"
-             width="1720" height="390" loading="lazy" decoding="async"
-             alt="The scale timeline showing twelve semitones, with the chord bracketed above the row and the scale below it, a round transport at the head of each rail, and the scale's tones spelled underneath.">
+             width="1268" height="318" loading="lazy" decoding="async"
+             alt="The scale timeline: twelve semitones in one sunken track with the scale's notes on raised keys, arcs joining the chord's tones above the row under the Chord caption, a round transport beside each, and the chord spelled underneath.">
         <img class="shot-dark" src="screenshots/12-timeline-brackets-dark.webp"
-             width="1720" height="390" loading="lazy" decoding="async"
-             alt="The scale timeline showing twelve semitones, with the chord bracketed above the row and the scale below it, a round transport at the head of each rail, and the scale's tones spelled underneath.">
-        <figcaption class="figure-caption">The chord rail sits above the row, the scale rail below.</figcaption>
+             width="1268" height="318" loading="lazy" decoding="async"
+             alt="The scale timeline: twelve semitones in one sunken track with the scale's notes on raised keys, arcs joining the chord's tones above the row under the Chord caption, a round transport beside each, and the chord spelled underneath.">
+        <figcaption class="figure-caption">Arcs above the row join the chord's tones; the scale's notes stand on raised keys.</figcaption>
       </figure>
 
       <h3 id="transports">Timeline transports</h3>
-      <p>At the leading edge of the timeline stand up to two round transports, each on the rail it plays — the Chord transport beside the chord rail above the row, the Scale transport beside the scale rail below it. Press one to make sound, press it again to stop; a transport that is sounding fills in solid.</p>
+      <p>At the leading edge of the timeline stand up to two round transports, each beside what it plays — the Chord transport level with the Chord caption above the row, the Scale transport level with the row itself. Press one to make sound, press it again to stop; a transport that is sounding fills in solid.</p>
       <ul>
         <li><strong>Scale</strong> — plays one octave of the scale, root to root, up and back down, once: one note per beat at the metronome's tempo, each lit on the neck as it sounds. It starts on the lowest root inside what the neck shows — the fret range and any pattern you have on. With several patterns on it plays one: the 3NPS pattern if there is one, otherwise the CAGED shape, otherwise the box. A box drawn more than once on a long neck plays its lowest copy.</li>
         <li><strong>Chord</strong> — holds the chord on the chord pad until you press it again.</li>
       </ul>
-      <p>A transport is mounted on a rail, so a rail is all it takes for one to appear: the Scale transport is there whenever a scale is on the timeline, the Chord transport whenever a chord is active. That includes Triads, where the transport sounds the triad on screen.</p>
+      <p>A transport appears whenever there is something for it to play: the Scale transport whenever a scale is on the timeline, the Chord transport whenever a chord is active. That includes Triads, where the transport sounds the triad on screen.</p>
       <p>On the Mac, <strong>Shift-Space</strong> presses whichever of the two is on screen — the chord if one is active, otherwise the scale. The plain space bar is the app's own transport: it stops whatever is rolling, and when nothing is, it starts the click together with a loop that is loaded and stopped. See <a href="guide.html#shortcuts">keyboard shortcuts and gestures</a>.</p>
       <p>Under the row, a single tone line spells what the transport is about to sound. It follows the subject of the mode you are in — the chord in Chords and Triads, the scale in Scales — except while something is playing, when it follows the sound instead. When both transports are up it puts <strong>Scale</strong> or <strong>Chord</strong> in front, so you can tell which one it is describing.</p>
       <p>The scale's line is spelled from the notes that will <em>actually be struck</em>, so narrowing the fret range or switching on a box narrows the line the same way it narrows the run. If the visible range holds no playable notes, the line says <em>No notes in this fret range</em> rather than leaving you to press a dead button.</p>
@@ -362,10 +362,10 @@
       <p>While the window is up, the <strong>Fret Range</strong> group carries a value chip reading the span — <strong>3–8</strong>. It is also a menu: open it to jump straight to a named position — <em>Open</em>, <em>3rd</em>, <em>5th</em>, <em>7th</em>, <em>9th</em> or <em>12th</em> — the ones that fit on the neck you have. Scale playback follows the window too.</p>
           <figure class="shot">
         <img class="shot-light" src="screenshots/18-fret-range-limiter-light.webp"
-             width="1936" height="638" loading="lazy" decoding="async"
+             width="1936" height="636" loading="lazy" decoding="async"
              alt="The neck with a framed position window over frets five through nine, its boundary frets marked as blue chips in the number row and the frets outside it dimmed and empty.">
         <img class="shot-dark" src="screenshots/18-fret-range-limiter-dark.webp"
-             width="1936" height="638" loading="lazy" decoding="async"
+             width="1936" height="636" loading="lazy" decoding="async"
              alt="The neck with a framed position window over frets five through nine, its boundary frets marked as blue chips in the number row and the frets outside it dimmed and empty.">
         <figcaption class="figure-caption">Fret Range set to Limited: the window framed on the neck, its boundaries named 5 and 9.</figcaption>
       </figure>

@@ -48,22 +48,18 @@ the default; Needle and Bar are free.
 - **Strobe** — a strobe band that stands still when you are in tune.
 - **Disc** — a rotating disc, seen through a half-moon window, that stops turning at true pitch.
 
-### Fast or Precision
+### Reading a note
 
-These are two different instruments, not a quality slider:
-
-| Mode | Reads | In tune within | Use it when |
-|------|-------|----------------|-------------|
-| **Fast** | Responds immediately, whole cents | ±5 cents | Retuning a string mid-song, checking quickly between takes. |
-| **Precision** | Hold a note about a second, tenths of a cent | ±0.5 cents | Setting the guitar up properly with it on the bench. |
-
-Precision measures phase over a settled baseline, which is why it needs a held note — a
-sub-cent reading is only as good as the stretch of signal it was fitted over.
+The tuner reads a note the moment you play it, then settles to a steady reading while you
+hold it. It finds the string's fundamental, so stiff wound strings don't read sharp. The
+reading is in whole cents, and the figure holds still instead of flickering when a note sits
+near a half cent. Anything within 3 cents counts as in tune. It works over a Bluetooth input
+too.
 
 ### Reference and calibration
 
-At the bottom of the panel, a **Reference** disclosure holds the Fast / Precision switch and
-two settings you set once and leave alone:
+At the bottom of the panel, a **Reference** disclosure holds two settings you set once and
+leave alone:
 
 - **A4** — the reference pitch, from 430 to 450 Hz in whole hertz, 440 by default. Turn it
   for an orchestra that tunes to 442, or a recording at 432.
@@ -265,8 +261,15 @@ recording, playing, overdubbing — with the bar and the time. Changing the samp
 the loop — the recording no longer matches the engine — and the looper tells you when that
 has happened.
 
-Loops live in memory for the session only. Nothing is written to disk, and quitting the app
-discards them.
+**Loops**, at the end of the transport row, opens the loop library, where a loop you want to keep gets a name:
+
+- **Save Current Loop…** — keeps the loop in the looper under a name, with its tempo, meter and length in bars.
+- **Tap a saved loop** to load it. It replaces the loop in the looper and plays with the amp off, too. A loop saved with a tempo and meter sets the metronome to them and plays from the next bar line.
+- **Export…** — writes a saved loop as a WAV file. A loop with a tempo and meter carries them in the file, for a DAW that reads them.
+- **Import Audio…** — brings in a WAV, AIFF, M4A or MP3, keeping its first 60 seconds. A file that carries a tempo and meter matching its length, as Fretling's own exports do, comes in on that grid; any other file is a free-length loop, shown as *Free*, and leaves the metronome alone.
+- **Rename…** and **Delete Loop** — with Export…, in a saved loop's menu: right-click the loop, or touch and hold it.
+
+A loop you have not saved lives in memory and goes when you quit. Saved loops are files in Fretling's own storage on this device: they stay until you delete them, and are not synced to your other devices.
 
 ## Mixer
 

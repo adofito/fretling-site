@@ -98,11 +98,10 @@ setting above.
 
 ## Icon tab
 
-Fretling ships fourteen app icons; pick one and the home screen or Dock icon changes. The
+Fretling ships twelve app icons; pick one and the home screen or Dock icon changes. The
 choices are **Warm hex**, **Classic**, **Rich wood**, **Fret window**, **Blush sky**,
-**Soft aurora**, **Watercolor**, **Champagne**, **Interval halo**, **Fret monogram**,
-**Constellation**, **Ember**, **Ultraviolet**, and **Daylight**. Each is shown as a preview
-tile before you commit.
+**Soft aurora**, **Watercolor**, **Champagne**, **Fret monogram**, **Ember**, **Ultraviolet**,
+and **Daylight**. Each is shown as a preview tile before you commit.
 
 ## The Fretling Pro row
 
@@ -112,7 +111,7 @@ state rather than always saying the same thing:
 - **Unlocked — thanks for the support**, once you have bought it.
 - **Trial — *N* days left**, while the [free trial](free-and-pro.md#the-14-day-trial) is
   running, counting down.
-- **The amp, the looper, precision tuning, and more**, otherwise — what the row is offering,
+- **The amp, the looper, strobe tuning, and more**, otherwise — what the row is offering,
   rather than a bare price.
 
 **Restore Purchases** lives on the unlock sheet itself, not in this row, so a new Mac, iPad or iPhone
