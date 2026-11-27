@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earling – Ear training for Mac, iPad and iPhone</title>
+  <meta name="description" content="Earling is Fretling&#x27;s sister app for the ear: hear the voices inside a chord, find the one that went missing, and sing it back. Eight modes on one path, on Mac, iPad and iPhone. Free, with a one-time Pro unlock.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Earling">
+  <meta property="og:title" content="Earling – Ear training for Mac, iPad and iPhone">
+  <meta property="og:description" content="Earling is Fretling&#x27;s sister app for the ear: hear the voices inside a chord, find the one that went missing, and sing it back. Eight modes on one path, on Mac, iPad and iPhone. Free, with a one-time Pro unlock.">
+  <meta property="og:url" content="https://www.fretling.app/earling/">
+  <meta property="og:image" content="https://www.fretling.app/earling/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.fretling.app/earling/og-image.png">
+  <link rel="canonical" href="https://www.fretling.app/earling/">
+  <link rel="alternate" hreflang="en" href="https://www.fretling.app/earling/">
+  <link rel="alternate" hreflang="es-419" href="https://www.fretling.app/earling/es/">
+  <link rel="alternate" hreflang="x-default" href="https://www.fretling.app/earling/">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>
+    /* Mark scripting on, and apply the stored appearance before first paint. */
+    (function () {
+      document.documentElement.className += " js";
+      try {
+        var pref = localStorage.getItem("fretling-theme");
+        if (pref === "light" || pref === "dark") {
+          document.documentElement.setAttribute("data-theme", pref);
+        }
+      } catch (e) { /* private mode */ }
+    })();
+  </script>
+</head>
+<body data-page="home" data-app="earling">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true" focusable="false">
+          <rect class="sm-bar" x="0" y="9.2" width="26" height="3.2"/>
+          <path class="sm-shell" transform="translate(13 10) scale(1.25) translate(-11.65 -9.4)" vector-effect="non-scaling-stroke" d="M4.8 13.6 L4.6 11.8 L4.8 10.0 L5.4 8.4 L6.2 6.9 L7.3 5.7 L8.6 4.7 L10.0 4.1 L11.5 3.8 L13.0 3.8 L14.4 4.1 L15.6 4.6 L16.7 5.4 L17.6 6.4 L18.2 7.5 L18.6 8.6 L18.7 9.8 L18.6 11.0 L18.2 12.0 L17.7 13.0 L17.0 13.8 L16.2 14.4 L15.2 14.8 L14.3 15.0 L13.4 15.0 L12.5 14.8 L11.6 14.5 L10.9 13.9 L10.4 13.3 L10.0 12.6 L9.7 11.9 L9.6 11.1 L9.7 10.4 L9.9 9.7 L10.3 9.1 L10.8 8.5 L11.3 8.2 L11.9 7.9 L12.5 7.8 L13.1 7.8 L13.7 7.9 L14.2 8.1 L14.7 8.4 L15.0 8.8 L15.3 9.3 L15.4 9.8 L15.5 10.3 L15.4 10.8 L15.3 11.2 L15.1 11.6 L14.8 11.9 L14.4 12.2 L14.0 12.3 L13.7 12.4 L13.3 12.4 L12.9 12.3 L12.6 12.2 L12.3 12.0 L12.0 11.7 L11.9 11.4 L11.8 11.1 M4.8 13.6 L9.7 11.9"/>
+        </svg>
+        Earling
+      </a>
+      <nav class="chip-nav" aria-label="Guide sections">
+        <ul>
+          <li><a href="guide.html" data-mark="guide">Guide</a></li>
+          <li><a href="free-and-pro.html" data-mark="pro">Free &amp; Pro</a></li>
+          <li><a href="privacy.html" data-mark="privacy">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="theme-control" data-menu="theme">
+          <button type="button" class="theme-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Appearance">
+            <span data-theme-label>System</span>
+            <svg class="chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="chip-menu chip-menu--end" role="listbox" aria-label="Appearance" hidden></div>
+        </div>
+        <a class="lang-switch" href="es/index.html" hreflang="es" lang="es" aria-label="Versión en español">Español</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-masthead">
+        <div class="hero-head">
+          <h1>Hear the voices <em data-hl="earling">inside</em> a chord.</h1>
+        </div>
+        <div class="hero-aside">
+          <p class="lede">Fretling's sister app, for the ear, on Mac, iPad and iPhone. A held chord brings each voice forward in turn; then you find one by ear, and sing it back. Eight modes on one path, from two notes to chords in a key.</p>
+          <p class="hero-meta">
+            <span>Mac, iPad and iPhone</span>
+            <span>Free, with a one-time Pro unlock</span>
+            <span>Hear, check, then sing</span>
+            <span>No account, no analytics</span>
+          </p>
+          <p class="hero-actions" data-store-cta data-store-state="soon">
+            <span class="hero-cta" aria-disabled="true" data-store-when="soon">Coming soon to the App Store: Mac, iPad and iPhone</span>
+            <a class="quiet" href="guide.html">Read the guide</a>
+          </p>
+        </div>
+      </div>
+
+      <figure class="figure keys-figure">
+        <div class="stage">
+          <img src="screenshots/01-voices-inside.webp" width="1600" height="986" alt="Spotlight, level 1, at Hear: a D-flat major chord on Voice lanes, its 3rd, F, brought forward over the 5th and the root.">
+        </div>
+        <figcaption class="figure-caption">Spotlight. A held chord brings each voice forward in turn, with its name.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="pools" id="three-doors" aria-label="What Earling does">
+      <a href="#spotlight" data-mark="hear">
+        <span class="pool-title">Hear it</span>
+        <span class="pool-desc">A held chord, each voice brought forward with its name, until you know where it sits.</span>
+        <span class="pool-go">Spotlight &rarr;</span>
+      </a>
+      <a href="#missing" data-mark="see">
+        <span class="pool-title">Find it</span>
+        <span class="pool-desc">The voice comes forward with no name, or goes missing, and you say which one it was.</span>
+        <span class="pool-go">Missing tone &rarr;</span>
+      </a>
+      <a href="#sing" data-mark="play">
+        <span class="pool-title">Sing it</span>
+        <span class="pool-desc">Sing the note back. The microphone draws your pitch and holds you to it, in any octave.</span>
+        <span class="pool-go">Sing &rarr;</span>
+      </a>
+    </nav>
+
+    <section class="feature" id="spotlight">
+      <div class="feature-body">
+        <h2>A voice brought forward</h2>
+        <p>A held chord brings each voice forward in turn while its name shows: the root, the 3rd, the 5th. Then one comes forward with no name, and you say which. Level by level the help fades, from a solo to no boost at all.</p>
+        <p>Spotlight's first level is free; the fading help, close and inverted chords and 7th chords are Pro. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/09-explore-a-chord.webp" width="1600" height="986" alt="The pad in Free practice: E minor 7 in the key of D, first inversion, open voicing, its 7th, D, brought forward among the 5th, the root and the 3rd."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="missing">
+      <div class="feature-body">
+        <h2>The note that went missing</h2>
+        <p>The chord plays whole, then again with one voice gone. Find the gap on the chord, then sing the note that filled it.</p>
+        <p>Missing tone's first level, on open triads, is free. Inverted chords, 7th chords and two tones missing are Pro. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/02-missing-note.webp" width="1600" height="986" alt="Missing tone, level 1, at Check: a G-sharp minor chord drawn whole on Voice lanes, with Root, 3rd and 5th to answer which voice is missing."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="sing">
+      <div class="feature-body">
+        <h2>Then sing it</h2>
+        <p>Every round ends on <strong>Sing</strong>. The microphone draws your voice as a trace and holds you to the note, in whatever octave suits you, for about half a second. Headphones help; on speakers, the chord steps aside while you sing.</p>
+        <p>No microphone? Sing becomes a tap, and nothing else changes. Late at night, turn Sing off in Settings. Sing is free in every mode.</p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/03-sing-it-back.webp" width="1600" height="986" alt="Higher or lower's Sing: your voice drawn as a trace, climbing from under F-sharp 4, the note, into the Higher band, 97 cents above it, with the Hold it bar most of the way full."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="modes">
+      <div class="feature-body">
+        <h2>Eight modes, one path</h2>
+        <p>From two notes to chords in a key: <strong>Higher or lower</strong>, <strong>Intervals</strong>, <strong>Chord quality</strong>, <strong>Spotlight</strong>, <strong>Missing tone</strong>, <strong>Scales and modes</strong>, <strong>Scale degrees</strong> and <strong>Chords in context</strong>. Each mode opens the next.</p>
+        <p>Higher or lower, Intervals and Chord quality are free at every level, and every other mode's first level is free too: 25 of the 47. <a class="pro-badge" href="free-and-pro.html">Pro</a></p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/04-one-path.webp" width="1600" height="986" alt="Earling's home: the path of eight modes down the side, Higher or lower, Intervals and Chord quality passed, and Spotlight's level 1 card with its Start button."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="views">
+      <div class="feature-body">
+        <h2>See it three ways, in a key</h2>
+        <p>Draw a chord as a <strong>Pitch stack</strong>, a <strong>Pitch wheel</strong> or <strong>Voice lanes</strong>. In Missing tone, Scale degrees and Chords in context, the drone turns the answers into degrees of the key, and a cadence can set the key first.</p>
+        <p>The three views, the drone and the cadence are free.</p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/06-in-a-key.webp" width="1600" height="986" alt="Chords in context, level 1, at Hear: the cadence I, IV, V, I drawn as chord columns in the key, V sounding."></figure>
+      </div>
+    </section>
+
+    <section class="feature" id="practice">
+      <div class="feature-body">
+        <h2>Free practice, and eight weeks of it</h2>
+        <p><strong>Free practice</strong> holds any chord you pick and lets you bring each voice forward yourself, or play any mode at a level you have opened.</p>
+        <p>The <strong>Practice</strong> page shows this week's minutes, then time and right answers by mode over the last eight weeks.</p>
+      </div>
+      <div class="feature-media">
+        <figure class="shot"><img src="screenshots/10-practice.webp" width="1600" height="986" alt="The Practice page: 122 minutes this week, time by mode over the last eight weeks as stacked bars, and right answers by mode as lines against the 80% a level asks."></figure>
+      </div>
+    </section>
+
+    <section class="section-card" id="free-and-pro">
+      <h2>Free for good. Pro takes each mode all the way.</h2>
+      <div class="tiers">
+        <div>
+          <h3>What's free</h3>
+          <ul>
+            <li>Higher or lower, Intervals and Chord quality, every level</li>
+            <li>The first level of the other five modes, so the whole path stays open</li>
+            <li>Hear, Check and Sing in every round</li>
+            <li>The three views, the drone and the cadence</li>
+            <li>Free practice and the Practice page</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What Pro adds</h3>
+          <ul>
+            <li>Spotlight to level 12: less help, close and inverted chords, 7th chords</li>
+            <li>Missing tone to level 5: inverted chords, 7th chords, two tones missing</li>
+            <li>The seven modes, and harmonic and melodic minor</li>
+            <li>Every scale degree, in major and minor keys</li>
+            <li>Every chord of the key, inverted, and 7th chords</li>
+          </ul>
+        </div>
+      </div>
+      <p class="tier-note">One purchase, once: no subscription. Try Pro free for 14 days. The unlock covers every Mac, iPad and iPhone signed into your Apple Account, and supports Family Sharing. Nothing that is free today moves behind the unlock later. <a href="free-and-pro.html">The full comparison</a></p>
+    </section>
+
+    <section class="section-card" id="privacy">
+      <h2>Private by default</h2>
+      <p>Earling runs on your device. There is no account, no analytics and no tracking. It asks for one permission, the microphone, and listens only while you sing: your voice is heard on the device as you sing and never recorded or sent. Your progress stays on your device. <a href="privacy.html">The privacy policy</a></p>
+    </section>
+  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Earling, Fretling's sister app for the ear. &copy; 2026 Carlos Maldonado.</p>
+      <p><a href="guide.html">User guide</a> &middot; <a href="free-and-pro.html">Free &amp; Pro</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="mailto:fretlingapp@gmail.com?subject=Earling%20support">Contact</a></p>
+      <p class="family"><span class="nb"><a class="app-fretling" href="../index.html">Fretling, for the guitar <span class="arr" aria-hidden="true">&rarr;</span></a><span class="sep" aria-hidden="true">&middot;</span></span><wbr><span class="nb"><a class="app-pianoling" href="../pianoling/index.html">Pianoling, for the piano <span class="arr" aria-hidden="true">&rarr;</span></a><span class="sep" aria-hidden="true">&middot;</span></span><wbr><a class="app-harmonling" href="../harmonling/index.html">Harmonling, for harmony <span class="arr" aria-hidden="true">&rarr;</span></a></p>
+    </div>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

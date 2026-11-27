@@ -2419,7 +2419,7 @@ body[data-app="harmonling"][data-page="home"] { --page-accent: var(--h-accent); 
 
 /* ============================================================
    10d. The family line
-   Every app's footer links to the other two, after the page links, each name in its own
+   Every app's footer links to the other three, after the page links, each name in its own
    app's accent.
    ============================================================ */
 .site-footer .family a { font-weight: 600; text-decoration: none; }
@@ -2428,7 +2428,42 @@ body[data-app="harmonling"][data-page="home"] { --page-accent: var(--h-accent); 
 .site-footer .family a.app-fretling   { color: var(--f-accent-app); }
 .site-footer .family a.app-pianoling  { color: var(--p-accent); }
 .site-footer .family a.app-harmonling { color: var(--h-accent); }
+.site-footer .family a.app-earling    { color: var(--e-accent); }
 .site-footer .family .sep { color: var(--f-ink-2); margin: 0 .5em; }
+/* With three links a line wraps on a phone. It breaks after a dot (the markup's <wbr>), never
+   inside a name or before a dot: each link but the last sits with its dot in one .nb span, since
+   the arrow's inline-block is a break opportunity of its own. */
+.site-footer .family a, .site-footer .family .nb { white-space: nowrap; }
+
+/* ============================================================
+   10e. Earling section (earling/, launch plan L4)
+   A fourth room in the same house, drawn and approved in
+   docs/design-review/earling-launch/: the mark, the home page's accent, the hero's lit word.
+   ============================================================ */
+
+:root {
+  /* Spotlight magenta, the app's accent: EarlingPalette's field #C8197A reads 5.1:1 on the
+     canvas, so the page deepens it on its own hue to 7.3:1 on the canvas and 7.8:1 on white. */
+  --e-accent: #9d1460;
+  /* The mark's bar is the app's own field, a graphic at 5.1:1 (3:1 is a graphic's floor). */
+  --e-mark: #c8197a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --e-accent: #ff7bbd; --e-mark: #ff5cae; }
+}
+/* Night's Spotlight #FF5CAE lifted on its own hue to 7.3:1 on #1a1a1a; the mark keeps it. */
+:root[data-theme="dark"] { --e-accent: #ff7bbd; --e-mark: #ff5cae; }
+
+body[data-app="earling"][data-page="home"] { --page-accent: var(--e-accent); }
+/* The hero band is dark in both themes, so its lit word always wears the night value. */
+body[data-app="earling"] .hero { --e-accent: #ff7bbd; }
+.hero h1 em[data-hl="earling"] { --hl: var(--e-accent); }
+
+/* The Spotlight bar mark: the icon's shell as one ink spiral, and the icon's magenta bar across
+   it. The only family mark with no notes on it, as the icon has none. */
+.brand .brand-mark .sm-bar   { fill: var(--e-mark); }
+.brand .brand-mark .sm-shell { fill: none; stroke: var(--f-ink-body); stroke-width: 1.3;
+  stroke-linecap: round; stroke-linejoin: round; }
 
 /* ============================================================
    11. Responsive + motion
